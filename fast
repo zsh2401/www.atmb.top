@@ -1,4 +1,4 @@
 git add .
 git commit -m "$*"
-git push origin gh-pages
+git push origin master
 
