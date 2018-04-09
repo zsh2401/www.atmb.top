@@ -1,0 +1,11 @@
+{
+"Name":"一键刷入小米6REC",
+"Auth":"zsh2401",
+"Version":"0.0.5",
+"MinSdk":5,
+"Size":"35M",
+"Desc":"可以刷入小米6REC",
+"Md5":"there is md5",
+"Pics":["some.png","test.png"],
+"Download":"https://autumnbox-1252709330.cos.ap-beijing.myqcloud.com/extensions/Zsh2401.Xiaomi6RecFlasher.dll"
+}
