@@ -45,7 +45,7 @@ function ___getSrc(fileName){
     if(IDX_USE_DEFIENED_JSON){
         result = "{\"name\":\"wow\"}"
     }else{
-        $.get("index.html",function(response){
+        $.get(fileName,function(response){
             result = response;})
     }
    return result;
