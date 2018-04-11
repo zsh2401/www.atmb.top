@@ -1,8 +1,8 @@
 var __EXT_USE_DEFEINED_JSON=false;
 function init(){
     ___showLoadingUI();
-    var file = ___getArgs("j");
-    console.log("json file name: " + file);
+    var file = "exts/" +  ___getArgs("j");
+    console.log("jExtInfo: " + file);
     var src = ___getSrc(file);
     console.log("src->" + src);
     var json = ___parseToJson(src);
@@ -17,9 +17,9 @@ function ___getArgs(name){
 function ___getSrc(fileName){
     var result=null;
     if(__EXT_USE_DEFEINED_JSON){
-        result = "{\"name\":\"wow\"}"
+        result = "{\"name\":\"fuck\"}"
     }else{
-        $.get("index.html",function(response){
+        $.get(fileName,function(response){
             result = response;})
     }
    return result;
@@ -28,7 +28,8 @@ function ___parseToJson(src){
     return eval("("+ src +")");
 } 
 function ___setEleByJson(json){
-    console.log("name->" + json.name)
+    console.log("name->" + json.name);
+    console.log("auth->"+ json.auth);
 }
 function ___showLoadingUI(){
     console.log("loading");

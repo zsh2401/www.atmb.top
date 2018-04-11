@@ -14,6 +14,14 @@ function init(){
         __add(jIndex.exts[index]);
     }
 }
+
+function __add(json){
+    var html = document.getElementById("table").innerHTML;
+    var fmt =__LINE_FMT.format(json.name,json.desc,json.info);
+    console.log(fmt)
+    document.getElementById("table").innerHTML += fmt;
+}
+
 function ___gotoX(jArgName){
     window.open("extension.html?j=" + jArgName);
 }
@@ -31,6 +39,7 @@ function __getIndex(){
         }
     }
 }
+
 function ___getSrc(fileName){
     var result=null;
     if(IDX_USE_DEFIENED_JSON){
@@ -41,12 +50,7 @@ function ___getSrc(fileName){
     }
    return result;
 }
-function __add(json){
-    var html = document.getElementById("table").innerHTML;
-    var fmt =__LINE_FMT.format(json.name,json.desc,json.info);
-    console.log(fmt)
-    document.getElementById("table").innerHTML += fmt;
-}
+
 function ___getJson(){
     var result=null;
     $.get(INDEX_PATH,function(response){
