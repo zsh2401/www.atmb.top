@@ -24,7 +24,9 @@ function ___setEleByJson(json){
     var html = parser.makeHtml(json.desc);
     console.log("md2html->" + html);
     $("#extVersion").html("版本号:" + json.version);
-    $("#extSdk").html("最低API:" + json.minSdk + "    目标API:" + json.targetSdk);
+    (json.minSdk==null || json.targetSdk==null)?
+    ($("#extSdk").html("未指定API")):
+    ($("#extSdk").html("最低API:" + json.minSdk + "    目标API:" + json.targetSdk));
     $("#extDesc").html(html);
     $("#btnDl").html("立刻下载");
     $("#btnDl").click(function(){window.location=json.downloadUrl});
