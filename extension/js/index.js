@@ -48,6 +48,7 @@ function ___getSrc(fileName){
         $.get(fileName,function(response){
             result = response;})
     }
+    console.log("src->" + result);
    return result;
 }
 
