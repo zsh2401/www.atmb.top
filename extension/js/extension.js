@@ -1,4 +1,4 @@
-var use_defined_json=false;
+var __EXT_USE_DEFEINED_JSON=false;
 function init(){
     ___showLoadingUI();
     var file = ___getArgs("j");
@@ -16,7 +16,7 @@ function ___getArgs(name){
 }
 function ___getSrc(fileName){
     var result=null;
-    if(use_defined_json){
+    if(__EXT_USE_DEFEINED_JSON){
         result = "{\"name\":\"wow\"}"
     }else{
         $.get("index.html",function(response){

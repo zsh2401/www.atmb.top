@@ -7,7 +7,7 @@ var __LINE_FMT =
     "onclick=\"javascrtpt:___gotoX(\'{2}\');\">"+
      "详情</button></td>" +
     "</tbody>"
-var USE_DEFIENED_JSON = false
+var IDX_USE_DEFIENED_JSON = false
 function init(){
     var jIndex = __getIndex()
     for(var index in jIndex.exts){
@@ -19,7 +19,7 @@ function ___gotoX(jArgName){
 }
 
 function __getIndex(){
-    if(!USE_DEFIENED_JSON){
+    if(IDX_USE_DEFIENED_JSON == true){
         var src = ___getSrc(INDEX_PATH)
         return eval("("+ src +")")
     }else{
@@ -33,7 +33,7 @@ function __getIndex(){
 }
 function ___getSrc(fileName){
     var result=null;
-    if(use_defined_json){
+    if(USE_DEFIENED_JSON){
         result = "{\"name\":\"wow\"}"
     }else{
         $.get("index.html",function(response){
