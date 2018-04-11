@@ -1,6 +1,4 @@
-var IDX_USE_DEFIENED_JSON = true
-
-var INDEX_PATH="exts/index.html"
+var INDEX_PATH="http://atmb.top/extension/exts/index.html"
 var __LINE_FMT = 
     "<tbody>"+
     "<td>{0}</td>"+
@@ -9,15 +7,18 @@ var __LINE_FMT =
     "onclick=\"javascrtpt:___gotoX(\'{2}\');\">"+
      "详情</button></td>" +
     "</tbody>"
-var IDX_DEFAULT_VALUE = "{\"exts\":["+
-        "{\"name\":\"一键刷入小米6 TWRP REC\",\"desc\":\"如名\",\"info\":\"fmi6rec.html\"},"+
-        "{\"name\":\"一键安装小米手机驱动\",\"desc\":\"这个模块可以一键安装小米手机驱动\",\"info\":\"xdi.html\"}]}";
+
 function init(){
-    var jIndex = __getIndex()
-    for(var index in jIndex.exts){
-        __add(jIndex.exts[index]);
-    }
+    __idxShowLoading();
+    __setByIndex(function(jIndex){
+        for(var index in jIndex.exts){
+            __add(jIndex.exts[index]);
+        }
+        __indexCloseLoading();
+    })
 }
+function __idxShowLoading(){}
+function __indexCloseLoading(){}
 function __add(json){
     var html = document.getElementById("table").innerHTML;
     var fmt =__LINE_FMT.format(json.name,json.desc,json.info);
@@ -29,33 +30,19 @@ function ___gotoX(jArgName){
     window.open("extension.html?j=" + jArgName);
 }
 
-function __getIndex(){
-    if(IDX_USE_DEFIENED_JSON){
-        return eval("(" + IDX_DEFAULT_VALUE +")")
-    }else{
-        var src = ___idx_getSrc(INDEX_PATH);
-        return eval("("+ src +")");
-    }
+function __setByIndex(fun){
+    var src = null;
+    $.ajax({
+        url:INDEX_PATH,
+        type:'GET',
+        success:function(data){
+            console.log(data);
+            var json = eval("("+ data +")");
+            fun(json);
+        }
+    });
 }
 
-function ___idx_getSrc(fileName){
-    var result=null;
-    if(IDX_USE_DEFIENED_JSON){
-        result = "{\"name\":\"wow\"}"
-    }else{
-        $.get(fileName,function(response){
-            result = response;})
-    }
-    console.log("src->" + result);
-   return result;
-}
-
-function ___getJson(){
-    var result=null;
-    $.get(INDEX_PATH,function(response){
-        result = response;})
-   return result;
-}
 String.prototype.format = function(args) {
     var result = this;
     if (arguments.length > 0) {
