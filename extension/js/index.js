@@ -27,16 +27,16 @@ function ___gotoX(jArgName){
 }
 
 function __getIndex(){
-    if(IDX_USE_DEFIENED_JSON == true){
-        var src = ___getSrc(INDEX_PATH)
-        return eval("("+ src +")")
-    }else{
+    if(IDX_USE_DEFIENED_JSON){
         return {
             "exts":[
                 {"name":"一键刷入小米6REC","desc":"this is desc","info":"test.html"},
                 {"name":"一键刷入小米6RECXX","desc":"this is desc","info":"test.html"}
             ]
         }
+    }else{
+        var src = ___getSrc(INDEX_PATH)
+        return eval("("+ src +")")
     }
 }
 
