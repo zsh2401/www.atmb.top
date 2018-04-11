@@ -26,7 +26,7 @@ function __add(json){
 }
 
 function ___gotoX(jArgName){
-    window.open("extension.html?j=" + jArgName);
+    window.location ="extension.html?j=" + jArgName;
 }
 
 function __setByIndex(fun){

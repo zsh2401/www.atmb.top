@@ -18,8 +18,13 @@ function ___parseToJson(src){
 } 
 function ___setEleByJson(json){
     document.title = '[拓展]' + json.name;
-    console.log("name->" + json.name);
-    console.log("auth->"+ json.auth);
+    $("#extName").html(json.name);
+    $("#extAuth").html("@" + json.auth);
+    var parser = new HyperDown();
+    var html = parser.makeHtml(json.desc);
+    $("#extDesc").html(html);
+    $("#btnDl").html("立刻下载");
+    $("#btnDl").click(function(){window.location=json.downloadUrl});
 }
 function ___showLoadingUI(){
     console.log("loading");
