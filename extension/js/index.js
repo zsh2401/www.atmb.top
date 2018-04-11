@@ -33,7 +33,7 @@ function __getIndex(){
 }
 function ___getSrc(fileName){
     var result=null;
-    if(USE_DEFIENED_JSON){
+    if(IDX_USE_DEFIENED_JSON){
         result = "{\"name\":\"wow\"}"
     }else{
         $.get("index.html",function(response){
