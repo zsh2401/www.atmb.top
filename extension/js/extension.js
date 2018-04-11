@@ -1,4 +1,4 @@
-var __EXTS_PATH = "http://atmb.top/extension/exts/"
+var __EXTS_PATH = "exts/"
 function init(){
     ___showLoadingUI();
     var fileName = __EXTS_PATH +  ___getArgs("j");
@@ -17,7 +17,7 @@ function ___parseToJson(src){
     return eval("("+ src +")");
 } 
 function ___setEleByJson(json){
-    
+    document.title = '[拓展]' + json.name;
     console.log("name->" + json.name);
     console.log("auth->"+ json.auth);
 }

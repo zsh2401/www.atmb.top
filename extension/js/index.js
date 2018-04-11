@@ -1,13 +1,12 @@
-var INDEX_PATH="http://atmb.top/extension/exts/index.html"
+var INDEX_PATH="exts/index.html"
 var __LINE_FMT = 
     "<tbody>"+
     "<td>{0}</td>"+
     "<td>{1}</td>"+
-    "<td><button type=\"button\" class=\"btn btn-info\" "+
+    "<td><button type=\"button\" class=\"btn btn-danger\" "+
     "onclick=\"javascrtpt:___gotoX(\'{2}\');\">"+
      "详情</button></td>" +
     "</tbody>"
-
 function init(){
     __idxShowLoading();
     __setByIndex(function(jIndex){
