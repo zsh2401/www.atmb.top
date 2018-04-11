@@ -1,4 +1,4 @@
-var INDEX_PATH="exts/index.html"
+var INDEX_PATH="../exts/index.html"
 var __LINE_FMT = 
     "<tbody>"+
     "<td>{0}</td>"+
@@ -35,8 +35,8 @@ function __getIndex(){
             ]
         }
     }else{
-        var src = ___getSrc(INDEX_PATH)
-        return eval("("+ src +")")
+        var src = ___getSrc(INDEX_PATH);
+        return eval("("+ src +")");
     }
 }
 
