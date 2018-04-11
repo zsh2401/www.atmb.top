@@ -7,7 +7,7 @@ var __LINE_FMT =
     "onclick=\"javascrtpt:___gotoX(\'{2}\');\">"+
      "详情</button></td>" +
     "</tbody>"
-var USE_DEFIENED_JSON = true
+var USE_DEFIENED_JSON = false
 function init(){
     var jIndex = __getIndex()
     for(var index in jIndex.exts){

@@ -1,4 +1,4 @@
-var use_defined_json=true;
+var use_defined_json=false;
 function init(){
     ___showLoadingUI();
     var file = ___getArgs("j");
