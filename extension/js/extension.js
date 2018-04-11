@@ -22,6 +22,9 @@ function ___setEleByJson(json){
     $("#extAuth").html("@" + json.auth);
     var parser = new HyperDown();
     var html = parser.makeHtml(json.desc);
+    console.log("md2html->" + html);
+    $("#extVersion").html("版本号:" + json.version);
+    $("#extSdk").html("最低API:" + json.minSdk + "    目标API:" + json.targetSdk);
     $("#extDesc").html(html);
     $("#btnDl").html("立刻下载");
     $("#btnDl").click(function(){window.location=json.downloadUrl});
