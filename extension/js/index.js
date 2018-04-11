@@ -1,4 +1,6 @@
-var INDEX_PATH="../exts/index.html"
+var IDX_USE_DEFIENED_JSON = true
+
+var INDEX_PATH="exts/index.html"
 var __LINE_FMT = 
     "<tbody>"+
     "<td>{0}</td>"+
@@ -7,14 +9,15 @@ var __LINE_FMT =
     "onclick=\"javascrtpt:___gotoX(\'{2}\');\">"+
      "详情</button></td>" +
     "</tbody>"
-var IDX_USE_DEFIENED_JSON = false
+var IDX_DEFAULT_VALUE = "{\"exts\":["+
+        "{\"name\":\"一键刷入小米6 TWRP REC\",\"desc\":\"如名\",\"info\":\"fmi6rec.html\"},"+
+        "{\"name\":\"一键安装小米手机驱动\",\"desc\":\"这个模块可以一键安装小米手机驱动\",\"info\":\"xdi.html\"}]}";
 function init(){
     var jIndex = __getIndex()
     for(var index in jIndex.exts){
         __add(jIndex.exts[index]);
     }
 }
-
 function __add(json){
     var html = document.getElementById("table").innerHTML;
     var fmt =__LINE_FMT.format(json.name,json.desc,json.info);
@@ -28,19 +31,14 @@ function ___gotoX(jArgName){
 
 function __getIndex(){
     if(IDX_USE_DEFIENED_JSON){
-        return {
-            "exts":[
-                {"name":"一键刷入小米6REC","desc":"this is desc","info":"test.html"},
-                {"name":"一键刷入小米6RECXX","desc":"this is desc","info":"test.html"}
-            ]
-        }
+        return eval("(" + IDX_DEFAULT_VALUE +")")
     }else{
-        var src = ___getSrc(INDEX_PATH);
+        var src = ___idx_getSrc(INDEX_PATH);
         return eval("("+ src +")");
     }
 }
 
-function ___getSrc(fileName){
+function ___idx_getSrc(fileName){
     var result=null;
     if(IDX_USE_DEFIENED_JSON){
         result = "{\"name\":\"wow\"}"

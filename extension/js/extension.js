@@ -3,7 +3,7 @@ function init(){
     ___showLoadingUI();
     var file = "exts/" +  ___getArgs("j");
     console.log("jExtInfo: " + file);
-    var src = ___getSrc(file);
+    var src = ___ext_getSrc(file);
     console.log("src->" + src);
     var json = ___parseToJson(src);
     ___setEleByJson(json);
@@ -14,7 +14,7 @@ function ___getArgs(name){
      var r = window.location.search.substr(1).match(reg);
      if(r!=null)return  unescape(r[2]); return null;
 }
-function ___getSrc(fileName){
+function ___ext_getSrc(fileName){
     var result=null;
     if(__EXT_USE_DEFEINED_JSON){
         result = "{\"name\":\"fuck\"}"
