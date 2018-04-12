@@ -3,6 +3,8 @@
 <head>
   <title>秋之盒</title>
   <meta charset="utf-8">
+  <meta name="theme-color" content="#ff7f50">
+  <meta name="msapplication-TileColor" content="#ff7f50">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/bootstrap.min.css"> 
   <link rel="stylesheet" href="../css/navbar.css"> 
@@ -11,42 +13,41 @@
   <script src="../js/bootstrap.min.js"></script>
   <script src="js/index.js"></script>
 </head>
-<body style="background-color: #ff7f50;color:#ff7f50">
-
-    <nav class="navbar navbar-default" style="border-radius: 0px;" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#navbar-c">
-                    <span class="sr-only">切换导航</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">秋之盒</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-c">
-                <ul class="nav navbar-nav">
-                    <li><a href="/">主页</a></li>
-                    <li><a href="/#dx">介绍</a></li>
-                    <li class="active"><a href="/extension/">拓展模块</a></li>
-                    <li><a href="/donate/">捐赠</a></li>
-                </ul>
-            </div>
+<body style="background-color: #fc561a;color:#fefefe">
+<nav class="navbar navbar-default" role="navigation" style="border-radius: 0px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target="#navbar-c">
+              <span class="sr-only">切换导航</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">秋之盒</a>
         </div>
-    </nav>
+        <div class="collapse navbar-collapse" id="navbar-c">
+            <ul class="nav navbar-nav">
+              <li><a href="/"><span class="glyphicon glyphicon-home"> 主页</a></li>
+              <li><a href="/#dx"><span class="glyphicon glyphicon-tint"> 介绍</a></li>
+              <li class="active"><a href="/extension/"><span class="glyphicon glyphicon-th"> 拓展模块</a></li>
+              <li><a href="/about/"><span class="glyphicon glyphicon-leaf"> 关于/联系</a></li>
+              <li><a href="/donate/"><span class="glyphicon glyphicon-heart-empty"> 开源/捐赠</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>    
 
     <div class="container">
-        <div class="jumbotron" style="background-color: #F7F6E7; border-radius: 20px;">
+        <div class="jumbotron" style="background-color: #00000000; border-radius: 0px;">
             <center>
                 <div class="page-header" style="margin:0px;">
-                    <img class="img-responsive" onclick="window.location = '../'" src="../images/leaves.png">
                     <h2>下载秋之盒拓展模块</h2>
                     <h3>做你想做的事情</h3>
                 </div>
             </center>
         </div>
-        <table id="table" class="table" style="background-color:#F7F6E7;border-radius: 10px;" style="color:#ff7f50">
+        <table id="table" class="table" style="background-color:#F7F6E7;color:#fc561a; border-radius: 0px;" style="color:#ff7f50">
             <thead>
                 <tr><th>模块名</th><th>简述</th><th>详情</th></tr>
             </thead>
@@ -55,6 +56,11 @@
     <script>
         init();
     </script>
-    <div style="display:none"><script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script></div>
+    <footer>
+        <div style="display:none"><script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script></div>
+        <center>
+            <h4>@zsh2401 2017-2018</h4>
+        </center>
+    </footer>
 </body>
 </html>
