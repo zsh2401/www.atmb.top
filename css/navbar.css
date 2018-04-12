@@ -1,7 +1,7 @@
 /* navbar */
 .navbar-default {
     background-color: #ff7f50;
-    border-color: #fc561a;
+    border-color: #ff6138;
 }
 /* Title */
 .navbar-default .navbar-brand {
@@ -23,7 +23,7 @@
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
     color: #fefefe;
-    background-color: #fc561a;
+    background-color: #ff6138;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
@@ -53,7 +53,7 @@
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #ff7f50;
+    background-color: transparent;
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fefefe;
