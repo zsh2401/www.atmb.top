@@ -5,15 +5,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/bootstrap.min.css"> 
-  <link rel="stylesheet" href="../css/index.css"> 
+  <link rel="stylesheet" href="../css/navbar.css"> 
   <link rel="shortcut icon" href="../images/leaves.png">
   <script src="../js/jquery.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="js/index.js"></script>
 </head>
 <body style="background-color: #ff7f50;color:#ff7f50">
+
+    <nav class="navbar navbar-default" style="border-radius: 0px;" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#navbar-c">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">秋之盒</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-c">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">主页</a></li>
+                    <li><a href="/#dx">介绍</a></li>
+                    <li class="active"><a href="/extension/">拓展模块</a></li>
+                    <li><a href="/donate/">捐赠</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <div class="jumbotron" style="background-color: #F7F6E7;margin-top: 5%; border-radius: 20px;">
+        <div class="jumbotron" style="background-color: #F7F6E7; border-radius: 20px;">
             <center>
                 <div class="page-header" style="margin:0px;">
                     <img class="img-responsive" onclick="window.location = '../'" src="../images/leaves.png">

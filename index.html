@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>秋之盒AutumnBox官网</title>
+  <title>秋之盒-官网</title>
   <meta charset="utf-8">
+  <meta name="theme-color" content="#ff7f50">
+  <meta name="msapplication-TileColor" content="#ff7f50">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="css/navbar.css"> 
   <link rel="shortcut icon" href="images/leaves.png">
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </head>
-<body style="background-color: #ff7f50;color:#ff7f50;">
+<body style="background-color: #fc561a;color:#fefefe;">
+    <nav class="navbar navbar-default" role="navigation" style="border-radius: 0px;">
+        <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target="#navbar-c">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="/">秋之盒</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-c">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/"><span class="glyphicon glyphicon-home"> 主页</a></li>
+                <li><a href="/#dx"><span class="glyphicon glyphicon-tint"> 介绍</a></li>
+                <li><a href="/extension/"><span class="glyphicon glyphicon-th"> 拓展模块</a></li>
+                <li><a href="/donate/"><span class="glyphicon glyphicon-leaf"> 关于/捐赠/联系</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
 
-<div class="container" >
-<br>
-  <div class="jumbotron"  style="background-color: #F7F6E7;border-radius: 20px;">
-    <div class="page-header" >
+<div class="container">
+  <div class="jumbotron" style="background-color: transparent; border-radius: 20px;">
+    <div class="page-header" style="color:#fefefe;">
         <center>
-            <img class="img-responsive" src="images/leaves.png">
             <h1>AutumnBox-秋之盒</h1>
             <h4>开源,简约,免费</h4>
-            <h4>一切功能基于谷歌ADB,小白大神都可用</h4>
+            <h4>一切功能基于谷歌ADB,绿色免安装</h4>
+            <h4>帮助小白,方便老鸟</h4>
             <br>
             <h4>最新版本: 0.77.2-浅测试</h4>
-            <h4>支持的系统平台: Windows 7-10</h4>
+            <h4>系统平台: Windows 7/8/8.1/10</h4>
             <h4>软件大小: 5.8MB</h4>
-            <button type="button" class="btn" onclick="javascrtpt:window.open('https://github.com/zsh2401/AutumnBox/')">
-                <img width="20px" src="images/github_o.png">  开源</button>
-            <button type="button" class="btn" onclick="javascrtpt:window.open('donate/')">
-              <img width="20px" src="images/donate_o.png">  捐赠</button>
-            <button type="button"  class="btn" onclick="javascrtpt:window.location.href=('https://github.com/zsh2401/AutumnBox/releases/download/v0.77.2-debug/AutumnBox-0.77.2-debug.zip')">
-                <img width="20px" src="images/download_o.png">  下载</button>
-            <br><br>
-            <button type="button" class="btn" onclick="javascrtpt:window.location ='extension/'">
-              <img width="20px" src="images/module.png"> 拓展模块</button>
-            <br><br>
-            <button type="button" class="btn" onclick="javascrtpt:window.open('http://shang.qq.com/wpa/qunwpa?idkey=6210b7c1027584a9fc497d1dc59649dbc7d2da9739145cdbba71b5b6d4616e8f')">
-              <img width="20px" src="images/qq.png">  加入交流群(246177486)</button>
-            <br><br>
-            <button type="button" class="btn" onclick="javascrtpt:window.open('http://shang.qq.com/wpa/qunwpa?idkey=13c6c11bb95ed98638e94f39850bc3cbbd1170b69ac077ab56fb875cc222262b')">
-              <img width="20px" src="images/qq.png">  加入交流群二(193403771)</button>
           </center>
     </div>
+    <center>            
+        <button type="button" style="width:70%" class="btn btn-danger" onclick="javascrtpt:window.location.href=('https://github.com/zsh2401/AutumnBox/releases/download/v0.77.2-debug/AutumnBox-0.77.2-debug.zip')">
+          立刻下载</button>
+      </center>
   </div>
-
-  <div class="jumbotron" style="background-color: #F7F6E7;border-radius: 20px;">
-    <center>
-      <h2>介绍</h2>
+  
+  <center id="dx">
       <img class="img-responsive" src="images/demo/demo0.png">
       <h3>优雅的界面</h3><br><br>
       <img class="img-responsive" src="images/demo/actnr.gif">
@@ -56,12 +67,9 @@
       <h3>基础版的MiFlash(不支持9008)</h3><br><br>
       <img class="img-responsive" src="images/demo/extdemo.gif">
       <h3>主体功能不够,拓展模块来凑</h3><br><br>
-      <img class="img-responsive" src="images/demo/extdemo.gif">
-      <h3>主体功能不够,拓展模块来凑</h3><br><br>
       <img class="img-responsive" src="images/demo/morefuncs.gif">
       <h3>更多玩法等待你的发现</h3>
     </center>
-  </div>
   <center>
     <button type="button" style="margin-bottom: 10%;" class="btn btn-danger" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">回到顶部</button>
   </center>
