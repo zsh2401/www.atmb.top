@@ -3,7 +3,7 @@ var __LINE_FMT =
     "<tbody>"+
     "<td>{0}</td>"+
     "<td>{1}</td>"+
-    "<td><button type=\"button\" class=\"btn btn-danger\" "+
+    "<td><button type=\"button\" class=\"btn btn-success\" "+
     "onclick=\"javascrtpt:___gotoX(\'{2}\');\">"+
      "详情</button></td>" +
     "</tbody>"
