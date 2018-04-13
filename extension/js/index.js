@@ -7,7 +7,7 @@ var __LINE_FMT =
     "onclick=\"javascrtpt:___gotoX(\'{2}\');\">"+
      "详情</button></td>" +
     "</tbody>"
-function init(){
+function initExtensionIndex(){
     __idxShowLoading();
     __setByIndex(function(jIndex){
         for(var index in jIndex.exts){

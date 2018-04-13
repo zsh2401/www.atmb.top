@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/navbar.css"> 
   <link rel="shortcut icon" href="images/leaves.png">
   <script src="js/jquery.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/atmb.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
@@ -53,7 +55,7 @@
             <h4>一切功能基于谷歌ADB,绿色免安装</h4>
             <h4>帮助小白,方便老鸟</h4>
             <br>
-            <h4>最新版本: 0.77.2-浅测试(2018.4.12)</h4>
+            <h4 id="latestVersion">最新版本: ...</h4>
             <h4>系统平台: Windows 7/8/8.1/10</h4>
             <h4>软件大小: 5.8MB</h4>
           </center>
@@ -82,6 +84,12 @@
   <center>
     <button type="button" style="margin-bottom: 10%;" class="btn btn-danger" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">回到顶部</button>
   </center>
+  <script>
+    getJsonFromFile("/api/update/",function(json){
+      var str = "最新版本 {0} ({1}/{2}/{3})";
+      $("#latestVersion").html(str.format(json.version,json.date[1],json.date[2],json.date[0]));
+    })
+  </script>
 </div>
 
   <footer>
