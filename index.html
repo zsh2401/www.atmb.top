@@ -58,10 +58,11 @@
             <h4 id="latestVersion">最新版本: ...</h4>
             <h4>系统平台: Windows 7/8/8.1/10</h4>
             <h4>软件大小: 5.8MB</h4>
+            <h4 id="downloadCount" style="display:none">...</h4>
           </center>
     </div>
     <center>            
-        <button type="button" style="margin-top:10px" class="btn btn-success" onclick="javascrtpt:window.location='https://pan.baidu.com/s/1bFZBAI'">
+        <button type="button" style="margin-top:10px" class="btn btn-success" onclick="download()">
           立刻下载</button>
           <button type="button" style="margin-top:10px" class="btn btn-primary " onclick="javascrtpt:window.location = '/about/'">
             加群/联系开发者</button>
@@ -85,10 +86,22 @@
     <button type="button" style="margin-bottom: 10%;" class="btn btn-danger" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">回到顶部</button>
   </center>
   <script>
-    getJsonFromFile("/api/update/",function(json){
+    console.log("本网站仓库:https://github.com/zsh2401/www.atmb.top/ 欢迎贡献代码!");
+    console.log("本网站仓库:https://github.com/zsh2401/www.atmb.top/ 欢迎贡献代码!");
+    console.log("本网站仓库:https://github.com/zsh2401/www.atmb.top/ 欢迎贡献代码!");
+    getJsonFrom("/api/update/",function(json){
       var str = "最新版本 {0} ({1}/{2}/{3})";
       $("#latestVersion").html(str.format(json.version,json.date[1],json.date[2],json.date[0]));
     })
+    queryDownloadCount(343,function(count){
+      console.log("xxxx");
+        $("#downloadCount").html("下载量: " + count);
+        $("#downloadCount").show();
+    });
+    function download(){
+      addDownloadCount(343);
+      javascrtpt:window.location='https://pan.baidu.com/s/1bFZBAI';
+    }
   </script>
 </div>
 
