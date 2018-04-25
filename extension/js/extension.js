@@ -29,7 +29,24 @@ function ___setEleByJson(json){
     ($("#extSdk").html("最低API:" + json.minSdk + "    目标API:" + json.targetSdk));
     $("#extDesc").html(html);
     $("#btnDl").html("立刻下载");
-    $("#btnDl").click(function(){window.location=json.downloadUrl});
+    $("#btnDl").click(function(){
+        window.location=json.downloadUrl
+        if(json.id != null){
+            console.log("have id!");
+            $.ajax("https://atmb.xxwhite.com/api/extension?id=" + json.id,function(data){
+                console.log("download + 1");
+            });
+        }else{
+            console.log("id not found!");
+        }
+    });
+    ___setDownloadCountByApi(json);
+}
+function ___setDownloadCountByApi(json){
+    $.get("https://atmb.xxwhite.com/api/extension?id=" + json.id,function(data){
+        var json = eval("("+ data +")");
+        $("#downloadCount").html("下载量: " + json.downloadTimes);
+    })
 }
 function ___showLoadingUI(){
     console.log("loading");
