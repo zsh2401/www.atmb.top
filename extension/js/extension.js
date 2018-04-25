@@ -22,7 +22,6 @@ function ___setEleByJson(json){
     $("#extAuth").html("@" + json.auth);
     var parser = new HyperDown();
     var html = parser.makeHtml(json.desc);
-    console.log("md2html->" + html);
     $("#extVersion").html("版本号:" + json.version);
     (json.minSdk==null || json.targetSdk==null)?
     ($("#extSdk").html("未指定API")):
@@ -33,7 +32,7 @@ function ___setEleByJson(json){
         window.location=json.downloadUrl
         if(json.id != null){
             console.log("have id!");
-            $.ajax("https://atmb.xxwhite.com/api/extension?id=" + json.id,function(data){
+            $.ajax("https://atmb.xxwhite.com/api/downexts?id=2018010100" + json.id,function(data){
                 console.log("download + 1");
             });
         }else{
@@ -43,10 +42,24 @@ function ___setEleByJson(json){
     ___setDownloadCountByApi(json);
 }
 function ___setDownloadCountByApi(json){
-    $.get("https://atmb.xxwhite.com/api/extension?id=" + json.id,function(data){
-        var json = eval("("+ data +")");
-        $("#downloadCount").html("下载量: " + json.downloadTimes);
-    })
+//     $.ajax({url: "https://atmb.xxwhite.com/api/extension?id=" + json.id,
+//         type: "GET",
+//         dataType:"jsonp",
+//         success: function(src){
+//         console.log("xxx" + src);
+//         var jx = eval("("+ src +")");
+//         $("#downloadCount").html("下载量: " + jx.downloadTimes);
+//         }}
+// });
+urlx = "https://atmb.xxwhite.com/api/extension?id=" + json.id
+$.ajax({
+    url: urlx,
+    type: "GET",
+    dataType: "jsonp", //指定服务器返回的数据类型
+    success: function (data) {
+        console.log("data",data);
+    }
+});
 }
 function ___showLoadingUI(){
     console.log("loading");
