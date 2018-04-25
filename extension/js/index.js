@@ -3,7 +3,7 @@
    atmb.js
    jQuery.js
 */
-var INDEX_PATH="/__EXT__/index.html"
+var INDEX_PATH="/EXTENSION_DATA"
 var __LINE_FMT = 
     "<tbody>"+
     "<td>{0}</td>"+
