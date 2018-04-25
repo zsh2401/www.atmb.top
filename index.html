@@ -11,7 +11,7 @@
   <link rel="shortcut icon" href="images/leaves.png">
   <script src="/js/jquery.js"></script>
   <script src="/js/index.js"></script>
-  <script src="/js/atmb.js"></script>
+  <script src="/js/atmbx.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
@@ -94,7 +94,7 @@
       $("#latestVersion").html(str.format(json.version,json.date[1],json.date[2],json.date[0]));
     })
     queryDownloadCount(343,function(count){
-      console.log("xxxx");
+
         $("#downloadCount").html("下载量: " + count);
         $("#downloadCount").show();
     });
