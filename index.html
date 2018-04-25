@@ -13,13 +13,6 @@
   <script src="/js/index.js"></script>
   <script src="/js/atmbx.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-9452158391330419",
-      enable_page_level_ads: true
-    });
-  </script>
 </head>
 <body style="background-color: #ff6138;color:#fefefe;">
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
@@ -86,15 +79,14 @@
     <button type="button" style="margin-bottom: 10%;" class="btn btn-danger" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">回到顶部</button>
   </center>
   <script>
-    console.log("本网站仓库:https://github.com/zsh2401/www.atmb.top/ 欢迎贡献代码!");
-    console.log("本网站仓库:https://github.com/zsh2401/www.atmb.top/ 欢迎贡献代码!");
-    console.log("本网站仓库:https://github.com/zsh2401/www.atmb.top/ 欢迎贡献代码!");
+    for(var i =0;i<5;i++){
+      console.log("本网站仓库:https://github.com/zsh2401/www.atmb.top/ 欢迎贡献代码!");
+    }
     getJsonFrom("/api/update/",function(json){
       var str = "最新版本 {0} ({1}/{2}/{3})";
       $("#latestVersion").html(str.format(json.version,json.date[1],json.date[2],json.date[0]));
-    })
+    });
     queryDownloadCount(343,function(count){
-
         $("#downloadCount").html("下载量: " + count);
         $("#downloadCount").show();
     });

@@ -12,7 +12,6 @@
   <script src="../js/jquery.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="/js/atmbx.js"></script>
-  <script src="js/index.js"></script>
 </head>
 <body style="background-color: #ff6138;color:#fefefe">
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
@@ -55,7 +54,28 @@
         </table>
     </div>
     <script>
-        initExtensionIndex();
+        var INDEX_PATH="/EXTS"
+        var __LINE_FMT = 
+            "<tbody>"+
+            "<td>{0}</td>"+
+            "<td>{1}</td>"+
+            "<td><button type=\"button\" class=\"btn btn-success\" "+
+            "onclick=\"javascrtpt:___gotoX(\'{2}\');\">"+
+            "详情</button></td>" +
+            "</tbody>"
+        getJsonFrom(INDEX_PATH,function(jIndex){
+            for(var index in jIndex.exts){
+                __add(jIndex.exts[index]);
+            }
+        });
+        function __add(json){
+            var html = document.getElementById("table").innerHTML;
+            var fmt =__LINE_FMT.format(json.name,json.desc,json.info);
+            document.getElementById("table").innerHTML += fmt;
+        }
+        function ___gotoX(jArgName){
+            window.location ="extension.html?j=" + jArgName;
+        }
     </script>
     <footer>
         <div style="display:none"><script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script></div>
