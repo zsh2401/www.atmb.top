@@ -13,6 +13,7 @@
   <script src="/js/index.js"></script>
   <script src="/js/atmbx.js"></script>
   <script src="/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body style="background-color: #ff6138;color:#fefefe;">
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
@@ -42,17 +43,16 @@
 <div class="container">
   <div class="jumbotron" style="background-color: transparent; border-radius: 20px;">
     <div class="page-header" style="color:#fefefe;">
-        <center>
+        <center id="information">
             <h1>AutumnBox-秋之盒</h1>
             <h4>开源,简约,免费</h4>
             <h4>一切功能基于谷歌ADB,绿色免安装</h4>
-            <h4>帮助小白,方便老鸟</h4>
-            <br>
-            <h4 id="latestVersion">最新版本: ...</h4>
+            <h4>帮助小白,方便老鸟</h4><br>
+            <h4>最新版本: {{version}} ({{date[1]}}/{{date[2]}}/{{date[0]}})</h4>
             <h4>系统平台: Windows 7/8/8.1/10</h4>
-            <h4>软件大小: 5.8MB</h4>
-            <h4 id="downloadCount" style="display:none">...</h4>
-          </center>
+            <h4>软件大小: 6MB</h4>
+            <h4>下载量: {{downloadCount}}</h4>
+        </center>
     </div>
     <center>            
         <button type="button" style="margin-top:10px" class="btn btn-success" onclick="download()">
@@ -79,20 +79,27 @@
     <button type="button" style="margin-bottom: 10%;" class="btn btn-danger" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">回到顶部</button>
   </center>
   <script>
-    for(var i =0;i<5;i++){
-      console.log("本网站仓库:https://github.com/zsh2401/www.atmb.top/ 欢迎贡献代码!");
-    }
+    var data = {
+        version:"...",
+        downloadCount:"...",
+        date:["","",""]
+      };
+    var app = new Vue({
+      el:"#information",
+      data:data
+    })
+    console.log("本网站仓库:https://github.com/zsh2401/www.atmb.top/ 欢迎贡献代码!");
     getJsonFrom("/api/update/",function(json){
       var str = "最新版本 {0} ({1}/{2}/{3})";
-      $("#latestVersion").html(str.format(json.version,json.date[1],json.date[2],json.date[0]));
+      data.version = json.version;
+      data.date = json.date;
     });
     queryDownloadCount(343,function(count){
-        $("#downloadCount").html("下载量: " + count);
-        $("#downloadCount").show();
+        data.downloadCount = count;
     });
     function download(){
       addDownloadCount(343);
-      javascrtpt:window.location='https://pan.baidu.com/s/1bFZBAI';
+      javascrtpt:window.location='https://download.atmb.top/';
     }
   </script>
 </div>

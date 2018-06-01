@@ -7,61 +7,51 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css"> 
   <link rel="shortcut icon" href="/images/leaves.png">
   <script src="/js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
   <script src="/js/Parser.js"></script>
   <script src="/js/atmbx.js"></script>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-9452158391330419",
-      enable_page_level_ads: true
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body style="background-color: #ff6138;color:#fefefe">
-    <div class="container">
-      <center>
-        <h1 id="extName">...</h1>
-        <h4 id="extAuth">...</h4>
-        <h4 id="extVersion">...</h4>
-        <h4 id="extSdk">...</h4>
-        <h4 id="downloadCount" style="display:none">...</h4>
-        <button type="button" class="btn btn-danger" onclick="window.open('https://github.com/zsh2401/AutumnBox/wiki/zh_CN_SDK%E7%89%88%E6%9C%AC%E5%85%B3%E7%B3%BB%E5%AF%B9%E7%85%A7%E8%A1%A8')">
+    <div id="information" class="container">
+      <center v-if="ext != null">
+        <h1>{{ext.name}}</h1>
+        <h4>@{{ext.auth}}</h4>
+        <h4>版本:{{ext.version}}</h4>
+        <h4 v-if="ext.minSdk != null">最低SDK:{{ext.minSdk}} 目标SDK{{ext.targetSdk}}</h4>
+        <h4 v-if="downloadCount != null">下载数量:{{downloadCount}}</h4>
+        <button v-if="ext.minSdk != null" type="button" class="btn btn-danger" onclick="window.open('https://github.com/zsh2401/AutumnBox/wiki/zh_CN_SDK%E7%89%88%E6%9C%AC%E5%85%B3%E7%B3%BB%E5%AF%B9%E7%85%A7%E8%A1%A8')">
           秋之盒版本与API版本对照表</button><br><br>
-        <button id="btnDl" type="button" class="btn btn-success">...</button>
+        <button type="button" class="btn btn-success" v-on:click="onClickDownload">下载</button>
         <button type="button" class="btn btn-danger" onclick="window.location='./'">返回上一级</button>
         <br><br>
         <h3>说明</h3>
-        <h4 id="extDesc">...</h4><br>
+        <h4>{{ext.desc}}</h4><br>
+      </center>
+      <center v-else>
+        <h1>加载中...</h1>
       </center>
     </div>
     <script>
+      var app = new Vue({
+        el:"#information",
+        data:{
+          ext:null,
+          downloadCount:null
+        },methods:{
+          onClickDownload:function(){
+            window.location =  (this.ext.downloadUrl);
+          }
+        }
+      });
       var fileName = getUrlParam("j");
       getJsonFrom(fileName,function(json){
-          ___setEleByJson(json);
-      })
-      function ___setEleByJson(json){
-          document.title = '[拓展]' + json.name;
-          $("#extName").html(json.name);
-          $("#extAuth").html("@" + json.auth);
-          var parser = new HyperDown();
-          var html = parser.makeHtml(json.desc);
-          $("#extVersion").html("版本号:" + json.version);
-          (json.minSdk==null || json.targetSdk==null)?
-          $("#extSdk").html("未指定API"):
-          ($("#extSdk").html("最低API:" + json.minSdk + "    目标API:" + json.targetSdk));
-          $("#extDesc").html(html);
-          $("#btnDl").html("立刻下载");
-          $("#btnDl").click(function(){
-              window.location=json.downloadUrl;
-              addDownloadCount(json.id);
-          });
+          app.ext = json;
           queryDownloadCount(json.id,function(count){
-              $("#downloadCount").html("下载量: " + count);
-              $("#downloadCount").show();
-              console.log(count);
+            console.log("ok!" + count);
+            app.downloadCount = count;
           });
-      }
+      });
     </script>
     <div style="display:none"><script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script></div>
 </body>

@@ -12,6 +12,7 @@
   <script src="/js/jquery.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/atmbx.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body style="background-color: #ff6138;color:#fefefe">
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
@@ -47,35 +48,33 @@
                 <button type="button" class="btn btn-info" onclick="window.open('https://github.com/zsh2401/AutumnBox/wiki/zh_CN_AutumnBox%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3')">开发文档</button>
             </center>
         </div>
-        <table id="table" class="table" style="background-color:#ff7f50; border-radius: 0px;" style="color:#ff7f50">
+        <table id="extensions" v-if="extensions != null" class="table" style="background-color:#ff7f50; border-radius: 0px;" style="color:#ff7f50">
             <thead>
                 <tr><th>模块名</th><th>简述</th><th>详情</th></tr>
             </thead>
+            <tbody>
+                <tr v-for="ext in extensions">
+                    <td>{{ext.name}}</td><td>{{ext.desc}}</td>
+                    <td><button type="button" class="btn btn-success" v-bind:info="ext.info" v-on:click="onClickExt">详情</button></td>
+                </tr>
+            </tbody>
         </table>
     </div>
     <script>
-        var INDEX_PATH="https://www.atmb.top/EXTS/index.html"
-        var __LINE_FMT = 
-            "<tbody>"+
-            "<td>{0}</td>"+
-            "<td>{1}</td>"+
-            "<td><button type=\"button\" class=\"btn btn-success\" "+
-            "onclick=\"javascrtpt:___gotoX(\'{2}\');\">"+
-            "详情</button></td>" +
-            "</tbody>"
-        getJsonFrom(INDEX_PATH,function(jIndex){
-            for(var index in jIndex.exts){
-                __add(jIndex.exts[index]);
+        var app = new Vue({
+            el:"#extensions",
+            data:{
+                extensions:null
+            },
+            methods:{
+                onClickExt:function(e){
+                    window.location ="extension.html?j=" + e.srcElement.getAttribute("info");
+                }
             }
         });
-        function __add(json){
-            var html = document.getElementById("table").innerHTML;
-            var fmt =__LINE_FMT.format(json.name,json.desc,json.info);
-            document.getElementById("table").innerHTML += fmt;
-        }
-        function ___gotoX(jArgName){
-            window.location ="extension.html?j=" + jArgName;
-        }
+        getJsonFrom("/EXTS/",function(jIndex){
+            app.extensions = jIndex.exts;
+        });
     </script>
     <footer>
         <div style="display:none"><script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script></div>
