@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>拓展模块信息</title>
+<head id="head">
+  <title>{{extName}}-秋之盒拓展模块</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/css/bootstrap.min.css"> 
@@ -25,8 +25,10 @@
         <button type="button" class="btn btn-success" v-on:click="onClickDownload">下载</button>
         <button type="button" class="btn btn-danger" onclick="window.location='./'">返回上一级</button>
         <br><br>
-        <h3>说明</h3>
-        <h4>{{ext.desc}}</h4><br>
+        <div v-if="descMarkDown != null">
+          <h3>说明</h3>
+          <h4 v-html="descMarkDown"/><br>
+        </div>
       </center>
       <center v-else>
         <h1>加载中...</h1>
@@ -37,20 +39,30 @@
         el:"#information",
         data:{
           ext:null,
-          downloadCount:null
+          descMarkDown:null,
+          downloadCount:null,
         },methods:{
           onClickDownload:function(){
-            window.location =  (this.ext.downloadUrl);
+            window.location = this.ext.downloadUrl;
           }
+        }
+      });
+      var head = new Vue({
+        el:"#head",
+        data:{
+          extName:"..."
         }
       });
       var fileName = getUrlParam("j");
       getJsonFrom(fileName,function(json){
-          app.ext = json;
-          queryDownloadCount(json.id,function(count){
-            console.log("ok!" + count);
-            app.downloadCount = count;
-          });
+        app.ext = json;
+        head.extName = json.name;
+        queryDownloadCount(json.id,function(count){
+          app.downloadCount = count;
+        });
+        var parser = new HyperDown();
+        var html = parser.makeHtml(json.desc);
+        app.descMarkDown = html;
       });
     </script>
     <div style="display:none"><script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script></div>
