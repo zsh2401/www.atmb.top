@@ -7,14 +7,44 @@
   <meta name="msapplication-TileColor" content="#ff7f50">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"> 
-  <link rel="stylesheet" href="/css/navbar.css"> 
+  <link rel="stylesheet" href="/lib/fullPage/css/jquery.fullPage.css"> 
+  <link rel="stylesheet" href="/css/navbar.css">
   <link rel="shortcut icon" href="/images/leaves.png">
   
   <script src="/lib/jquery/js/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/lib/fullPage/js/jquery.fullPage.js"></script>
   <script src="/js/atmbx.js"></script>
   <script src="/js/counter.js"></script>
+  
+  <script>
+    $(document).ready(()=>{
+      var data = {
+          version:"...",
+          downloadCount:"...",
+          date:["","",""]
+        };
+      var app = new Vue({
+        el:"#information",
+        data:data
+      })
+      console.log("本网站仓库:https://github.com/zsh2401/www.atmb.top/ 欢迎贡献代码!");
+      getJsonFrom("/api/update/",function(json){
+        var str = "最新版本 {0} ({1}/{2}/{3})";
+        data.version = json.version;
+        data.date = json.date;
+      });
+      queryDownloadCount(343,function(count){
+          data.downloadCount = count;
+      });
+      function download(){
+        addDownloadCount(343);
+        javascrtpt:window.location='https://download.atmb.top/';
+      }
+    });
+  </script>
+  
 </head>
 <body style="background-color: #ff6138;color:#fefefe;">
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
@@ -79,30 +109,6 @@
   <center>
     <button type="button" style="margin-bottom: 10%;" class="btn btn-danger" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">回到顶部</button>
   </center>
-  <script>
-    var data = {
-        version:"...",
-        downloadCount:"...",
-        date:["","",""]
-      };
-    var app = new Vue({
-      el:"#information",
-      data:data
-    })
-    console.log("本网站仓库:https://github.com/zsh2401/www.atmb.top/ 欢迎贡献代码!");
-    getJsonFrom("/api/update/",function(json){
-      var str = "最新版本 {0} ({1}/{2}/{3})";
-      data.version = json.version;
-      data.date = json.date;
-    });
-    queryDownloadCount(343,function(count){
-        data.downloadCount = count;
-    });
-    function download(){
-      addDownloadCount(343);
-      javascrtpt:window.location='https://download.atmb.top/';
-    }
-  </script>
 </div>
   <footer>
       <div style="display:none"><script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script></div>

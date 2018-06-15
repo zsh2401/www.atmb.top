@@ -13,31 +13,10 @@
   <script src="/js/atmbx.js"></script>
   <script src="/js/counter.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-</head>
-<body style="background-color: #ff6138;color:#fefefe">
-    <div id="information" class="container">
-      <center v-if="ext != null">
-        <h1>{{ext.name}}</h1>
-        <h4>@{{ext.auth}}</h4>
-        <h4>版本:{{ext.version}}</h4>
-        <h4 v-if="ext.minSdk != null">最低SDK:{{ext.minSdk}} 目标SDK{{ext.targetSdk}}</h4>
-        <h4 v-if="downloadCount != null">下载数量:{{downloadCount}}</h4>
-        <button v-if="ext.minSdk != null" type="button" class="btn btn-danger" onclick="window.open('https://github.com/zsh2401/AutumnBox/wiki/zh_CN_SDK%E7%89%88%E6%9C%AC%E5%85%B3%E7%B3%BB%E5%AF%B9%E7%85%A7%E8%A1%A8')">
-          秋之盒版本与API版本对照表</button><br><br>
-        <button type="button" class="btn btn-success" v-on:click="onClickDownload">下载</button>
-        <button type="button" class="btn btn-danger" onclick="window.location='./'">返回上一级</button>
-        <br><br>
-        <div v-if="descMarkDown != null">
-          <h3>说明</h3>
-          <h4 v-html="descMarkDown"/><br>
-        </div>
-      </center>
-      <center v-else>
-        <h1>加载中...</h1>
-      </center>
-    </div>
-    <script>
-      var app = new Vue({
+  <script>
+    var app;
+    $(document).ready(()=>{
+      app = new Vue({
         el:"#information",
         data:{
           ext:null,
@@ -61,7 +40,31 @@
           app.downloadCount = count;
         });
       });
-    </script>
+    });
+  </script>
+</head>
+<body style="background-color: #ff6138;color:#fefefe">
+    <div id="information" class="container">
+      <center v-if="ext != null">
+        <h1>{{ext.name}}</h1>
+        <h4>@{{ext.auth}}</h4>
+        <h4>版本:{{ext.version}}</h4>
+        <h4 v-if="ext.minSdk != null">最低SDK:{{ext.minSdk}} 目标SDK{{ext.targetSdk}}</h4>
+        <h4 v-if="downloadCount != null">下载数量:{{downloadCount}}</h4>
+        <button v-if="ext.minSdk != null" type="button" class="btn btn-danger" onclick="window.open('https://github.com/zsh2401/AutumnBox/wiki/zh_CN_SDK%E7%89%88%E6%9C%AC%E5%85%B3%E7%B3%BB%E5%AF%B9%E7%85%A7%E8%A1%A8')">
+          秋之盒版本与API版本对照表</button><br><br>
+        <button type="button" class="btn btn-success" v-on:click="onClickDownload">下载</button>
+        <button type="button" class="btn btn-danger" onclick="window.location='./'">返回上一级</button>
+        <br><br>
+        <div v-if="descMarkDown != null">
+          <h3>说明</h3>
+          <h4 v-html="descMarkDown"/><br>
+        </div>
+      </center>
+      <center v-else>
+        <h1>加载中...</h1>
+      </center>
+    </div>
     <div style="display:none"><script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script></div>
 </body>
 </html>

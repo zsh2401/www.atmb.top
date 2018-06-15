@@ -13,6 +13,24 @@
   <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="/js/atmbx.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+      $(document).ready(()=>{
+        var app = new Vue({
+            el:"#extensions",
+            data:{
+                extensions:null
+            },
+            methods:{
+                onClickExt:function(e){
+                    window.location ="extension.html?j=" + e.srcElement.getAttribute("info");
+                }
+            }
+        });
+        getJsonFrom("/EXTS/",function(jIndex){
+            app.extensions = jIndex.exts;
+        });
+      });
+  </script>
 </head>
 <body style="background-color: #ff6138;color:#fefefe">
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
@@ -60,22 +78,6 @@
             </tbody>
         </table>
     </div>
-    <script>
-        var app = new Vue({
-            el:"#extensions",
-            data:{
-                extensions:null
-            },
-            methods:{
-                onClickExt:function(e){
-                    window.location ="extension.html?j=" + e.srcElement.getAttribute("info");
-                }
-            }
-        });
-        getJsonFrom("/EXTS/",function(jIndex){
-            app.extensions = jIndex.exts;
-        });
-    </script>
     <footer>
         <div style="display:none"><script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script></div>
         <center>
