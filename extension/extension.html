@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head id="head">
-  <title>{{extName}}-秋之盒拓展模块</title>
+<head>
+  <title id="title">拓展模块</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/bootstrap.min.css"> 
   <link rel="shortcut icon" href="/images/leaves.png">
-  <script src="/js/jquery.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/Parser.js"></script>
+
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"> 
+  <script src="/lib/jquery/js/jquery.js"></script>
+  <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/lib/markdown/js/Parser.js"></script>
   <script src="/js/atmbx.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="/js/counter.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body style="background-color: #ff6138;color:#fefefe">
     <div id="information" class="container">
@@ -44,25 +46,20 @@
         },methods:{
           onClickDownload:function(){
             window.location = this.ext.downloadUrl;
+            addDownloadCount(this.ext.id);
           }
-        }
-      });
-      var head = new Vue({
-        el:"#head",
-        data:{
-          extName:"..."
         }
       });
       var fileName = getUrlParam("j");
       getJsonFrom(fileName,function(json){
         app.ext = json;
-        head.extName = json.name;
+        document.title = json.name +"-秋之盒拓展";
+        var parser = new HyperDown(); 
+        var html = parser.makeHtml(json.desc);
+        app.descMarkDown = html;
         queryDownloadCount(json.id,function(count){
           app.downloadCount = count;
         });
-        var parser = new HyperDown();
-        var html = parser.makeHtml(json.desc);
-        app.descMarkDown = html;
       });
     </script>
     <div style="display:none"><script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script></div>
