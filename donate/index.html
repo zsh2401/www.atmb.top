@@ -9,9 +9,28 @@
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"> 
   <link rel="stylesheet" href="/css/navbar.css"> 
   <link rel="shortcut icon" href="/images/leaves.png">
-  
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="/lib/jquery/js/jquery.js"></script>
   <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/js/atmbx.js"></script>
+  <script>
+    var vm = null;
+    $(document).ready(()=>{
+        vm = new Vue({
+            el:"#donationsDiv",
+            data:{donations:null}
+        });
+        $.ajax({
+            url:"donations.json",
+            type:"GET",
+            dataType:"json",
+            success:(json)=>{
+                vm.$data.donations = json;
+            }
+        });
+    }
+    ); 
+  </script>
 </head>
 <body style="background-color: #ff6138;color:#fefefe">
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
@@ -41,7 +60,7 @@
     <div class="jumbotron" style="background-color: transparent; border-radius: 0px;">
         <center>
             <h1>开源</h1>
-            <p>秋之盒一直都以GPL3.0协议开源,请在必要时遵守开源协议</p>
+            <p>秋之盒一直都以GPL3.0协议开源,请在必要时遵守开源协议<br>如果可以的话,希望能够标个星,这是对我开源代码的认可</p>
             <button type="button" class="btn btn-primary" onclick="window.open('https://github.com/zsh2401/AutumnBox/')">
                 秋之盒仓库</button>
             <button type="button" class="btn btn-primary" onclick="window.open('https://github.com/zsh2401/www.atmb.top/')">
@@ -61,35 +80,22 @@
             </div>
             <h1>感谢名单</h1>
             <p>如果您捐赠了但却未被记录,请联系zsh2401@163.com</p>
-            <table id="table" class="table" style="background-color:transparent; border-radius: 0px;">
-                <thead>
-                <tr><th>名称</th><th>日期</th><th>数额</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>离殇已忘梦丶</td><td>4/14/2018</td><td>50¥</td></tr>
-                    <tr><td>离殇已忘梦丶</td><td>3/17/2018</td><td>50¥</td></tr>
-                    <tr><td>离殇已忘梦丶</td><td>1/20/2018</td><td>50¥</td></tr>
-                    <tr><td>无路行者</td><td>5/29/2018</td><td>28¥</td></tr>
-                    <tr><td>饼干怪兽</td><td>3/26/2018</td><td>15¥</td></tr>
-                    <tr><td>佚名</td><td>3/27/2018</td><td>15¥</td></tr>
-                    <tr><td>Mr.皮皮虾</td><td>4/30/2018</td><td>10¥</td></tr>
-                    <tr><td>七十二</td><td>4/26/2018</td><td>10¥</td></tr>
-                    <tr><td>yume</td><td>1/19/2018</td><td>10¥</td></tr>
-                    <tr><td>隼</td><td>5/4/2018</td><td>5¥</td></tr>
-                    <tr><td>佚名</td><td>4/4/2018</td><td>5¥</td></tr>
-                    <tr><td>By_大咸鱼</td><td>3/17/2018</td><td>5¥</td></tr> 
-                    <tr><td>*贺云</td><td>3/26/2018</td><td>5¥</td></tr>
-                    <tr><td>佚名</td><td>4/29/2018</td><td>5¥</td></tr>
-                    <tr><td>佚名</td><td>4/29/2018</td><td>5¥</td></tr>
-                    <tr><td>毛线没有团团</td><td>3/18/2018</td><td>4¥</td></tr>
-                    <tr><td>Deardust</td><td>4/12/2018</td><td>3¥</td></tr>
-                    <tr><td>佚名</td><td>2/25/2018</td><td>2.33¥</td></tr>
-                    <tr><td>*毅</td><td>3/2/2018</td><td>2.10¥</td></tr>
-                    <tr><td>BigSun</td><td>4/30/2018</td><td>0.5¥</td></tr> 
-                    <tr><td>像风一样的男人</td><td>3/19/2018</td><td>0.05¥</td></tr>
-                    <tr><td>佚名</td><td>1/8/2018</td><td>0.01¥</td></tr>
-                </tbody>
-            </table>
+            <div id="donationsDiv">
+                <table v-if="donations" class="table" style="background-color:transparent; border-radius: 0px;">
+                    <thead><tr><th>姓名</th><th>日期</th><th>数额</th><th>备注</th></tr></thead>
+                    <tbody>
+                        <tr v-for="donation in donations">
+                            <td>{{donation.name}}</td>
+                            <td>{{donation.date}}</td>
+                            <td>{{donation.count}}</td>
+                            <td>{{donation.t}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div v-else>
+                    <h2>名单加载中..</h2>
+                </div>
+            </div>
         </center>
     </div>
 </div>
