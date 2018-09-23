@@ -7,7 +7,8 @@
   <meta name="msapplication-TileColor" content="#ff7f50">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"> 
-  <link rel="stylesheet" href="/css/navbar.css"> 
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/donate.css"> 
   <link rel="shortcut icon" href="/images/leaves.png">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="/lib/jquery/js/jquery.js"></script>
@@ -57,7 +58,7 @@
     </div>
 </nav>    
 <div class="container">
-    <div class="jumbotron" style="background-color: transparent; border-radius: 0px;">
+    <div class="jumbotron">
         <center>
             <h1>开源</h1>
             <p>秋之盒一直都以GPL3.0协议开源,请在必要时遵守开源协议<br>如果可以的话,希望能够标个星,这是对我开源代码的认可</p>
@@ -74,14 +75,14 @@
                     我希望大家能够一起守护秋之盒的纯洁与美好....</p>
             <h1>捐赠方式</h1>
             <p>如果您进行了捐赠,将会被记录在捐赠感谢名单上</p>
-            <div>
-                <img src="alipay.jpg">
-                <img src="wechatpay.jpg">
+            <div class="donate-image-div">				
+                <img class="donate-image" src="alipay.jpg">
+                <img class="donate-image"src="wechatpay.jpg">
             </div>
             <h1>感谢名单</h1>
             <p>如果您捐赠了但却未被记录,请联系zsh2401@163.com</p>
             <div id="donationsDiv">
-                <table v-if="donations" class="table" style="background-color:transparent; border-radius: 0px;">
+                <table v-if="donations" class="table">
                     <thead><tr><th>姓名</th><th>日期</th><th>数额</th><th>备注</th></tr></thead>
                     <tbody>
                         <tr v-for="donation in donations">
