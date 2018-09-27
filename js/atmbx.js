@@ -1,18 +1,29 @@
-/*Version 0.6 */
-/*Need jquery */
-/* Obsolete code */
+/*Version 0.7 */
 function getJsonFrom(url,gettedFunction){
-    $.ajax({url:url,
-        type:"GET",
-        success:function(src){
-        var json = eval("("+src+")");
-        gettedFunction(json);
-    }})
+    fetch(url)
+    .then(response=>response.json())
+    .then(json=>{
+        success(json);
+    }).catch(err=>{
+        console.log(err);
+    })
+}
+function getHtmlFrom(url,success){
+    fetch(url)
+    .then(response=>response.text())
+    .then(text=>{
+        success(text);
+    }).catch(err=>{
+        console.log(err);
+    })
 }
 function getUrlParam(name){
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
     var r = window.location.search.substr(1).match(reg);  //匹配目标参数
     if (r != null) return unescape(r[2]); return null; //返回参数值
+}
+String.prototype.toJObj = function(){
+    return eval("(" +this+ ")");
 }
 String.prototype.format = function(args) {
     var result = this;
