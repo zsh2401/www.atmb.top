@@ -1,5 +1,6 @@
 /*Version 0.6 */
 /*Need jquery */
+/* Obsolete code */
 function getJsonFrom(url,gettedFunction){
     $.ajax({url:url,
         type:"GET",
