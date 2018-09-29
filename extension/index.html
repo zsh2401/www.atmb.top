@@ -28,7 +28,7 @@
         }});
     }
     function fetchData(){
-        fetch("../EXTS")
+        fetch("../EXTS/index.html")
             .then(response=>response.text())
             .then(data=>{
                 var jObj = eval("(" +data +")");
