@@ -25,13 +25,16 @@
         fetch("./donations.json")
             .then(response => response.json())
             .then(json =>{
-                vm.$data.donations = json;
-                console.log(vm.$data.donations);
+                vm.$data.donations = sortDonations(json);
             })
             .catch(err => 
             {
                 console.log(err);
             })
+    }
+    function sortDonations(arr){
+        //TODO
+        return arr;
     }
   </script>
 </head>
