@@ -7,9 +7,9 @@
   <meta name="msapplication-TileColor" content="#ff7f50">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/navbar.css">
-  <link rel="stylesheet" href="/css/donate.css"> 
-  <link rel="shortcut icon" href="/images/leaves.png">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/donate.css"> 
+  <link rel="shortcut icon" href="../images/leaves.png">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -22,7 +22,7 @@
         });
     }
     function fetchData(){
-        fetch("./donations.json")
+        fetch("donations.json")
             .then(response => response.json())
             .then(json =>{
                 vm.$data.donations = sortDonations(json);
@@ -53,11 +53,11 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-c">
             <ul class="nav navbar-nav">
-              <li><a href="/"><span class="glyphicon glyphicon-home"> 主页</a></li>
-              <li><a href="/#dx"><span class="glyphicon glyphicon-tint"> 介绍</a></li>
-              <li><a href="/extension/"><span class="glyphicon glyphicon-th"> 拓展模块</a></li>
-              <li><a href="/about/"><span class="glyphicon glyphicon-leaf"> 关于/联系</a></li>
-              <li class="active"><a href="/donate/"><span class="glyphicon glyphicon-heart-empty"> 开源/捐赠</a></li>
+              <li><a href="../"><span class="glyphicon glyphicon-home"> 主页</a></li>
+              <li><a href="../#dx"><span class="glyphicon glyphicon-tint"> 介绍</a></li>
+              <li><a href="../extension/"><span class="glyphicon glyphicon-th"> 拓展模块</a></li>
+              <li><a href="../about/"><span class="glyphicon glyphicon-leaf"> 关于/联系</a></li>
+              <li class="active"><a href="."><span class="glyphicon glyphicon-heart-empty"> 开源/捐赠</a></li>
             </ul>
         </div>
     </div>
