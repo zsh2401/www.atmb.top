@@ -1,3 +1,5 @@
 packages
 *.lnk
 api/update_dv/test.zip
+/.vs/
+/www.atmb.top.sln
