@@ -6,14 +6,21 @@
   <meta name="theme-color" content="#ff7f50">
   <meta name="msapplication-TileColor" content="#ff7f50">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/index.css">
   <link rel="shortcut icon" href="./images/leaves.png">
   
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="./js/counter.js"></script>
+  <script src="./js/index.js"></script>
   
   <script>
     var downloadUrl = "https://pan.baidu.com/s/1bFZBAI";
@@ -25,7 +32,8 @@
         data:{
           version:"...",
           downloadCount:"...",
-          date:["","",""]
+          date:["","",""],
+          latestVersionInfo:".."
         }
       })
     }
@@ -35,14 +43,30 @@
         .then(json=>{
           vm.$data.version = json.version;
           vm.$data.date = json.date;
+          vm.$data.latestVersionInfo = json.message.replace(/\n/g,'<br>');
         }).catch(error=>{
           console.log(error);
-
         })
     }
     function download(){
         addDownloadCount(343);
         javascrtpt:window.location=downloadUrl;
+    }
+    function initComments(){
+        new Valine({
+          el: '#vcomments',
+          placeholder:"遵守法律法规，理性讨论，写下你对秋之盒的建议与评论",
+          appId: 'VLA81Yn1kDUEgE9A99Qwnb1u-gzGzoHsz',
+          appKey: 'CpivAcjiG4W9BWNpS2z47X98'
+        });
+    }
+    function initSwiper(){
+      var mySwiper = new Swiper ('.swiper-container', {
+        loop: true,
+        autoplay:2000,
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+      })    
     }
   </script>
   
@@ -73,43 +97,64 @@
   </nav>
 
 <div class="container">
-  <div class="jumbotron" style="background-color: transparent; border-radius: 20px;">
-    <div class="page-header" style="color:#fefefe;">
-        <center id="information">
-            <h1>AutumnBox-秋之盒</h1>
-            <h2 style="margin-top: 0px">开源,简约,免费</h2>
-            <br>
-            <h4>一切功能基于谷歌ADB,绿色免安装</h4>
-            <h4>帮助小白,方便老鸟</h4><br>
-            <h4>最新版本: {{version}} ({{date[1]}}/{{date[2]}}/{{date[0]}})</h4>
-            <h4>系统平台: Windows 7/8/8.1/10</h4>
-            <h4>软件大小: 6MB</h4>
-            <h4>下载量: {{downloadCount}}</h4>
-        </center>
-    </div>
-    <center>            
-        <button type="button" style="margin-top:10px" class="btn btn-success" onclick="download()">
-          立刻下载</button>
-          <button type="button" style="margin-top:10px" class="btn btn-primary " onclick="javascrtpt:window.location = '/about/'">
+  <div id="head" style="background-color: transparent;text-align: center">
+      <div id="appInfo">
+          <img id="icon" src="./images/leaves.png">
+          <p id="name">秋之盒</p>
+          <h4 style="margin-top: 0px">开源,简约,免费的图形化ADB工具箱</h4>
+      </div>
+      <div id="information">
+        <div id="details">
+          <h4 id="downloads">下载量:{{downloadCount}}</h4>
+          <h4 id="updateDate">更新日期:{{date[1]}}/{{date[2]}}/{{date[0]}}</h4>
+          <h4 id="version">最新版本:{{version}}</h4>
+        </div>
+           <br>
+        <button type="button" style="font-size: 15px;" class="btn btn-success" onclick="download()">
+            立刻下载</button>
+        <button type="button" style="font-size: 15px;" class="btn btn-primary " onclick="javascrtpt:window.location = '/about/'">
             加群/联系开发者</button>
-      </center>
+        <div class="splitline"></div>
+        <div id="latestVersionInfo">
+            <h4 id="title">{{version}} 更新内容</h4>
+            <p id="content" v-html="latestVersionInfo"></p>
+        </div>
+      </div>
   </div>
-  <center id="dx">
-      <p><img class="img-responsive" src="images/demo/demo0.png"></p>
-      <h3>优雅的界面</h3><br><br>
-      <p></p><img class="img-responsive" src="images/demo/actnr.gif"></p>
-      <h3>免root激活黑域冰箱等基于ADB的软件</h3><br><br>
-      <p><img class="img-responsive" src="images/demo/pushfile.gif"></p>
-      <h3>在手机成砖时推送文件</h3><br><br>
-      <p><img class="img-responsive" src="images/demo/fb.gif"></p>
-      <h3>基础版的MiFlash(不支持9008)</h3><br><br>
-      <p><img class="img-responsive" src="images/demo/extdemo.gif"></p>
-      <h3>主体功能不够,拓展模块来凑</h3><br><br>
-      <p><img class="img-responsive" src="images/demo/morefuncs.gif"></p>
-      <h3>更多玩法等待你的发现</h3>
-    </center>
-  <center>
-    <button type="button" style="margin-bottom: 10%;" class="btn btn-danger" onclick="document.documentElement.scrollTop = document.body.scrollTop =0;">回到顶部</button>
+  <div class="splitline"></div>
+  <h4 id="desc">
+    轻量级的Windows图形化adb工具箱,一切功能基于谷歌ADB,绿色软件随装随用无污染，
+    体积仅有6M,帮助小白,方便老鸟。
+    <br>本软件支持Windows 7+,推荐使用Windows 10
+  </h4>
+
+  <div style="background-color:whitesmoke;text-align: center;">
+      
+          <div class="swiper-container" style="width: 100%;">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <img class="img-responsive" src="images/demo/demo0.png">
+                  </div>
+                  <div class="swiper-slide">
+                      <img class="img-responsive" src="images/demo/actnr.gif">
+                  </div>
+                  <div class="swiper-slide">
+                      <img class="img-responsive" src="images/demo/pushfile.gif">
+                  </div>
+                  <div class="swiper-slide">
+                      <img class="img-responsive" src="images/demo/fb.gif">
+                  </div>
+                  <div class="swiper-slide">
+                      <img class="img-responsive" src="images/demo/extdemo.gif">
+                  </div>
+                  <div class="swiper-slide">
+                      <img class="img-responsive" src="images/demo/morefuncs.gif">
+                  </div>
+              </div>
+              <div class="swiper-pagination"></div>
+          </div>
+  </div>
+  <div id="vcomments" style="background-color: whitesmoke"></div>
   </center>
 </div>
   <footer>
@@ -124,6 +169,8 @@
     queryDownloadCount(343,function(count){
           vm.$data.downloadCount = count;
     });
+    initComments();
+    initSwiper();
   </script>
 </body>
 </html>

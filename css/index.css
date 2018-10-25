@@ -1,0 +1,60 @@
+body{
+    background-color: whitesmoke;
+}
+.container{
+    background-color: transparent;
+}
+#head{
+    margin-top:50px;
+}
+#details{
+    display: inline-block;
+    /* width: 100%; */
+}
+#desc{
+    /* max-width: 400px; */
+    /* color: black; */
+    text-align: center;
+}
+#latestVersionInfo {
+    text-align: center;
+}
+#latestVersionInfo #title{
+    font-size: 22px;
+    text-align: center;
+}
+#latestVersionInfo #content{
+    font-size: 15px;
+    
+}
+#head #details #downloads{
+    margin-right: 10px;
+    float: left;
+}
+#head #details #updateDate{
+    margin-right: 10px;
+    float: left;
+}
+#head #details #version{
+    margin-right: 10px;
+    float: left;
+}
+#head #appInfo{
+    text-align: center;
+}
+#head #appInfo #name{
+   font-size: 60px;
+    /* background: white; */
+    /* display: inline-block; */
+    /* width: 100%;  */
+}
+#head #appInfo #icon{
+    /* float: right; */
+}
+.splitline{
+    margin-top:10px;
+    margin-bottom: 10px;
+    background-color: whitesmoke;
+    height: 1px;
+    width: 100%;
+}
