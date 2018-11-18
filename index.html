@@ -64,6 +64,14 @@
           appKey: 'CpivAcjiG4W9BWNpS2z47X98'
         });
     }
+    function gotoComment(){
+      var ele = document.getElementById("comments");
+      window.scrollTo(0,ele.offsetTop);
+      window.location.hash = "#comments";
+    }
+    function gotoContact(){
+      window.location = "about";
+    }
     function initSwiper(){
       var mySwiper = new Swiper ('.swiper-container', {
         loop: true,
@@ -109,6 +117,12 @@
               <button type="button" style="font-size: 15px;" class="btn btn-success" onclick="download()">
                   立刻下载
                   <span class="badge">{{downloadCount}}</span>
+              </button>
+              <button type="button" style="font-size: 15px;" class="btn btn-primary" onclick="gotoComment()">
+                  评论
+              </button>
+              <button type="button" style="font-size: 15px;" class="btn btn-info" onclick="gotoContact()">
+                  联系
               </button>
             </div>
       </div>
@@ -220,7 +234,7 @@
             </div>
         </div>
         <div style="height: 1px;width: 100%;background: black;margin-top: 20px;"></div>
-        <h3>留言/评论</h3>
+        <h3 name="comments" id="comments">留言/评论</h3>
         <div id="vcomments"></div>
         <footer style="text-align: center">
             <div style="display:none"><script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script></div>
