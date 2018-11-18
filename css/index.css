@@ -1,55 +1,28 @@
 body{
+    background-image: url(../images/qiusewuxiansenlinlideqiutianbizhi_417353_10.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
     background-color: whitesmoke;
 }
 .container{
     background-color: transparent;
 }
 #head{
+    background-color: transparent;
     margin-top:50px;
+    color: white;
 }
-#details{
-    display: inline-block;
-    /* width: 100%; */
+#head #appName{
+    /* font-size: 80px; */
+    color: #ff7f50;
+}
+#head #slogan{
+    color: white;
 }
 #desc{
-    /* max-width: 400px; */
-    /* color: black; */
-    text-align: center;
-}
-#latestVersionInfo {
-    text-align: center;
-}
-#latestVersionInfo #title{
-    font-size: 22px;
-    text-align: center;
-}
-#latestVersionInfo #content{
-    font-size: 15px;
-    
-}
-#head #details #downloads{
-    margin-right: 10px;
-    float: left;
-}
-#head #details #updateDate{
-    margin-right: 10px;
-    float: left;
-}
-#head #details #version{
-    margin-right: 10px;
-    float: left;
-}
-#head #appInfo{
-    text-align: center;
-}
-#head #appInfo #name{
-   font-size: 60px;
-    /* background: white; */
-    /* display: inline-block; */
-    /* width: 100%;  */
-}
-#head #appInfo #icon{
-    /* float: right; */
+    background-color: whitesmoke;
+    padding: 10px;
 }
 .splitline{
     margin-top:10px;
@@ -57,4 +30,11 @@ body{
     background-color: whitesmoke;
     height: 1px;
     width: 100%;
+}
+#desc .row{
+    margin-top: 20px;
+}
+footer{
+    color: black;
+    text-align: center;
 }
