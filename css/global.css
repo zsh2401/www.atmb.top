@@ -1,15 +1,31 @@
 body{
-    background-color: #ff6138;
-    color: black;
+    /* background-color: #ff6138;
+    color: whitesmoke; */
+    background-image: url(../images/qiusewuxiansenlinlideqiutianbizhi_417353_10.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-color: whitesmoke;
 }
-footer{
+.firstele{
+    margin-top: 60px;
+}
+.whiteele{
     color: black;
+    background-color: whitesmoke;
+}
+/* .container{
+    color: black;
+    background-color: whitesmoke;
+} */
+footer{
+    margin-top: 20px;
     text-align: center;
 }
 .spaceline{
    height: 10px;
    width: 100%;
-color: transparent;
+   color: transparent;
 }
 .container{
     background-color: #ffffff;

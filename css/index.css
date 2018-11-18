@@ -16,6 +16,7 @@ body{
 #desc{
     background-color: whitesmoke;
     padding: 10px;
+    color: black;
 }
 #desc .row{
     margin-top: 20px;
