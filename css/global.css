@@ -1,0 +1,30 @@
+body{
+    background-color: #ff6138;
+    color: black;
+}
+footer{
+    color: black;
+    text-align: center;
+}
+.spaceline{
+   height: 10px;
+   width: 100%;
+color: transparent;
+}
+.container{
+    background-color: #ffffff;
+    background-color: transparent;
+}
+.splitline{
+    margin-top:10px;
+    margin-bottom: 10px;
+    background-color: whitesmoke;
+    height: 1px;
+    width: 100%;
+}
+.primary-color{
+    color: #ff7f50;
+}
+.centerText{
+    text-align: center;
+}

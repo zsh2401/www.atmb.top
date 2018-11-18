@@ -13,23 +13,9 @@ body{
     margin-top:50px;
     color: white;
 }
-#head #appName{
-    /* font-size: 80px; */
-    color: #ff7f50;
-}
-#head #slogan{
-    color: white;
-}
 #desc{
     background-color: whitesmoke;
     padding: 10px;
-}
-.splitline{
-    margin-top:10px;
-    margin-bottom: 10px;
-    background-color: whitesmoke;
-    height: 1px;
-    width: 100%;
 }
 #desc .row{
     margin-top: 20px;

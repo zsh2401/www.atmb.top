@@ -6,19 +6,20 @@
   <meta name="theme-color" content="#ff7f50">
   <meta name="msapplication-TileColor" content="#ff7f50">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="shortcut icon" href="./images/leaves.png">
   
 
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/vue"></script>
   <script src="./js/counter.js"></script>
   <script src="./js/index.js"></script>
   
@@ -102,8 +103,8 @@
     <div id="head">
       <div class="row">
           <div class="col-md-6 col-xs-12">
-              <h1 id="appName">AutumnBox</h1>
-              <h4 id="slogan">开源,简约,免费的图形化ADB工具箱</h4>
+              <h1 class="primary-color">AutumnBox</h1>
+              <h4>开源,简约,免费的图形化ADB工具箱</h4>
               <button type="button" style="font-size: 15px;" class="btn btn-success" onclick="download()">
                   立刻下载
                   <span class="badge">{{downloadCount}}</span>
@@ -115,7 +116,6 @@
     <div id="desc">
         <div class="row">
           <div class="col-md-6">
-             <!-- <img class="img-responsive" style="width: 20%" src="./images/leaves.png"> -->
              <div class="media">
                <div class="media-left">
                   <img src="./images/leaves.png" width="70px" class="media-object">
@@ -218,7 +218,8 @@
                 <p>花瓶功能,但我就是要加!</p>
             </div>
         </div>
-        <div id="vcomments" style="background-color: whitesmoke"></div>
+
+        <div id="vcomments"></div>
         <footer style="text-align: center">
             <div style="display:none"><script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script></div>
             <h4>Copyright © 2017 - 2018 zsh2401,All Rights Reserved</h4>
