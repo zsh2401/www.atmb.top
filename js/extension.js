@@ -38,10 +38,7 @@ function fetchData(){
   })
 }
 function initComments(){
-  new Valine({
-      el: '#vcomments',
-      placeholder:"遵守法律法规，理性讨论，写下你的建议与评论",
-      appId: 'VLA81Yn1kDUEgE9A99Qwnb1u-gzGzoHsz',
-      appKey: 'CpivAcjiG4W9BWNpS2z47X98'
-  });
+  var fileName = getUrlParam("j");
+  var pathOfPage = "./" + j;
+  initValine("#vcomments","");
 }
