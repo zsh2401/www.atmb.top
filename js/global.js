@@ -4,6 +4,7 @@ atmb.top global.js
 depend on 
 -vue.js 
 -Valine
+-JQuery
 */
 function fetchJson(url,successCallBack){
   fetch(url)

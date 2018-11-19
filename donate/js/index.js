@@ -29,3 +29,10 @@ function sortDonations(arr) {
         }
     });
 }
+
+$(document).ready(()=>{
+    //神了,如果不用jquery的$(doc).ready()
+    //就必须在body后写js,不然根本没法加载vue,真的牛皮
+    initVue();
+    fetchData();
+});

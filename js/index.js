@@ -54,3 +54,8 @@ function initSwiper(){
     paginationClickable: true
   })    
 }
+$(document).ready(()=>{
+    initVue();
+    fetchData();
+    initComments();
+});
