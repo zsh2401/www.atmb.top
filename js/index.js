@@ -1,4 +1,5 @@
 var downloadUrl = "https://pan.baidu.com/s/1bFZBAI";
+var donwload_beta = "http://dream.zsh2401.top:4396/";
 var __UPDATE_LOG_URL = "/_api_/update/index.html";
 var vm = null;
 function initVue(){
@@ -27,8 +28,12 @@ function fetchData(){
     });
 }
 function download(){
-    addDownloadCount(343);
-    javascrtpt:window.location=downloadUrl;
+  addDownloadCount(343);
+  window.location=downloadUrl;
+}
+function download_beta(){
+  addDownloadCount(343);
+  window.location=donwload_beta;
 }
 function initComments(){
     new Valine({
@@ -45,14 +50,6 @@ function gotoComment(){
 }
 function gotoContact(){
   window.location = "about";
-}
-function initSwiper(){
-  var mySwiper = new Swiper ('.swiper-container', {
-    loop: true,
-    autoplay:2000,
-    pagination: '.swiper-pagination',
-    paginationClickable: true
-  })    
 }
 $(document).ready(()=>{
     initVue();

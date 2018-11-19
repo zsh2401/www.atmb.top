@@ -34,7 +34,7 @@ function fetchData(){
 }
 function initComments(){
   var fileName = getUrlParam("j");
-  var pathOfPage = "/extension/extension" + fileName;
+  var pathOfPage = "/extension/" + fileName;
   initValine("#vcomments",pathOfPage);
 }
 $(document).ready(()=>{
