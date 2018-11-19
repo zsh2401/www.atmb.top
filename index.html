@@ -96,10 +96,13 @@
         </div>
         <div class="splitline"></div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-5" v-if="latestVersionInfo == null">
               <h3>{{version}}更新日志<small> - {{date[1]}}/{{date[2]}}/{{date[0]}}</small></h3>
               <p v-html="latestVersionInfo"></p>
           </div>
+          <div class="col-md-5" v-else>
+                <h3>这是你没见过的船新版本</h3>
+            </div>
           <div class="col-md-7">
               <img class="img-responsive" src="./images/demo/show_launch.gif">
           </div>
