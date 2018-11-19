@@ -10,7 +10,7 @@ body{
 }
 #head{
     background-color: transparent;
-    margin-top:50px;
+    /* margin-top:50px; */
     color: white;
 }
 #desc{
