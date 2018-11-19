@@ -40,6 +40,7 @@
                   <li class="active"><a href="../extension/"><span class="glyphicon glyphicon-th"> 拓展模块</a></li>
                   <li><a href="../about/"><span class="glyphicon glyphicon-leaf"> 关于/联系</a></li>
                   <li><a href="../donate/"><span class="glyphicon glyphicon-heart-empty"> 开源/捐赠</a></li>
+                  <li><a href="../comments/"><span class="glyphicon glyphicon-edit" /> 留言/软件评论</a></li>
                 </ul>
             </div>
         </div>
@@ -52,9 +53,6 @@
             <h1>{{ext.name}}<span class="badge">{{downloadCount}}下载</h1>
             <h4>@{{ext.auth}}</h4>
             <h4>版本:{{ext.version}}</h4>
-            <!-- <h4 v-if="ext.minSdk != null">最低SDK:{{ext.minSdk}} 目标SDK{{ext.targetSdk}}</h4> -->
-            <!-- <button v-if="ext.minSdk != null" type="button" class="btn btn-danger" onclick="window.open('https://github.com/zsh2401/AutumnBox/wiki/zh_CN_SDK%E7%89%88%E6%9C%AC%E5%85%B3%E7%B3%BB%E5%AF%B9%E7%85%A7%E8%A1%A8')">
-              秋之盒版本与API版本对照表</button><br><br> -->
             <button type="button" class="btn btn-success" v-on:click="onClickDownload">立刻获取</span></button>
             <button type="button" class="btn btn-danger" onclick="window.location='./'">返回上一级</button>
             <div v-if="ext.descMarkDown != null">

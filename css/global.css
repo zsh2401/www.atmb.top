@@ -1,6 +1,4 @@
 body{
-    /* background-color: #ff6138;
-    color: whitesmoke; */
     background-image: url(../images/qiusewuxiansenlinlideqiutianbizhi_417353_10.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,6 +28,7 @@ footer{
 .container{
     background-color: #ffffff;
     background-color: transparent;
+    min-height: 100vh;
 }
 .splitline{
     margin-top:10px;

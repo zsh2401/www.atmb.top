@@ -1,6 +1,9 @@
 /*
 atmb.top global.js
 1.0
+depend on 
+-vue.js 
+-Valine
 */
 function fetchJson(url,successCallBack){
   fetch(url)
