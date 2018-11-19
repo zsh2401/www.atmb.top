@@ -96,7 +96,7 @@
         </div>
         <div class="splitline"></div>
         <div class="row">
-          <div class="col-md-5" v-if="latestVersionInfo == null">
+          <div class="col-md-5" v-if="latestVersionInfo != null">
               <h3>{{version}}更新日志<small> - {{date[1]}}/{{date[2]}}/{{date[0]}}</small></h3>
               <p v-html="latestVersionInfo"></p>
           </div>

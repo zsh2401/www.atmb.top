@@ -9,7 +9,7 @@ function initVue(){
       version:"...",
       downloadCount:"...",
       date:["","",""],
-      latestVersionInfo:".."
+      latestVersionInfo:null
     }
   })
 }
