@@ -1,3 +1,4 @@
+var __INDEX_DATA_URL = "/_data_/extensions/index.html";
 var vm = null;
 function initVue(){
     vm = new Vue({
@@ -12,7 +13,7 @@ function initVue(){
     }});
 }
 function fetchData(){
-    fetch("../EXTS/index.html")
+    fetch(__INDEX_DATA_URL)
         .then(response=>response.text())
         .then(data=>{
             var jObj = eval("(" +data +")");

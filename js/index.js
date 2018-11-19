@@ -1,5 +1,5 @@
 var downloadUrl = "https://pan.baidu.com/s/1bFZBAI";
-console.log("本网站仓库:https://github.com/zsh2401/www.atmb.top/ 欢迎贡献代码!");
+var __UPDATE_LOG_URL = "/_api_/update/index.html";
 var vm = null;
 function initVue(){
   vm = new Vue({
@@ -16,7 +16,7 @@ function fetchData(){
     queryDownloadCount(343,function(count){
       vm.$data.downloadCount = count;
     });
-    fetch("./api/update/index.html")
+    fetch(__UPDATE_LOG_URL)
     .then(res=>res.json())
     .then(json=>{
       vm.$data.version = json.version;

@@ -6,6 +6,7 @@ depend on
 -Valine
 -JQuery
 */
+console.log("本网站仓库:https://github.com/zsh2401/www.atmb.top/ 欢迎贡献代码!");
 function fetchJson(url,successCallBack){
   fetch(url)
     .then(res=>res.json())
@@ -24,7 +25,7 @@ function fetchJson(url,successCallBack){
         console.log("can't get " + url + " " + e);
     })
 }
-function initValine(_el,pathOfPage=null){
+function initValine(_el = "#vcomments",pathOfPage=null){
     new Valine({
         el: _el,
         placeholder:"遵守法律法规，理性讨论，写下你对秋之盒的建议与评论",
