@@ -1,3 +1,25 @@
+/*
+atmb.top global.js
+1.0
+*/
+function fetchJson(url,successCallBack){
+  fetch(url)
+    .then(res=>res.json())
+    .then(json=>{
+      successCallBack(json);
+    }).catch(e=>{
+        console.log("can't get " + url + " " + e);
+    })
+}
+function fetchJson(url,successCallBack){
+  fetch(url)
+    .then(res=>res.text())
+    .then(text=>{
+      successCallBack(text);
+    }).catch(e=>{
+        console.log("can't get " + url + " " + e);
+    })
+}
 function initValine(_el,pathOfPage=null){
     new Valine({
         el: _el,
@@ -6,4 +28,9 @@ function initValine(_el,pathOfPage=null){
         appKey: 'CpivAcjiG4W9BWNpS2z47X98',
         path: pathOfPage,
       });
+}
+function getUrlParam(name){
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+    if (r != null) return unescape(r[2]); return null; //返回参数值
 }
