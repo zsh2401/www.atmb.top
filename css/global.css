@@ -1,9 +1,10 @@
 body{
-    background-image: url(../images/qiusewuxiansenlinlideqiutianbizhi_417353_10.jpg);
+    /* background-image: url(../images/qiusewuxiansenlinlideqiutianbizhi_417353_10.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
-    background-color: whitesmoke;
+    background-color: whitesmoke; */
+    background: #ff6138;
 }
 .firstele{
     margin-top: 60px;
