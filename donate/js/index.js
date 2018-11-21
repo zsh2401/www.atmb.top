@@ -6,7 +6,7 @@ function initVue() {
     });
 }
 function fetchData() {
-    fetch("donations.json")
+    fetch("/_data_/donations/donations.json")
         .then(response => response.json())
         .then(json => {
             vm.$data.donations = sortDonations(json);
