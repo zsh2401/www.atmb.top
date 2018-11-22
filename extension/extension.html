@@ -1,76 +1,76 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-  <title id="title">拓展模块</title>
-  <meta charset="utf-8">
-  <meta name="theme-color" content="#ff7f50">
-  <meta name="msapplication-TileColor" content="#ff7f50">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="/images/leaves.png">
+    <title id="title">拓展模块</title>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#ff7f50">
+    <meta name="msapplication-TileColor" content="#ff7f50">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/images/leaves.png">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/navbar.css">
-  <link rel="stylesheet" href="../css/global.css">
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
-  <script src="../lib/markdown/js/Parser.js"></script>
-  <script src="../js/global.js"></script>
-  <script src="../js/counter.js"></script>
-  <script src="js/extension_details.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="../lib/markdown/js/Parser.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/counter.js"></script>
+    <script src="js/extension_details.js"></script>
 </head>
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
-                  data-target="#navbar-c">
-                  <span class="sr-only">切换导航</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
+                        data-target="#navbar-c">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">秋之盒</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-c">
                 <ul class="nav navbar-nav">
-                  <li><a href="../"><span class="glyphicon glyphicon-home"> 主页</a></li>
-                  <li class="active"><a href="../extension/"><span class="glyphicon glyphicon-th"> 拓展模块</a></li>
-                  <li><a href="../about/"><span class="glyphicon glyphicon-leaf"> 关于/联系</a></li>
-                  <li><a href="../donate/"><span class="glyphicon glyphicon-heart-empty"> 开源/捐赠</a></li>
-                  <li><a href="../comments/"><span class="glyphicon glyphicon-edit" /> 留言/软件评论</a></li>
+                    <li><a href="../"><span class="glyphicon glyphicon-home"/> 主页</a></li>
+                    <li class="active"><a href="../extension/"><span class="glyphicon glyphicon-th"/> 拓展模块</a></li>
+                    <li><a href="../about/"><span class="glyphicon glyphicon-leaf"/> 关于/联系</a></li>
+                    <li><a href="../donate/"><span class="glyphicon glyphicon-heart-empty"/> 开源/捐赠</a></li>
+                    <li><a href="../comments/"><span class="glyphicon glyphicon-edit" /> 留言/软件评论</a></li>
                 </ul>
             </div>
         </div>
-  </nav>    
+    </nav>
 
-  <div class="container" style="background: whitesmoke;">
-    <div class="firstele"></div>
-    <div id="information" style="text-align: center;">
-        <div v-if="ext != null">
-            <h1>{{ext.name}}<span class="badge">{{downloadCount}}下载</h1>
-            <h4>@{{ext.auth}}</h4>
-            <h4>版本:{{ext.version}}</h4>
-            <button type="button" class="btn btn-success" v-on:click="onClickDownload">立刻获取</span></button>
-            <button type="button" class="btn btn-danger" onclick="window.location='./'">返回上一级</button>
-            <div v-if="ext.descMarkDown != null">
-                <h3>说明</h3>
-                <p v-html="ext.descMarkDown">...</p>
-            </div>
-            <div v-else>
-              <h1>加载中...</h1>
+    <div class="container" style="background: whitesmoke;">
+        <div class="firstele"></div>
+        <div id="information" style="text-align: center;">
+            <div v-if="ext != null">
+                <h1>{{ext.name}}<span class="badge"/>{{downloadCount}}下载</h1>
+                <h4>@{{ext.auth}}</h4>
+                <h4>版本:{{ext.version}}</h4>
+                <button type="button" class="btn btn-success" v-on:click="onClickDownload">立刻获取</button>
+                <button type="button" class="btn btn-danger" onclick="window.location='./'">返回上一级</button>
+                <div v-if="ext.descMarkDown != null">
+                    <h3>说明</h3>
+                    <p v-html="ext.descMarkDown">...</p>
+                </div>
+                <div v-else>
+                    <h1>加载中...</h1>
+                </div>
             </div>
         </div>
+        <div id="vcomments"></div>
+        <footer>
+            <div style="display:none">
+                <script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script>
+            </div>
+            <p>Copyright © 2017 - 2018 zsh2401,All Rights Reserved</p>
+        </footer>
     </div>
-    <div id="vcomments"></div>
-    <footer>
-      <div style="display:none">
-        <script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script>
-      </div>
-      <p>Copyright © 2017 - 2018 zsh2401,All Rights Reserved</p>
-    </footer>
-  </div>
-  </body>
+</body>
 </html>
