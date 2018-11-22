@@ -8,6 +8,7 @@ function initVue(){
     data:{
       version:"...",
       downloadCount:"...",
+      downloadBetaCount:"...",
       date:["","",""],
       latestVersionInfo:null
     }
@@ -17,6 +18,9 @@ function fetchData(){
     queryDownloadCount(343,function(count){
       vm.$data.downloadCount = count;
     });
+    queryDownloadCount(344,function(count){
+      vm.$data.downloadBetaCount = count;
+    })
     fetch(__UPDATE_LOG_URL)
     .then(res=>res.json())
     .then(json=>{
@@ -32,7 +36,7 @@ function download(){
   window.location=downloadUrl;
 }
 function download_beta(){
-  addDownloadCount(343);
+  addDownloadCount(344);
   window.location=donwload_beta;
 }
 function initComments(){
