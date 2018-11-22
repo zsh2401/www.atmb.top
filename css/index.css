@@ -5,13 +5,13 @@
     background-attachment:fixed;
     background-color: whitesmoke;
 } */
-.container{
+/* .container{
     background-color: transparent;
-}
+    padding: 0px;
+} */
 #head{
-    background-color: transparent;
-    /* margin-top:50px; */
-    color: white;
+    /* background-color: #ff6138; */
+    color: black;
 }
 #desc{
     background-color: whitesmoke;

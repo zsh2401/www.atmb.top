@@ -13,10 +13,10 @@ body{
     color: black;
     background-color: whitesmoke;
 }
-/* .container{
+.container{
     color: black;
     background-color: whitesmoke;
-} */
+}
 footer{
     margin-top: 20px;
     text-align: center;
@@ -26,6 +26,13 @@ footer{
    height: 10px;
    width: 100%;
    color: transparent;
+}
+.colorline{
+    margin-top:5px;
+    margin-bottom: 5px;
+    height: 1px;
+    width: 100%;
+    background: #ff7f50;
 }
 .container{
     background-color: #ffffff;

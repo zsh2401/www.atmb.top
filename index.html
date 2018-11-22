@@ -50,12 +50,12 @@
     </div>
 </nav>
 
-<div id="ajaxInfos" class="container">
+<div id="ajaxInfos" class="container" style="background:whitesmoke">
     <div class="firstele"></div>
     <!-- <div class="alert alert-warning">此网站正在维护中,您可能会在访问时遇到一些问题</div> -->
-    <div id="head">
-        <h1>AutumnBox <small style="color: whitesmoke">v{{version}}</small></span></h1>
-        <h4>开源,简约,免费的图形化ADB工具箱</h4>
+    <div id="head"> 
+        <h1 class="primary-color">AutumnBox<small style="color: whitesmoke">v{{version}}</small></span></h1>
+        <h5>开源,简约,免费的图形化ADB工具箱</h5>
         <button type="button" style="font-size: 15px;" class="btn btn-success" onclick="download()">
             下载
             <span class="badge">{{downloadCount}}</span>
@@ -65,15 +65,9 @@
             <span class="badge">{{downloadBetaCount}}</span>
         </button>
     </div>
-    <div class="splitline"></div>
     <div id="desc">
         <div class="row">
           <div class="col-md-6">
-             <div class="media">
-               <div class="media-left">
-                  <img src="./images/leaves.png" width="70px" class="media-object">
-               </div>
-               <div class="media-body">
                   <h3>秋之盒(AutumnBox,秋香):</h3>
                   <p>使用.net C#和WPF技术编写的基于谷歌adb的图形化工具箱.这个工具箱封装了大量的adb命令,帮助小白,方便老鸟</p>
                   <div style="margin-top: 5px;">
@@ -84,8 +78,6 @@
                         联系
                     </button>
                 </div>
-               </div>
-             </div>
           </div>
           <div class="col-md-6">
             <h3>运行所需:</h3>
