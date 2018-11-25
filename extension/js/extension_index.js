@@ -17,8 +17,16 @@ function fetchData(){
         .then(response=>response.text())
         .then(data=>{
             var jObj = eval("(" +data +")");
-            console.log(jObj);
             vm.$data.extensions = jObj.exts;
+            // for(var i =0;i<vm.$data.extensions.length;i++){
+            //     var currentValue = vm.$data.extensions[i]
+            //     currentValue.downloadTimes = "...";
+            //     console.log(currentValue.id);
+            //     queryDownloadCount(currentValue.id,(times)=>{
+            //         console.log(times);
+            //         vm.$data.extensions[i].downloadTimes = times;
+            //     })
+            // };
         }).catch(err=>{
             console.log(err);
         })

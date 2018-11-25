@@ -5,7 +5,7 @@ function initVue(){
     data:{
       ext:null,
       descMarkDown:null,
-      downloadCount:null,
+      downloadCount:"N/A",
     },
     methods:{
       onClickDownload:function(){
@@ -26,7 +26,7 @@ function fetchData(){
     var parser = new HyperDown(); 
     var html = parser.makeHtml(json.desc);
     vm.$data.ext.descMarkDown = html;
-    console.log(vm.$data.ext.descMarkDown);
+    // console.log(vm.$data.ext.descMarkDown);
     queryDownloadCount(json.id,function(count){
       vm.$data.downloadCount = count;
     });

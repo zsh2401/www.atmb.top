@@ -58,7 +58,7 @@
                     <tr v-for="ext in extensions">
                         <td>{{ext.name}}</td>
                         <td>{{ext.desc}}</td>
-                        <td><button type="button" class="btn btn-success" v-bind:info="ext.info" v-on:click="onClickExt">详情</button></td>
+                        <td><button type="button" class="btn btn-success" v-bind:info="ext.info" v-on:click="onClickExt">详情{{ext.downloadTimes}}</button></td>
                     </tr>
                 </tbody>
             </table>

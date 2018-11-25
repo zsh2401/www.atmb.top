@@ -1,5 +1,7 @@
-var __DOWNLOAD_ADD_PRE = "https://atmb.xxwhite.com/api/downexts?id=";
-var __DOWNLOAD_QUERT_PRE = "https://atmb.xxwhite.com/api/extension?id=";
+var __DOWNLOAD_ADD_PRE = "https://atmb.xxwhite.com/api/dlta/";
+var __DOWNLOAD_QUERT_PRE = "https://atmb.xxwhite.com/api/dlt/";
+// var __DOWNLOAD_ADD_PRE = "https://atmb.xxwhite.com/api/downexts?id=";
+// var __DOWNLOAD_QUERT_PRE = "https://atmb.xxwhite.com/api/extension?id=";
 function addDownloadCount(id){
     try{
         if(id == null)return;
@@ -21,7 +23,7 @@ function queryDownloadCount(id,success){
         fetch(urlx)
         .then(res=>res.json())
         .then(json=>{
-            success(json[0].downloadTimes)
+            success(json.times)
         }).catch(err=>{
             console.log("下载量查询API访问失败:" + err);
         })
