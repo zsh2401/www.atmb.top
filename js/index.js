@@ -1,4 +1,4 @@
-var downloadUrl = "https://pan.baidu.com/s/1bFZBAI";
+var downloadUrl = "https://dl.sm9.top/AutumuBox/%E4%B8%BB%E7%A8%8B%E5%BA%8F/";
 var donwload_beta = "http://dream.zsh2401.top:4396/";
 var __UPDATE_LOG_URL = "/_api_/update/index.html";
 var vm = null;
