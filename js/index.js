@@ -33,11 +33,11 @@ function fetchData(){
 }
 function download(){
   addDownloadCount(343);
-  window.location=downloadUrl;
+  window.open(downloadUrl);
 }
 function download_beta(){
   addDownloadCount(344);
-  window.location=donwload_beta;
+  window.open(donwload_beta);
 }
 function initComments(){
     new Valine({
