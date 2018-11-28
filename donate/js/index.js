@@ -10,10 +10,21 @@ function fetchData() {
         .then(response => response.json())
         .then(json => {
             vm.$data.donations = sortDonations(json);
+            calculateTotal(json);
         })
         .catch(err => {
             console.log(err);
         });
+}
+function calculateTotal(arr){
+    var total = 0.00;
+    var currentNum;
+    
+    for(var i=0;i<arr.length;i++){
+        currentNum = arr[i].count.replace("¥", "");
+        total+= parseFloat(currentNum);
+    }
+    console.log("donation total:" + total);
 }
 function sortDonations(arr) {
     var d = new Date();
