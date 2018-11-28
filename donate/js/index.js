@@ -1,3 +1,4 @@
+var __DONATION_DATA_URL = "/_data_/donations/donations.json";
 var vm = null;
 function initVue() {
     vm = new Vue({
@@ -6,7 +7,7 @@ function initVue() {
     });
 }
 function fetchData() {
-    fetch("/_data_/donations/donations.json")
+    fetch(__DONATION_DATA_URL)
         .then(response => response.json())
         .then(json => {
             vm.$data.donations = sortDonations(json);
@@ -19,7 +20,6 @@ function fetchData() {
 function calculateTotal(arr){
     var total = 0.00;
     var currentNum;
-    
     for(var i=0;i<arr.length;i++){
         currentNum = arr[i].count.replace("¥", "");
         total+= parseFloat(currentNum);

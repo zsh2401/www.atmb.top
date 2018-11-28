@@ -1,4 +1,5 @@
 var __INDEX_DATA_URL = "/_data_/extensions/index.html";
+var __EXTENSION_PAGE_PRE = "extension.html?j=";
 var vm = null;
 function initVue(){
     vm = new Vue({
@@ -8,7 +9,7 @@ function initVue(){
     }, 
     methods:{
         onClickExt:function(e){
-            window.open("extension.html?j=" + e.srcElement.getAttribute("info"));
+            window.open(__EXTENSION_PAGE_PRE + e.srcElement.getAttribute("info"));
         }
     }});
 }
