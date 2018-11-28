@@ -44,12 +44,14 @@
     </nav>
     <div class="container" style="background: whitesmoke;">
         <div class="firstele"></div>
+        
         <h1 class="primary-color">下载秋之盒拓展模块</h1>
         <h3>做你想做的事情</h3>
         <button type="button" class="btn btn-success" onclick="window.open('/help/install_extension/')">如何安装拓展?</button>
         <button type="button" class="btn btn-info" onclick="window.open('https://github.com/zsh2401/AutumnBox/wiki/zh_CN_AutumnBox%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3')">开发文档</button>
         <div class="spaceline"></div>
         <div id="extensions">
+            <div class="alert alert-warning">新一代拓展模块正在开发中,请持续关注</div>
             <table class="table" v-if="extensions">
                 <tbody>
                     <tr v-for="ext in extensions">
@@ -70,8 +72,5 @@
             <p>Copyright © 2017 - 2018 zsh2401,All Rights Reserved</p>
         </footer>
     </div>
-    <script>
-        initValine();
-    </script>
 </body>
 </html>

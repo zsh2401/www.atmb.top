@@ -1,4 +1,4 @@
-var __INDEX_DATA_URL = "/_data_/extensions/index.html";
+var __INDEX_DATA_URL = "/_data_/extensions/index.json";
 var __EXTENSION_PAGE_PRE = "extension.html?j=";
 var vm = null;
 function initVue(){
@@ -15,19 +15,9 @@ function initVue(){
 }
 function fetchData(){
     fetch(__INDEX_DATA_URL)
-        .then(response=>response.text())
-        .then(data=>{
-            var jObj = eval("(" +data +")");
-            vm.$data.extensions = jObj.exts;
-            // for(var i =0;i<vm.$data.extensions.length;i++){
-            //     var currentValue = vm.$data.extensions[i]
-            //     currentValue.downloadTimes = "...";
-            //     console.log(currentValue.id);
-            //     queryDownloadCount(currentValue.id,(times)=>{
-            //         console.log(times);
-            //         vm.$data.extensions[i].downloadTimes = times;
-            //     })
-            // };
+        .then(response=>response.json())
+        .then(json=>{
+            vm.$data.extensions = json.exts;
         }).catch(err=>{
             console.log(err);
         })
@@ -35,4 +25,5 @@ function fetchData(){
 $(document).ready(()=>{
     initVue();
     fetchData();
+    initValine();
 });

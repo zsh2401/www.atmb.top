@@ -1,12 +1,16 @@
-/*
-发布模块很简单,
-你就在exts的列表里加上新的行就完事儿了
-不要乱搞别人的部分哦!注意给自己上一行补上逗号哦!
-info不一定要是在本网站的东西,也可以放在你自己那边,但记得要允许跨域访问哦!
-*/
 {
-    "exts":[
-        {id:"2018072901","name":"上帝力量","desc":"真正的一键激活冰箱小黑屋","info":"/_data_/extensions/godpower.html"},
+    "comments":[
+        "发布模块很简单,你就在exts的列表里加上新的行就完事儿了",
+        "不要乱搞别人的部分哦!注意给自己上一行补上逗号哦!",
+        "info不一定要是在本网站的东西,也可以放在你自己那边,但记得要允许跨域访问哦!"
+    ],
+    "exts":[],
+
+
+
+
+    "__backup":[
+        {"name":"上帝力量","desc":"真正的一键激活冰箱小黑屋","info":"/_data_/extensions/godpower.html"},
         {"name":"一键刷入小米6 TWRP REC","desc":"如名","info":"/_data_/extensions/fm6rec.html"},
         {"name":"一键安装小米手机驱动","desc":"这个模块可以一键安装小米手机驱动","info":"/_data_/extensions/xdi.html"},
         {"name":"一键刷入Magisk","desc":"可以直接下载并刷入Magisk框架","info":"/_data_/extensions/autoMagisk.html"},
