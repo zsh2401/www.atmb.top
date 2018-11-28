@@ -55,12 +55,6 @@ function gotoComment(){
 function gotoContact(){
   window.location = "about";
 }
-function gotoViewScanReport(){
-  window.open("http://r.virscan.org/language/zh-cn/report/67dda3a561124fe6c0818cfe32da9f9f");
-}
-function gotoViewScanReport2(){
-  window.open("https://habo.qq.com/file/showdetail?pk=ADQGb11vB2QIOls5U2A%3D");
-}
 $(document).ready(()=>{
     initVue();
     fetchData();
