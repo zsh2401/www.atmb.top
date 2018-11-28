@@ -66,10 +66,12 @@
             </button>
         </div>
         <div id="desc">
-            <div class="row">
+            <div class="row" style="margin-bottom:0px;">
                 <div class="col-md-6">
                     <h3>秋之盒是什么?</h3>
-                    <p>使用C#和WPF技术编写的ADB图形化工具箱.<br>用图形界面的方式包装了ADB命令行,帮助小白,方便老鸟</p>
+                    <p>使用C#和WPF技术编写的ADB图形化工具箱.<br>用图形界面的方式包装了ADB命令行,帮助小白,方便老鸟
+                        <br><br>秋之盒值得被您信任 <a onclick="gotoViewScanReport()">查看病毒查杀报告</a>
+                    </p>
                     <div style="margin-top: 5px;">
                         <button type="button" style="font-size: 15px;" class="btn btn-primary" onclick="gotoComment()">
                             评论
@@ -78,6 +80,7 @@
                             联系
                         </button>
                     </div>
+                    <h3></h3>
                 </div>
                 <div class="col-md-6">
                     <h3>运行所需:</h3>
@@ -88,28 +91,29 @@
                     </ul>
                 </div>
             </div>
-            <div class="splitline"></div>
             <div class="row">
-                <div class="col-md-5" v-if="latestVersionInfo != null">
+                <div class="col-md-6" v-if="latestVersionInfo != null">
+                    <h3>开发者需要您的帮助<embed src="./images/svg/hands2.svg" style="width:30px;"></h3>
+                    <p>我只是一名19岁学生,最初为学习与实践目的创立了此项目
+                        <br>如今面临巨大的生活与学习压力,我不得不放缓开发进度
+                        <br>我希望您可以支持我<embed src="./images/svg/heart.svg" style="width:20px;">这完全是自愿的
+                        <br>作为回报,你可以在第一时间获得我的人工援助</p>
+                    <button class="btn btn-success" onclick="window.location='./donate/'">扫码或领取支付宝红包进行捐赠</button>
+                </div>
+                <div class="col-md-6" v-if="latestVersionInfo != null">
                     <h3>{{version}}更新日志<small> - {{date[1]}}/{{date[2]}}/{{date[0]}}</small></h3>
                     <p v-html="latestVersionInfo"></p>
-                </div>
-                <div class="col-md-5" v-else>
-                    <h3>这是你没见过的船新版本</h3>
-                </div>
-                <div class="col-md-7">
-                    <img class="img-responsive" src="./images/demo/show_launch.gif">
                 </div>
             </div>
             <div class="splitline"></div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <h2>全新设计</h2>
                     <p>基于<a href="http://materialdesigninxaml.net/">MaterialDesignInXaml</a>的Material Design化界面</p>
                     <p>简洁,高效,美观</p>
                 </div>
-                <div class="col-md-6">
-                    <img class="img-responsive" src="/images/demo/show0.png">
+                <div class="col-md-7">
+                    <img class="img-responsive" src="./images/demo/show_launch.gif">
                 </div>
             </div>
             <div class="row">

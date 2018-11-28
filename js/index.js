@@ -55,6 +55,9 @@ function gotoComment(){
 function gotoContact(){
   window.location = "about";
 }
+function gotoViewScanReport(){
+  window.open("http://r.virscan.org/language/zh-cn/report/67dda3a561124fe6c0818cfe32da9f9f");
+}
 $(document).ready(()=>{
     initVue();
     fetchData();
