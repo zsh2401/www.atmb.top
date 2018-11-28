@@ -3,7 +3,11 @@ var vm = null;
 function initVue() {
     vm = new Vue({
         el: "#donationsDiv",
-        data: { donations: null }
+        data: { 
+            donations: null,
+            countOfDonation:0,
+            totalOfDonation:0.0
+        }
     });
 }
 function fetchData() {
@@ -11,7 +15,8 @@ function fetchData() {
         .then(response => response.json())
         .then(json => {
             vm.$data.donations = sortDonations(json);
-            calculateTotal(json);
+            vm.$data.countOfDonation = json.length;
+            vm.$data.totalOfDonation = calculateTotal(json);
         })
         .catch(err => {
             console.log(err);
@@ -24,7 +29,7 @@ function calculateTotal(arr){
         currentNum = arr[i].count.replace("¥", "");
         total+= parseFloat(currentNum);
     }
-    console.log("donation total:" + total);
+    return total.toFixed(2);
 }
 function sortDonations(arr) {
     var d = new Date();

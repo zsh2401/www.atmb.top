@@ -61,19 +61,19 @@
                 我希望大家能够一起守护秋之盒的纯洁与美好....
             </p>
             <h1>捐赠方式</h1>
-            <h3>您将被记录在捐赠名单,永久保存</h3>
+            <h3>您将被记录在下方的捐赠名单,永久保存</h3>
             <div class="row">
                 <div class="col-md-4"><img class="donate-image" src="images/alipay.jpg"></div>
                 <div class="col-md-4"><img class="donate-image" src="images/redpacket.jpg"></div>
                 <div class="col-md-4"><img class="donate-image" src="images/wechatpay.jpg"></div>
-                
-               
-               
             </div>
-            <h1>感谢名单</h1>
-            <h3>如果您捐赠了但却未被记录,请联系zsh2401@163.com</p>
         </div>
         <div id="donationsDiv">
+            <div class="text-center">
+                <h1><embed src="../images/svg/heart.svg" style="width:30px;"> 谢谢你们</h1>   
+                <h3>{{countOfDonation}}次捐赠,总计{{totalOfDonation}}元人民币</h3>
+                <h4>如果您捐赠了但却未被记录,请联系zsh2401@163.com</h4>
+            </div>
             <table v-if="donations" class="table">
                 <thead>
                     <tr><th>姓名</th><th>日期</th><th>数额</th><th>备注</th></tr>
