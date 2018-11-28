@@ -8,7 +8,7 @@ function initVue(){
     }, 
     methods:{
         onClickExt:function(e){
-            window.location ="extension.html?j=" + e.srcElement.getAttribute("info");
+            window.open("extension.html?j=" + e.srcElement.getAttribute("info"));
         }
     }});
 }
