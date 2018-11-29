@@ -33,7 +33,7 @@ function fetchData(){
 }
 function download(){
   addDownloadCount(343);
-  window.open(downloadUrl);
+  window.open(donwload_beta);
 }
 function download_beta(){
   addDownloadCount(344);

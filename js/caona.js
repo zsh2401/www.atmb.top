@@ -6,12 +6,21 @@ function addDownloadCount(id){
     try{
         if(id == null)return;
         urlx = __DOWNLOAD_ADD_PRE + id;
-        fetch(urlx)
-        .then(json=>{
-            console.log(id + "下载量+1~");
-        }).catch(err=>{
-            console.log(err);
-        })
+        console.log(urlx);
+        $.ajax({
+            url: urlx,
+            success:function(){
+                console.log(id + "下载量+1~");
+            }
+        });
+        // fetch(urlx)
+        // .then(response=>{
+            
+        // }).then(data=>{
+        //     console.log(id + "下载量+1~");
+        // }).catch(err=>{
+        //     console.log(err);
+        // })
     }catch(err){
         console.log(err);
     }
