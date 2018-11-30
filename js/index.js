@@ -1,5 +1,6 @@
-var downloadUrl = "https://dl.sm9.top/AutumuBox/%E4%B8%BB%E7%A8%8B%E5%BA%8F/";
-var donwload_beta = "http://dream.zsh2401.top:4396/";
+var downloadUrl = "https://dl.sm9.top/AutumuBox/主程序/稳定版/";
+var donwload_beta = "https://dl.sm9.top/AutumuBox/主程序/测试版/";
+//var donwload_beta = "http://dream.zsh2401.top:4396/";
 var __UPDATE_LOG_URL = "/_api_/update/index.html";
 var vm = null;
 function initVue(){
