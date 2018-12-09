@@ -5,11 +5,11 @@ function initVue(){
     vm = new Vue({
     el:"#extensions",
     data:{
-        extensions:null
+        extensions:[],
     }, 
     methods:{
         onClickExt:function(e){
-            window.open(__EXTENSION_PAGE_PRE + e.srcElement.getAttribute("info"));
+            window.open(__EXTENSION_PAGE_PRE + e.srcElement.getAttribute("file"));
         }
     }});
 }
@@ -17,13 +17,24 @@ function fetchData(){
     fetch(__INDEX_DATA_URL)
         .then(response=>response.json())
         .then(json=>{
-            vm.$data.extensions = json.exts;
+            var extInfos = json.exts;
+            for(var i =0;i<extInfos.length;i++){
+                handleInfo(extInfos[i])
+            }
         }).catch(err=>{
             console.log(err);
         })
-    }
+}
+function handleInfo(infoUrl)
+{
+    fetch(infoUrl)
+    .then(response=>response.json())
+    .then(json=>{
+        vm.$data.extensions.push({file:infoUrl,info:json});
+    });
+}
 $(document).ready(()=>{
+    initValine();
     initVue();
     fetchData();
-    initValine();
 });

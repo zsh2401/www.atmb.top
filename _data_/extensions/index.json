@@ -4,7 +4,10 @@
         "不要乱搞别人的部分哦!注意给自己上一行补上逗号哦!",
         "info不一定要是在本网站的东西,也可以放在你自己那边,但记得要允许跨域访问哦!"
     ],
-    "exts":[],
+    "exts":[
+        "/_data_/extensions/fm6rec.json",
+        "/_data_/extensions/xdi.json"
+    ],
 
 
 

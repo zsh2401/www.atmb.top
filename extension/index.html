@@ -51,13 +51,13 @@
         <button type="button" class="btn btn-info" onclick="window.open('https://github.com/zsh2401/AutumnBox/wiki/zh_CN_AutumnBox%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3')">开发文档</button>
         <div class="spaceline"></div>
         <div id="extensions">
-            <div class="alert alert-warning">新一代拓展模块正在开发中,请持续关注</div>
+            <div class="alert alert-warning">新一代拓展模块正在陆续开发中,请保持关注</div>
             <table class="table" v-if="extensions">
                 <tbody>
                     <tr v-for="ext in extensions">
-                        <td>{{ext.name}}</td>
-                        <td>{{ext.desc}}</td>
-                        <td><button type="button" class="btn btn-success" v-bind:info="ext.info" v-on:click="onClickExt">详情{{ext.downloadTimes}}</button></td>
+                        <td><img v-bind:src="ext.info.icon" style="width:40px;margin-right: 10px">  {{ext.info.name}}</td>
+                        <td>{{ext.info.desc}}</td>
+                        <td><button type="button" class="btn btn-success" v-bind:file="ext.file" v-on:click="onClickExt">详情</button></td>
                     </tr>
                 </tbody>
             </table>

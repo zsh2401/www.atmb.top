@@ -1,7 +1,15 @@
-// var downloadUrl = "https://dl.sm9.top/AutumuBox/主程序/稳定版/";
-// var donwload_beta = "https://dl.sm9.top/AutumuBox/主程序/测试版/";
-var donwload_beta = "http://dream.zsh2401.top:4396/";
-var downloadUrl = "http://dream.zsh2401.top:4396/";
+var useXXWhite = true;
+
+
+var download_beta= null;
+var downloadUrl = null;
+if(useXXWhite){
+  downloadUrl = "https://dl.sm9.top/AutumuBox/主程序/稳定版/";
+  download_beta = "https://dl.sm9.top/AutumuBox/主程序/测试版/";
+}else{
+  donwload_beta = "http://dream.zsh2401.top:4396/";
+  downloadUrl = "http://dream.zsh2401.top:4396/";
+}
 var __UPDATE_LOG_URL = "/_api_/update/index.html";
 var vm = null;
 function initVue(){

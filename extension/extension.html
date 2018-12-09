@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="./css/extensionpage.css">
     <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
@@ -47,30 +48,26 @@
         </div>
     </nav>
 
-    <div class="container" style="background: whitesmoke;">
+    <div id="information"  class="container" style="background: transparent;">
         <div class="firstele"></div>
-        <div id="information">
-            <div v-if="ext != null">
+        <div class="row">
+            <div class="col-md-7 col-xs-12" v-if="ext != null" style="background:whitesmoke;">
                 <div class="row">
-                    <div class="col-md-5 text-center">
-                            <h1>{{ext.name}} v{{ext.version}}</h1> 
-                            <h3>@{{ext.auth}}</h3>
-                            <button type="button" class="btn btn-success" v-on:click="onClickDownload">立刻获取 <span class="badge"> {{downloadCount}}</span></button>
-                    </div>
-                    <div class="col-md-7 text-center">
-                       <h3>说明</h3>
-                        <div v-if="ext.descMarkDown != null">
-                            <p v-html="ext.descMarkDown">...</p>
-                        </div>
-                        <div v-else>
-                            <h1>加载中...</h1>
-                        </div>
+                    <div class="col-md-4"><img v-bind:src="ext.icon" class="img-responsive"></div>
+                    <div class="col-md-8">
+                            <h2>{{ext.name}}</h2>
+                            <h4>开发者:{{ext.auth}}  版本:{{ext.version}} 下载:{{downloadCount}}</h4>
+                            <button class="btn btn-success"  v-on:click="onClickDownload">立刻获取</button>
                     </div>
                 </div>
-                
+                <p v-html="ext.descMarkDown">...</p>
             </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-4 col-xs-12" style="background:whitesmoke;">
+                <div id="vcomments">xxass</div>
+            </div>
+            
         </div>
-        <div id="vcomments"></div>
         <footer>
             <div style="display:none">
                 <script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script>

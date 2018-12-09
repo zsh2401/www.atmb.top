@@ -26,7 +26,6 @@ function fetchData(){
     var parser = new HyperDown(); 
     var html = parser.makeHtml(json.desc);
     vm.$data.ext.descMarkDown = html;
-    // console.log(vm.$data.ext.descMarkDown);
     queryDownloadCount(json.id,function(count){
       vm.$data.downloadCount = count;
     });
@@ -35,7 +34,13 @@ function fetchData(){
 function initComments(){
   var fileName = getUrlParam("j");
   var pathOfPage = "/extension/" + fileName;
-  initValine("#vcomments",pathOfPage);
+  new Valine({
+    el: "#vcomments",
+    placeholder:"遵守法律法规，理性讨论，写下你对该模块的建议与评论,建议留下邮箱方便进行回复",
+    appId: 'VLA81Yn1kDUEgE9A99Qwnb1u-gzGzoHsz',
+    appKey: 'CpivAcjiG4W9BWNpS2z47X98',
+    path: pathOfPage,
+  });
 }
 $(document).ready(()=>{
   initVue();
