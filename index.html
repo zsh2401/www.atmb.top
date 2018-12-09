@@ -41,11 +41,12 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-c">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="."><span class="glyphicon glyphicon-home"/> 主页</a></li>
-                    <li><a href="extension/"><span class="glyphicon glyphicon-th"/> 拓展模块</a></li>
-                    <li><a href="about/"><span class="glyphicon glyphicon-leaf"/> 关于/联系</a></li>
-                    <li><a href="donate/"><span class="glyphicon glyphicon-heart-empty"/> 开源/捐赠</a></li>
-                    <li><a href="../comments/"><span class="glyphicon glyphicon-edit" /> 留言/软件评论</a></li>
+                    <li class="active"><a href="."><span class="glyphicon glyphicon-home"> 主页</a></li>
+                    <li><a href="extension/"><span class="glyphicon glyphicon-th"> 拓展模块</a></li>
+                    <li><a href="about/"><span class="glyphicon glyphicon-leaf"> 关于/联系</a></li>
+                    <li><a href="donate/"><span class="glyphicon glyphicon-heart-empty"> 开源/捐赠</a></li>
+                    <li><a href="../comments/"><span class="glyphicon glyphicon-edit"></span> 留言/软件评论</a></li>
+                    <li><a href="../help/"><span class="glyphicon glyphicon-paperclip"> 帮助</a></li>
                 </ul>
             </div>
         </div>
@@ -57,14 +58,18 @@
         <div id="head">
             <h1 class="primary-color"><embed src="./images/svg/leaf.svg" style="width:60px;height:60px">AutumnBox<small style="color: whitesmoke">v{{version}}</small></h1>
             <h5>开源,简约,免费的图形化ADB工具箱</h5>
-            <button type="button" style="font-size: 15px;" class="btn btn-success" onclick="download()">
-                下载
-                <span class="badge">{{downloadCount}}</span>
-            </button>
-            <button type="button" style="font-size: 15px;" class="btn btn-warning" onclick="download_beta()">
-                下载BETA
-                <span class="badge">{{downloadBetaCount}}</span>
-            </button>
+            <div class="btn-group">
+                <button type="button" style="font-size: 15px;" class="btn btn-success" onclick="download()">
+                    下载
+                    <span class="badge">{{downloadCount}}</span>
+                </button>
+                <button type="button" style="font-size: 15px;" class="btn btn-warning" onclick="download_beta()">
+                    下载BETA
+                    <span class="badge">{{downloadBetaCount}}</span>
+                </button>
+               
+            </div>
+            
         </div>
         <div id="desc">
             <div class="row" style="margin-bottom:0px;">
@@ -81,12 +86,14 @@
                         </div>
                     </div>
                     <div style="margin-top: 5px;">
-                        <button type="button" style="font-size: 15px;" class="btn btn-primary" onclick="gotoComment()">
-                            评论
-                        </button>
-                        <button type="button" style="font-size: 15px;" class="btn btn-info" onclick="gotoContact()">
-                            联系
-                        </button>
+                        <div class="btn-group">
+                            <button type="button" style="font-size: 15px;" class="btn btn-primary" onclick="gotoComment()">
+                                评论
+                            </button>
+                            <button type="button" style="font-size: 15px;" class="btn btn-info" onclick="gotoContact()">
+                                联系
+                            </button>
+                        </div>
                     </div>
                     <h3></h3>
                 </div>
@@ -129,16 +136,16 @@
                     <img class="img-responsive" src="/images/demo/show5.gif">
                 </div>
                 <div class="col-md-6">
-                    <h2>一键设定设备管理员应用</h2>
-                    <p>感谢@web1n提供的技术支持,秋之盒得以用更加高效的方式设定设备管理员</p>
+                    <h2>一键激活软件特权模式</h2>
+                    <p>秋之盒可以通过更加高效的方式激活以下软件的免ROOT模式,其中要感谢@web1n做出的贡献</p>
                     <p>支持的应用:</p>
                     <ul>
-                        <li>冰箱</li>
-                        <li>小黑屋 @web1n</li>
-                        <li>黑洞</li>
-                        <li>空调狗</li>
-                        <li>第二空间</li>
-                        <li>FreezeYou!</li>
+                        <li><a target="_blank" href="https://www.coolapk.com/apk/com.catchingnow.icebox">冰箱</a></li>
+                        <li><a target="_blank" href="https://www.coolapk.com/apk/web1n.stopapp">小黑屋 @web1n</a></li>
+                        <li><a target="_blank" href="https://www.coolapk.com/apk/com.hld.apurikakusu">黑洞</a></li>
+                        <li><a target="_blank" href="https://www.coolapk.com/apk/me.yourbay.airfrozen">空调狗</a></li>
+                        <li><a target="_blank" href="https://www.coolapk.com/apk/com.hld.anzenbokusu">第二空间</a></li>
+                        <li><a target="_blank" href="https://www.coolapk.com/apk/cf.playhi.freezeyou">FreezeYou!</a></li>
                         <li>更多应用正在陆续支持中...</li>
                     </ul>
                 </div>
