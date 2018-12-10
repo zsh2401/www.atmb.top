@@ -1,12 +1,8 @@
-var useXXWhite = true;
-
-
-var download_beta= "https://dl.sm9.top/AutumuBox/主程序/稳定版/";
-var downloadUrl = "https://dl.sm9.top/AutumuBox/主程序/测试版/";
+var __RELEASE_DOWNLOAD = "https://dl.sm9.top/AutumuBox/主程序/稳定版/";
+var __BETA_DOWNLOAD  = "https://dl.sm9.top/AutumuBox/主程序/测试版/";
+var __UPDATE_LOG_URL = "/_api_/update/index.html";
 // var donwload_beta = "http://dream.zsh2401.top:4396/";
 // var downloadUrl = "http://dream.zsh2401.top:4396/";
-
-var __UPDATE_LOG_URL = "/_api_/update/index.html";
 var vm = null;
 function initVue(){
   vm = new Vue({
@@ -39,11 +35,11 @@ function fetchData(){
 }
 function download(){
   addDownloadCount(343);
-  window.open(donwload_beta);
+  window.open(__RELEASE_DOWNLOAD);
 }
 function download_beta(){
   addDownloadCount(344);
-  window.open(donwload_beta);
+  window.open(__BETA_DOWNLOAD);
 }
 function initComments(){
     new Valine({
