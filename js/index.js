@@ -1,5 +1,7 @@
-var __RELEASE_DOWNLOAD = "https://dl.sm9.top/AutumuBox/主程序/稳定版/";
-var __BETA_DOWNLOAD  = "https://dl.sm9.top/AutumuBox/主程序/测试版/";
+var __XXWHITE = "https://dl.sm9.top/AutumuBox/%E4%B8%BB%E7%A8%8B%E5%BA%8F/%E6%B5%8B%E8%AF%95%E7%89%88/";
+var __ZSH2401 = "http://dream.zsh2401.top:4396/";
+var __BETA_DOWNLOAD  = "http://dream.zsh2401.top:4396/";
+
 var __UPDATE_LOG_URL = "/_api_/update/index.html";
 // var donwload_beta = "http://dream.zsh2401.top:4396/";
 // var downloadUrl = "http://dream.zsh2401.top:4396/";
@@ -11,6 +13,7 @@ function initVue(){
       version:"...",
       downloadCount:"...",
       downloadBetaCount:"...",
+      downloadCount2:"...",
       date:["","",""],
       latestVersionInfo:null
     }
@@ -23,6 +26,9 @@ function fetchData(){
     queryDownloadCount(344,function(count){
       vm.$data.downloadBetaCount = count;
     })
+    queryDownloadCount(345,function(count){
+      vm.$data.downloadCount2 = count;
+    })
     fetch(__UPDATE_LOG_URL)
     .then(res=>res.json())
     .then(json=>{
@@ -33,9 +39,13 @@ function fetchData(){
       console.log(error);
     });
 }
-function download(){
+function download_1(){
   addDownloadCount(343);
-  window.open(__RELEASE_DOWNLOAD);
+  window.open(__ZSH2401);
+}
+function download_2(){
+  addDownloadCount(345);
+  window.open(__XXWHITE);
 }
 function download_beta(){
   addDownloadCount(344);
