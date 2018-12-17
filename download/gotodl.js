@@ -1,7 +1,7 @@
 var __web1nDownload = "https://atmb-download.web1n.com/";
 var __web1nId = "346";
 
-var __monologuechiDownload = "https://dl.sm9.top/AutumuBox/%E4%B8%BB%E7%A8%8B%E5%BA%8F/%E6%B5%8B%E8%AF%95%E7%89%88/";
+var __monologuechiDownload = "https://atmb.sm9.top/AutumnBox/%E4%B8%BB%E7%A8%8B%E5%BA%8F/";
 var __monoId = "345";
 
 var __zs2401Download = "http://dream.zsh2401.top:4396/";
