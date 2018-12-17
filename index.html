@@ -58,22 +58,18 @@
         <div id="head">
             <h1 class="primary-color"><embed src="./images/svg/leaf.svg" style="width:60px;height:60px">AutumnBox  <small>开源,简约,免费的图形化ADB工具箱</small> </h1>
             <div class="btn-group">
-                <button type="button" style="font-size: 15px;" class="btn btn-success" onclick="download_1()">
-                    <embed src="./images/svg/download.svg" style="width:15px;">
-                    分流1
+                <button type="button" style="font-size: 15px;" class="btn btn-success" onclick="window.open('download')">
+                    立刻下载
                     <span class="badge">{{downloadCount}}</span>
                 </button>
-                <button type="button" style="font-size: 15px;" class="btn btn-success" onclick="download_2()">
-                    <embed src="./images/svg/download.svg" style="width:15px;">
-                    分流2
-                    <span class="badge">{{downloadCount2}}</span>
-                </button>
-                <button type="button" style="font-size: 15px;" class="btn btn-warning" onclick="download_beta()">
-                        <embed src="./images/svg/danger.svg" style="width:15px;">
-                    BETA版
-                    <span class="badge">{{downloadBetaCount}}</span>
-                </button>
-               
+                <div class="btn-group">
+                    <button type="button" style="font-size: 15px;" class="btn btn-primary" onclick="gotoComment()">
+                            评论
+                    </button>
+                    <button type="button" style="font-size: 15px;" class="btn btn-info" onclick="gotoContact()">
+                            联系
+                    </button>
+                </div>
             </div>
             
         </div>
@@ -89,16 +85,6 @@
                             <br><a target="_blank" href="http://r.virscan.org/language/zh-cn/report/67dda3a561124fe6c0818cfe32da9f9f">* 全球杀软检测报告</a>
                             <br><a target="_blank" href="https://habo.qq.com/file/showdetail?pk=ADQGb11vB2QIOls5U2A%3D">* 腾讯哈勃分析报告</a>
                             <br><a target="_blank" href="https://github.com/zsh2401/AutumnBox">* 开放源代码</a>
-                        </div>
-                    </div>
-                    <div style="margin-top: 5px;">
-                        <div class="btn-group">
-                            <button type="button" style="font-size: 15px;" class="btn btn-primary" onclick="gotoComment()">
-                                评论
-                            </button>
-                            <button type="button" style="font-size: 15px;" class="btn btn-info" onclick="gotoContact()">
-                                联系
-                            </button>
                         </div>
                     </div>
                     <h3></h3>
