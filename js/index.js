@@ -24,6 +24,10 @@ function fetchData(){
       // console.log(count);
       vm.$data.downloadCount += parseInt(count);
     })
+    queryDownloadCount(347,function(count){
+      // console.log(count);
+      vm.$data.downloadCount += parseInt(count);
+    })
     fetch(__UPDATE_LOG_URL)
     .then(res=>res.json())
     .then(json=>{
