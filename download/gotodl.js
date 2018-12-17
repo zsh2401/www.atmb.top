@@ -35,7 +35,7 @@ function initVue(){
             "version":null,
             "date":[],
             "latestVersionInfo":null,
-            "baiduCount":"暂未统计",
+            "baiduCount":0,
             "web1nCount":0,
             "dreamCount":0,
             "monoCount":0,
@@ -51,6 +51,13 @@ function fetchData(){
     })
     queryDownloadCount(__web1nId,function(count){
         __vm.$data.web1nCount = count;
+    });
+    queryDownloadCount(__baiduPanId,function(count){
+        if(parseInt(count) < 9000){
+            __vm.$data.baiduCount = "暂未统计";
+        }else{
+            __vm.$data.baiduCount = count;
+        }
     });
     fetch(__UPDATE_LOG_URL)
     .then(res=>res.json())
