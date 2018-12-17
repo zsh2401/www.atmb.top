@@ -7,6 +7,9 @@ var __monoId = "345";
 var __zs2401Download = "http://dream.zsh2401.top:4396/";
 var __dreamId = "343";
 
+var __baiduPanDownload = "https://pan.baidu.com/s/1bFZBAI";
+var __baiduPanId = "347";
+
 var __UPDATE_LOG_URL = "/_api_/update/index.html";
 function gotoMono(){
     window.open(__monologuechiDownload);
@@ -20,6 +23,10 @@ function gotoZsh2401(){
     window.open(__zs2401Download);
     addDownloadCount(__dreamId);
 }
+function gotoBaiduPan(){
+    window.open(__baiduPanDownload);
+    addDownloadCount(__baiduPanId);
+}
 var __vm = null;
 function initVue(){
     __vm = new Vue({
@@ -28,7 +35,7 @@ function initVue(){
             "version":null,
             "date":[],
             "latestVersionInfo":null,
-            
+            "baiduCount":"暂未统计",
             "web1nCount":0,
             "dreamCount":0,
             "monoCount":0,
