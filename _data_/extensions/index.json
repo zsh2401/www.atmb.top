@@ -6,7 +6,9 @@
     ],
     "exts":[
         "/_data_/extensions/fm6rec.json",
-        "/_data_/extensions/xdi.json"
+        "/_data_/extensions/xdi.json",
+        "/_data_/extensions/gappsskipper.json",
+        "/_data_/extensions/animationsetter.json"
     ],
 
 

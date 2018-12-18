@@ -1,0 +1,11 @@
+{
+    "id":2018121802,
+    "icon":"/_data_/extensions/img/googleplay.png",
+    "name":"跳过GAPPS",
+    "auth":"zsh2401",
+    "dangerLevel":"低",
+    "minSdk":8,
+    "targetSdk":8,
+    "desc":"什么?卡在GAPPS了?帮你解决!",
+    "downloadUrl":"http://dream.zsh2401.top:4397/Zsh2401.GappsSkipper.dll"
+}

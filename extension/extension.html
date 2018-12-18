@@ -21,8 +21,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
     <!-- <script src="../lib/markdown/js/Parser.js"></script> -->
     <script src="../js/global.js"></script>
-    <script src="../js/caona.js?s=a"></script>
-    <script src="js/extension_details.js"></script>
+    <script src="../js/caona.js?s=efg"></script>
+    <script src="js/extension_details.js?q=cfkv"></script>
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
@@ -56,8 +56,12 @@
             <div class="col-md-4"><img v-bind:src="ext.icon" class="img-responsive"></div>
             <div class="col-md-8">
                     <h2>{{ext.name}}</h2>
-                    <h4>开发者:{{ext.auth}}  版本:{{ext.version}} 下载:{{downloadCount}}</h4>
-                    <button class="btn btn-success"  v-on:click="onClickDownload">立刻获取</button>
+                    <h4>开发者:{{ext.auth}}  版本:{{ext.version}}</h4>
+                    <h4 v-if="ext.dangerLevel != null">危险级别: {{ext.dangerLevel}}</h4>
+                    <div class="btn-group">
+                        <button class="btn btn-success"  v-on:click="onClickDownload">立刻获取 <span class="badge">{{downloadCount}}</span> </button>
+                        <button type="button" class="btn btn-info" onclick="window.open('../go/help/install_extension/')">如何安装拓展?</button>
+                    </div>
             </div>
         </div>
         <div>

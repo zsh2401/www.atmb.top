@@ -1,0 +1,13 @@
+{
+    "id":2018121801,
+    "icon":"/_data_/extensions/img/animation.png",
+    "name":"调节手机动画速度",
+    "auth":"zsh2401",
+    "minSdk":8,
+    "targetSdk":8,
+    "dangerLevel":"低",
+    "pics":["/_data_/extensions/img/animationsetter1.png"],
+    "desc":"事实上,在部分ROM中,该功能已经失效,请自行测试",
+    "version":"0.0.5",
+    "downloadUrl":"http://dream.zsh2401.top:4397/Zsh2401.AnimationSpeedSetter.dll"
+}
