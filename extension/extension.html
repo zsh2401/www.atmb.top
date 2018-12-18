@@ -8,16 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/images/leaves.png">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="./css/extensionpage.css">
     <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
-    <script src="../lib/markdown/js/Parser.js"></script>
+    <!-- <script src="../lib/markdown/js/Parser.js"></script> -->
     <script src="../js/global.js"></script>
     <script src="../js/caona.js?s=a"></script>
     <script src="js/extension_details.js"></script>
@@ -48,26 +50,25 @@
         </div>
     </nav>
 
-    <div id="information"  class="container" style="background: transparent;">
+    <div id="information" class="container" style="background: whitesmoke;">
         <div class="firstele"></div>
-        <div class="row">
-            <div class="col-md-7 col-xs-12" v-if="ext != null" style="background:whitesmoke;">
-                <div class="row">
-                    <div class="col-md-4"><img v-bind:src="ext.icon" class="img-responsive"></div>
-                    <div class="col-md-8">
-                            <h2>{{ext.name}}</h2>
-                            <h4>开发者:{{ext.auth}}  版本:{{ext.version}} 下载:{{downloadCount}}</h4>
-                            <button class="btn btn-success"  v-on:click="onClickDownload">立刻获取</button>
-                    </div>
-                </div>
-                <p v-html="ext.descMarkDown">...</p>
+        <div  class="row">
+            <div class="col-md-4"><img v-bind:src="ext.icon" class="img-responsive"></div>
+            <div class="col-md-8">
+                    <h2>{{ext.name}}</h2>
+                    <h4>开发者:{{ext.auth}}  版本:{{ext.version}} 下载:{{downloadCount}}</h4>
+                    <button class="btn btn-success"  v-on:click="onClickDownload">立刻获取</button>
             </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-4 col-xs-12" style="background:whitesmoke;">
-                <div id="vcomments">xxass</div>
-            </div>
-            
         </div>
+        <div>
+            <p v-html="ext.desc"></p>
+        </div>
+        <div v-if="extpics != null" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div v-for="pic in extpics" class="swiper-slide"><img class="img-responsive" v-bind:src="pic"></div>
+            </div>
+        </div>
+        <div id="vcomments"></div>   
         <footer>
             <div style="display:none">
                 <script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script>

@@ -4,7 +4,7 @@ function initVue(){
     el:"#information",
     data:{
       ext:null,
-      descMarkDown:null,
+      extpics:["/images/extnopic.png"],
       downloadCount:"N/A",
     },
     methods:{
@@ -12,6 +12,11 @@ function initVue(){
         window.location = this.ext.downloadUrl;
         addDownloadCount(this.ext.id);
       }
+    },
+    mounted(){
+      setTimeout(function(){
+        initSwiper();
+     },200);
     }
   });
 }
@@ -22,10 +27,10 @@ function fetchData(){
   .then(text=>{
     var json = eval("(" + text + ")");
     vm.$data.ext = json;
+    if(json.pics != null && json.pics.length != 0){
+      vm.$data.extpics = json.pics;
+    }
     document.title = json.name +"-秋之盒拓展";
-    var parser = new HyperDown(); 
-    var html = parser.makeHtml(json.desc);
-    vm.$data.ext.descMarkDown = html;
     queryDownloadCount(json.id,function(count){
       vm.$data.downloadCount = count;
     });
@@ -42,8 +47,19 @@ function initComments(){
     path: pathOfPage,
   });
 }
+function initSwiper(){
+  console.log("wtf");
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 2.1,
+    spaceBetween: 40,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+}
 $(document).ready(()=>{
+  initComments();
   initVue();
   fetchData();
-  initComments();
 });
