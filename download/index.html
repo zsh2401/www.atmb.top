@@ -53,11 +53,11 @@
 <div id="downloadCountInfo" class="container" style="background: whitesmoke;">
     <div class="firstele"></div>
     <div class="text-center" v-if="latestVersionInfo != null">
-        <h3>{{version}}更新日志<small> - {{date[1]}}/{{date[2]}}/{{date[0]}}</small></h3>
-        <p v-html="latestVersionInfo"></p>
+        <h1>请注意,最新版本是{{version}}</h1>
+        <h3>各渠道更新速度不同,请自行选择</h3>
     </div>
 
-    <h1 class="text-center">请选择你的下载方式</h1>
+    <h1 class="text-center">选择一个下载渠道</h1>
     <div class="row text-center">
 
         <div class="col-md-3" style="margin-top:40px;">
@@ -110,6 +110,11 @@
                     2017年11月上线
                 </p>
         </div>
+    </div>
+    <div class="splitline"></div>
+    <div class="text-center">
+            <h3>{{version}}更新日志<small> - {{date[1]}}/{{date[2]}}/{{date[0]}}</small></h3>
+            <p v-html="latestVersionInfo"></p>
     </div>
     <div class="splitline"></div>
     <div class="text-center">
