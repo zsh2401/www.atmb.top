@@ -14,6 +14,9 @@ body{
     background-repeat: no-repeat;
     background-attachment:fixed;
 }
+#website-notice{
+    visibility: hidden;
+}
 .firstele{
     margin-top: 60px;
 }
