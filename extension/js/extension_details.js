@@ -14,8 +14,10 @@ function initVue(){
       }
     },
     mounted(){
+      fetchData();
       setTimeout(function(){
         initSwiper();
+        initComments();
      },200);
     }
   });
@@ -59,7 +61,5 @@ function initSwiper(){
   });
 }
 $(document).ready(()=>{
-  initComments();
   initVue();
-  fetchData();
 });
