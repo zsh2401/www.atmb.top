@@ -25,9 +25,6 @@ function initWebsiteNotice(){
         var noticeCtrl =  document.getElementById(__websiteNoticeCtrlId);
         if(notice.enable){
             noticeCtrl.style.visibility="visible";
-            for(var i = 0 ;i<notice.classes.length;i++){
-                noticeCtrl.classList.add(notice.classes[i]);
-            }
             noticeCtrl.innerHTML = notice.content;
         }else{
             noticeCtrl.style.visibility="hidden";

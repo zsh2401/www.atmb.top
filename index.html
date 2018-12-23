@@ -58,26 +58,32 @@
         <div id="website-notice"></div>
         <!-- <div class="alert alert-warning">此网站正在维护中,您可能会在访问时遇到一些问题</div> -->
         <div id="head">
-            <h1 class="primary-color"><embed src="./images/svg/leaf.svg" style="width:60px;height:60px">AutumnBox  <small>开源,简约,免费的图形化ADB工具箱</small> </h1>
-            <div class="btn-group">
-                <button type="button" style="font-size: 15px;" class="btn btn-success" onclick="window.location = 'download'">
-                    立刻获取
-                    <!-- <span class="badge">{{downloadCount}}</span> -->
-                </button>
-                <div class="btn-group">
-                    <button type="button" style="font-size: 15px;" class="btn btn-primary" onclick="gotoComment()">
-                            评论
-                    </button>
-                    <button type="button" style="font-size: 15px;" class="btn btn-info" onclick="gotoContact()">
-                            联系
-                    </button>
-                    <button type="button" style="font-size: 15px;" class="btn btn-success" onclick="javascrtpt:window.open('https://www.coolapk.com/dyh/1592')">
-                        酷安看看号
-                    </button>
-                </div>
-                <br>
+            <h1 class="primary-color text-center"><embed src="./images/svg/leaf.svg" style="width:60px;height:60px">AutumnBox</h1>
+            <h2 class="text-center">开源,简约,免费的图形化ADB工具箱
                 
+            </h2>
+            <div class="text-center">
+                <div class="btn-group">
+                   
+                        <button v-bind:title="downloadCount" type="button" style="font-size: 15px;" class="btn btn-success" onclick="window.location = 'download'">
+                            立刻获取
+                            <!-- <span class="badge">{{downloadCount}}</span> -->
+                        </button>
+                        <button type="button" style="font-size: 15px;" class="btn btn-primary" onclick="gotoComment()">
+                            评论
+                        </button>
+                        <button type="button" style="font-size: 15px;" class="btn btn-info" onclick="gotoContact()">
+                            联系
+                        </button>
+                        <button type="button" style="font-size: 15px;" class="btn btn-success" onclick="javascrtpt:window.open('https://www.coolapk.com/dyh/1592')">
+                            酷安看看号
+                        </button>
+
+                </div>
             </div>
+            <!-- <h5 class="text-center" style="color:gray">下载量:{{downloadCount}}</h5> -->
+
+        <div style="height:20px;background:transparent;"></div>
             
         </div>
         <div id="desc">

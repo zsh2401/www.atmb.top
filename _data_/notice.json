@@ -1,5 +1,4 @@
 {
     "enable":true,
-    "classes":["alert","alert-success"],
-    "content":"网站公告:秋之盒2019预览版发布 <a href='/download'>立刻下载</a>!"
+    "content":"<div class='alert alert-success'> 网站公告:秋之盒2019预览版发布 <a href='/download'>立刻下载</a></div>"
 }
