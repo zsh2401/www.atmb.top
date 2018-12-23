@@ -8,5 +8,6 @@
     "size":"15KB",
     "targetSdk":8,
     "desc":"什么?卡在GAPPS了?帮你解决!",
+    "bdesc":"什么?卡在GAPPS了?帮你解决!",
     "downloadUrl":"http://dream.zsh2401.top:4397/Zsh2401.GappsSkipper.dll"
 }

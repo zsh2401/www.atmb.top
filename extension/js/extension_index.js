@@ -30,8 +30,15 @@ function handleInfo(infoUrl)
     fetch(infoUrl)
     .then(response=>response.json())
     .then(json=>{
-        vm.$data.extensions.push({file:infoUrl,info:json});
+        vm.$data.extensions.push({file:infoUrl,info:json,fdesc:getfdesc(json.desc)});
     });
+}
+function getfdesc(str){
+    if(str.length <= 10){
+        return str;
+    }else{
+        return str.substr(0,10);
+    }
 }
 $(document).ready(()=>{
     initValine();

@@ -8,7 +8,8 @@
     "size":"34MB",
     "dangerLevel":"高",
     "pics":["/_api_/potd/just.png","/images/extnopic.png"],
-    "desc":"这个拓展可以一键刷入小米6 TWRP REC(OFFACE开发,可解锁DATA)<br>",
+    "bdesc":"这个拓展可以一键刷入小米6 REC(OFFACE开发,可解锁DATA)",
+    "desc":"这个拓展可以一键刷入小米6 TWRP REC(OFFACE开发,可解锁DATA,仅支持安卓8.0以上的小米6手机)<br>",
     "version":"0.0.5",
     "downloadUrl":"http://dream.zsh2401.top:4397/Zsh2401.Xiaomi6RecFlasher.dll"
 }

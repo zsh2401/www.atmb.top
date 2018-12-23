@@ -46,22 +46,41 @@
     <div class="container" style="background: whitesmoke;">
         <div class="firstele"></div>
         <div id="website-notice"></div>
-        <h1 class="primary-color">下载秋之盒拓展模块</h1>
-        <h3>做你想做的事情</h3>
-        <button type="button" class="btn btn-success" onclick="window.open('../go/help/install_extension/')">如何安装拓展?</button>
-        <button type="button" class="btn btn-info" onclick="window.open('https://github.com/zsh2401/AutumnBox/wiki/zh_CN_AutumnBox%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3')">开发文档</button>
+        <div class="alert alert-warning">新一代拓展模块正在陆续开发中,请保持关注</div>
+
+        <h1 class="primary-color text-center">下载秋之盒拓展模块</h1>
+        <h3 class="text-center">做你想做的事情<br><br>
+            <div class="btn-group">
+                <button type="button" class="btn btn-success" onclick="window.open('../go/help/install_extension/')">如何安装拓展?</button>
+                <button type="button" class="btn btn-info" onclick="window.open('https://github.com/zsh2401/AutumnBox/wiki/zh_CN_AutumnBox%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3')">开发文档</button>
+            </div>
+        </h3>
         <div class="spaceline"></div>
+
         <div id="extensions">
-            <div class="alert alert-warning">新一代拓展模块正在陆续开发中,请保持关注</div>
-            <table class="table" v-if="extensions">
-                <tbody>
-                    <tr v-for="ext in extensions">
-                        <td><img v-bind:src="ext.info.icon" style="width:40px;margin-right: 10px">  {{ext.info.name}}</td>
-                        <td>{{ext.info.desc}}</td>
-                        <td><button type="button" class="btn btn-success" v-bind:file="ext.file" v-on:click="onClickExt">详情</button></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div v-if="extensions">
+                <div style="height:1px;background-color:gainsboro;margin-bottom:4px;"></div>
+                <div v-for="ext in extensions" style="margin-top:3px;margin-bottom:3px;">
+                    
+
+                    <div class="row">
+                        <div class="col-md-1 col-xs-2">
+                            <img v-bind:src="ext.info.icon" style="width:40px">
+                        </div>
+                        <div class="col-md-3 col-xs-10">
+                            <a v-bind:file="ext.file" v-on:click="onClickExt">{{ext.info.name}}</a>
+                        </div>
+                        <div class="col-md-8 hidden-xs">
+                            <p v-if="ext.info.bdesc != null">{{ext.info.bdesc}}</p>
+                            <p v-else>{{ext.fdesc}}</p>
+                        </div>    
+                    </div>
+
+                    <div style="height:1px;background-color:gainsboro;margin-bottom:4px;"></div>
+                </div>
+
+            </div>
+
             <div v-else>
                 <h2 class="textCenter">Loading</h2>
             </div>
