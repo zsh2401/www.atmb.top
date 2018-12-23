@@ -9,7 +9,7 @@ function initVue(){
     }, 
     methods:{
         onClickExt:function(e){
-            window.open(__EXTENSION_PAGE_PRE + e.srcElement.getAttribute("file"));
+            window.open();
         }
     }});
 }
@@ -30,7 +30,8 @@ function handleInfo(infoUrl)
     fetch(infoUrl)
     .then(response=>response.json())
     .then(json=>{
-        vm.$data.extensions.push({file:infoUrl,info:json,fdesc:getfdesc(json.desc)});
+        var extPage = __EXTENSION_PAGE_PRE + infoUrl;
+        vm.$data.extensions.push({extPage:extPage,info:json,fdesc:getfdesc(json.desc)});
     });
 }
 function getfdesc(str){
