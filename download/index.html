@@ -21,7 +21,7 @@
   <script src="//cdn.jsdelivr.net/npm/vue"></script>
   <script src="/js/global.js?w=asdasjlk"></script>
   <script src="../js/caona.js"></script>
-  <script src="gotodl.js?a=bc"></script>
+  <script src="gotodl.js?a=bcx"></script>
 </head>
 <body>
 
@@ -58,7 +58,6 @@
         <h3>各渠道更新速度不同,请自行选择</h3>
     </div>
 
-    <h1 class="text-center">选择一个下载渠道</h1>
     <div class="row text-center">
 
         <div class="col-md-3" style="margin-top:40px;">
@@ -67,7 +66,7 @@
             <button class="btn btn-success" onclick="gotoWeb1n()">下载(推荐)  <span class="badge">{{web1nCount}}</span></button>
             <p>
                 小黑屋开发者web1n提供<br>
-                下载速度较快,通常在1天内跟进最新版<br>
+                通常在1天内跟进最新版<br>
                 2018年12月17日上线
             </p>
             <a href="https://https.vc/" target="_blank">web1n 博客</a>
@@ -80,17 +79,18 @@
             <p>
                 MonoLogueChi提供<br>
                 由zsh2401与其合作管理<br>
-                下载速度稳定,通常在1天内跟进最新版<br>
+                通常在1天内跟进最新版<br>
                 2018年11月上线
             </p>
             <a href="https://www.xxwhite.com/" target="_blank">叉叉白 博客</a>
         </div>
 
         <div class="col-md-3" style="margin-top:40px;">
-            <!-- <div class="splitline"></div> -->
                 <img class="img-responsive" style="height:70px;margin: 0 auto;" src="./images/zsh2401.jpg">
                 <h1>2401's dream</h1>
-                <button class="btn btn-danger" onclick="gotoZsh2401()">猛汉下载  <span class="badge">{{dreamCount}}</span></button>
+               
+                <button class="btn btn-warning" onclick="gotoZsh2401()">下载  <span class="badge">{{dreamCount}}</span></button>
+  
                 <p>
                     秋之盒开发者提供<br>
                     版本更新最快,下载速度时快时慢<br>
@@ -101,14 +101,14 @@
         </div>
 
         <div class="col-md-3" style="margin-top: 40px">
-                <!-- <div class="splitline"></div> -->
-                <img class="img-responsive" style="height:70px;margin: 0 auto;" src="./images/dbpan.jpg">
-                <h1>百度网盘</h1>
-                <button class="btn btn-warning" onclick="gotoBaiduPan()">龟速下载  <span class="badge">{{baiduCount}}</span></button>
+                <img class="img-responsive" style="height:70px;margin: 0 auto;" src="./images/misaka2.png">
+                <h1>其它方式</h1>
+                <div class="btn-group btn-group-vertical">
+                    <button class="btn btn-primary" onclick="gotoBaiduPan()">百度网盘  <span class="badge">{{baiduCount}}</span></button>
+                    <button class="btn btn-info" onclick="gotoGithub()">GitHub Release  <span class="badge">{{githubCount}}</span></button>
+                </div>
                 <p> 
-                    龟速下载,版本更新最慢<br>
-                    优点是相对稳定<br>
-                    2017年11月上线
+                    相对稳定<br>但新版本不会第一时间<br>考虑这里的下载方式<br>
                 </p>
         </div>
     </div>

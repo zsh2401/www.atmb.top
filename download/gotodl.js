@@ -10,6 +10,9 @@ var __dreamId = "343";
 var __baiduPanDownload = "https://pan.baidu.com/s/1bFZBAI";
 var __baiduPanId = "347";
 
+var __githubDl = "https://github.com/zsh2401/AutumnBox/releases";
+var __githubId = "348";
+
 var __UPDATE_LOG_URL = "/_api_/update/index.html";
 function gotoMono(){
     window.open(__monologuechiDownload);
@@ -27,6 +30,10 @@ function gotoBaiduPan(){
     window.open(__baiduPanDownload);
     addDownloadCount(__baiduPanId);
 }
+function gotoGithub(){
+    window.open(__githubDl);
+    addDownloadCount(__githubId);
+}
 var __vm = null;
 function initVue(){
     __vm = new Vue({
@@ -39,6 +46,7 @@ function initVue(){
             "web1nCount":0,
             "dreamCount":0,
             "monoCount":0,
+            "githubCount":0,
         }
     });
 }
@@ -51,6 +59,9 @@ function fetchData(){
     })
     queryDownloadCount(__web1nId,function(count){
         __vm.$data.web1nCount = count;
+    });
+    queryDownloadCount(__githubId,function(count){
+        __vm.$data.githubCount = count;
     });
     queryDownloadCount(__baiduPanId,function(count){
         if(parseInt(count) < 9000){
