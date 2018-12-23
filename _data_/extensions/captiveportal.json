@@ -1,0 +1,12 @@
+{
+    "id":2018042600,
+    "icon":"",
+    "name":"一键除去Wifi叹号和叉号",
+    "auth":"MonoLogueChi",
+    "dangerLevel":"低",
+    "minSdk":8,
+    "size":"14KB",
+    "targetSdk":8,
+    "desc":"一键除去Wifi叹号和叉号",
+    "downloadUrl":"https://atmb.sm9.top/AutumnBox/%E6%8B%93%E5%B1%95%E6%A8%A1%E5%9D%97/MonoLogueChi/Captiveportal/0.0.10/"
+}
