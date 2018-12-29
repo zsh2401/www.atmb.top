@@ -11,23 +11,15 @@ function initVue(){
     }
   })
 }
-function fetchData(){
-    queryDownloadCount(343,function(count){
-      // console.log(count);
-      vm.$data.downloadCount += parseInt(count);
+
+function fetchData() {
+    /*
+    queryDownloadCountArr([343, 344, 345, 346, 347], function (count) {
+        for (var i = 0, len = count.length; i < len; i++) {
+            vm.$data.downloadCount += count[i].times;
+        }
     });
-    queryDownloadCount(345,function(count){
-      // console.log(count);
-      vm.$data.downloadCount += parseInt(count);
-    })
-    queryDownloadCount(346,function(count){
-      // console.log(count);
-      vm.$data.downloadCount += parseInt(count);
-    })
-    queryDownloadCount(347,function(count){
-      // console.log(count);
-      vm.$data.downloadCount += parseInt(count);
-    })
+    */
     fetch(__UPDATE_LOG_URL)
     .then(res=>res.json())
     .then(json=>{
@@ -38,6 +30,7 @@ function fetchData(){
       console.log(error);
     });
 }
+
 function initComments(){
     new Valine({
       el: '#vcomments',
