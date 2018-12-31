@@ -14,73 +14,62 @@ var __githubDl = "https://github.com/zsh2401/AutumnBox/releases";
 var __githubId = "348";
 
 var __UPDATE_LOG_URL = "/_api_/update/index.html";
-function gotoMono(){
+function gotoMono() {
     window.open(__monologuechiDownload);
     addDownloadCount(__monoId);
 }
-function gotoWeb1n(){
+function gotoWeb1n() {
     window.open(__web1nDownload);
     addDownloadCount(__web1nId);
 }
-function gotoZsh2401(){
+function gotoZsh2401() {
     window.open(__zs2401Download);
     addDownloadCount(__dreamId);
 }
-function gotoBaiduPan(){
+function gotoBaiduPan() {
     window.open(__baiduPanDownload);
     addDownloadCount(__baiduPanId);
 }
-function gotoGithub(){
+function gotoGithub() {
     window.open(__githubDl);
     addDownloadCount(__githubId);
 }
 var __vm = null;
-function initVue(){
+function initVue() {
     __vm = new Vue({
-        el:"#downloadCountInfo",
-        data:{
-            "version":null,
-            "date":[],
-            "latestVersionInfo":null,
-            "baiduCount":0,
-            "web1nCount":0,
-            "dreamCount":0,
-            "monoCount":0,
-            "githubCount":0,
+        el: "#downloadCountInfo",
+        data: {
+            "version": null,
+            "date": [],
+            "latestVersionInfo": null,
+            "baiduCount": 0,
+            "web1nCount": 0,
+            "dreamCount": 0,
+            "monoCount": 0,
+            "githubCount": 0,
         }
     });
 }
-function fetchData(){
-    queryDownloadCount(__dreamId,function(count){
+function fetchData() {
+    var ids = [__dreamId, __monoId, __web1nId, __baiduPanId, __githubId];
+    queryDownloadCount(ids, function (count) {
         __vm.$data.dreamCount = count[__dreamId];
-    })
-    queryDownloadCount(__monoId,function(count){
         __vm.$data.monoCount = count[__monoId];
-    })
-    queryDownloadCount(__web1nId,function(count){
         __vm.$data.web1nCount = count[__web1nId];
-    });
-    queryDownloadCount(__githubId,function(count){
         __vm.$data.githubCount = count[__githubId];
-    });
-    queryDownloadCount(__baiduPanId,function(count){
-        if(parseInt(count) < 9000){
-            __vm.$data.baiduCount = "暂未统计";
-        }else{
-            __vm.$data.baiduCount = count[__baiduPanId];
-        }
+        __vm.$data.baiduCount = count[__baiduPanId];
     });
     fetch(__UPDATE_LOG_URL)
-    .then(res=>res.json())
-    .then(json=>{
-        __vm.$data.version = json.version;
-        __vm.$data.date = json.date;
-        __vm.$data.latestVersionInfo = json.message.replace(/\n/g,'<br>');
-    }).catch(error=>{
-      console.log(error);
-    });
+        .then(res => res.json())
+        .then(json => {
+            __vm.$data.version = json.version;
+            __vm.$data.date = json.date;
+            __vm.$data.latestVersionInfo = json.message.replace(/\n/g, '<br>');
+        }).catch(error => {
+            console.log(error);
+        });
 }
-$(document).ready(function(){
+$(document).ready(function () {
     initVue();
     fetchData();
 });
