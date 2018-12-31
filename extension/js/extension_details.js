@@ -34,7 +34,7 @@ function fetchData(){
     }
     document.title = json.name +"-秋之盒拓展";
     queryDownloadCount(json.id,function(count){
-      vm.$data.downloadCount = count;
+      vm.$data.downloadCount = count[json.id];
     });
   })
 }

@@ -52,22 +52,22 @@ function initVue(){
 }
 function fetchData(){
     queryDownloadCount(__dreamId,function(count){
-        __vm.$data.dreamCount = count;
+        __vm.$data.dreamCount = count[__dreamId];
     })
     queryDownloadCount(__monoId,function(count){
-        __vm.$data.monoCount = count;
+        __vm.$data.monoCount = count[__monoId];
     })
     queryDownloadCount(__web1nId,function(count){
-        __vm.$data.web1nCount = count;
+        __vm.$data.web1nCount = count[__web1nId];
     });
     queryDownloadCount(__githubId,function(count){
-        __vm.$data.githubCount = count;
+        __vm.$data.githubCount = count[__githubId];
     });
     queryDownloadCount(__baiduPanId,function(count){
         if(parseInt(count) < 9000){
             __vm.$data.baiduCount = "暂未统计";
         }else{
-            __vm.$data.baiduCount = count;
+            __vm.$data.baiduCount = count[__baiduPanId];
         }
     });
     fetch(__UPDATE_LOG_URL)

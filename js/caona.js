@@ -1,59 +1,51 @@
-var __DOWNLOAD_ADD_PRE = "https://atmb.xxwhite.com/api/dlt?op=add&id=";
-var __DOWNLOAD_QUERT_PRE = "https://atmb.xxwhite.com/api/dlt?id=";
+var __API_HOST = "https://atmb.xxwhite.com/";
+var __API_ADD_PRE = __API_HOST + "api/dlt/add/";
+var __API_REG_PRE = __API_HOST + "api/dlt/register/";
+var __API_QUE_PRE = __API_HOST + "api/dlt/query/";
 
-function addDownloadCount(id) {
-    try {
-        if (id == null) return;
-        urlx = __DOWNLOAD_ADD_PRE + id;
-        console.log(urlx);
-        $.ajax({
-            url: urlx,
-            success: function () {
-                console.log(id + "下载量+1~");
+function addDownloadCount(id, desc) {
+    if (id == null) return;
+    var url = __API_ADD_PRE + id;
+    fetch(url)
+        .then(response => response.json())
+        .then(json => {
+            if (json.code == "3") {
+                registerId(id, desc);
             }
+            console.log(id + "下载量+1~");
+        })
+        .catch(err => {
+            console.log(err);
         });
-        // fetch(urlx)
-        // .then(response=>{
+}
 
-        // }).then(data=>{
-        //     console.log(id + "下载量+1~");
-        // }).catch(err=>{
-        //     console.log(err);
-        // })
-    } catch (err) {
-        console.log(err);
-    }
+function registerId(id, desc) {
+    if (id == null) return;
+    var url = __API_REG_PRE + id + "?desc=" + desc;
+    fetch(url)
+        .then(response => response.json())
+        .then(json => {
+            if (json.code != "0") {
+                console.log("注册失败!");
+                console.log(json);
+            }
+        })
+        .catch(err => {
+            console.log(err);
+        });
 }
 
 function queryDownloadCount(id, success) {
-    try {
-        //if (id == null) return 0;
-        urlx = __DOWNLOAD_QUERT_PRE + id;
-
-        fetch(urlx)
-            .then(res => res.json())
-            .then(json => {
-                success(json[0].times);
-            }).catch(err => {
-                console.log("下载量查询API访问失败:" + err);
-            });
-    } catch (error) {
-        console.log("下载量查询API访问失败:" + error);
-    }
-}
-
-function queryDownloadCountArr(id, success) {
-    try {
-        //if (id == null) return 0;
-        urlx = __DOWNLOAD_QUERT_PRE + id;
-        fetch(urlx)
-            .then(res => res.json())
-            .then(json => {
-                success(json);
-            }).catch(err => {
-                console.log("下载量查询API访问失败:" + err);
-            });
-    } catch (error) {
-        console.log("下载量查询API访问失败:" + error);
-    }
+    if (id == null) return;
+    var url = __API_QUE_PRE + id;
+    fetch(url)
+        .then(response => response.json())
+        .then(json => {
+            if (json.code == "0") {
+                success(json.data);
+            }
+        })
+        .catch(err => {
+            console.log(err);
+        });
 }
