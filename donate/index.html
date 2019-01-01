@@ -79,19 +79,25 @@
                 <h3>{{countOfDonation}}次捐赠,总计{{totalOfDonation}}元人民币</h3>
                 <h4>如果您捐赠了但却未被记录,请联系zsh2401@163.com</h4>
             </div>
-            <table v-if="donations" class="table">
-                <thead>
-                    <tr><th>姓名</th><th>日期</th><th>数额</th><th>备注</th></tr>
-                </thead>
-                <tbody>
-                    <tr v-for="donation in donations">
-                        <td>{{donation.name}}</td>
-                        <td>{{donation.date}}</td>
-                        <td>{{donation.count}}</td>
-                        <td>{{donation.t}}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div v-if="donations">
+                <div class="row" >
+                        <div class="col-md-3 col-xs-7">称呼</div>
+                        <div class="col-md-3 col-xs-3">日期</div>
+                        <div class="col-md-3 col-xs-2">数额</div>
+                        <div class="col-md-3 hidden-xs">备注</div>
+                </div>
+                <div style="height:1px;background-color:gainsboro;margin-bottom:4px;"></div>
+                <div v-for="donation in donations">
+                    <div class="row" >
+                        <div class="col-md-3 col-xs-7">{{donation.name}}</div>
+                        <div class="col-md-3 col-xs-3">{{donation.date}}</div>
+                        <div class="col-md-3 col-xs-2">{{donation.count}}</div>
+                        <div class="col-md-3 hidden-xs">{{donation.t}}</div>
+                    </div>
+                    <div style="height:1px;background-color:gainsboro;margin-bottom:4px;"></div>
+                </div>
+ 
+            </div>
             <div v-else>
                 <h2>名单加载中..</h2>
             </div>
