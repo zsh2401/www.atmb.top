@@ -31,7 +31,14 @@ function handleInfo(infoUrl)
     .then(response=>response.json())
     .then(json=>{
         var extPage = __EXTENSION_PAGE_PRE + infoUrl;
-        vm.$data.extensions.push({extPage:extPage,info:json,fdesc:getfdesc(json.desc)});
+        var data = {extPage:extPage,info:json,dlTimes:"N/A",fdesc:getfdesc(json.desc)};
+        queryDownloadCount(json.id,(result)=>{
+            console.log(result);
+            console.log("wtf");
+           
+            data.dlTimes = result[json.id.toString()];
+        });
+        vm.$data.extensions.push(data);
     });
 }
 function getfdesc(str){
