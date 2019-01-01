@@ -68,13 +68,16 @@
                         <div class="col-md-1 col-xs-2">
                             <img v-bind:src="ext.info.icon" style="width:40px">
                         </div>
-                        <div class="col-md-3 col-xs-10">
-                            <a v-bind:href="ext.extPage" target="_blank">{{ext.info.name}} <span class="badge">{{ext.dlTimes}}次下载</span></a>
+                        <div class="col-md-11 col-xs-10">
+                                <div class="col-md-4 col-xs-12">
+                                        <a v-bind:href="ext.extPage" target="_blank">{{ext.info.name}} <span class="badge">{{ext.dlTimes}}次下载</span></a>
+                                </div>
+                                <div class="col-md-8 col-xs-12">
+                                    <p v-if="ext.info.bdesc != null">{{ext.info.bdesc}}</p>
+                                    <p v-else>{{ext.fdesc}}</p>
+                                </div>    
                         </div>
-                        <div class="col-md-8 hidden-xs">
-                            <p v-if="ext.info.bdesc != null">{{ext.info.bdesc}}</p>
-                            <p v-else>{{ext.fdesc}}</p>
-                        </div>    
+
                     </div>
 
                     <div style="height:1px;background-color:gainsboro;margin-bottom:4px;"></div>
