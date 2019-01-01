@@ -42,22 +42,20 @@ function initVue() {
             "version": null,
             "date": [],
             "latestVersionInfo": null,
-            "baiduCount": 0,
-            "web1nCount": 0,
-            "dreamCount": 0,
-            "monoCount": 0,
-            "githubCount": 0,
+            "dldata":{
+                "343":0,
+                "345":0,
+                "346":0,
+                "347":0,
+                "348":0
+            },
         }
     });
 }
 function fetchData() {
     var ids = [__dreamId, __monoId, __web1nId, __baiduPanId, __githubId];
     queryDownloadCount(ids, function (count) {
-        __vm.$data.dreamCount = count[__dreamId];
-        __vm.$data.monoCount = count[__monoId];
-        __vm.$data.web1nCount = count[__web1nId];
-        __vm.$data.githubCount = count[__githubId];
-        __vm.$data.baiduCount = count[__baiduPanId];
+        __vm.$data.dldata = count;
     });
     fetch(__UPDATE_LOG_URL)
         .then(res => res.json())

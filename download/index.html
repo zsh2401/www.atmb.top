@@ -20,7 +20,7 @@
     <script src="//cdn.jsdelivr.net/npm/vue"></script>
     <script src="/js/global.js?w=asdasjlk"></script>
     <script src="../js/caona.js"></script>
-    <script src="gotodl.js?a=bcx"></script>
+    <script src="js/index.js?a=b"></script>
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
@@ -58,7 +58,7 @@
             <div class="col-md-3" style="margin-top:40px;">
                 <img class="img-responsive" style="height:70px;margin: 0 auto;" src="./images/web1n.jpg">
                 <h1>WEB1N</h1>
-                <button class="btn btn-success" onclick="gotoWeb1n()">下载(推荐)  <span class="badge">{{web1nCount}}</span></button>
+                <button class="btn btn-success" onclick="gotoWeb1n()">下载(推荐)  <span class="badge">{{dldata[__web1nId]}}</span></button>
                 <p>
                     小黑屋开发者web1n提供<br>
                     通常在1天内跟进最新版<br>
@@ -69,7 +69,7 @@
             <div class="col-md-3" style="margin-top:40px;">
                 <img class="img-responsive" style="height:70px;margin: 0 auto;" src="./images/mono.jpg">
                 <h1>MonoLogueChi</h1>
-                <button class="btn btn-success" onclick="gotoMono()">下载(推荐)  <span class="badge">{{monoCount}}</span></button>
+                <button class="btn btn-success" onclick="gotoMono()">下载(推荐)  <span class="badge">{{dldata[__monoId]}}</span></button>
                 <p>
                     MonoLogueChi提供<br>
                     由zsh2401与其合作管理<br>
@@ -83,7 +83,7 @@
                 <img class="img-responsive" style="height:70px;margin: 0 auto;" src="./images/zsh2401.jpg">
                 <h1>2401's dream</h1>
 
-                <button class="btn btn-warning" onclick="gotoZsh2401()">下载  <span class="badge">{{dreamCount}}</span></button>
+                <button class="btn btn-warning" onclick="gotoZsh2401()">下载  <span class="badge">{{dldata[__dreamId]}}</span></button>
 
                 <p>
                     秋之盒开发者提供<br>
@@ -97,8 +97,8 @@
                 <img class="img-responsive" style="height:70px;margin: 0 auto;" src="./images/misaka2.png">
                 <h1>其它方式</h1>
                 <div class="btn-group btn-group-vertical">
-                    <button class="btn btn-primary" onclick="gotoBaiduPan()">百度网盘  <span class="badge">{{baiduCount}}</span></button>
-                    <button class="btn btn-info" onclick="gotoGithub()">GitHub Release  <span class="badge">{{githubCount}}</span></button>
+                    <button class="btn btn-primary" onclick="gotoBaiduPan()">百度网盘  <span class="badge">{{dldata[__baiduPanId]}}</span></button>
+                    <button class="btn btn-info" onclick="gotoGithub()">GitHub Release  <span class="badge">{{dldata[__githubId]}}</span></button>
                 </div>
                 <p>
                     相对稳定<br>但新版本不会第一时间<br>考虑这里的下载方式<br>
