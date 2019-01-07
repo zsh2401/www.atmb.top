@@ -10,7 +10,7 @@ function initVue(){
     methods:{
       onClickDownload:function(){
         window.location = this.ext.downloadUrl;
-        addDownloadCount(this.ext.id);
+        addDownloadCount(this.ext.id,this.ext.name);
       }
     },
     mounted(){
@@ -50,8 +50,7 @@ function initComments(){
   });
 }
 function initSwiper(){
-  console.log("wtf");
-  var swiper = new Swiper('.swiper-container', {
+  new Swiper('.swiper-container', {
     slidesPerView: 2.1,
     spaceBetween: 40,
     pagination: {

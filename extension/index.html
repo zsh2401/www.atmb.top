@@ -61,26 +61,16 @@
         <div id="extensions">
             <div v-if="extensions">
                 <div style="height:1px;background-color:gainsboro;margin-bottom:4px;"></div>
-                <div v-for="ext in extensions" style="margin-top:3px;margin-bottom:3px;">
+                <div class="row">
                     
 
-                    <div class="row">
-                        <div class="col-md-1 col-xs-2">
-                            <img v-bind:src="ext.info.icon" style="width:40px">
-                        </div>
-                        <div class="col-md-11 col-xs-10">
-                                <div class="col-md-4 col-xs-12">
-                                        <a v-bind:href="ext.extPage" target="_blank">{{ext.info.name}} <span class="badge">{{ext.dlTimes}}次下载</span></a>
-                                </div>
-                                <div class="col-md-8 col-xs-12">
-                                    <p v-if="ext.info.bdesc != null">{{ext.info.bdesc}}</p>
-                                    <p v-else>{{ext.fdesc}}</p>
-                                </div>    
-                        </div>
-
+                    <div v-for="ext in extensions"  class="col-md-4" style="height:100px">
+                        <img v-bind:src="ext.info.icon" style="width:40px">
+                        <a v-bind:href="ext.extPage" target="_blank">{{ext.info.name}} <span class="badge" v-if="dltimes[ext.info.id] != null">{{dltimes[ext.info.id]}}次下载</span></a>
+                        <p v-if="ext.info.bdesc != null">{{ext.info.bdesc}}</p>
+                        <p v-else>{{ext.fdesc}}</p>
                     </div>
-
-                    <div style="height:1px;background-color:gainsboro;margin-bottom:4px;"></div>
+                    
                 </div>
 
             </div>

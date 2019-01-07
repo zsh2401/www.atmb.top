@@ -11,8 +11,9 @@ function addDownloadCount(id, desc) {
         .then(json => {
             if (json.code == "3") {
                 registerId(id, desc);
+            }else{
+                console.log(id + "下载量+1~");
             }
-            console.log(id + "下载量+1~");
         })
         .catch(err => {
             console.log(err);

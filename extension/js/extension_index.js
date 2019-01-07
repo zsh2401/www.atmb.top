@@ -6,18 +6,20 @@ function initVue(){
     el:"#extensions",
     data:{
         extensions:[],
+        dltimes:{},
     }, 
     methods:{
-        onClickExt:function(e){
-            window.open();
-        }
     }});
 }
 function fetchData(){
+    queryDownloadCount("",(json)=>{
+        vm.$data.dltimes = json;
+    })
     fetch(__INDEX_DATA_URL)
         .then(response=>response.json())
         .then(json=>{
             var extInfos = json.exts;
+            total = extInfos.length;
             for(var i =0;i<extInfos.length;i++){
                 handleInfo(extInfos[i])
             }
@@ -31,13 +33,7 @@ function handleInfo(infoUrl)
     .then(response=>response.json())
     .then(json=>{
         var extPage = __EXTENSION_PAGE_PRE + infoUrl;
-        var data = {extPage:extPage,info:json,dlTimes:"N/A",fdesc:getfdesc(json.desc)};
-        queryDownloadCount(json.id,(result)=>{
-            console.log(result);
-            console.log("wtf");
-           
-            data.dlTimes = result[json.id.toString()];
-        });
+        var data = {extPage:extPage,info:json,fdesc:getfdesc(json.desc)};
         vm.$data.extensions.push(data);
     });
 }
