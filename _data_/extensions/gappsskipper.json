@@ -6,7 +6,9 @@
     "dangerLevel":"低",
     "minSdk":8,
     "size":"15KB",
+    "updateDate":"12/18/2019",
     "targetSdk":8,
+    "atmbver":"2019.1.1",
     "desc":"什么?卡在GAPPS了?帮你解决!",
     "bdesc":"什么?卡在GAPPS了?帮你解决!",
     "downloadUrl":"http://dream.zsh2401.top:4397/Zsh2401.GappsSkipper.dll"

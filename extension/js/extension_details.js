@@ -4,7 +4,7 @@ function initVue(){
     el:"#information",
     data:{
       ext:null,
-      extpics:["/images/extnopic.png"],
+      extpics:[],
       downloadCount:"N/A",
     },
     methods:{
@@ -25,9 +25,9 @@ function initVue(){
 function fetchData(){
   var fileName = getUrlParam("j");
   fetch(fileName)
-  .then(res=>res.text())
-  .then(text=>{
-    var json = eval("(" + text + ")");
+  .then(res=>res.json())
+  .then(json=>{
+    console.log(json);
     vm.$data.ext = json;
     if(json.pics != null && json.pics.length != 0){
       vm.$data.extpics = json.pics;

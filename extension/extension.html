@@ -50,41 +50,48 @@
         </div>
     </nav>
 
-    <div id="information" class="container" style="background: whitesmoke;">
+    <div id="information" class="container">
         <div class="firstele"></div>
         <div  class="row">
-            <div class="col-md-4"><img v-bind:src="ext.icon" class="img-responsive"></div>
+            <div class="col-md-2"><img v-bind:src="ext.icon" class="img-responsive"></div>
             <div class="col-md-8">
-                    <h2>{{ext.name}}</h2>
-                    <div class="row">
-                        <h4 class="col-md-4">开发者:{{ext.auth}}</h4>
-                        <h4 class="col-md-4" v-if="ext.version != null">版本:{{ext.version}}</h4>
-                        <h4 class="col-md-4" v-if="ext.dangerLevel != null" >危险级别:{{ext.dangerLevel}}</h4>
-                        <h4 class="col-md-4" v-if="ext.size != null">近似大小:{{ext.size}}</h4>
-                        <h4 class="col-md-8" v-if="ext.email != null">联系邮箱:{{ext.email}}</h4>
-                        <h4 class="col-md-4" v-if="ext.opensource != null"><a v-bind:href="ext.opensource" target="_blank">开源地址</a></h4>
+                <h2 style="margin-top:0px">{{ext.name}}</h2>
+                    <p v-html="ext.desc"></p>
+                    <div class="row" style="color:gray">
+                            <h5 class="col-md-3">下载:{{downloadCount}}</h5>
+                            <h5 class="col-md-3">开发者:{{ext.auth}}</h5>
+                            <h5 class="col-md-3" v-if="ext.version != null">版本:{{ext.version}}</h5>
+                            <h5 class="col-md-3" v-if="ext.dangerLevel != null" >危险级别:{{ext.dangerLevel}}</h5>
+                            <h5 class="col-md-3" v-if="ext.size != null">近似大小:{{ext.size}}</h5>
+                            <h5 class="col-md-3" v-if="ext.email != null">邮箱:{{ext.email}}</h5>
+                            <h5 class="col-md-3" v-if="ext.updateDate != null">最近更新:{{ext.updateDate}}</h5>
+                            <h5 class="col-md-3" v-if="ext.opensource != null"><a v-bind:href="ext.opensource" target="_blank">开源地址</a></h5>
+                            <h5 class="col-md-4" v-if="ext.atmbver != null">支持秋之盒:{{ext.atmbver}}</h5>
                     </div>
-                    <div class="btn-group">
-                        <button class="btn btn-success"  v-on:click="onClickDownload">立刻获取 <span class="badge">{{downloadCount}}</span> </button>
-                        <button type="button" class="btn btn-info" onclick="window.open('../go/help/install_extension/')">如何安装拓展?</button>
-                    </div>
+                  
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group btn-group-vertical">
+                        <button class="btn btn-primary"  v-on:click="onClickDownload">立刻获取 </button>
+                        <button class="btn btn-default"  onclick="window.open('/go/help/install_extension')">如何安装拓展模块?</button>
+                </div>
+                    
             </div>
         </div>
-        <div>
-            <p v-html="ext.desc"></p>
-        </div>
+
         <div v-if="extpics != null" class="swiper-container">
             <div class="swiper-wrapper">
                 <div v-for="pic in extpics" class="swiper-slide"><img class="img-responsive" v-bind:src="pic"></div>
             </div>
         </div>
+        
         <h2 class="text-center">评论区</h2>
         <div id="vcomments"></div>   
         <footer>
             <div style="display:none">
                 <script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script>
             </div>
-            <p>Copyright © 2017 - 2018 zsh2401,All Rights Reserved</p>
+            <p>Copyright © 2017 - 2019 zsh2401,All Rights Reserved</p>
         </footer>
     </div>
 </body>

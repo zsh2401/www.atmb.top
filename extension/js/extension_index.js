@@ -33,15 +33,21 @@ function handleInfo(infoUrl)
     .then(response=>response.json())
     .then(json=>{
         var extPage = __EXTENSION_PAGE_PRE + infoUrl;
-        var data = {extPage:extPage,info:json,fdesc:getfdesc(json.desc)};
+        var data = {extPage:extPage,info:json,fdesc:getfdesc(json)};
         vm.$data.extensions.push(data);
     });
 }
-function getfdesc(str){
-    if(str.length <= 10){
-        return str;
+function getfdesc(json){
+    if(json.desc != null){
+        if(json.desc.length > 10){
+           return json.desc.substring(0,10);
+        }else{
+            return json.desc;
+        }
+    }else if(json.fdesc != null){
+        return fdesc;
     }else{
-        return str.substr(0,10);
+        return null;
     }
 }
 $(document).ready(()=>{

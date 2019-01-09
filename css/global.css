@@ -1,14 +1,10 @@
 ::-webkit-scrollbar{
     display:none;
 }
+*{
+    font-family: Microsoft YaHei UI Light,Microsoft YaHei, sans-serif;
+}
 body{
-    /* overflow-y:hidden; */
-    /* background-image: url(../images/qiusewuxiansenlinlideqiutianbizhi_417353_10.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    background-color: whitesmoke; */
-    /* background: whitesmoke; */
     background-image: url(../images/bg2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,11 +18,11 @@ body{
 }
 .whiteele{
     color: black;
-    background-color: whitesmoke;
+    background-color: white;
 }
 .container{
     color: black;
-    background-color: whitesmoke;
+    background-color: white;
 }
 footer{
     margin-top: 20px;
@@ -44,11 +40,6 @@ footer{
     height: 1px;
     width: 100%;
     background: #ff7f50;
-}
-.container{
-    background-color: #ffffff;
-    background-color: transparent;
-    min-height: 100vh;
 }
 .splitline{
     margin-top:10px;

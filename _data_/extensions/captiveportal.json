@@ -6,8 +6,8 @@
     "dangerLevel":"低",
     "minSdk":8,
     "size":"16KB",
+    "opensource":"https://github.com/MonoLogueChi/AutumnBoxExtension-Captiveportal",
     "targetSdk":8,
     "bdesc":"一键除去Wifi叹号和叉号",
-    "desc":"一键除去Wifi叹号和叉号<a href='https://github.com/MonoLogueChi/AutumnBoxExtension-Captiveportal'>开源地址</a>",
     "downloadUrl":"https://atmb.sm9.top/AutumnBox/%E6%8B%93%E5%B1%95%E6%A8%A1%E5%9D%97/MonoLogueChi/Captiveportal/"
 }

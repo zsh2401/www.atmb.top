@@ -14,10 +14,9 @@
     color: black;
 }
 #desc{
-    background-color: whitesmoke;
-    padding: 10px;
+    padding: 5px;
     color: black;
 }
 #desc .row{
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }

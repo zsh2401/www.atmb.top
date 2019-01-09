@@ -44,26 +44,21 @@
             </div>
         </div>
     </nav>
-    <div class="container" style="background: whitesmoke;">
+    <div class="container">
         <div class="firstele"></div>
         <div id="website-notice"></div>
-        <div class="alert alert-warning">新一代拓展模块正在陆续开发中,请保持关注</div>
-
-        <h1 class="primary-color text-center">下载秋之盒拓展模块</h1>
-        <h3 class="text-center">做你想做的事情<br><br>
+        <h1 class="text-center">下载秋之盒拓展模块</h1>
+        <h5 class="text-center">做你想做的事情<br><br>
             <div class="btn-group">
-                <button type="button" class="btn btn-success" onclick="window.open('../go/help/install_extension/')">如何安装拓展?</button>
-                <button type="button" class="btn btn-info" onclick="window.open('https://github.com/zsh2401/AutumnBox/wiki/zh_CN_AutumnBox%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3')">开发文档</button>
+                <button type="button" class="btn btn-default" onclick="window.open('../go/help/install_extension/')">如何安装拓展?</button>
+                <button type="button" class="btn btn-default" onclick="window.open('https://github.com/zsh2401/AutumnBox/wiki/zh_CN_AutumnBox%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3')">开发文档</button>
             </div>
-        </h3>
-        <div class="spaceline"></div>
-
+        </h5>
         <div id="extensions">
             <div v-if="extensions">
                 <div style="height:1px;background-color:gainsboro;margin-bottom:4px;"></div>
+                <div class="alert alert-info">新一代拓展模块正在陆续开发中,请保持关注</div>
                 <div class="row">
-                    
-
                     <div v-for="ext in extensions"  class="col-md-4" style="height:100px">
                         <img v-bind:src="ext.info.icon" style="width:40px">
                         <a v-bind:href="ext.extPage" target="_blank">{{ext.info.name}} <span class="badge" v-if="dltimes[ext.info.id] != null">{{dltimes[ext.info.id]}}次下载</span></a>
@@ -83,7 +78,7 @@
             <div style="display:none">
                 <script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script>
             </div>
-            <p>Copyright © 2017 - 2018 zsh2401,All Rights Reserved</p>
+            <p>Copyright © 2017 - 2019 zsh2401,All Rights Reserved</p>
         </footer>
     </div>
 </body>

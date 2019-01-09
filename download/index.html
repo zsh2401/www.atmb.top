@@ -47,57 +47,60 @@
             </div>
         </div>
     </nav>
-    <div id="downloadCountInfo" class="container" style="background: whitesmoke;">
+    <div id="downloadCountInfo" class="container">
         <div class="firstele"></div>
         <div id="website-notice"></div>
-        <div class="text-center" v-if="latestVersionInfo != null">
-            <h1>请注意,最新版本是{{version}}</h1>
-            <h3>各渠道更新速度不同,请自行选择</h3>
+        <div class="text-center">
+            <h3>{{version}}更新日志<small> - {{date[1]}}/{{date[2]}}/{{date[0]}}</small></h3>
+            <p v-html="latestVersionInfo"></p>
         </div>
         <div class="row text-center">
-            <div class="col-md-3" style="margin-top:40px;">
+            <div class="col-md-3" style="margin-bottom:40px;">
                 <img class="img-responsive" style="height:70px;margin: 0 auto;" src="./images/web1n.jpg">
                 <h1>WEB1N</h1>
-                <button class="btn btn-success" onclick="gotoWeb1n()">下载(推荐)  <span class="badge">{{dldata[__web1nId]}}</span></button>
+                <button class="btn btn-default" onclick="gotoWeb1n()">下载(推荐)  <span class="badge">{{dldata[__web1nId]}}</span></button>
                 <p>
                     小黑屋开发者web1n提供<br>
                     通常在1天内跟进最新版<br>
-                    2018年12月17日上线
+                    2018年12月17日上线<br>
+                    <a href="https://https.vc/" target="_blank">web1n 博客</a>
                 </p>
-                <a href="https://https.vc/" target="_blank">web1n 博客</a>
+         
             </div>
-            <div class="col-md-3" style="margin-top:40px;">
+            <div class="col-md-3" style="margin-bottom:40px;">
                 <img class="img-responsive" style="height:70px;margin: 0 auto;" src="./images/mono.jpg">
                 <h1>MonoLogueChi</h1>
-                <button class="btn btn-success" onclick="gotoMono()">下载(推荐)  <span class="badge">{{dldata[__monoId]}}</span></button>
+                <button class="btn btn-default" onclick="gotoMono()">下载(推荐)  <span class="badge">{{dldata[__monoId]}}</span></button>
                 <p>
                     MonoLogueChi提供<br>
                     通常在10分钟内跟进最新版<br>
-                    通常情况下是<font color="#5cb85c">最稳定的</font>下载通道<br />
-                    2018年11月上线
+                    通常情况下是<span style="color:#5cb85c">最稳定的</span>下载通道<br />
+                    2018年11月上线<br>
+                    <a href="https://www.xxwhite.com/" target="_blank">叉叉白 博客</a>
                 </p>
-                <a href="https://www.xxwhite.com/" target="_blank">叉叉白 博客</a>
+             
             </div>
-            <div class="col-md-3" style="margin-top:40px;">
+            <div class="col-md-3" style="margin-bottom:40px;">
                 <img class="img-responsive" style="height:70px;margin: 0 auto;" src="./images/zsh2401.jpg">
                 <h1>2401's dream</h1>
 
-                <button class="btn btn-warning" onclick="gotoZsh2401()">下载  <span class="badge">{{dldata[__dreamId]}}</span></button>
+                <button class="btn btn-default" onclick="gotoZsh2401()">下载  <span class="badge">{{dldata[__dreamId]}}</span></button>
 
                 <p>
                     秋之盒开发者提供<br>
                     版本更新最快,下载速度时快时慢<br>
-                    有时推送测试版 ,可能存在危险!<br>
-                    2018年6月上线
+                    有时推送测试版 ,可能存在<span style="color:red">危险</span>!<br>
+                    2018年6月上线<br>
+                    <a href="https://zsh2401.top" target="_blank">2401的晚秋咖啡</a>
                 </p>
-                <a href="https://zsh2401.top" target="_blank">2401的晚秋咖啡</a>
+                
             </div>
-            <div class="col-md-3" style="margin-top: 40px">
+            <div class="col-md-3" style="margin-bottom: 40px">
                 <img class="img-responsive" style="height:70px;margin: 0 auto;" src="./images/misaka2.png">
                 <h1>其它方式</h1>
                 <div class="btn-group btn-group-vertical">
-                    <button class="btn btn-primary" onclick="gotoBaiduPan()">百度网盘  <span class="badge">{{dldata[__baiduPanId]}}</span></button>
-                    <button class="btn btn-info" onclick="gotoGithub()">GitHub Release  <span class="badge">{{dldata[__githubId]}}</span></button>
+                    <button class="btn btn-default" onclick="gotoBaiduPan()">百度网盘  <span class="badge">{{dldata[__baiduPanId]}}</span></button>
+                    <button class="btn btn-default" onclick="gotoGithub()">GitHub Release  <span class="badge">{{dldata[__githubId]}}</span></button>
                 </div>
                 <p>
                     相对稳定<br>但新版本不会第一时间<br>考虑这里的下载方式<br>
@@ -106,29 +109,19 @@
         </div>
         <div class="splitline"></div>
         <div class="text-center">
-            <h3>{{version}}更新日志<small> - {{date[1]}}/{{date[2]}}/{{date[0]}}</small></h3>
-            <p v-html="latestVersionInfo"></p>
-        </div>
-        <div class="splitline"></div>
-        <div class="text-center">
             <p class="text-center">
                 原本我想在这里贴捐赠二维码的,但想想又不太合适,不过还是希望大家能进行捐赠<embed src="../images/svg/heart.svg" style="width:20px;">
                 <br>是否捐赠与下载速度无关,完全自愿,真的很谢谢你
             </p>
             <a href="../donate/" target="_blank">扫码捐赠或领取最大99元支付宝赏金红包</a>
-            <img class="img-responsive" src="./images/misaka.jpg">
+            <!-- <img class="img-responsive" src="./images/misaka.jpg"> -->
         </div>
 
-        <!-- <div class="row">
-                <div class="col-md-4"><img class="donate-image" src="../donate/images/alipay.jpg"></div>
-                <div class="col-md-4"><img class="donate-image" src="../donate/images/redpacket.jpg"></div>
-                <div class="col-md-4"><img class="donate-image" src="../donate/images/wechatpay.jpg"></div>
-        </div> -->
         <footer>
             <div style="display:none">
                 <script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script>
             </div>
-            <p>Copyright © 2017 - 2018 zsh2401,All Rights Reserved</p>
+            <p>Copyright © 2017 - 2019 zsh2401,All Rights Reserved</p>
         </footer>
     </div>
 </body>
