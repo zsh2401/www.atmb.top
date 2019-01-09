@@ -55,12 +55,10 @@
 
     <div class="container" style="background:transparent;min-height: 0">
         <div class="firstele"></div>
-        <br><br><br>
-
-        <h1 class="text-center" style="margin: 0; color:white">AutumnBox 秋之盒</h1>
-        <h4 class="text-center" style="color:white">开源,简约,免费的安卓手机助手</h4>
-        <br><br><br>
-
+        <div class="jumbotron" style="background:transparent">
+                <h1 class="text-center" style="margin: 0; color:white">AutumnBox 秋之盒</h1>
+                <h4 class="text-center" style="color:white">开源,简约,免费的安卓手机助手</h4>
+        </div>
     </div>
     <div id="ajaxInfos" class="container">
         <div id="website-notice"></div>
@@ -80,7 +78,7 @@
         <div id="desc">
             <div class="row" style="margin-bottom:0px;">
                 <div class="col-md-6">
-                    <h3><embed src="./images/svg/security.svg" width="30px">秋之盒值得被您信任</h3>
+                    <h3><embed src="./images/svg/security.svg" width="30px"> 秋之盒值得被您信任</h3>
                     <ul>
                         <li>使用C#和WPF技术编写,遵守Windows API规范</li>
                         <li><a target="_blank" href="http://r.virscan.org/language/zh-cn/report/67dda3a561124fe6c0818cfe32da9f9f">全球杀软检测报告</a></li>
@@ -88,7 +86,7 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <h3><embed src="./images/svg/req.svg" style="width:30px">运行所需</h3>
+                    <h3><embed src="./images/svg/req.svg" style="width:30px"> 运行所需</h3>
                     <ul>
                         <li><embed src="./images/svg/pc.svg" width="20px"> X86桌面设备(常见的个人计算机)</li>
                         <li><embed src="./images/svg/windows.svg" width="20px"> 建议Windows 10 最低Windows 7</li>
@@ -98,7 +96,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6" v-if="latestVersionInfo != null">
-                    <h3><embed src="./images/svg/hands2.svg" style="width:30px">开发者需要您的帮助</h3>
+                    <h3><embed src="./images/svg/hands2.svg" style="width:30px"> 开发者需要您的帮助</h3>
                     <p>我只是一名19岁学生,最初为学习与实践目的创立了此项目
                         <br>如今面临巨大的生活与学习压力,我不得不放缓开发进度
                         <br>我希望您可以支持我<embed src="./images/svg/heart.svg" style="width:20px;">这完全是自愿的
@@ -106,7 +104,7 @@
                     <button class="btn btn-default" onclick="window.location='./donate/'">扫码或领取支付宝红包进行捐赠</button>
                 </div>
                 <div class="col-md-6" v-if="latestVersionInfo != null">
-                    <h3><embed src="./images/svg/leaf.svg" style="width:30px">{{version}}更新日志<small> - {{date[1]}}/{{date[2]}}/{{date[0]}}</small></h3>
+                    <h3><embed src="./images/svg/leaf.svg" style="width:30px"> {{version}}更新日志<small> - {{date[1]}}/{{date[2]}}/{{date[0]}}</small></h3>
                     <p v-html="latestVersionInfo"></p>
                 </div>
             </div>
