@@ -55,7 +55,8 @@
 
     <div class="container" style="background:transparent">
         <div class="firstele"></div>
-        <p class="text-center" style="color:white"><embed src="./images/svg/leaf.svg" style="width:100px;height:100px"></p>
+        <br><br><br>
+
         <h1 class="text-center" style="margin: 0; color:white">AutumnBox 秋之盒</h1>
         <h4 class="text-center" style="color:white">开源,简约,免费的安卓手机助手</h4>
         <br><br><br>
@@ -63,11 +64,12 @@
     </div>
     <div id="ajaxInfos" class="container">
         <div id="website-notice"></div>
+        
         <h4 class="text-center">解压即用,绿色软件,帮助小白,方便老鸟!</h4>
         <div class="text-center" style="color:white">
                 <div class="btn-group">
                     <button v-bind:title="downloadCount" type="button" style="font-size: 15px;" class="btn btn-default" onclick="window.location = 'download'">
-                                    立刻下载
+                                    立刻获取
                     </button>
                     <button type="button" style="font-size: 15px;" class="btn btn-default" onclick="javascrtpt:window.open('go/opensource')">
                                     浏览源代码
@@ -104,7 +106,7 @@
                     <button class="btn btn-default" onclick="window.location='./donate/'">扫码或领取支付宝红包进行捐赠</button>
                 </div>
                 <div class="col-md-6" v-if="latestVersionInfo != null">
-                    <h3>{{version}}更新日志<small> - {{date[1]}}/{{date[2]}}/{{date[0]}}</small></h3>
+                    <h3><embed src="./images/svg/leaf.svg" style="width:30px">{{version}}更新日志<small> - {{date[1]}}/{{date[2]}}/{{date[0]}}</small></h3>
                     <p v-html="latestVersionInfo"></p>
                 </div>
             </div>
