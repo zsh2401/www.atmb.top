@@ -16,6 +16,7 @@
     <script src="//cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="../js/global.js"></script>
+    <script src="js/index.js?a=b"></script>
     <script>
         $(window).resize(resizeVideo);
         $(document).ready(resizeVideo);
@@ -122,63 +123,23 @@
                 </ul>
             </div>
         </div>
-        <h2 class="centerText primary-color">The Story</h2>
-        <p class="centerText">
-            2016.11<br>
-            &nbsp&nbsp我想,我第二爱听的歌应该就是Late in autumn了吧?<br><br>
-            2017.1<br>
-            &nbsp&nbsp我入门了Python,并有了基础的编程思想<br><br>
-            2017.5<br>
-            &nbsp&nbsp我做了个Python翻译程序,并传到了github,获得两颗星星<br><br>
-            2017.6.1<br>
-            &nbsp&nbsp我简单学些了安卓开发,知道了如何开发一个真正的App<br><br>
-            2017.6.16<br>
-            &nbsp&nbsp我开始学习C#<br><br>
-            2017.7<br>
-            &nbsp&nbsp我在酷安看到@大侠阿木 开发了一个一加五刷机工具箱<br><br>
-            2017.7.11<br>
-            &nbsp&nbsp我受到启发,使用C# WinForm开发了MiDreamer工具箱并在MIUI论坛和酷安发布<br><br>
-            2017.7下旬<br>
-            &nbsp&nbsp我放下了界面丑陋的MiDreamer,开始尝试开发新的工具箱<br><br>
-            2017.7.31<br>
-            &nbsp&nbspAutumnBox开源仓库在github建立<br><br>
-            2017.8.18<br>
-            &nbsp&nbspAutumnBox话题在酷安被创建<br><br>
-            2017.11.23<br>
-            &nbsp&nbspAutumnBox开始内测<br><br>
-            2018.3<br>
-            &nbsp&nbspAutumnBox有了开放框架,第三方开发者可以来开发了!<br><br>
-            2018.4<br>
-            &nbsp&nbspAutumnBox官网进一步完善<br><br>
-            2018.8<br>
-            &nbsp&nbsp秋之盒开始使用Material Design设计<br><br>
-            2018.9<br>
-            &nbsp&nbsp交流群在大家的捐助下升级至1000人上限<br><br>
-            2018.10<br>
-            &nbsp&nbsp1.2版本发布,代码全部重写<br><br>
-            2018.11<br>
-            &nbsp&nbsp1.3系列版本持续更新<br><br>
-            2018.12<br>
-            1.3.8发布,冲刺正式版<br>
-            一些老牌拓展模块重构并上架<br>
-            更多下载分流<br><br>
-            2019.1.1<br>
-            秋之盒2019正式版发布了!!!!!<br>
-距离秋之盒开始编写已经过去了520天,520!我爱你们!<br>
-这520天里,秋之盒经历了无数的更新,有超过十万人使用了秋之盒,并有不少真正的先行者汇报了大量BUG!<br>
-今天,2019年的第一天,秋之盒正式版发布了,无数的故事与我的心血交织,这个版本值得你们所有人使用!<br>
-在未来,会有大量的秋之盒拓展模块发布,秋之盒安卓版也会复活,而秋之盒本身会尽量保持每月一更的频率持续修复BUG与增加新功能<br>
-特别感谢 药丸的黑屋开发  来咬我啊  等开发人员提供的技术支持!<br>
-感谢 白瀛丶 nnflyboy 无路行者 等对秋之盒进行的物质支持!<br>
-感谢 咖枯 Playhi 等冻结软件开发者对秋之盒的支持!<br>
-感谢 Yume 不似少年时 秋箱箱神 在群内进行的管理,维护了群内环境!<br>
-还有不少人没有被点名感谢,但我真的很谢谢你,谢谢你们<br>
-最后,希望大家能够在自己的搞机圈子里适当地安利秋之盒,比如论坛发帖,贴吧发帖,转发秋之盒酷安看看号动态等(跪求订阅秋之盒酷安看看号)<br>
-<br>
-thanks for all the fish<br>
-<br>
-            待续...
-        </p>
+
+        <h2 class="centerText primary-color">The Story...</h2>
+        <div id="story">
+            <div v-for="line in timeline" style="margin-bottom:20px">
+                <div class="row">
+                    <div class="col-md-2 hidden-col-xs"></div>
+                    <div class="col-md-2 col-xs-3"><span style="width:20px;background:orangered;">&nbsp;&nbsp;</span> {{line.date}}</div>
+                    <div v-html="line.story" class="col-md-7 col-xs-9"></div>
+                </div>
+            </div>
+
+            <p class="text-center">
+                thanks for all the fish<br><br>
+                待续...
+            </p>
+        </div>
+
         <footer>
             <div style="display:none">
                 <script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script>
