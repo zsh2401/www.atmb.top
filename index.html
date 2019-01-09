@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@3.4.2/dist/css/swiper.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/global.css?a=cb">
+    <link rel="stylesheet" href="./css/global.css?a=adaasddascb">
     <link rel="shortcut icon" href="./images/leaves.png">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index.css?b=ck">
 
 
     
@@ -53,34 +53,32 @@
         </div>
     </nav>
 
-    <div id="ajaxInfos" class="container">
+    <div class="container" style="background:transparent">
         <div class="firstele"></div>
-        <div id="website-notice"></div>
-        <!-- <div class="alert alert-warning">此网站正在维护中,您可能会在访问时遇到一些问题</div> -->
-        <div id="head">
-            <p class="text-center" style="margin:0px"><embed src="./images/svg/leaf.svg" style="width:100px;height:100px"></p>
-            <h1 class="text-center primary-color" style="margin:0px">AutumnBox 秋之盒</h1>
-            <h4 class="text-center">开源,简约,免费的安卓手机助手</h4>
-            <h4 class="text-center">解压即用,绿色软件,帮助小白,方便老鸟!</h4>
-            
-            <div class="text-center">
-                <div class="btn-group">
-                        <button v-bind:title="downloadCount" type="button" style="font-size: 15px;" class="btn btn-default" onclick="window.location = 'download'">
-                            立刻下载
-                        </button>
-                        <button type="button" style="font-size: 15px;" class="btn btn-default" onclick="javascrtpt:window.open('go/opensource')">
-                            浏览源代码
-                        </button>
-                </div>
-            </div>
+        <p class="text-center" style="color:white"><embed src="./images/svg/leaf.svg" style="width:100px;height:100px"></p>
+        <h1 class="text-center" style="margin: 0; color:white">AutumnBox 秋之盒</h1>
+        <h4 class="text-center" style="color:white">开源,简约,免费的安卓手机助手</h4>
+        <br><br><br>
 
-        <div style="height:20px;background:transparent;"></div>
-            
+    </div>
+    <div id="ajaxInfos" class="container">
+        <div id="website-notice"></div>
+        <h4 class="text-center">解压即用,绿色软件,帮助小白,方便老鸟!</h4>
+        <div class="text-center" style="color:white">
+                <div class="btn-group">
+                    <button v-bind:title="downloadCount" type="button" style="font-size: 15px;" class="btn btn-default" onclick="window.location = 'download'">
+                                    立刻下载
+                    </button>
+                    <button type="button" style="font-size: 15px;" class="btn btn-default" onclick="javascrtpt:window.open('go/opensource')">
+                                    浏览源代码
+                    </button>
+                </div>
         </div>
+
         <div id="desc">
             <div class="row" style="margin-bottom:0px;">
                 <div class="col-md-6">
-                    <h3><embed src="./images/svg/security.svg" width="5%">秋之盒值得被您信任</h3>
+                    <h3><embed src="./images/svg/security.svg" width="30px">秋之盒值得被您信任</h3>
                     <ul>
                         <li>使用C#和WPF技术编写,遵守Windows API规范</li>
                         <li><a target="_blank" href="http://r.virscan.org/language/zh-cn/report/67dda3a561124fe6c0818cfe32da9f9f">全球杀软检测报告</a></li>
@@ -88,7 +86,7 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <h3><embed src="./images/svg/req.svg" style="width:5%">运行所需</h3>
+                    <h3><embed src="./images/svg/req.svg" style="width:30px">运行所需</h3>
                     <ul>
                         <li><embed src="./images/svg/pc.svg" width="20px"> X86桌面设备(常见的个人计算机)</li>
                         <li><embed src="./images/svg/windows.svg" width="20px"> 建议Windows 10 最低Windows 7</li>
@@ -98,7 +96,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6" v-if="latestVersionInfo != null">
-                    <h3><embed src="./images/svg/hands2.svg" style="width:5%">开发者需要您的帮助</h3>
+                    <h3><embed src="./images/svg/hands2.svg" style="width:30px">开发者需要您的帮助</h3>
                     <p>我只是一名19岁学生,最初为学习与实践目的创立了此项目
                         <br>如今面临巨大的生活与学习压力,我不得不放缓开发进度
                         <br>我希望您可以支持我<embed src="./images/svg/heart.svg" style="width:20px;">这完全是自愿的

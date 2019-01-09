@@ -23,6 +23,7 @@ body{
 .container{
     color: black;
     background-color: white;
+    border-radius: 10px;
 }
 footer{
     margin-top: 20px;
