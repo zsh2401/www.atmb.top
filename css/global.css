@@ -24,6 +24,7 @@ body{
     color: black;
     background-color: white;
     border-radius: 10px;
+    min-height: 100vh;
 }
 footer{
     margin-top: 20px;
