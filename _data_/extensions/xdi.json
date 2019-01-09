@@ -1,11 +1,12 @@
 {
     "id":2018042602,
     "icon":"/_data_/extensions/img/driver.png",
-    "name":"一键安装小米手机驱动",
+    "name":"一键安装安卓手机驱动",
     "auth":"zsh2401",
     "dangerLevel":"无",
     "size":"9.3MB",
-    "desc":"听说你连不上手机？",
+    "fdesc":"听说你连不上手机？",
+    "desc":"听说你连不上手机？<br>模块安装后名字是安装小米手机驱动,但实际上是通用的",
     "version":"0.0.8",
     "downloadUrl":"http://dream.zsh2401.top:4397/Zsh2401.XiaomiDriverInstaller.dll"
 }
