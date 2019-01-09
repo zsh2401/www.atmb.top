@@ -13,13 +13,9 @@ function initVue(){
 }
 
 function fetchData() {
-    /*
-    queryDownloadCountArr([343, 344, 345, 346, 347], function (count) {
-        for (var i = 0, len = count.length; i < len; i++) {
-            vm.$data.downloadCount += count[i].times;
-        }
+    queryDownloadCount([343, 344, 345, 346, 347], function (data) {
+          vm.$data.downloadCount += parseInt(data[343]) + parseInt(data[344]) + parseInt(data[345]) + parseInt(data[346]) + parseInt(data[347]);
     });
-    */
     fetch(__UPDATE_LOG_URL)
     .then(res=>res.json())
     .then(json=>{
