@@ -23,7 +23,9 @@ function __fetchContent(url){
     .then(response=>response.text())
     .then((text)=>{
         __vm.$data.contentHtml = __MarkDownToHtml(text);
-       
+        // var thisId = window.location.hash;
+        // console.log(thisId);
+        // location.href = thisId;
     }).catch((e)=>{
         console.log(e);
     });

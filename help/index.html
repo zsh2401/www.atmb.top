@@ -23,7 +23,7 @@
     <script src="js/index.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
+    <nav id="top" class="navbar navbar-default" role="navigation" style="border-radius: 0px;">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -49,7 +49,8 @@
     </nav>
 
     <div id="app" class="container" style="background: whitesmoke">
-        <div class="firstele"></div>
+        <div class="backtotop"><button class="btn btn-default" onclick="location.href = '#top'">返回顶部</button></div>
+        <br>
         <div id="website-notice"></div>
         <!-- 内容 -->
         <div v-if="contentHtml != null" class="content" v-html="contentHtml"></div>
