@@ -99,18 +99,18 @@ s
 ~~Sister's noise 仍然在继续追寻~~
 
 # 激活DPM软件
-这里是重头戏,[看这里](?md=install_md.md)
+这里是重头戏,[看这里](?md=dpmhelp.md)
 ### 什么是DPM软件?有哪些?干什么用?
-[看这里](?md=install_md.md)
+[看这里](?md=dpmhelp.md#什么是DPM软件-有哪些-干什么用)
 ### 使用秋之盒激活他们
-[看这里](?md=install_md.md)
+[看这里](?md=dpmhelp.md#使用秋之盒激活他们)
 #### 激活冰箱
-[看这里](?md=install_md.md)
+[看这里](?md=dpmhelp.md#激活冰箱)
 #### 激活小黑屋
-[看这里](?md=install_md.md)
+[看这里](?md=dpmhelp.md#激活小黑屋)
 #### 其它
-[看这里](?md=install_md.md)
+[看这里](?md=dpmhelp.md#其它)
 ### 激活失败的解决方案
-[看这里](?md=install_md.md)
+[看这里](?md=dpmhelp.md#激活失败的解决方案)
 
 ******
