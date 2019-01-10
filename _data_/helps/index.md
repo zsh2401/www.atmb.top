@@ -36,7 +36,9 @@
 * [激活脚本优化软件](?md=script.md)
     * [什么是脚本优化软件?有哪些?干什么用?](?md=script.md&node=什么是脚本优化软件?有哪些?干什么用?)
     * [激活黑域](?md=script.md&node=激活黑域)
-    * [激活小黑屋麦克斯韦模式](?md=script.md&node=激活小黑屋麦克斯韦模式)
+    * [激活小黑屋麦克斯韦妖模式](?md=script.md&node=激活小黑屋麦克斯韦妖模式)
+    * [激活ShizukuManager](?md=script.md&node=激活shizukumanager)
+    * [激活AppOps](?md=script.md&node=激活appops)
 
 
 * [一些技巧](?md=skills.md)

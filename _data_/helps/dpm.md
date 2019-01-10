@@ -1,14 +1,8 @@
-<style>
-    .important{
-        color:orangered;
-    }
-    /* .tiny-img{
-        max-width:500px;
-    } */
-</style>
-
 # <div class="text-center">激活DPM软件</div> 
-这可能是你下载秋之盒的主要原因之一
+
+本页面作者: zsh2401
+
+~~这可能是你下载秋之盒的唯一原因~~
 
 # 什么是DPM软件-有哪些-干什么用
 DPM软件这个说法并不准确,不过这类软件确实是在获取了DevicePolicyManager的特殊权限后,对安卓手机进行一些更有效的"治理"
