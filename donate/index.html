@@ -18,6 +18,7 @@
     <script src="js/index.js?w=b"></script>
 </head>
 <body>
+
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -28,35 +29,72 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">秋之盒</a>
+                <a class="navbar-brand visible-xs-block">秋之盒</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-c">
                 <ul class="nav navbar-nav">
-                    <li><a href="../"><span class="glyphicon glyphicon-home"> 主页</a></li>
-                    <li><a href="../extension/"><span class="glyphicon glyphicon-th"> 拓展模块</a></li>
-                    <li><a href="../about/"><span class="glyphicon glyphicon-leaf"> 关于/联系</a></li>
-                    <li class="active"><a href="."><span class="glyphicon glyphicon-heart-empty"> 开源/捐赠</a></li>
-                    <li><a href="../comments/"><span class="glyphicon glyphicon-edit"> 留言/软件评论</a></li>
-                    <li><a href="../help/"><span class="glyphicon glyphicon-paperclip"> 帮助</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            秋之盒 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/">主页面</a></li>
+                            <li><a href="download/">立刻下载</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            拓展模块 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/extension/">浏览拓展模块</a></li>
+                            <li><a href="/help/?md=ext.md">如何安装拓展模块?</a></li>
+                            <li><a href="/go/open/">开发拓展模块</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                开源/捐赠 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/donate/">捐赠与支持</a></li>
+                            <li><a href="/opensource/">开源与鸣谢</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            帮助<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/help/">说明书 </a></li>
+                            <li><a href="/comments/">留言</a></li>
+                        </ul>
+                    </li> 
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            关于 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/about/">联系</a></li>
+                            <li><a href="/story/">故事</a></li>
+                            <li><a href="https://zsh2401.top">开发者博客</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="container">
-        <div class="firstele"></div>
         <div id="website-notice"></div>
-        <div class="centerText">
-            <h1>开源</h1>
-            <p>秋之盒现以LGPL3.0 (宽松的GNU公共协议)开源,请在必要时遵守开源协议<br>如果可以的话,希望能够标个星,这是对我开源代码的认可</p>
-            <div class="btn-group">
-                    <button type="button" class="btn btn-default" onclick="window.open('https://github.com/zsh2401/AutumnBox/')">
-                        秋之盒仓库
-                    </button>
-                    <button type="button" class="btn btn-default" onclick="window.open('https://github.com/zsh2401/www.atmb.top/')">
-                        本站点网页仓库
-                    </button>
-            </div>
-            
+        <div class="text-center">
             <h1>捐赠</h1>
             <p>
                 秋之盒是一个完全开源免费的自由软件,兴趣是我开发这个软件的最初动力<br>

@@ -5,6 +5,7 @@
     font-family: Microsoft YaHei UI Light,Microsoft YaHei, sans-serif;
 }
 body{
+    padding-top: 50px;
     background-image: url(../images/bg2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,8 +24,9 @@ body{
 .container{
     color: black;
     background-color: white;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     min-height: 100vh;
+    padding: 20px;
 }
 footer{
     margin-top: 20px;
