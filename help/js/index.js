@@ -23,9 +23,10 @@ function __fetchContent(url){
     .then(response=>response.text())
     .then((text)=>{
         __vm.$data.contentHtml = __MarkDownToHtml(text);
-        // var thisId = window.location.hash;
-        // console.log(thisId);
-        // location.href = thisId;
+        setTimeout(()=>{
+            $('html, body').animate({scrollTop: $("#" + getUrlParam("node")).offset().top}, 1000);
+        },500)
+        console.log(getUrlParam("node"));
     }).catch((e)=>{
         console.log(e);
     });
