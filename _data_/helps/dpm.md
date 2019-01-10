@@ -2,9 +2,9 @@
     .important{
         color:orangered;
     }
-    .tiny-img{
+    /* .tiny-img{
         max-width:500px;
-    }
+    } */
 </style>
 
 # <div class="text-center">激活DPM软件</div> 
@@ -95,20 +95,20 @@ DPM软件激活步骤都差不多,而你只需要在秋之盒中选择你要的�
 当你激活失败时,输出信息是你最好的帮手,阅读输出信息来解决问题
 
 
-### 输出信息中有"Not allowed to ... already several accounts on the device"
+#### 输出信息中有"Not allowed to ... already several accounts on the device"
 
 * 这个提示通常是账号没删干净,通常情况下秋之盒会帮你完成这一步,但既然没成功,就手动来吧,前往设置->同步/账号->删除
 
 
-### 输出信息中有"Not allowed to ... already several users on the device"
+#### 输出信息中有"Not allowed to ... already several users on the device"
 
 * 这个提示通常是用户没删干净,通常情况下秋之盒会帮你完成这一步,但既然没成功,就手动来吧,删除你的多用户/访客/应用双开
 
-### 输出信息中有"Trying to set the device owner, but device owner is already set."
+#### 输出信息中有"Trying to set the device owner, but device owner is already set."
 
 * 你已经设置其它APP为设备管理员,一山不容二虎,你必须先卸载另一个dpm软件(<span class="important"> 千万不要直接卸载,去该DPM软件设置内进行卸载!!</span>)
 
-### 输出信息中有"Neither user xxx nor current process has android.permission.MANAGE_DEVICE_ADMINS"
+#### 输出信息中有"Neither user xxx nor current process has android.permission.MANAGE_DEVICE_ADMINS"
 
 * 我不开心!你为什么不好好看文档!!!出现这个问题,请关闭MIUI优化并开启MIUI安全调试!(均在开发者选项中)
 
