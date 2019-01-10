@@ -1,4 +1,5 @@
-<div class="alert alert-warning">此页面仍然在编写中</div>
+# 此页面尚未完成!
+
 <style>
     .important{
         color:orangered;
