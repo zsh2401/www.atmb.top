@@ -20,3 +20,13 @@
 #desc .row{
     margin-bottom: 5px;
 }
+.header{
+    background-image: url(/images/headbg.jpg);
+    margin: 0;
+    width: 100%;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+
