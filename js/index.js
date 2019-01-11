@@ -12,7 +12,7 @@ function initVue(){
   })
 }
 function gotoOS(){
-  window.location = "/oepnsource";
+  window.location = "/opensource";
 }
 function gotoDl(){
   window.location = "/download";
