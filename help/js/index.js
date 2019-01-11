@@ -24,7 +24,7 @@ function __fetchContent(url){
     .then((text)=>{
         __vm.$data.contentHtml = __MarkDownToHtml(text);
         setTimeout(()=>{
-            $('html, body').animate({scrollTop: $("#" + getUrlParam("node")).offset().top}, 1000);
+            $('html, body').animate({scrollTop: $("#" + getUrlParam("node")).offset().top - 50}, 1000);
         },500)
         console.log(getUrlParam("node"));
     }).catch((e)=>{
