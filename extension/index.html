@@ -108,7 +108,7 @@
                 <div style="height:1px;background-color:gainsboro;margin-bottom:4px;"></div>
                 <div class="alert alert-info">新一代拓展模块正在陆续开发中,请保持关注</div>
                 <div class="row">
-                    <div v-for="ext in extensions"  class="col-md-4" style="height:100px">
+                    <div v-for="ext in extensions"  class="col-md-4 col-sm-6" style="height:100px">
                         <img v-bind:src="ext.info.icon" style="width:40px">
                         <a v-bind:href="ext.extPage" target="_blank">{{ext.info.name}} <span class="badge" v-if="dltimes[ext.info.id] != null">{{dltimes[ext.info.id]}}次下载</span></a>
                         <p v-if="ext.info.bdesc != null">{{ext.info.bdesc}}</p>

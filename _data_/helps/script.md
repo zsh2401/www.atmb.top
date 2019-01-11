@@ -1,6 +1,6 @@
 # <div class="text-center">激活脚本优化软件</div> 
 
-本页面作者: zsh2401
+<div class="text-center">本页面作者: zsh2401</div>
 
 # 什么是脚本优化软件?有哪些?干什么用?
 啊,其实这个说法也很笼统,"脚本优化软件"是我自创词汇.

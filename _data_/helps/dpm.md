@@ -1,6 +1,6 @@
 # <div class="text-center">激活DPM软件</div> 
 
-本页面作者: zsh2401
+<div class="text-center">本页面作者: zsh2401</div>
 
 ~~这可能是你下载秋之盒的唯一原因~~
 

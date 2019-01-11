@@ -1,4 +1,4 @@
 {
-    "enable":true,
+    "enable":false,
     "content":"<div class='alert alert-warning'> 本网站维护中...可能会遇到一些问题</div>"
 }
