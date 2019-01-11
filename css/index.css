@@ -1,25 +1,3 @@
-/* body{
-    background-image: url(../images/qiusewuxiansenlinlideqiutianbizhi_417353_10.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    background-color: whitesmoke;
-} */
-/* .container{
-    background-color: transparent;
-    padding: 0px;
-} */
-#head{
-    /* background-color: #ff6138; */
-    color: black;
-}
-#desc{
-    padding: 5px;
-    color: black;
-}
-#desc .row{
-    margin-bottom: 5px;
-}
 .header{
     background-image: url(/images/headbg.jpg);
     margin: 0;
@@ -38,9 +16,15 @@
     padding-bottom: 5px;
     /* text-decoration: underline; */
 }
-.wblock{
-    min-width: 20px;
-    min-height: 10px;
-    background-color: #ff7f50
+.main-btn{
+    font-size: 15;
+    border-radius: 0;
 }
-
+.head-container{
+    min-height:auto;
+    background: transparent;
+    color: white;
+}
+.embed-icon{
+    width: 30px;
+}

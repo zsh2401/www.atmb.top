@@ -94,9 +94,8 @@
     </nav>
 
     <div class="container">
-        <!-- <div class="firstele"></div> -->
         <div id="website-notice"></div>
-        <h1 class="text-center">下载秋之盒拓展模块</h1>
+        <h1 class="text-center">下载拓展模块</h1>
         <h5 class="text-center">做你想做的事情<br><br>
             <div class="btn-group">
                 <button type="button" class="btn btn-default" onclick="window.open('../help/?md=ext.md')">如何安装拓展?</button>
@@ -106,7 +105,7 @@
         <div id="extensions">
             <div v-if="extensions">
                 <div style="height:1px;background-color:gainsboro;margin-bottom:4px;"></div>
-                <div class="alert alert-info">新一代拓展模块正在陆续开发中,请保持关注</div>
+                <div class="alert alert-info text-center">新一代拓展模块正在陆续开发中,请保持关注</div>
                 <div class="row">
                     <div v-for="ext in extensions"  class="col-md-4 col-sm-6" style="height:100px">
                         <img v-bind:src="ext.info.icon" style="width:40px">
