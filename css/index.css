@@ -29,4 +29,18 @@
     background-repeat: no-repeat;
     background-attachment:fixed;
 }
+.hlink:hover{
+    color: black;
+    text-decoration: none;
+}
+.hlink{
+    color: black;
+    padding-bottom: 5px;
+    /* text-decoration: underline; */
+}
+.wblock{
+    min-width: 20px;
+    min-height: 10px;
+    background-color: #ff7f50
+}
 

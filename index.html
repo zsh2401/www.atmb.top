@@ -23,7 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="./js/caona.js?s=was"></script>
-    <script src="./js/index.js?s=asadalkh"></script>
+    <script src="./js/index.js?s=aalkh"></script>
     <script src="./js/global.js?axs=wcsqw"></script>
 </head>
 <body>
@@ -101,28 +101,67 @@
         </div>
     </nav>
 
+    <div id="ajaxInfos">
     <div class="jumbotron header">
         <div class="container" style="min-height:auto;background: transparent;color: white">
-        
                     <h1>AutumnBox 2019</h1>
                     <h4>开源,简约,免费的安卓手机助手</h4>
                     <div class="btn-group">
-                        <button v-bind:title="downloadCount" type="button" style="font-size: 15px;" class="btn btn-default" onclick="window.location = 'download'">
-                            立刻获取
+                        <button v-bind:title="downloadCount" type="button" style="font-size: 15px;border-radius: 0px;" class="btn btn-warning" onclick="window.location = 'download'">
+                            立刻获取 v{{version}}
                         </button>
-                        <button type="button" style="font-size: 15px;" class="btn btn-default" onclick="javascrtpt:window.open('go/opensource')">
-                            浏览源代码
+                        <button type="button" style="font-size: 15px;border-radius: 0px;" class="btn btn-default" onclick="javascrtpt:window.open('go/opensource')">
+                            源代码
                     </button>
                 </div>
          </div>
     </div>
     
 
-    <div id="ajaxInfos" class="container">
+    <div class="container">
         <div id="website-notice"></div>
+        <div class="row">
 
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <a class="hlink" href="/help/?md=dpm.md">
+                    <h3>激活冻结软件</h3>
+                        <li><span class="wblock"></span><a target="_blank" href="https://www.coolapk.com/apk/com.catchingnow.icebox">冰箱</a></li>
+                        <li><a target="_blank" href="https://www.coolapk.com/apk/web1n.stopapp">小黑屋 @web1n</a></li>
+                        <li><a target="_blank" href="https://www.coolapk.com/apk/com.hld.apurikakusu">黑洞</a></li>
+                        <li><a target="_blank" href="https://www.coolapk.com/apk/me.yourbay.airfrozen">空调狗</a></li>
+                        <li><a target="_blank" href="https://www.coolapk.com/apk/com.hld.anzenbokusu">第二空间</a></li>
+                        <li><a target="_blank" href="https://www.coolapk.com/apk/cf.playhi.freezeyou">FreezeYou!</a></li>
+                        <li>更多应用正在陆续支持中...</li>
+                </a>
+            </div>
 
-        <div id="desc">
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <a class="hlink" href="/help/?md=script.md">
+                    <h3>执行脚本</h3>
+                    <li><a target="_blank" href="https://www.coolapk.com/apk/me.piebridge.brevent">黑域</a></li>
+                    <li><a target="_blank" href="https://www.coolapk.com/apk/moe.shizuku.privileged.api">ShizukuManager</a></li>
+                </a>
+            </div>
+
+             <div class="col-md-3 col-sm-6 col-xs-6">
+                <a class="hlink" href="/help/?md=skills.md">
+                    <h3>手机刷机</h3>
+                    <li>刷入Recovery</li>
+                    <li>解锁系统分区(非BL)</li>
+                    <li>一键上BL锁</li>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-8">
+                <a class="hlink" href="http://materialdesigninxaml.net/">
+                    <h3 class="visible-md visible-lg">Material Design</h3>
+                    <h3 class="visible-xs visible-sm">MD设计</h3>
+                    基于Material Design In Xaml
+                </a>
+            </div>
+        </div>
+
+        <div id="desc" style="color:gray">
             <div class="row" style="margin-bottom:0px;">
                 <div class="col-md-6 col-sm-6">
                     <h3><embed src="./images/svg/security.svg" width="30px"> 秋之盒值得被您信任</h3>
@@ -241,5 +280,6 @@
             </footer>
         </div>
     </div>
+</div>
 </body>
 </html>
