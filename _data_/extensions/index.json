@@ -9,7 +9,8 @@
         "/_data_/extensions/xdi.json",
         "/_data_/extensions/gappsskipper.json",
         "/_data_/extensions/animationsetter.json",
-        "/_data_/extensions/captiveportal.json"
+        "/_data_/extensions/captiveportal.json",
+        "/_data_/extensions/nexus.json"
     ],
 
 
@@ -20,6 +21,7 @@
         {"name":"一键刷入小米6 TWRP REC","desc":"如名","info":"/_data_/extensions/fm6rec.html"},
         {"name":"一键安装小米手机驱动","desc":"这个模块可以一键安装小米手机驱动","info":"/_data_/extensions/xdi.html"},
         {"name":"一键刷入Magisk","desc":"可以直接下载并刷入Magisk框架","info":"/_data_/extensions/autoMagisk.html"},
-        {"name":"一键去除Wi-Fi叹号和叉号","desc":"可以一键去除Wi-Fi叉号和叹号","info":"/_data_/extensions/captiveportal.html"}
+        {"name":"一键去除Wi-Fi叹号和叉号","desc":"可以一键去除Wi-Fi叉号和叹号","info":"/_data_/extensions/captiveportal.html"},
+        {"name":"Nexus工具箱","desc":"Nexus及Pixel手机解锁、刷写基带/vendor等","info":"/_data_/extensions/nexus.html"}
     ]
 }

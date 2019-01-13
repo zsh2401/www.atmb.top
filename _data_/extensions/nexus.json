@@ -1,0 +1,15 @@
+{
+    "id":20190113,
+    "icon":"/_data_/extensions/img/nexus.png",
+    "name":"Nexus工具箱",
+    "auth":"神经元",
+    "dangerLevel":"高",
+    "minSdk":8,
+    "size":"53KB",
+    "updateDate":"01/13/2019",
+    "targetSdk":8,
+    "atmbver":"2019.1.11",
+    "desc":"Nexus及Pixel手机解锁、刷写基带/vendor等",
+    "bdesc":"Nexus及Pixel手机解锁、刷写基带/vendor等",
+    "downloadUrl":"https://github.com/singleNeuron/AutumnBox_exp_Nexus/releases"
+}
