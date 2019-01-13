@@ -51,40 +51,41 @@ DPM模式无需ROOT,但激活时却有许多坎坷,如果你不使用秋之盒,�
 
 #### -1.索尼手机取出手机 SIM 卡；小米用户请开启「USB 调试（安全设置）」关闭「MIUI 优化」。
 #### 0.在手机上下载并安装冰箱(废话)
-<img src="/_data_/helps/imgs/dpm/install.jpg" class="img-responsive">
+
+![](/_data_/helps/imgs/dpm/install.jpg)
 
 ******
 
 #### 1. <span class="important">删除屏幕锁与指纹锁</span>
-<img src="/_data_/helps/imgs/dpm/nolock.jpg" class="img-responsive">
+![](/_data_/helps/imgs/dpm/nolock.jpg)
 
 ******
 
 #### 2. 启动秋之盒并连接手机
-<img src="/images/demo/show_launch.gif" class="img-responsive tiny-img">
+![](/images/demo/show_launch.gif)
 
 ******
 
 #### 3. 找到激活冰箱功能,并双击
-<img src="/_data_/helps/imgs/dpm/activate.gif" class="img-responsive tiny-img">
+
+![](/_data_/helps/imgs/dpm/activate.gif)
 
 ******
 
 #### 4. 在冰箱中选择DPM模式
-<img src="/_data_/helps/imgs/dpm/selectmode.jpg" class="img-responsive tiny-img">
+![](/_data_/helps/imgs/dpm/selectmode.jpg)
 
 #### 5. 大功告成!
-<img src="/_data_/helps/imgs/dpm/successed.jpg" class="img-responsive tiny-img">
+![](/_data_/helps/imgs/dpm/successed.jpg)
 
 ## 其它
 DPM软件激活步骤都差不多,而你只需要在秋之盒中选择你要的点击即可<span class="important">(特别推荐小黑屋)</span>
-<img src="/_data_/helps/imgs/dpm/other.jpg" class="img-responsive tiny-img">
+![](/_data_/helps/imgs/dpm/other.jpg)
 
 # 激活失败的解决方案
 
 [此处参考了冰箱DPM文档](https://github.com/heruoxin/Ice-Box-Docs)
-
-<img src="/_data_/helps/imgs/dpm/cpoutput.jpg" class="img-responsive tiny-img">
+![](/_data_/helps/imgs/dpm/cpoutput.jpg)
 
 当你激活失败时,输出信息是你最好的帮手,阅读输出信息来解决问题
 

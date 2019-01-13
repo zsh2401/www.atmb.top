@@ -1,9 +1,3 @@
-<style>
-    .important{
-        color:orangered;
-    }
-</style>
-
 # DON'T PANIC
 # 欢迎来到秋之盒帮助页面 
 
@@ -12,13 +6,13 @@
 如果你在详细阅读后仍然未找到解决方案,请[联系我们](/about/)
 <!-- # 目录 -->
 
-* [运行秋之盒<span class="important">(编写中)</span>](?md=run.md)
+* [运行秋之盒](?md=run.md)
     * [确保操作系统](?md=run.md&node=确保操作系统)
     * [确保.NET环境](?md=run.md&node=确保NET环境)
     * [下载并解压使用](?md=run.md&node=下载并解压使用)
 
 
-* [连接设备<span class="important">(编写中)</span>](?md=connect_device.md)
+* [连接设备](?md=connect_device.md)
     * [找不到设备的常见处理方法](?md=connect_device.md&node=找不到设备的常见处理方法)
     * [一键安装安卓手机驱动](?md=connect_device.md&node=一键安装安卓手机驱动)
 

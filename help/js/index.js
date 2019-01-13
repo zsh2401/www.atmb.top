@@ -18,6 +18,7 @@ function __getMDUrlFromPara(){
 function __MarkDownToHtml(md){
     return marked(md);
 }
+var _imgSetterInterval = null
 function __fetchContent(url){
     fetch(url)
     .then(response=>response.text())
@@ -26,7 +27,6 @@ function __fetchContent(url){
         setTimeout(()=>{
             $('html, body').animate({scrollTop: $("#" + getUrlParam("node")).offset().top - 50}, 1000);
         },500)
-        console.log(getUrlParam("node"));
     }).catch((e)=>{
         console.log(e);
     });
