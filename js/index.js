@@ -11,7 +11,12 @@ function initVue(){
     }
   })
 }
-
+function gotoOS(){
+  window.location = "/opensource";
+}
+function gotoDl(){
+  window.location = "/download";
+}
 function fetchData() {
     queryDownloadCount([343, 344, 345, 346, 347], function (data) {
           vm.$data.downloadCount += parseInt(data[343]) + parseInt(data[344]) + parseInt(data[345]) + parseInt(data[346]) + parseInt(data[347]);

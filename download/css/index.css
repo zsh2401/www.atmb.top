@@ -1,0 +1,16 @@
+.downloadIcon{
+    height:70px;
+    margin: 0 auto;
+    border-radius: 10px
+}
+.ways div{
+    margin-bottom:40px;
+}
+.ways div img{
+    height:70px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.ways div div{
+    margin: 0;
+}

@@ -9,10 +9,10 @@
     <meta name="description" content="秋之盒是开源,简约,免费的图形化ADB工具箱.欢迎你在这里安全地下载秋之盒以及寻求帮助,共同促进秋之盒的发展">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@3.4.2/dist/css/swiper.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/global.css?a=adaasdxdascb">
+    <link rel="stylesheet" href="/css/navbar.css?b=c">
+    <link rel="stylesheet" href="./css/global.css?a=scb">
     <link rel="shortcut icon" href="./images/leaves.png">
-    <link rel="stylesheet" href="./css/index.css?b=ck">
+    <link rel="stylesheet" href="./css/index.css?b=caak">
 
 
     
@@ -23,12 +23,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="./js/caona.js?s=was"></script>
-    <script src="./js/index.js?s=asadalkh"></script>
-    <script src="./js/global.js?axs=wcsaqw"></script>
+    <script src="./js/index.js?s=aalkh"></script>
+    <script src="./js/global.js?axs=wqw"></script>
 </head>
 <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
+    <nav class="navbar navbar-default navbar-fixed-top noradius" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -38,97 +38,93 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">秋之盒</a>
+                <a class="navbar-brand visible-xs-block">秋之盒</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-c">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="."><span class="glyphicon glyphicon-home"> 主页</a></li>
-                    <li><a href="extension/"><span class="glyphicon glyphicon-th"> 拓展模块</a></li>
-                    <li><a href="about/"><span class="glyphicon glyphicon-leaf"> 关于/联系</a></li>
-                    <li><a href="donate/"><span class="glyphicon glyphicon-heart-empty"> 开源/捐赠</a></li>
-                    <li><a href="../comments/"><span class="glyphicon glyphicon-edit"> 留言/软件评论</a></li>
-                    <li><a href="../help/"><span class="glyphicon glyphicon-paperclip"> 帮助</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            秋之盒 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/">主页面</a></li>
+                            <li><a href="/download/">立刻下载</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            拓展模块 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/extension/">浏览拓展模块</a></li>
+                            <li><a href="/help/?md=ext.md">如何安装拓展模块?</a></li>
+                            <li><a href="/go/open/">开发拓展模块</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                开源/捐赠 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/donate/">捐赠与支持</a></li>
+                            <li><a href="/opensource/">开源与鸣谢</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            帮助<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/help/">说明书 </a></li>
+                            <li><a href="/comments/">留言</a></li>
+                        </ul>
+                    </li> 
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            关于 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/about/">联系</a></li>
+                            <li><a href="/story/">故事</a></li>
+                            <li><a href="https://zsh2401.top">开发者博客</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container" style="background:transparent;min-height: 0">
-        <div class="firstele"></div>
-        <div class="jumbotron" style="background:transparent">
-                <h1 class="text-center" style="margin: 0; color:white">AutumnBox 秋之盒</h1>
-                <h4 class="text-center" style="color:white">开源,简约,免费的安卓手机助手</h4>
-        </div>
+    <div id="ajaxInfos">
+    <div class="jumbotron header">
+        <div class="container head-container">
+                    <h1>AutumnBox 2019</h1>
+                    <h4>开源,简约,免费的安卓手机助手</h4>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-warning main-btn" onclick="gotoDl()">
+                            立刻获取 v{{version}}
+                        </button>
+                        <button type="button" class="btn btn-default main-btn" onclick="gotoOS()">
+                            浏览源码仓库
+                    </button>
+                </div>
+         </div>
     </div>
-    <div id="ajaxInfos" class="container">
-        <div id="website-notice"></div>
-        
-        <h4 class="text-center">解压即用,绿色软件,帮助小白,方便老鸟!</h4>
-        <div class="text-center" style="color:white">
-                <div class="btn-group">
-                    <button v-bind:title="downloadCount" type="button" style="font-size: 15px;" class="btn btn-default" onclick="window.location = 'download'">
-                                    立刻获取
-                    </button>
-                    <button type="button" style="font-size: 15px;" class="btn btn-default" onclick="javascrtpt:window.open('go/opensource')">
-                                    浏览源代码
-                    </button>
-                </div>
-        </div>
+    
 
-        <div id="desc">
-            <div class="row" style="margin-bottom:0px;">
-                <div class="col-md-6">
-                    <h3><embed src="./images/svg/security.svg" width="30px"> 秋之盒值得被您信任</h3>
-                    <ul>
-                        <li>使用C#和WPF技术编写,遵守Windows API规范</li>
-                        <li>以LGPL3.0开放源代码,完全透明</li>
-                        <li><a target="_blank" href="http://r.virscan.org/language/zh-cn/report/67dda3a561124fe6c0818cfe32da9f9f">全球杀软检测报告</a></li>
-                        <li><a target="_blank" href="https://habo.qq.com/file/showdetail?pk=ADQGb11vB2QIOls5U2A%3D">腾讯哈勃分析报告</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <h3><embed src="./images/svg/req.svg" style="width:30px"> 运行所需</h3>
-                    <ul>
-                        <li><embed src="./images/svg/pc.svg" width="20px"> X86桌面设备(常见的个人计算机)</li>
-                        <li><embed src="./images/svg/windows.svg" width="20px"> 建议Win10(1809) 最低Win7</li>
-                        <li><embed src="./images/svg/env.svg" width="20px"> .net 4.6及以上(Win10自带)<a target="_blank" href="/go/download/dotnet/">[点击下载]</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6" v-if="latestVersionInfo != null">
-                    <h3><embed src="./images/svg/hands2.svg" style="width:30px"> 开发者需要您的帮助</h3>
-                    <p>我只是一名19岁学生,最初为学习与实践目的创立了此项目
-                        <br>如今面临巨大的生活与学习压力,我不得不放缓开发进度
-                        <br>我希望您可以支持我<embed src="./images/svg/heart.svg" style="width:20px;">这完全是自愿的
-                        <br>作为回报,你可以在第一时间获得我的人工援助</p>
-                    <button class="btn btn-default" onclick="window.location='./donate/'">扫码或领取支付宝红包进行捐赠</button>
-                </div>
-                <div class="col-md-6" v-if="latestVersionInfo != null">
-                    <h3><embed src="./images/svg/leaf.svg" style="width:30px"> {{version}}更新日志<small> - {{date[1]}}/{{date[2]}}/{{date[0]}}</small></h3>
-                    <p v-html="latestVersionInfo"></p>
-                </div>
-            </div>
-            <!-- <div class="splitline"></div> -->
-            <!-- <div class="row">
-                <div class="col-md-5">
-                    <h2>全新设计</h2>
-                    <p>基于<a target="_blank" href="http://materialdesigninxaml.net/">MaterialDesignInXaml</a>的Material Design化界面</p>
-                    <p>简洁,高效,美观</p>
-                </div>
-                <div class="col-md-7">
-                    <img class="img-responsive" src="./images/demo/show_launch.gif">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <img class="img-responsive" src="/images/demo/show5.gif">
-                </div>
-                <div class="col-md-6">
-                    <h2>一键激活软件特权模式</h2>
-                    <p>秋之盒可以通过更加高效的方式激活以下软件的免ROOT模式,其中要感谢@web1n做出的贡献</p>
-                    <p>支持的应用:</p>
-                    <ul>
+    <div class="container">
+        <div id="website-notice"></div>
+        <div class="row">
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <a class="hlink" href="/help/?md=dpm.md">
+                    <h3>激活冻结软件</h3>
                         <li><a target="_blank" href="https://www.coolapk.com/apk/com.catchingnow.icebox">冰箱</a></li>
                         <li><a target="_blank" href="https://www.coolapk.com/apk/web1n.stopapp">小黑屋 @web1n</a></li>
                         <li><a target="_blank" href="https://www.coolapk.com/apk/com.hld.apurikakusu">黑洞</a></li>
@@ -136,57 +132,73 @@
                         <li><a target="_blank" href="https://www.coolapk.com/apk/com.hld.anzenbokusu">第二空间</a></li>
                         <li><a target="_blank" href="https://www.coolapk.com/apk/cf.playhi.freezeyou">FreezeYou!</a></li>
                         <li>更多应用正在陆续支持中...</li>
-                    </ul>
-                </div>
+                </a>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>超多实用功能</h2>
-                    <p>为你提供高效的搞机体验</p>
-                    <ul>
-                        <li>大部分功能无需ROOT</li>
-                        <li>充分挖掘ADB功能</li>
-                        <li>全部操作图形化,更加快速方便的交互</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <img class="img-responsive" src="/images/demo/show3.png">
-                </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <a class="hlink" href="/help/?md=script.md">
+                    <h3>执行脚本</h3>
+                    <li><a target="_blank" href="https://www.coolapk.com/apk/me.piebridge.brevent">黑域</a></li>
+                    <li><a target="_blank" href="https://www.coolapk.com/apk/moe.shizuku.privileged.api">ShizukuManager</a></li>
+                </a>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <img class="img-responsive" src="/images/demo/show2.png">
-                </div>
-                <div class="col-md-6">
-                    <h2>详尽的提示与选择</h2>
-                    <p>尽可能帮助您做出正确的选择</p>
-                </div>
+
+             <div class="col-md-3 col-sm-6 col-xs-6">
+                <a class="hlink" href="/help/?md=skills.md">
+                    <h3>手机刷机</h3>
+                    <li>刷入Recovery</li>
+                    <li>解锁系统分区(非BL)</li>
+                    <li>一键上BL锁</li>
+                </a>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>下载拓展模块!</h2>
-                    <p>
-                        秋之盒自带的功能还是不够你用?我早就考虑到了!
-                        秋之盒具有开放能力,所有人都可以为秋之盒开发新功能!因此你可以找到大量的拓展模块,自由选择并进行使用!
-                        <br>如果你是开发者,欢迎加入AutumnBox拓展模块的开发!
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <img class="img-responsive" src="/images/demo/show4.png">
-                </div>
+
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <a class="hlink" href="http://materialdesigninxaml.net/">
+                    <h3>谷歌质感设计</h3>
+                    基于Material Design In Xaml
+                </a>
             </div>
+        </div>
+
+        <div id="desc">
             <div class="row">
-                <div class="col-md-6">
-                    <img class="img-responsive" src="/images/demo/show6.png">
+                <div class="col-md-6 col-sm-6">
+                    <h3><embed class="embed-icon" src="./images/svg/security.svg"> 秋之盒值得被您信任</h3>
+                    <li>使用C#和WPF技术编写,遵守Windows API规范</li>
+                    <li><a href="/opensource/"><img src="https://img.shields.io/badge/%E5%BC%80%E6%BA%90%E8%AE%B8%E5%8F%AF-LGPL3.0-brightgreen.svg"></a></li>
+                    <li><a target="_blank" href="http://r.virscan.org/language/zh-cn/report/67dda3a561124fe6c0818cfe32da9f9f"><img src="https://img.shields.io/badge/%E5%85%A8%E7%90%83%E6%9F%A5%E6%9D%80-安全-brightgreen.svg"></a></li>
+                    <li><a target="_blank" href="https://habo.qq.com/file/showdetail?pk=ADQGb11vB2QIOls5U2A%3D"><img src="https://img.shields.io/badge/%E8%85%BE%E8%AE%AF%E5%93%88%E5%8B%83-%E6%9C%AA%E5%8F%91%E7%8E%B0%E9%A3%8E%E9%99%A9-brightgreen.svg"></a></li>
                 </div>
-                <div class="col-md-6">
-                    <h2>各式各样的主题</h2>
-                    <p>花瓶功能,但我就是要加!</p>
+                <div class="col-md-6 col-sm-6">
+                    <h3><embed class="embed-icon" src="./images/svg/req.svg"> 运行所需</h3>
+                    <li><embed src="./images/svg/pc.svg" width="20px"> X86桌面设备(常见的个人计算机)</li>
+                    <li><embed src="./images/svg/windows.svg" width="20px"> 建议Win10(1809) 最低Win7</li>
+                    <li><embed src="./images/svg/env.svg" width="20px"> .net 4.6及以上(Win10自带)<a target="_blank" href="/go/download/dotnet/">[点击下载]</a></li>
                 </div>
-            </div> -->
-            <!-- <div style="height: 1px;width: 100%;background: black;margin-top: 20px;"></div> -->
-            <!-- <h3 name="comments" id="comments">留言/评论</h3> -->
+
+                
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6" v-if="latestVersionInfo != null">
+                        <h3><embed src="/images/svg/leaf.svg" class="embed-icon">{{version}}更新日志<small> - {{date[1]}}/{{date[2]}}/{{date[0]}}</small></h3>
+                        <p v-html="latestVersionInfo"></p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                        <h3><embed class="embed-icon"src="./images/svg/heart.svg"> 开发者需要您的帮助</h3>
+                        <p>我只是一名19岁学生,最初为学习与实践目的创立了此项目.<br>
+                            如今面临巨大的生活与学习压力,我不得不放缓开发进度.<br>
+                            我希望您可以支持我,这完全是自愿的,<br>
+                                作为回报,你可以在第一时间获得我的人工援助</p>
+                        <button class="btn btn-default" onclick="window.location='./donate/'">扫码或领取支付宝红包进行捐赠</button>
+                </div>
+                
+            </div>
+
+            <br><br>
+           
             <div id="vcomments"></div>
+
             <footer>
                 <div style="display:none">
                 <script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script></div>
@@ -194,5 +206,6 @@
             </footer>
         </div>
     </div>
+</div>
 </body>
 </html>

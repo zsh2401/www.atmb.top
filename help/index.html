@@ -13,17 +13,16 @@
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="css/index.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js"></script>
-    <script src='https://cdn.jsdelivr.net/npm/valine@1.3.4/dist/Valine.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked@0.6.0/lib/marked.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
     <script src="/js/global.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/index.js?ab=c"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@0.6.0/lib/marked.min.js"></script>
 </head>
 <body>
-    <nav id="top" class="navbar navbar-default" role="navigation" style="border-radius: 0px;">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -33,30 +32,79 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">秋之盒</a>
+                <a class="navbar-brand visible-xs-block">秋之盒</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-c">
                 <ul class="nav navbar-nav">
-                    <li><a href="/"><span class="glyphicon glyphicon-home"> 主页</a></li>
-                    <li><a href="/extension/"><span class="glyphicon glyphicon-th"> 拓展模块</a></li>
-                    <li><a href="/about/"><span class="glyphicon glyphicon-leaf"> 关于/联系</a></li>
-                    <li><a href="/donate/"><span class="glyphicon glyphicon-heart-empty"> 开源/捐赠</a></li>
-                    <li><a href="/comments/"><span class="glyphicon glyphicon-edit"> 留言/软件评论</a></li>
-                    <li class="active"><a href="/help/"><span class="glyphicon glyphicon-paperclip"> 帮助</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            秋之盒 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/">主页面</a></li>
+                            <li><a href="/download/">立刻下载</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            拓展模块 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/extension/">浏览拓展模块</a></li>
+                            <li><a href="/help/?md=ext.md">如何安装拓展模块?</a></li>
+                            <li><a href="/go/open/">开发拓展模块</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                开源/捐赠 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/donate/">捐赠与支持</a></li>
+                            <li><a href="/opensource/">开源与鸣谢</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            帮助<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/help/">说明书 </a></li>
+                            <li><a href="/comments/">留言</a></li>
+                        </ul>
+                    </li> 
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            关于 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/about/">联系</a></li>
+                            <li><a href="/story/">故事</a></li>
+                            <li><a href="https://zsh2401.top">开发者博客</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div id="app" class="container" style="background: whitesmoke">
-        <div class="backtotop"><button class="btn btn-default" onclick="location.href = '#top'">返回顶部</button></div>
-        <br>
+    <div id="app" class="container">
         <div id="website-notice"></div>
-        <!-- 内容 -->
+        <div class="backtotop">
+            <div class="btn-group btn-group-vertical">
+                <button class="btn btn-default" onclick="location.href = '.'">帮助主页</button>
+                <button class="btn btn-default" onclick="location.href = '#top'">返回顶部</button>
+            </div>
+        </div>
         <div v-if="contentHtml != null" class="content" v-html="contentHtml"></div>
-        <h1 v-else class="text-center">此页面暂未编写完成!</h1>
-        <!-- 内容 -->
-        <p class="text-center">上面的内容不够?<a href="../about/">立刻获取人工支持</a> </p>
+        <h1 v-else class="text-center">加载中</h1>
         <footer>
             <div style="display:none">
                 <script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script>

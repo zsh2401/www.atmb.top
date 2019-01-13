@@ -1,4 +1,3 @@
-<div class="alert alert-warning">此页面仍然在编写中</div>
 <style>
     .important{
         color:orangered;
@@ -13,104 +12,41 @@
 如果你在详细阅读后仍然未找到解决方案,请[联系我们](/about/)
 <!-- # 目录 -->
 
-* [运行秋之盒](#运行秋之盒)
-    * [确保操作系统](#确保操作系统)
-    * [确保.NET环境](#确保NET环境)
-    * [下载并解压使用](#下载并解压使用)
+* [运行秋之盒<span class="important">(编写中)</span>](?md=run.md)
+    * [确保操作系统](?md=run.md&node=确保操作系统)
+    * [确保.NET环境](?md=run.md&node=确保NET环境)
+    * [下载并解压使用](?md=run.md&node=下载并解压使用)
 
 
-* [连接设备](#连接设备)
-    * [找不到设备的常见处理方法](#找不到设备的常见处理方法)
-    * [一键安装安卓手机驱动](#一键安装安卓手机驱动)
+* [连接设备<span class="important">(编写中)</span>](?md=connect_device.md)
+    * [找不到设备的常见处理方法](?md=connect_device.md&node=找不到设备的常见处理方法)
+    * [一键安装安卓手机驱动](?md=connect_device.md&node=一键安装安卓手机驱动)
 
 
-* [激活DPM软件](#激活DPM软件)
-    * [什么是DPM软件?有哪些?干什么用?](#什么是DPM软件-有哪些-干什么用-)
-    * [使用秋之盒激活他们](#使用秋之盒激活他们)
-        * [激活冰箱](#激活冰箱)
-        * [激活小黑屋](#激活小黑屋)
-        * [其它](#其它)
-    * [激活失败的解决方案](#激活失败的解决方案)
+* [激活DPM软件](?md=dpm.md&node=激活DPM软件)
+    * [什么是DPM软件?有哪些?干什么用?](?md=dpm.md&node=什么是dpm软件-有哪些-干什么用)
+    * [国产手机及三星注意事项](?md=dpm.md&node=国产手机及三星注意事项)
+    * [使用秋之盒激活他们](?md=dpm.md&node=使用秋之盒激活他们)
+        * [激活DPM软件(以冰箱为例)](?md=dpm.md&node=激活dpm软件_以冰箱为例)
+        * [其它](?md=dpm.md&node=其它)
+    * [激活失败的解决方案](?md=dpm.md&node=激活失败的解决方案)
 
 
-* [激活脚本优化软件](#激活脚本优化软件)
-    * [什么是脚本优化软件?有哪些?干什么用?](#什么是脚本优化软件?有哪些?干什么用?)
-    * [激活黑域](#激活黑域)
-    * [激活小黑屋麦克斯韦模式](#激活小黑屋麦克斯韦模式)
+* [激活脚本优化软件](?md=script.md)
+    * [什么是脚本优化软件?有哪些?干什么用?](?md=script.md&node=什么是脚本优化软件?有哪些?干什么用?)
+    * [激活黑域](?md=script.md&node=激活黑域)
+    * [激活小黑屋麦克斯韦妖模式](?md=script.md&node=激活小黑屋麦克斯韦妖模式)
+    * [激活ShizukuManager](?md=script.md&node=激活shizukumanager)
+    * [激活AppOps](?md=script.md&node=激活appops)
 
 
-* [一些技巧](#一些技巧)
-    * [用秋之盒刷REC](#用秋之盒刷REC)
-        * [一键刷小米6 TWRP REC](#一键刷小米6-TWRP-REC)
-    * [用秋之盒给手机加BL锁](#用秋之盒给手机加BL锁)
-    * [解除系统锁,获取完整ROOT](#解除系统锁,获取完整ROOT)
+* [一些技巧<span class="important">(编写中)</span>](?md=skills.md)
+    * [用秋之盒刷REC](?md=skills.md&node=用秋之盒刷REC)
+        * [一键刷小米6 TWRP REC](?md=skills.md&node=一键刷小米6-TWRP-REC)
+    * [用秋之盒给手机加BL锁](?md=skills.md&node=用秋之盒给手机加BL锁)
+    * [解除系统锁,获取完整ROOT](?md=skills.md&node=解除系统锁,获取完整ROOT)
 
 
- * [拓展模块](#拓展模块)
-    * [下载并安装拓展模块](#下载并安装拓展模块)
-    * [使用拓展模块](#使用拓展模块)
-
-
-******
-
-# 运行秋之盒
-为了正常运行秋之盒
-### 确保操作系统
-秋之盒基于.net framework 4.6进行编写,而.net 4.6最低支持Windows 7,因此,秋之盒对操作系统的最低要求是Windows7系统   
-并且推荐在Windows 10上运行(更安全,更美观,更稳定)
-s
-### 确保NET环境
-如果你是Windows 7或阉割版Windows 10用户,可能会遇到以下图片中的问题
-![](https://tse3.mm.bing.net/th?id=OIP.ya74Bo-A4cFEQ-MbBYiPeAHaDr&pid=Api)
-
-是的,你缺少.NET环境,请立刻 [下载与安装](/download/dotnet/)
-<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
-
-### 下载并解压使用
-万事俱备,你要做的就是立刻下载秋之盒!
-然后把文件解压出来再用!!!别直接就点压缩包里的文件!!!!!
-
-******
-
-# 连接设备
-历尽千辛万苦,你终于打开了秋之盒
-
-<!-- ![](/images/demo/show_launch.gif) -->
-
-如果正常,你应该可以看到右侧设备面板显示出已连接的设备,但如果你**明明插了设备,但却没显示**,怎么办啊!
-
-~~明明比任何人都更为接近,为何却始终无法互相感应~~
-### 找不到设备的常见处理方法
-可能的原因①: 有其它ADB进程造成冲突,解决方案:
-* 退出所有其它手机助手(360,应用宝等)
-* 退出所有其它ADB工具箱
-* 打开任务管理,找到所有名叫adb.exe的进程,并结束他们
-
-
-可能的原因②: 电脑上没有安装安卓手机的驱动,解决方案
-* 下载并使用秋之盒拓展模块 [一键安装安卓手机驱动](/extension/extension.html?j=/_data_/extensions/xdi.json) 
-* 打开百度搜索 您的设备型号+驱动 下载并安装
-
-以上几种原因<span class="important">可能同时存在</span>,请进行彻底排查
-
-### 一键安装安卓手机驱动
-下载并使用秋之盒拓展模块 [一键安装安卓手机驱动](/extension/extension.html?j=/_data_/extensions/xdi.json) 
-
-~~Sister's noise 仍然在继续追寻~~
-
-# 激活DPM软件
-这里是重头戏,[看这里](?md=dpmhelp.md)
-### 什么是DPM软件?有哪些?干什么用?
-[看这里](?md=dpmhelp.md#什么是DPM软件-有哪些-干什么用)
-### 使用秋之盒激活他们
-[看这里](?md=dpmhelp.md#使用秋之盒激活他们)
-#### 激活冰箱
-[看这里](?md=dpmhelp.md#激活冰箱)
-#### 激活小黑屋
-[看这里](?md=dpmhelp.md#激活小黑屋)
-#### 其它
-[看这里](?md=dpmhelp.md#其它)
-### 激活失败的解决方案
-[看这里](?md=dpmhelp.md#激活失败的解决方案)
-
-******
+ * [拓展模块](?md=ext.md)
+    * [下载并安装拓展模块](?md=ext.md&node=下载并安装拓展模块)
+    * [使用拓展模块](?md=ext.md&node=使用拓展模块)

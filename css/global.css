@@ -5,10 +5,12 @@
     font-family: Microsoft YaHei UI Light,Microsoft YaHei, sans-serif;
 }
 body{
-    background-image: url(../images/bg2.jpg);
+    padding-top: 50px;
+    background-color: whitesmoke;
+    /* background-image: url(../images/bg2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment:fixed;
+    background-attachment:fixed; */
 }
 #website-notice{
     visibility: hidden;
@@ -23,8 +25,9 @@ body{
 .container{
     color: black;
     background-color: white;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     min-height: 100vh;
+    padding: 20px;
 }
 footer{
     margin-top: 20px;
@@ -55,4 +58,7 @@ footer{
 }
 .centerText{
     text-align: center;
+}
+.noradius{
+    border-radius: 0px;
 }

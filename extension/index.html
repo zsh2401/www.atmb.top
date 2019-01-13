@@ -30,36 +30,84 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">秋之盒</a>
+                <a class="navbar-brand visible-xs-block">秋之盒</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-c">
                 <ul class="nav navbar-nav">
-                    <li><a href="../"><span class="glyphicon glyphicon-home"> 主页</a></li>
-                    <li class="active"><a href="."><span class="glyphicon glyphicon-th"> 拓展模块</a></li>
-                    <li><a href="../about/"><span class="glyphicon glyphicon-leaf"> 关于/联系</a></li>
-                    <li><a href="../donate/"><span class="glyphicon glyphicon-heart-empty"> 开源/捐赠</a></li>
-                    <li><a href="../comments/"><span class="glyphicon glyphicon-edit"> 留言/软件评论</a></li>
-                    <li><a href="../help/"><span class="glyphicon glyphicon-paperclip"> 帮助</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            秋之盒 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/">主页面</a></li>
+                            <li><a href="/download/">立刻下载</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            拓展模块 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/extension/">浏览拓展模块</a></li>
+                            <li><a href="/help/?md=ext.md">如何安装拓展模块?</a></li>
+                            <li><a href="/go/open/">开发拓展模块</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                开源/捐赠 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/donate/">捐赠与支持</a></li>
+                            <li><a href="/opensource/">开源与鸣谢</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            帮助<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/help/">说明书 </a></li>
+                            <li><a href="/comments/">留言</a></li>
+                        </ul>
+                    </li> 
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            关于 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/about/">联系</a></li>
+                            <li><a href="/story/">故事</a></li>
+                            <li><a href="https://zsh2401.top">开发者博客</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="container">
-        <div class="firstele"></div>
         <div id="website-notice"></div>
-        <h1 class="text-center">下载秋之盒拓展模块</h1>
+        <h1 class="text-center">下载拓展模块</h1>
         <h5 class="text-center">做你想做的事情<br><br>
             <div class="btn-group">
-                <button type="button" class="btn btn-default" onclick="window.open('../go/help/install_extension/')">如何安装拓展?</button>
+                <button type="button" class="btn btn-default" onclick="window.open('../help/?md=ext.md')">如何安装拓展?</button>
                 <button type="button" class="btn btn-default" onclick="window.open('https://github.com/zsh2401/AutumnBox/wiki/zh_CN_AutumnBox%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3')">开发文档</button>
             </div>
         </h5>
         <div id="extensions">
             <div v-if="extensions">
                 <div style="height:1px;background-color:gainsboro;margin-bottom:4px;"></div>
-                <div class="alert alert-info">新一代拓展模块正在陆续开发中,请保持关注</div>
+                <div class="alert alert-info text-center">新一代拓展模块正在陆续开发中,请保持关注</div>
                 <div class="row">
-                    <div v-for="ext in extensions"  class="col-md-4" style="height:100px">
+                    <div v-for="ext in extensions"  class="col-md-4 col-sm-6" style="height:100px">
                         <img v-bind:src="ext.info.icon" style="width:40px">
                         <a v-bind:href="ext.extPage" target="_blank">{{ext.info.name}} <span class="badge" v-if="dltimes[ext.info.id] != null">{{dltimes[ext.info.id]}}次下载</span></a>
                         <p v-if="ext.info.bdesc != null">{{ext.info.bdesc}}</p>

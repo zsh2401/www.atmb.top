@@ -42,6 +42,7 @@ function initVue() {
             "version": null,
             "date": [],
             "latestVersionInfo": null,
+            "total2401":0,
             "dldata":{
                 "343":0,
                 "345":0,
@@ -56,6 +57,7 @@ function fetchData() {
     var ids = [__dreamId, __monoId, __web1nId, __baiduPanId, __githubId];
     queryDownloadCount(ids, function (count) {
         __vm.$data.dldata = count;
+        __vm.$data.total2401 = (parseInt(count[__dreamId]) + parseInt(count[__baiduPanId]) + parseInt(count[__githubId]));
     });
     fetch(__UPDATE_LOG_URL)
         .then(res => res.json())

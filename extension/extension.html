@@ -25,6 +25,7 @@
     <script src="js/extension_details.js?q=cfaakv"></script>
 </head>
 <body>
+
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-radius: 0px;">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -35,48 +36,104 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">秋之盒</a>
+                <a class="navbar-brand visible-xs-block">秋之盒</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-c">
                 <ul class="nav navbar-nav">
-                    <li><a href="../"><span class="glyphicon glyphicon-home"> 主页</a></li>
-                    <li class="active"><a href="../extension/"><span class="glyphicon glyphicon-th"> 拓展模块</a></li>
-                    <li><a href="../about/"><span class="glyphicon glyphicon-leaf"> 关于/联系</a></li>
-                    <li><a href="../donate/"><span class="glyphicon glyphicon-heart-empty"> 开源/捐赠</a></li>
-                    <li><a href="../comments/"><span class="glyphicon glyphicon-edit" > 留言/软件评论</a></li>
-                    <li><a href="../help/"><span class="glyphicon glyphicon-paperclip"> 帮助</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            秋之盒 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/">主页面</a></li>
+                            <li><a href="/download/">立刻下载</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            拓展模块 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/extension/">浏览拓展模块</a></li>
+                            <li><a href="/help/?md=ext.md">如何安装拓展模块?</a></li>
+                            <li><a href="/go/open/">开发拓展模块</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                开源/捐赠 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/donate/">捐赠与支持</a></li>
+                            <li><a href="/opensource/">开源与鸣谢</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            帮助<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/help/">说明书 </a></li>
+                            <li><a href="/comments/">留言</a></li>
+                        </ul>
+                    </li> 
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            关于 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/about/">联系</a></li>
+                            <li><a href="/story/">故事</a></li>
+                            <li><a href="https://zsh2401.top">开发者博客</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div id="information" class="container">
-        <div class="firstele"></div>
         <div  class="row">
+
             <div class="col-md-2"><img v-bind:src="ext.icon" class="img-responsive"></div>
             <div class="col-md-8">
                 <h2 style="margin-top:0px">{{ext.name}}</h2>
-                    <p v-html="ext.desc"></p>
-                    <div class="row" style="color:gray">
-                            <h5 class="col-md-3">下载:{{downloadCount}}</h5>
-                            <h5 class="col-md-3">开发者:{{ext.auth}}</h5>
-                            <h5 class="col-md-3" v-if="ext.version != null">版本:{{ext.version}}</h5>
-                            <h5 class="col-md-3" v-if="ext.dangerLevel != null" >危险级别:{{ext.dangerLevel}}</h5>
-                            <h5 class="col-md-3" v-if="ext.size != null">近似大小:{{ext.size}}</h5>
-                            <h5 class="col-md-3" v-if="ext.email != null">邮箱:{{ext.email}}</h5>
-                            <h5 class="col-md-3" v-if="ext.updateDate != null">最近更新:{{ext.updateDate}}</h5>
-                            <h5 class="col-md-3" v-if="ext.opensource != null"><a v-bind:href="ext.opensource" target="_blank">开源地址</a></h5>
-                            <h5 class="col-md-4" v-if="ext.atmbver != null">支持秋之盒:{{ext.atmbver}}</h5>
+                <div class="col-md-2 visible-xs-block">
+                    <div class="btn-group">
+                            <button class="btn btn-primary"  v-on:click="onClickDownload">立刻获取 </button>
+                            <button class="btn btn-default"  onclick="window.open('/go/help/install_extension')">如何安装拓展模块?</button>
                     </div>
-                  
+                </div>
+                <p v-html="ext.desc"></p>
+                <div class="row" style="color:gray">
+                        <h5 class="col-md-3">下载:{{downloadCount}}</h5>
+                        <h5 class="col-md-3">开发者:{{ext.auth}}</h5>
+                        <h5 class="col-md-3" v-if="ext.version != null">版本:{{ext.version}}</h5>
+                        <h5 class="col-md-3" v-if="ext.dangerLevel != null" >危险级别:{{ext.dangerLevel}}</h5>
+                        <h5 class="col-md-3" v-if="ext.size != null">近似大小:{{ext.size}}</h5>
+                        <h5 class="col-md-3" v-if="ext.email != null">邮箱:{{ext.email}}</h5>
+                        <h5 class="col-md-3" v-if="ext.updateDate != null">最近更新:{{ext.updateDate}}</h5>
+                        <h5 class="col-md-3" v-if="ext.opensource != null"><a v-bind:href="ext.opensource" target="_blank">开源地址</a></h5>
+                        <h5 class="col-md-4" v-if="ext.atmbver != null">支持秋之盒:{{ext.atmbver}}</h5>
+                </div>
             </div>
-            <div class="col-md-2">
+
+            <div class="col-md-2 hidden-xs">
                 <div class="btn-group btn-group-vertical">
                         <button class="btn btn-primary"  v-on:click="onClickDownload">立刻获取 </button>
                         <button class="btn btn-default"  onclick="window.open('/go/help/install_extension')">如何安装拓展模块?</button>
                 </div>
-                    
             </div>
+
+
+
         </div>
 
         <div v-if="extpics != null" class="swiper-container">
