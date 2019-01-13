@@ -19,6 +19,7 @@
 .main-btn{
     font-size: 15;
     border-radius: 0;
+    border-width: 0px;
 }
 .head-container{
     min-height:auto;
