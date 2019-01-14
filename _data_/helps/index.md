@@ -12,9 +12,11 @@
     * [下载并解压使用](?md=run.md&node=下载并解压使用)
 
 
-* [连接设备](?md=connect_device.md)
-    * [找不到设备的常见处理方法](?md=connect_device.md&node=找不到设备的常见处理方法)
-    * [一键安装安卓手机驱动](?md=connect_device.md&node=一键安装安卓手机驱动)
+- [连接设备](?md=connect_device.md)
+    - [从最简单的开始尝试](?md=connect_device.md&node=从最简单的开始尝试)
+    - [确保已正确安装驱动](?md=connect_device.md&node=确保已正确安装驱动)
+    - [确保手机USB调试已打开](?md=connect_device.md&node=确保手机USB调试已打开)
+    - [确保ADB端口没有冲突](?md=connect_device.md&node=确保ADB端口没有冲突)
 
 
 * [激活DPM软件](?md=dpm.md&node=激活DPM软件)
