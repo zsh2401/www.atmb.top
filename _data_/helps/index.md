@@ -12,6 +12,8 @@
     * [下载并解压使用](?md=run.md&node=下载并解压使用)
 
 
+* [ADB服务启动失败解决方案 <span class="important">(编写中)</span>](?md=adbfail.md)
+
 - [连接设备](?md=connect_device.md)
     - [从最简单的开始尝试](?md=connect_device.md&node=从最简单的开始尝试)
     - [确保已正确安装驱动](?md=connect_device.md&node=确保已正确安装驱动)
