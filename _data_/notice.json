@@ -1,5 +1,5 @@
 {
-    "enable":true,
+    "enable":false,
     "content":"<div class='alert alert-warning'> 请勿下载目前版本，有严重bug，请等待修复</div>"
 }
 
