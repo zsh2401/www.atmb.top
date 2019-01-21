@@ -43,6 +43,7 @@ function initVue() {
             "date": [],
             "latestVersionInfo": null,
             "total2401":0,
+            "isWindows":true,
             "dldata":{
                 "343":0,
                 "345":0,
@@ -52,7 +53,12 @@ function initVue() {
             },
         }
     });
+    __vm.$data.isWindows = IsPC();
 }
+function IsPC(){  
+    return (navigator.platform == "Win32") || (navigator.platform == "Windows"); 
+ }
+
 function fetchData() {
     var ids = [__dreamId, __monoId, __web1nId, __baiduPanId, __githubId];
     queryDownloadCount(ids, function (count) {
