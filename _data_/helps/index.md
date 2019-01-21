@@ -19,6 +19,7 @@
     - [确保已正确安装驱动](?md=connect_device.md&node=确保已正确安装驱动)
     - [确保手机USB调试已打开](?md=connect_device.md&node=确保手机usb调试已打开)
     - [确保ADB端口没有冲突](?md=connect_device.md&node=确保adb端口没有冲突)
+    - [连接华为设备](?md=cnct_huawei.md)
 
 
 * [激活DPM软件](?md=dpm.md&node=激活DPM软件)
