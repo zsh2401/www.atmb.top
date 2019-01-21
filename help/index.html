@@ -111,7 +111,10 @@
             </div>
         </div>
         <div v-if="contentHtml != null" class="content" v-html="contentHtml"></div>
-        <h1 v-else class="text-center">加载中</h1>
+        <div v-else class="text-center">
+            <h1>加载中...</h1>
+            <h4>如果一直加载,请更换浏览器再试</h4>
+        </div>
         <footer>
             <div style="display:none">
                 <script src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript"></script>
