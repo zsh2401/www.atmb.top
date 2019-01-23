@@ -3,15 +3,16 @@
     "icon":"/_data_/extensions/img/animation.png",
     "name":"调节手机动画速度",
     "auth":"zsh2401",
-    "email":"zsh2401@163.com",
-    "minSdk":8,
-    "targetSdk":8,
-    "dangerLevel":"低",
-    "updateDate":"12/18/2019",
-    "size":"22KB",
+    "version":"0.0.5",
+    "downloadUrl":"http://dream.zsh2401.top:4397/Zsh2401.AnimationSpeedSetter.dll",
     "pics":["/_data_/extensions/img/animationsetter1.png"],
     "desc":"事实上,在部分ROM中,该功能已经失效,请自行测试",
     "bdesc":"事实上,在部分ROM中,该功能已经失效,请自行测试",
-    "version":"0.0.5",
-    "downloadUrl":"http://dream.zsh2401.top:4397/Zsh2401.AnimationSpeedSetter.dll"
+
+    "addition":[
+        {"key":"电子邮件","value":"zsh2401@163.com"},
+        {"key":"危险级别","value":"低"},
+        {"key":"最近更新","value":"12/18/2019"},
+        {"key":"近似大小","value":"22KB"}
+    ]
 }

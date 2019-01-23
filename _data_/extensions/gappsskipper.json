@@ -3,13 +3,14 @@
     "icon":"/_data_/extensions/img/googleplay.png",
     "name":"跳过GAPPS",
     "auth":"zsh2401",
-    "dangerLevel":"低",
-    "minSdk":8,
-    "size":"15KB",
-    "updateDate":"12/18/2019",
-    "targetSdk":8,
-    "atmbver":"2019.1.1",
     "desc":"什么?卡在GAPPS了?帮你解决!",
     "bdesc":"什么?卡在GAPPS了?帮你解决!",
-    "downloadUrl":"http://dream.zsh2401.top:4397/Zsh2401.GappsSkipper.dll"
+    "downloadUrl":"http://dream.zsh2401.top:4397/Zsh2401.GappsSkipper.dll",
+    
+    "addition":[
+        {"key":"最近更新","value":"01/03/2019"},
+        {"key":"近似大小","value":"15KB"},
+        {"key":"支持的秋之盒","value":"2019.1.1"},
+        {"key":"危险级别","value":"低"}
+    ]
 }
