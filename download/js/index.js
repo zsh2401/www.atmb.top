@@ -1,4 +1,4 @@
-var __web1nDownload = "https://atmb-download.web1n.com/";
+var __web1nDownload = "https://download.udp.pw/?dir=安卓/工具/秋之盒";
 var __web1nId = "346";
 
 var __monologuechiDownload = "https://atmb.sm9.top/AutumnBox/%E4%B8%BB%E7%A8%8B%E5%BA%8F/";
