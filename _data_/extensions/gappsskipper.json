@@ -5,7 +5,7 @@
     "auth":"zsh2401",
     "desc":"什么?卡在GAPPS了?帮你解决!",
     "bdesc":"什么?卡在GAPPS了?帮你解决!",
-    "downloadUrl":"http://dream.zsh2401.top:4397/Zsh2401.GappsSkipper.dll",
+    "downloadUrl":"http://dream.zsh2401.top:4396/exts/Zsh2401.GappsSkipper.dll",
     
     "addition":[
         {"key":"最近更新","value":"01/03/2019"},
