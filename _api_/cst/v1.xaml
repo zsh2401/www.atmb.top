@@ -23,7 +23,7 @@
                 <materialDesign:Card Margin="10" Width="320">
                     <StackPanel Margin="5">
                         <TextBlock DockPanel.Dock="Top" FontSize="20" TextWrapping="Wrap" Text="扫码领红包!" />
-                        <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="Gray" Text="这是最为互利的捐赠方式了,你我都是完全受利!"/>
+                        <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="Gray" Text="这个方式你无需付出,而我也可以得到收益...真的很感谢你啊!(或搜索564908538)"/>
                         <Image Source="http://atmb.top/_api_/tips/alipayqrcode.png">
                             <Image.InputBindings>
                                 <MouseBinding MouseAction="LeftClick" Command="{Binding OpenUrl}" CommandParameter="http://www.zsh2401.top"/>

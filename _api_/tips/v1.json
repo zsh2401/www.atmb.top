@@ -1,4 +1,5 @@
 {
+    "enable":false,
     "tips":
     [
         {"col":1,"title":"支付宝扫码领个红包吧!T_T","text":"这个方式你无需付出,而我也可以得到收益...真的很感谢你啊!(或搜索564908538)","pic":"http://atmb.top/_api_/tips/alipayqrcode.png"},
