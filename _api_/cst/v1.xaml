@@ -1,0 +1,12 @@
+<Grid>
+    <materialDesign:Card Margin="10" Background="{DynamicResource CardBackgroundBrush}" Width="660">
+        <DockPanel DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
+            <Image DockPanel.Dock="Left" Height="100px" Source="/Resources/Drawable/icon.ico"></Image>
+            <StackPanel DockPanel.Dock="Right">
+                <TextBlock Text="{DynamicResource AppNameWithVersion}"  FontSize="25px"></TextBlock>
+                <TextBlock  TextWrapping="Wrap" Margin="0,0,0,0" FontSize="12px" Text="{DynamicResource AboutMessage}" VerticalAlignment="Top"/>
+                <Button Command="{Binding OpenUrl}" CommandParameter="http://www.baidu.com" Style="{DynamicResource MaterialDesignFlatButton}" Content="Fuck"/>
+            </StackPanel>
+        </DockPanel>
+    </materialDesign:Card>
+</Grid>
