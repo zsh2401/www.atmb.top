@@ -1,12 +1,36 @@
-<Grid>
-    <materialDesign:Card Margin="10" Background="{DynamicResource CardBackgroundBrush}" Width="660">
-        <DockPanel DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
-            <Image DockPanel.Dock="Left" Height="100px" Source="/Resources/Drawable/icon.ico"></Image>
-            <StackPanel DockPanel.Dock="Right">
-                <TextBlock Text="{DynamicResource AppNameWithVersion}"  FontSize="25px"></TextBlock>
-                <TextBlock  TextWrapping="Wrap" Margin="0,0,0,0" FontSize="12px" Text="{DynamicResource AboutMessage}" VerticalAlignment="Top"/>
-                <Button Command="{Binding OpenUrl}" CommandParameter="http://www.baidu.com" Style="{DynamicResource MaterialDesignFlatButton}" Content="Fuck"/>
+<?xml version="1.0" encoding="utf-8"?>
+<WrapPanel>
+            <materialDesign:Card Margin="10" Width="320">
+                <StackPanel Margin="5">
+                    <TextBlock DockPanel.Dock="Top" FontSize="20" TextWrapping="Wrap" Text="欢迎来到全新的秋之盒" />
+                    <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="Gray" Text="或许你可以看看这些"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button DockPanel.Dock="Bottom" Padding="0" FontSize="13"  Style="{DynamicResource MaterialDesignFlatButton}" Command="{Binding OpenUrl}" CommandParameter="http://atmb.top/help">
+                            <TextBlock TextDecorations="Underline" Text="秋之盒官网"/>
+                        </Button>
+                        <Button Margin="10,0,0,0" DockPanel.Dock="Bottom" Padding="0" FontSize="13"  Style="{DynamicResource MaterialDesignFlatButton}"  Command="{Binding OpenUrl}" CommandParameter="http://atmb.top/help">
+                            <TextBlock TextDecorations="Underline" Text="说明书"/>
+                        </Button>
+                    </StackPanel>
+
+                    <Image Source="http://b-ssl.duitang.com/uploads/item/201205/03/20120503181506_5RQKv.jpeg">
+                        <Image.InputBindings>
+                            <MouseBinding MouseAction="LeftClick" Command="{Binding OpenUrl}" CommandParameter="http://www.zsh2401.top"/>
+                        </Image.InputBindings>
+                    </Image>
+                </StackPanel>
+            </materialDesign:Card>
+            <StackPanel VerticalAlignment="Top">
+                <materialDesign:Card Margin="10" Width="320">
+                    <StackPanel Margin="5">
+                        <TextBlock DockPanel.Dock="Top" FontSize="20" TextWrapping="Wrap" Text="扫码领红包!" />
+                        <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="Gray" Text="这是最为互利的捐赠方式了,你我都是完全受利!"/>
+                        <Image Source="http://atmb.top/_api_/tips/alipayqrcode.png">
+                            <Image.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding OpenUrl}" CommandParameter="http://www.zsh2401.top"/>
+                            </Image.InputBindings>
+                        </Image>
+                    </StackPanel>
+                </materialDesign:Card>
             </StackPanel>
-        </DockPanel>
-    </materialDesign:Card>
-</Grid>
+        </WrapPanel>
