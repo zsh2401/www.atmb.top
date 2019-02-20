@@ -1,4 +1,5 @@
-        <WrapPanel>
+        <Grid>
+        <WrapPanel HorizontalAlignment="Center" Width="900">
             <materialDesign:Card Margin="10" Width="320">
                 <StackPanel Margin="5">
                     <TextBlock DockPanel.Dock="Top" FontSize="20" TextWrapping="Wrap" Text="欢迎来到全新的秋之盒" />
@@ -41,8 +42,9 @@
                 </materialDesign:Card>
             </StackPanel>
             
-            <!-- <materialDesign:Card Height="300" Margin="10" Width="660">
-                <WebBrowser Source="https://zsh2401.top/messageboard/"/>
+            <!-- <materialDesign:Card Height="700" Margin="10" Width="660">
+                <WebBrowser Source="https://zsh2401.top"/>
             </materialDesign:Card> -->
             
         </WrapPanel>
+</Grid>
