@@ -22,7 +22,7 @@
     <!-- <script src="../lib/markdown/js/Parser.js"></script> -->
     <script src="../js/global.js"></script>
     <script src="../js/caona.js?s=efg"></script>
-    <script src="js/extension_details.js?q=cfaakv"></script>
+    <script src="js/extension_details.js?q=cfasdaakv"></script>
 </head>
 <body>
 
@@ -101,6 +101,7 @@
 
     <div class="container">
         <div id="information">
+            <div class="alert alert-danger" v-if="obtained != null">{{obtained}}</div>
             <div class="row">
                     <div class="col-md-2 col-sm-2 hidden-xs"><img v-bind:src="ext.icon" class="img-responsive"></div>
                     <div class="col-md-10 col-sm-10 col-xs-12">
@@ -108,7 +109,8 @@
                         <h3 class="visible-xs" style="margin-top:0px">{{ext.name}}</h3>
                         <h4 style="color:gray"><span v-if="ext.version != null">v{{ext.version}}</span>@{{ext.auth}}</h4>
                         <div class="btn-group">
-                            <button class="btn btn-primary"  v-on:click="onClickDownload">立刻获取 <span class="badge">{{downloadCount}}</span> </button>
+                            <div v-if="obtained"></div>
+                            <button v-else class="btn btn-primary"  v-on:click="onClickDownload">立刻获取 <span class="badge">{{downloadCount}}</span> </button>
                             <button class="btn btn-default"  onclick="window.open('/go/help/install_extension')">如何安装拓展模块?</button>
                         </div>
                     </div>

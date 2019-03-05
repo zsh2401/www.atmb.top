@@ -5,6 +5,7 @@ function initVue(){
     data:{
       ext:null,
       extpics:[],
+      obtained :null,
       downloadCount:"N/A",
     },
     methods:{
@@ -31,6 +32,9 @@ function fetchData(){
     vm.$data.ext = json;
     if(json.pics != null && json.pics.length != 0){
       vm.$data.extpics = json.pics;
+    }
+    if(json.obtained != null){
+      vm.$data.obtained = json.obtained;
     }
     document.title = json.name +"-秋之盒拓展";
     queryDownloadCount(json.id,function(count){
