@@ -65,4 +65,5 @@ function initSwiper(){
 }
 $(document).ready(()=>{
   initVue();
+  initComments();
 });
