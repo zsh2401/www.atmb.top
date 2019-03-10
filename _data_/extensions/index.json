@@ -1,4 +1,4 @@
-{
+﻿{
     "comments":[
         "发布模块很简单,你就在exts的列表里加上新的行就完事儿了",
         "不要乱搞别人的部分哦!注意给自己上一行补上逗号哦!",
@@ -10,6 +10,7 @@
         "/_data_/extensions/gappsskipper.json",
         "/_data_/extensions/animationsetter.json",
         "/_data_/extensions/captiveportal.json",
+        "/_data_/extensions/kfmarkmlchi.json",
         "/_data_/extensions/kfmark2401.json",
         "/_data_/extensions/buildViewer.json",
         "/_data_/extensions/bqss.json",
