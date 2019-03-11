@@ -1,0 +1,15 @@
+{
+    "id":2019031101,
+    "icon":"/_data_/extensions/img/appopsx.png",
+    "name":"一键激活AppOpsX",
+    "auth":"zsh2401",
+    "bdesc":"如名",
+    "desc":"如名",
+    "version":"1.0.0",
+    "downloadUrl":"http://dream.zsh2401.top:4396/extsx/Zsh2401.AppOpsXActivator.dll",
+    
+    "addition":[
+        {"key":"近似大小","value":"17KB"},
+        {"key":"危险级别","value":"低"}
+    ]
+}
