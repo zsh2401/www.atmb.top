@@ -41,7 +41,7 @@
                 <StackPanel VerticalAlignment="Top">
                     <materialDesign:Card Margin="10" Width="320">
                         <StackPanel Margin="5">
-                            <TextBlock DockPanel.Dock="Top" FontSize="20" TextWrapping="Wrap" Text="扫码领红包!" />
+                            <TextBlock DockPanel.Dock="Top" FontSize="20" TextWrapping="Wrap" Text="支付宝扫码领红包!" />
                             <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="Gray" Text="这个方式你无需付出,而我也可以得到收益...真的很感谢你啊!(不方便扫码可以搜索564908538)"/>
                             <Image Width="309" Height="116" Source="http://atmb.top/_api_/home_v1/alipayqrcode.png">
                                 <Image.InputBindings>
