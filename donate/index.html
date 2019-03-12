@@ -118,17 +118,17 @@
             </div>
             <div v-if="donations">
                 <div class="row" >
-                        <div class="col-md-3 col-xs-7 col-sm-4">称呼</div>
+                        <div class="col-md-3 col-xs-6 col-sm-3">称呼</div>
                         <div class="col-md-3 col-xs-3 col-sm-3">日期</div>
-                        <div class="col-md-3 col-xs-2 col-sm-2">数额</div>
+                        <div class="col-md-3 col-xs-3 col-sm-3">数额</div>
                         <div class="col-md-3 hidden-xs col-sm-3">备注</div>
                 </div>
                 <div style="height:1px;background-color:gainsboro;margin-bottom:4px;"></div>
                 <div v-for="donation in donations">
                     <div class="row" >
-                        <div class="col-md-3 col-xs-7 col-sm-4">{{donation.name}}</div>
+                        <div class="col-md-3 col-xs-6 col-sm-3">{{donation.name}}</div>
                         <div class="col-md-3 col-xs-3 col-sm-3">{{donation.date}}</div>
-                        <div class="col-md-3 col-xs-2 col-sm-2">{{donation.count}}</div>
+                        <div class="col-md-3 col-xs-3 col-sm-3">{{donation.count}}</div>
                         <div class="col-md-3 hidden-xs col-sm-3">{{donation.t}}</div>
                     </div>
                     <div style="height:1px;background-color:gainsboro;margin-bottom:4px;"></div>
