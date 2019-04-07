@@ -8,7 +8,7 @@
         <Grid>
             <StackPanel>
 
-                <materialDesign:Card Height="65" Margin="10,10,10,0">
+                <materialDesign:Card Height="65" Margin="10,10,10,0" Width="660">
                     <StackPanel Margin="5">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock DockPanel.Dock="Top" FontSize="20" TextWrapping="Wrap" Text="广告位招租" />
