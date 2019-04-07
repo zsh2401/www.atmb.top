@@ -48,7 +48,7 @@
                                     <TextBlock DockPanel.Dock="Top" FontSize="20" TextWrapping="Wrap" Text="快否激活器现已上架" />
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" FontSize="12" Foreground="Gray" Text="比官方激活器更加轻量!"/>
-                                        <Button FontSize="12" Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Left" Command="{Binding OpenUrl}" CommandParameter="http://localhost:24010/extension/" Content="下载>>"/>
+                                        <Button FontSize="12" Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Left" Command="{Binding OpenUrl}" CommandParameter="http://atmb.top/extension/" Content="下载>>"/>
                                     </StackPanel>
                                 </StackPanel>
                             </StackPanel>
