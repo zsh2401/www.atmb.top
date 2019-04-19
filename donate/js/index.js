@@ -1,4 +1,4 @@
-var __DONATION_DATA_URL = "/_data_/donations/donations.json";
+var __DONATION_DATA_URL = "/_data_/donors.json";
 var vm = null;
 function initVue() {
     vm = new Vue({
@@ -22,6 +22,20 @@ function fetchData() {
             console.log(err);
         });
 }
+function completeData(crt){
+        if(crt.priority == null){
+            crt.priority = 0;
+        }
+        if(crt.name == null){
+            crt.name = "佚名";
+        }
+        if(crt.t == null){
+            crt.t = "捐赠";
+        }
+        if(crt.date == null){
+            crt.date = "未知";
+        }
+}
 function calculateTotal(arr){
     var total = 0.00;
     var currentNum;
@@ -32,18 +46,25 @@ function calculateTotal(arr){
     return total.toFixed(2);
 }
 function sortDonations(arr) {
-    var d = new Date();
-    return arr.sort(function (a, b) {
+    var sortedWithCount = arr.sort(function (a, b) {
+        completeData(a);
         if (a.count === b.count) {
-            var c0 = a.date.split('/');
-            var c1 = b.date.split('/');
-            var d0 = d.setFullYear(c0[2], c0[0], c0[1]);
-            var d1 = d.setFullYear(c1[2], c1[0], c1[1]);
-            return d1 - d0;
+            return isEarlyThan(a,b);
         } else {
             return b.count.replace("¥", "") - a.count.replace("¥", "");
-        }
+        } 
     });
+    return sortedWithCount.sort(function(a,b){
+        return b.priority - a.priority;
+    })
+}
+var __d = new Date();
+function isEarlyThan(a,b){
+    var c0 = a.date.split('/');
+    var c1 = b.date.split('/');
+    var d0 = __d.setFullYear(c0[2], c0[0], c0[1]);
+    var d1 = __d.setFullYear(c1[2], c1[0], c1[1]);
+    return d1 - d0;
 }
 
 $(document).ready(()=>{
