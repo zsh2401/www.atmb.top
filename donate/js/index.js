@@ -40,7 +40,7 @@ function calculateTotal(arr){
     var total = 0.00;
     var currentNum;
     for(var i=0;i<arr.length;i++){
-        currentNum = arr[i].count.replace("¥", "");
+        currentNum = arr[i].amount .replace("¥", "");
         total+= parseFloat(currentNum);
     }
     return total.toFixed(2);
@@ -48,10 +48,10 @@ function calculateTotal(arr){
 function sortDonations(arr) {
     var sortedWithCount = arr.sort(function (a, b) {
         completeData(a);
-        if (a.count === b.count) {
+        if (a.amount === b.amount ) {
             return isEarlyThan(a,b);
         } else {
-            return b.count.replace("¥", "") - a.count.replace("¥", "");
+            return b.amount .replace("¥", "") - a.amount .replace("¥", "");
         } 
     });
     return sortedWithCount.sort(function(a,b){
