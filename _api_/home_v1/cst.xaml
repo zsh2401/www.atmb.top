@@ -8,7 +8,7 @@
         <Grid>
             <StackPanel>
 
-                <materialDesign:Card Height="65" Margin="10,10,10,0" Width="660">
+                <!-- <materialDesign:Card Height="65" Margin="10,10,10,0" Width="660">
                     <StackPanel Margin="5">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock DockPanel.Dock="Top" FontSize="20" TextWrapping="Wrap" Text="广告位招租" />
@@ -16,7 +16,7 @@
                         </StackPanel>
                         <TextBlock>开发者需要钱去见女友.....支持多种展现方式，详情请邮件联系</TextBlock>
                     </StackPanel>
-                </materialDesign:Card>
+                </materialDesign:Card> -->
                 
                 <WrapPanel HorizontalAlignment="Center">
                     <StackPanel Margin="10" >
