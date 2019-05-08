@@ -8,8 +8,6 @@
 
 
 # 连接设备
-作者: MonoLogueChi 修改: zsh2401
-
 历尽千辛万苦,你终于打开了秋之盒
 
 ![正常](https://s2.ax1x.com/2019/01/10/FXSRFs.png)

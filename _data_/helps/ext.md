@@ -1,8 +1,5 @@
 # <div class="text-center">拓展模块</div>
 
-<div class="text-center">本页面作者: zsh2401</div>
-
-
 * Q: 什么是秋之盒拓展模块?
 * A: 我想你应该听过插件/模组之类的词,秋之盒拓展模块跟他们差不多
 
