@@ -1,0 +1,27 @@
+<DockPanel Margin="30">
+<StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+<Image HorizontalAlignment="Left" Width="50" Source="http://atmb.top/images/leaves.png">
+    <Image.InputBindings>
+        <MouseBinding MouseAction="LeftClick" Command="{Binding OpenUrl}" CommandParameter="http://www.atmb.top"/>
+    </Image.InputBindings>
+</Image>
+<StackPanel>
+    <TextBlock FontFamily="{DynamicResource AutumnBox.Font}" FontSize="25" Text="感谢您选择AutumnBox秋之盒"/>
+    <TextBlock Foreground="DarkGray" Text="秋之盒将ADB命令行工具进行图形化封装,实现大量功能,并完全中文汉化"/>
+</StackPanel>
+</StackPanel>
+<StackPanel DockPanel.Dock="Left">
+<Image Width="310" Height="174" Source="http://b-ssl.duitang.com/uploads/item/201205/03/20120503181506_5RQKv.jpeg">
+    <Image.InputBindings>
+        <MouseBinding MouseAction="LeftClick" Command="{Binding OpenUrl}" CommandParameter="http://www.zsh2401.top"/>
+    </Image.InputBindings>
+</Image>
+</StackPanel>
+<StackPanel DockPanel.Dock="Right">
+<Image Width="310" Height="174" Source="http://b-ssl.duitang.com/uploads/item/201205/03/20120503181506_5RQKv.jpeg">
+    <Image.InputBindings>
+        <MouseBinding MouseAction="LeftClick" Command="{Binding OpenUrl}" CommandParameter="http://www.zsh2401.top"/>
+    </Image.InputBindings>
+</Image>
+</StackPanel>
+</DockPanel>
