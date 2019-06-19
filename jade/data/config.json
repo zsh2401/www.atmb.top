@@ -1,7 +1,8 @@
 {
     "jades":[
         {"filename":"src/index.jade","out":"index.html"},
-        {"filename":"src/donate.jade","out":"donate/index.html"}
+        {"filename":"src/donate.jade","out":"donate/index.html"},
+        {"filename":"src/download.jade","out":"download/index.html"}
     ],
     "outDir":"../docs/"
 }
