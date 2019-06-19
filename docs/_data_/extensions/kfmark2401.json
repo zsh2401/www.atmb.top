@@ -1,0 +1,15 @@
+{
+    "id":2018030501,
+    "icon":"/_data_/extensions/img/kfmark.png",
+    "name":"激活快否-简版",
+    "auth":"zsh2401",
+    "bdesc":"通用性较差的快否激活器",
+    "desc":"通用性较差的快否激活器",
+    "version":"1.0.0",
+    "downloadUrl":"http://dream.zsh2401.top:4396/extsx/Zsh2401.KFMarkActivator.dll",
+    
+    "addition":[
+        {"key":"近似大小","value":"700KB"},
+        {"key":"危险级别","value":"低"}
+    ]
+}

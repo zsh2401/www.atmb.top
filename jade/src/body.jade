@@ -1,0 +1,50 @@
+html
+    head
+        block title
+            title #{title}
+        meta(charset='utf-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="description",content="#{desc}")
+        link(rel='stylesheet',type='text/css',href='https://cdn.jsdelivr.net/npm/swiper@3.4.2/dist/css/swiper.min.css')
+        link(rel='stylesheet',type='text/css',href='https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css')
+        link(rel='stylesheet',type='text/css',href='/css/global.css')
+        link(rel='stylesheet',type='text/css',href='/css/navbar.css')
+        block includeCSS
+        script(src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js")
+        script(src='https://cdn.jsdelivr.net/npm/valine@1.3.4/dist/Valine.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js')
+        script(src="https://cdn.jsdelivr.net/npm/vue")
+        script(src="/js/caona.js")
+        script(src="/js/global.js")
+
+        block includeJS
+    body
+        nav(role="navigation").navbar.navbar-default.navbar-fixed-top.noradius
+            .container-fluid
+                .navbar-header
+                    button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-c")
+                        span.sr-only 切换导航
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a(href="/").navbar-brand.visible-xs-block 秋之盒
+                
+                #navbar-c.collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        for menuItem in menu
+                            li.dropdown
+                                a(href="#" data-toggle="dropdown").dropdown-toggle #{menuItem.title}
+                                    b.caret
+                                ul.dropdown-menu
+                                    for child in menuItem.childs
+                                        li
+                                            a(href="#{child.href}") #{child.title}
+        block precontent
+        //- 主要容器
+        .container
+            block content
+            footer
+                div(style={display:'none'})
+                    script(src="https://s13.cnzz.com/z_stat.php?id=1272395513&web_id=1272395513" language="JavaScript")
+                p Copyright © 2017 - 2019 zsh2401,All Rights Reserved

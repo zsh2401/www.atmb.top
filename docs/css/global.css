@@ -1,0 +1,64 @@
+::-webkit-scrollbar{
+    display:none;
+}
+*{
+    font-family: Microsoft YaHei UI Light,Microsoft YaHei, sans-serif;
+}
+body{
+    padding-top: 50px;
+    background-color: whitesmoke;
+    /* background-image: url(../images/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed; */
+}
+#website-notice{
+    visibility: hidden;
+}
+.firstele{
+    margin-top: 60px;
+}
+.whiteele{
+    color: black;
+    background-color: white;
+}
+.container{
+    color: black;
+    background-color: white;
+    /* border-radius: 10px; */
+    min-height: 100vh;
+    padding: 20px;
+}
+footer{
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+}
+.spaceline{
+   height: 10px;
+   width: 100%;
+   color: transparent;
+}
+.colorline{
+    margin-top:5px;
+    margin-bottom: 5px;
+    height: 1px;
+    width: 100%;
+    background: #ff7f50;
+}
+.splitline{
+    margin-top:10px;
+    margin-bottom: 10px;
+    background-color: black;
+    height: 1px;
+    width: 100%;
+}
+.primary-color{
+    color: #ff7f50;
+}
+.centerText{
+    text-align: center;
+}
+.noradius{
+    border-radius: 0px;
+}
