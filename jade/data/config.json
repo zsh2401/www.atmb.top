@@ -1,0 +1,7 @@
+{
+    "jades":[
+        {"filename":"src/index.jade","out":"index.html"},
+        {"filename":"src/donate.jade","out":"donate/index.html"}
+    ],
+    "outDir":"../docs/"
+}
