@@ -2,7 +2,8 @@ const fs = require("fs");
 const jade = require("jade");
 const pageData = JSON.parse(fs.readFileSync("./data/pageconst.json"));
 const config = JSON.parse(fs.readFileSync("./data/config.json"));
-pageData.donate = handleDonateData();
+pageData.donate = readDonateData();
+pageData.software = readSoftwareData();
 
 function renderAll(){
     for(let i = 0;i<config.jades.length;i++){
@@ -16,7 +17,11 @@ function renderAll(){
         });
     }
 }
-function handleDonateData(){
+
+function readSoftwareData(){
+    return JSON.parse(fs.readFileSync("./data/software.json"));
+}
+function readDonateData(){
     let donateData = {};
     donateData.donors = JSON.parse(fs.readFileSync("./data/donors.json"));
     donateData.donateTotalAmount = 0;
@@ -36,7 +41,6 @@ function donateDataSort(a, b) {
         return b.amount - a.amount;
     } 
 }
-
 function isEarlyThan(a,b){
     const __d = new Date();
     var c0 = a.date.split('/');
@@ -45,4 +49,5 @@ function isEarlyThan(a,b){
     var d1 = __d.setFullYear(c1[2], c1[0], c1[1]);
     return d1 - d0;
 }
+
 renderAll();
