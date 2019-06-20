@@ -2,8 +2,10 @@ const fs = require("fs");
 const jade = require("jade");
 const pageData = JSON.parse(fs.readFileSync("./data/pageconst.json"));
 const config = JSON.parse(fs.readFileSync("./data/config.json"));
+
 pageData.donate = readDonateData();
 pageData.software = readSoftwareData();
+pageData.story = readStoryData();
 
 function renderAll(){
     for(let i = 0;i<config.jades.length;i++){
@@ -17,7 +19,9 @@ function renderAll(){
         });
     }
 }
-
+function readStoryData(){
+    return JSON.parse(fs.readFileSync("./data/story.json"));
+}
 function readSoftwareData(){
     return JSON.parse(fs.readFileSync("./data/software.json"));
 }

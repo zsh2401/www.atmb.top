@@ -1,0 +1,17 @@
+extends body
+block content
+    h1.primary-color.text-center The story of AutumnBox
+    #story
+        for node in story
+            div(style="margin-bottom:20px")
+                .row
+                    .col-md-2.hidden-col-xs
+                    .col-md-2.col-xs-4
+                        span(style="width:20px;background:orangered;") &nbsp;&nbsp;
+                        span #{node.date}
+                    .col-md-7.col-xs-8.
+                        #{node.story}
+        
+        .text-center.
+            Thanks for all the fish<br><br>
+            待续
