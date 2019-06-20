@@ -1,0 +1,31 @@
+<script>
+/*www.atmb.top/go?a=qq_gr*/    
+var data = {
+    "help":"/help",
+    "dl_dnet":"https://support.microsoft.com/zh-cn/help/3102436/the-net-framework-4-6-1-offline-installer-for-windows",
+    "dl_ext":"/extension",
+    "ist_ext":"/help?md=ext.md",
+    "qq_gr":"/about",
+    "dev_ext":"https://github.com/zsh2401/AutumnBox/wiki/%E5%89%8D%E8%A8%80",
+    "os":"/opensource",
+    "donate":"/donate",
+    "donation_ls":"/donate",
+    "feedback":"/comments",
+    "adb_fail":"/help?md=adbfail.md",
+    "c_dev":"/help?md=connect_device.md",
+    "os_lisence":"https://github.com/zsh2401/AutumnBox/blob/master/LICENSE",
+    "h_ist_ext":"/help/?md=ext.md"
+};
+function getUrlParam(name){
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+    if (r != null) return decodeURI(r[2]); return null; //返回参数值
+}
+function go()
+{
+    var key =  getUrlParam("a");
+    var target = data[key];
+    window.location =  target == null ? "/404.html" : target;
+}
+go();
+</script>

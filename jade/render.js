@@ -6,6 +6,7 @@ const config = JSON.parse(fs.readFileSync("./data/config.json"));
 pageData.donate = readDonateData();
 pageData.software = readSoftwareData();
 pageData.story = readStoryData();
+pageData.go = readGOData();
 
 function renderAll(){
     for(let i = 0;i<config.jades.length;i++){
@@ -18,6 +19,9 @@ function renderAll(){
             }
         });
     }
+}
+function readGOData(){
+    return (fs.readFileSync("./data/go.json"));
 }
 function readStoryData(){
     return JSON.parse(fs.readFileSync("./data/story.json"));
