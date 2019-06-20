@@ -1,0 +1,17 @@
+{
+    "id":2018042600,
+    "icon":"/_data_/extensions/img/captiveportal.png",
+    "name":"一键除去Wifi叹号和叉号",
+    "bdesc":"一键除去Wifi叹号和叉号",
+    "desc":"一键除去Wifi叹号和叉号，如无法使用请下载最新版模块搭配最新版秋之盒使用",
+    "auth":"MonoLogueChi",
+    "obtained":null,
+    "downloadUrl":"https://atmb.sm9.top/AutumnBox/%E6%8B%93%E5%B1%95%E6%A8%A1%E5%9D%97/MonoLogueChi/Captiveportal/",
+
+       
+    "addition":[
+        {"key":"近似大小","value":"13KB"},
+        {"key":"支持的秋之盒","value":"2019.3.5"},
+        {"key":"开放源代码:","value":"<a href='https://github.com/MonoLogueChi/AutumnBox.Captiveportal'>浏览</a>"}
+    ]
+}

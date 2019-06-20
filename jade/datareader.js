@@ -1,0 +1,4 @@
+function readAllData(){
+    let data = {};
+    
+}

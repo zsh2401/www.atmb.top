@@ -1,0 +1,75 @@
+extends body
+block includeJS
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js")
+block title
+    title #{ext.name} - #{title}
+block content
+    if(ext.obtained)
+        .alert.alert-danger #{obtained}
+    .row
+        .col-md-2.col-sm-2.hidden-xs
+            img(src="#{ext.icon}").img-responsive
+        .col-md-10.col-sm-10.col-xs-12
+            h1(style="margin-top:0px").hidden-xs #{ext.name}
+            h3(style="margin-top:0px").visible-xs #{ext.name}
+            h4(style="color:gray") 
+                if(ext.version)
+                    span #{ext.version}
+                span   @#{ext.auth}
+            .btn-group
+                unless(ext.obtained)
+                    button(onclick="window.open('#{ext.downloadUrl}')").btn.btn-primary 立刻获取
+                button(onclick="window.open('/go/help/install_extension')").btn.btn-default 如何安装拓展模块?
+    br
+    br
+    if(ext.pics)
+        div.swiper-container
+            div.swiper-wrapper
+                for pic in ext.pics
+                    div.swiper-slide
+                        img(src="#{pic}").img-responsive
+
+    if(ext.desc)
+        div !{ext.desc}
+    else
+        p 开发者是条懒狗,没有写简介
+
+    script.
+        window.onload = ()=>{
+            new Swiper('.swiper-container', {
+                slidesPerView: 2.3,
+                spaceBetween: 40,
+                pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                },
+            });
+        }
+  
+
+    //-         <div v-if="extpics != null" class="swiper-container" style="margin-top:10px">
+    //-             <div class="swiper-wrapper">
+    //-                 <div v-for="pic in extpics" class="swiper-slide"><img class="img-responsive" v-bind:src="pic"></div>
+    //-             </div>
+    //-         </div>
+    //-         <div>
+    //-             <h3>简介</h3>
+    //-             <p v-if="ext.desc != null" v-html="ext.desc"></p>
+    //-             <p v-else>开发者很懒,没写简介</p>
+    //-         </div>
+    //-         <div v-if="ext.addition != null">
+    //-             <h3>其它</h3>
+    //-             <div class="row" style="color:gray">
+    //-                 <div v-for="addin in ext.addition" class="col-md-3 col-sm-4 col-xs-6">
+    //-                     <span>{{addin.key}}</span> : <span v-html="addin.value"></span>
+    //-                 </div>
+    //-             </div>
+    //-         </div>
+            
+    //-     </div>
+
+    //-     <div v-if="extpics != null" class="swiper-container">
+    //-         <div class="swiper-wrapper">
+    //-             <div v-for="pic in extpics" class="swiper-slide"><img class="img-responsive" v-bind:src="pic"></div>
+    //-         </div>
+    //-     </div>

@@ -1,0 +1,30 @@
+extends body
+block title
+    title 模块市场 - #{title}
+
+block content
+    h1.text-center 下载拓展模块
+    h5.text-center 做你想做的事情
+    .text-center
+        .btn-group
+            button(type="button" onclick="window.open('../help/ext.html')").btn.btn-default 如何安装拓展?
+            button(type="button" onclick="window.open('https://github.com/zsh2401/AutumnBox/wiki/zh_CN_AutumnBox%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3')").btn.btn-default 开发文档
+
+    br
+    br
+    .alert.alert-info.text-center 新一代拓展模块正在陆续开发中,请保持关注
+
+    .row
+        for ext in exts
+            div(style="height:100px").col-md-4.col-sm-4.col-xs-6
+                .row
+                    .col-md-3.col-sm-3.col-xs-3
+                        img(src="#{ext.icon}",style="width:40px;padding:0px;margin:0px;").-img-responsive
+                    .col-md-9.col-sm-9.col-xs-9
+                        a(href='/extension/#{ext.id}.html')   #{ext.name}
+                        if(ext.bdesc)
+                            br
+                            small(style='color:gray;') #{ext.bdesc}
+                        else
+                            br
+                            small(style='font-size:12px') #{ext.fdesc}
