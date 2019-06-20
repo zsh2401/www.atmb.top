@@ -39,6 +39,8 @@ function readDonateData(){
         donateData.donateTimes ++;
     }
     donateData.donors = donateData.donors.sort(donateDataSort);
+    donateData.donors = donateData.donors.sort((a,b)=> {
+        return b.priority - a.priority});
     donateData.donateTotalAmount = donateData.donateTotalAmount.toFixed(2);
     return donateData;
 }

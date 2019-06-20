@@ -24,20 +24,30 @@ block content
     br
     if(ext.pics)
         div.swiper-container
-            div.swiper-wrapper
+            div(style='height:300px').swiper-wrapper
                 for pic in ext.pics
                     div.swiper-slide
                         img(src="#{pic}").img-responsive
 
+    h3 简介
     if(ext.desc)
         div !{ext.desc}
     else
         p 开发者是条懒狗,没有写简介
+    h3 其它
+    div(style="color:gray").row
+        for addin in ext.addition
+            .col-md-3.col-sm-4.col-xs-6
+                span #{addin.key}
+                span :
+                span #{addin.value}
+    
+    div(vid='#{ext.id}')#vcomment
 
     script.
         window.onload = ()=>{
             new Swiper('.swiper-container', {
-                slidesPerView: 2.3,
+                slidesPerView: 2.3,}
                 spaceBetween: 40,
                 pagination: {
                 el: '.swiper-pagination',
