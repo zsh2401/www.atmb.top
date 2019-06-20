@@ -11,7 +11,7 @@
         {"title":"拓展模块",
             "childs":[
                 {"title":"浏览拓展模块","href":"/extension/"},
-                {"title":"如何安装拓展模块?","href":"/help/?md=ext.md"},
+                {"title":"如何安装拓展模块?","href":"/help/ext.html"},
                 {"title":"开发拓展模块","href":"/go/open/"}
             ]
         },
