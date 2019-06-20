@@ -1,35 +1,27 @@
 const fs = require('fs');
 const jade = require('jade');
-const path = require('path');
-const TARGET = "../docs/extension/";
-const EXTS_DIR = "./data/exts/";
-const GALLERY_JADE = "./src/extgallery.jade";
-const VIEW_JADE = "./src/extview.jade";
-const GALLERY_INDEX = "../docs/extension/index.html";
-const pageData = JSON.parse(fs.readFileSync("./data/pageconst.json"));
-pageData.exts = readAllExtInfo();
+const base = require('../base');
+const libdata = require('../data/data');
+const data = libdata.read();
+
+const DIR_EXTS = base.rootDir +  "/docs/extension/";
+
+const JADE_GALLERY = base.rootDir + "/jade/src/extgallery.jade";
+const JADE_EXTVIEW = base.rootDir + "/jade/src/extview.jade";
+const HTML_GALLERY = base.rootDir + "/docs/extension/index.html";
+
 function renderGallery(){
-    let html = jade.renderFile(GALLERY_JADE,pageData);
-    fs.writeFileSync(GALLERY_INDEX,html);
+    let html = jade.renderFile(JADE_GALLERY,data);
+    fs.writeFileSync(HTML_GALLERY,html);
 }
 function renderExtViews(){
-    for(let i =0;i<pageData.exts.length;i++){
-        let ext = pageData.exts[i];
-        pageData.ext = ext;
-        let html = jade.renderFile(VIEW_JADE,pageData);
-        fs.writeFileSync(TARGET + ext.id + ".html",html);
+    for(let i =0;i<data.exts.length;i++){
+        let ext = data.exts[i];
+        data.ext = ext;
+        let html = jade.renderFile(JADE_EXTVIEW,data);
+        fs.writeFileSync(DIR_EXTS + ext.id + ".html",html);
     }
+    data.ext = undefined;
 }
-function readAllExtInfo(){
-    let data = [];
-    var files  = fs.readdirSync(EXTS_DIR);
-    for(let i = 0;i<files.length;i++){
-        let file = files[i];
-        let json = fs.readFileSync(EXTS_DIR + file,'utf-8');
-        let tmp = JSON.parse(json);
-        data[data.length] = tmp;
-    }
-    return data;
-}
-renderGallery();
-renderExtViews();
+exports.renderGallery = renderGallery;
+exports.renderExtViews = renderExtViews;

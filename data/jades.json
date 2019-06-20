@@ -1,0 +1,10 @@
+[
+        {"filename":"/jade/src/index.jade","out":"/docs/index.html"},
+        {"filename":"/jade/src/donate.jade","out":"/docs/donate/index.html"},
+        {"filename":"/jade/src/download.jade","out":"/docs/download/index.html"},
+        {"filename":"/jade/src/story.jade","out":"/docs/story/index.html"},
+        {"filename":"/jade/src/opensource.jade","out":"/docs/opensource/index.html"},
+        {"filename":"/jade/src/contact.jade","out":"/docs/about/index.html"},
+        {"filename":"/jade/src/bd.jade","out":"/docs/about/bd.html"},
+        {"filename":"/jade/src/404.jade","out":"/docs/404.html"}
+]
