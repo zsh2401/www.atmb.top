@@ -42,9 +42,10 @@ html
                                             a(href="#{child.href}") #{child.title}
         block precontent
         //- 主要容器
-        .container
+        .container 
             block sitenotice
-                .alert.alert-danger.text-center 本网站目前正在维护,请立刻离开并在尝试在稍后访问
+                if(web.notice.enable)
+                    div(class="alert alert-#{web.notice.level} text-center") #{web.notice.text}
 
             block content
             footer

@@ -10,6 +10,7 @@ function read(){
     data.software = tryReadJSON('software.json');
     data.story = tryReadJSON('story.json');
     data.exts = readExts();
+    data.web.notice = tryReadJSON('webnotice.json');
     data.guides = getGuideFiles();
     return data;
 }
