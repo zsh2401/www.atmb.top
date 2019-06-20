@@ -1,6 +1,6 @@
 {
     "id":2019031101,
-    "icon":"/_data_/extensions/img/appopsx.png",
+    "icon":"/images/extensions/img/appopsx.png",
     "name":"一键激活AppOpsX",
     "auth":"zsh2401",
     "bdesc":"如名",

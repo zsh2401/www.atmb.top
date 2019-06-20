@@ -1,6 +1,6 @@
 {
     "id":2018121802,
-    "icon":"/_data_/extensions/img/googleplay.png",
+    "icon":"/images/extensions/img/googleplay.png",
     "name":"跳过GAPPS",
     "auth":"zsh2401",
     "desc":"什么?卡在GAPPS了?帮你解决!",

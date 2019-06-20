@@ -1,6 +1,6 @@
 {
     "id":2018030502,
-    "icon":"/_data_/extensions/img/list.png",
+    "icon":"/images/extensions/img/list.png",
     "name":"Build浏览器",
     "auth":"zsh2401",
     "bdesc":"帮助您更好地浏览Build.prop",

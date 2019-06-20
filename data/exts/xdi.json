@@ -1,6 +1,6 @@
 {
     "id":2018042602,
-    "icon":"/_data_/extensions/img/driver.png",
+    "icon":"/images/extensions/img/driver.png",
     "name":"一键安装安卓手机驱动",
     "auth":"zsh2401",
     "bdesc":"听说你连不上手机？",

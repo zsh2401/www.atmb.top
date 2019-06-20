@@ -1,6 +1,6 @@
 {
     "id":2018030501,
-    "icon":"/_data_/extensions/img/kfmark.png",
+    "icon":"/images/extensions/img/kfmark.png",
     "name":"激活快否-简版",
     "auth":"zsh2401",
     "bdesc":"通用性较差的快否激活器",

@@ -1,6 +1,6 @@
 {
     "id":2018042601,
-    "icon":"/_data_/extensions/img/mi.png",
+    "icon":"/images/extensions/img/mi.png",
     "name":"一键刷入小米6 TWRP REC",
     "auth":"zsh2401",
     "downloadUrl":"http://dream.zsh2401.top:4396/extsx/Zsh2401.Xiaomi6RecFlasher.dll",

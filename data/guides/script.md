@@ -33,7 +33,7 @@
 2. 在秋之盒中激活小黑屋麦克斯韦妖模式
 3. 完美!
 
-![](/_data_/helps/imgs/script/maxwell.jpg)
+![](/images/helps/imgs/script/maxwell.jpg)
 
 # 激活ShizukuManager
 
@@ -42,7 +42,7 @@
 2. 在秋之盒中激活ShizukuManager
 3. Perfect!
 
-![](/_data_/helps/imgs/script/shizuku.jpg")
+![](/images/helps/imgs/script/shizuku.jpg)
 
 # 激活AppOps
 
@@ -50,4 +50,4 @@
 1. 下载并安装ShizukuManager
 2. 激活ShizukuManager(AppOps特权模式基于ShizukuManager)
 
-![](/_data_/helps/imgs/script/appops.jpg)
+![](/images/helps/imgs/script/appops.jpg)

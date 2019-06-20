@@ -1,6 +1,6 @@
 {
     "id":2018030503,
-    "icon":"/_data_/extensions/img/bqsa.webp",
+    "icon":"/images/extensions/img/bqsa.webp",
     "name":"激活BottomQucikSettings",
     "auth":"zsh2401",
     "bdesc":"如名",

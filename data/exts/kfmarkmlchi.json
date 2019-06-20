@@ -1,6 +1,6 @@
 {
   "id": 2019011900,
-  "icon": "/_data_/extensions/img/kfmark.png",
+  "icon": "/images/extensions/img/kfmark.png",
   "name": "一键激活快否",
   "bdesc": "一键激活快否",
   "desc": "一键激活快否，需要连接网络下载激活文件，如需离线激活，请出门右转，源码和使用介绍详见<a href='https://github.com/MonoLogueChi/AutumnBox.KFMARK'>GitHub</a>",
