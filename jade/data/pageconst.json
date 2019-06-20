@@ -23,8 +23,7 @@
         },
         {"title":"帮助",
             "childs":[
-                {"title":"说明书","href":"/help/"},
-                {"title":"留言","href":"/comments/"}
+                {"title":"说明书","href":"/help/"}
             ]
         },
         {"title":"关于",

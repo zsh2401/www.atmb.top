@@ -1,0 +1,16 @@
+extends body
+block includeCSS
+    link(rel='stylesheet',type='text/css',href='./css/index.css')
+block content
+    #top
+    br
+    br
+    br
+    .backtotop
+        .btn-group.btn-group-vertical
+            button(onclick="location.href = '/help/'").btn.btn-default 说明书主页
+            button(onclick="location.href = '#top'").btn.btn-default 回到顶部
+   
+    div !{html}
+
+        
