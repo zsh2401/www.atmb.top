@@ -2,7 +2,9 @@ extends body
 block includeJS
     script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js")
 block title
-    title #{ext.name} - #{title}
+    title #{ext.name} - #{web.title}
+    link(rel="icon" href="#{ext.icon}" type="image/x-icon")
+    link(rel="shortcut icon" href="#{ext.icon}" type="image/x-icon")
 block content
     if(ext.obtained)
         .alert.alert-danger #{obtained}
