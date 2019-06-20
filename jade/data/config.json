@@ -6,7 +6,8 @@
         {"filename":"src/story.jade","out":"story/index.html"},
         {"filename":"src/opensource.jade","out":"opensource/index.html"},
         {"filename":"src/contact.jade","out":"about/index.html"},
-        {"filename":"src/bd.jade","out":"about/bd.html"}
+        {"filename":"src/bd.jade","out":"about/bd.html"},
+        {"filename":"src/404.jade","out":"404.html"}
     ],
     "outDir":"../docs/"
 }
