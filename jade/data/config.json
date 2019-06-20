@@ -4,7 +4,9 @@
         {"filename":"src/donate.jade","out":"donate/index.html"},
         {"filename":"src/download.jade","out":"download/index.html"},
         {"filename":"src/story.jade","out":"story/index.html"},
-        {"filename":"src/opensource.jade","out":"opensource/index.html"}
+        {"filename":"src/opensource.jade","out":"opensource/index.html"},
+        {"filename":"src/contact.jade","out":"about/index.html"},
+        {"filename":"src/bd.jade","out":"about/bd.html"}
     ],
     "outDir":"../docs/"
 }

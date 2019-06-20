@@ -31,7 +31,7 @@
             "childs":[
                 {"title":"联系","href":"/about/"},
                 {"title":"故事","href":"/story/"},
-                {"title":"商务合作","href":"/bd/"},
+                {"title":"商务合作","href":"/about/bd.html"},
                 {"title":"开发者博客","href":"https://zsh2401.top"}
             ]
         }
