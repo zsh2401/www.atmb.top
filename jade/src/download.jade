@@ -1,8 +1,13 @@
 extends body
 block includeJS
-    script(src="./js/index.js")
+    script(src="https://cdn.jsdelivr.net/npm/vue")
+    script(src="/js/yin.js")
+    script
+        include ../js/download.js
 block includeCSS
-    link(rel='stylesheet',type='text/css',href='./css/index.css')
+    style
+        include ../css/download.css
+    
 block title
     title 下载 - #{web.title}
 

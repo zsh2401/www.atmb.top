@@ -1,0 +1,20 @@
+nav(role="navigation").navbar.navbar-default.navbar-fixed-top.noradius
+            .container-fluid
+                .navbar-header
+                    button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-c")
+                        span.sr-only 切换导航
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a(href="/").navbar-brand.visible-xs-block 秋之盒
+                
+                #navbar-c.collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        for menuItem in web.menu
+                            li.dropdown
+                                a(href="#" data-toggle="dropdown").dropdown-toggle #{menuItem.title}
+                                    b.caret
+                                ul.dropdown-menu
+                                    for child in menuItem.childs
+                                        li
+                                            a(href="#{child.href}") #{child.title}

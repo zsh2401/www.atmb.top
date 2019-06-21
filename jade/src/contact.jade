@@ -22,11 +22,12 @@ block content
 
     #containerDiv
         iframe(src="//player.bilibili.com/player.html?aid=41336181&cid=72599777&page=1" style="border:0px;" scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true")#headVideo
-    
+    #vcomment
     script.
         $(window).resize(resizeVideo);
         $(document).ready(resizeVideo);
-        function resizeVideo() {
+        function resizeVideo() 
+        {
             var newVideoW = $("#containerDiv").width();
             var newVideoH = newVideoW * 0.6;
             $("#headVideo").width(newVideoW);

@@ -1,4 +1,100 @@
-<html><head><title>下载 - 秋之盒官网</title><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content="undefined"/><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@3.4.2/dist/css/swiper.min.css"/><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"/><link rel="stylesheet" type="text/css" href="/css/global.css"/><link rel="stylesheet" type="text/css" href="/css/navbar.css"/><link rel="stylesheet" type="text/css" href="./css/index.css"/><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@1.3.4/dist/Valine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vue"></script><script src="/js/caona.js"></script><script src="/js/global.js"></script><script src="./js/index.js"></script></head><body><nav role="navigation" class="navbar navbar-default navbar-fixed-top noradius"><div class="container-fluid"><div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#navbar-c" class="navbar-toggle"><span class="sr-only">切换导航</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand visible-xs-block">秋之盒</a></div><div id="navbar-c" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">秋之盒<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/">主页</a></li><li><a href="/download">立刻下载</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">拓展模块<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/extension/">浏览拓展模块</a></li><li><a href="/help/ext.html">如何安装拓展模块?</a></li><li><a href="/go/open/">开发拓展模块</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">开源/捐赠<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/donate/">捐赠与支持</a></li><li><a href="/opensource/">开源与鸣谢?</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">帮助<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/help/">说明书</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">关于<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/about/">联系</a></li><li><a href="/story/">故事</a></li><li><a href="/about/bd.html">商务合作</a></li><li><a href="https://zsh2401.top">开发者博客</a></li></ul></li></ul></div></div></nav><div class="container"> <div class="alert alert-warning text-center">本网站目前正在维护,您可能会遇到一些问题</div><div class="alert alert-success text-center">感谢您下载秋之盒,这里是<a href="/help/">秋之盒使用说明书</a></div><div class="text-center"><a href="../donate/" target="_blank">扫码捐赠或领取最大99元支付宝赏金红包</a></div><div id="downloadCountInfo"><h1 class="text-center">选择您的下载渠道</h1><div class="text-center"><h3>2019.4.13 更新日志</h3><p>我会对软件进行定期更新与优化,旨在提升软件性能,建议用户尽快跟进</p></div><br/><br/><div class="row text-center ways"><div class="col-md-4 col-sm-6"><img src="./images/mono.jpg" class="img-responsive"/><h1>MonoLogueChi</h1><button onclick="gotoMono()" class="btn btn-default">下载 <span class="badge">{{dldata[__monoId]}}</span></button><p>MonoLogueChi提供<br>
+<html><head><title>下载 - 秋之盒官网</title><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content="undefined"/><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"/><link rel="stylesheet" type="text/css" href="/css/global.css"/><link rel="stylesheet" type="text/css" href="/css/navbar.css"/><style>.downloadIcon{
+    height:70px;
+    margin: 0 auto;
+    border-radius: 10px
+}
+.ways div{
+    margin-bottom:40px;
+}
+.ways div img{
+    height:70px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.ways div div{
+    margin: 0;
+}</style><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@1.3.4/dist/Valine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script><script src="/js/libatmb.js"></script><script src="/js/datasetter.js"></script><script src="/js/vcomment.js"></script><script src="/js/global.js"></script><script src="https://cdn.jsdelivr.net/npm/vue"></script><script src="/js/yin.js"></script><script>var __web1nDownload = "https://download.udp.pw/?dir=安卓/工具/秋之盒";
+var __web1nId = "346";
+
+var __monologuechiDownload = "https://atmb.sm9.top/AutumnBox/%E4%B8%BB%E7%A8%8B%E5%BA%8F/";
+var __monoId = "345";
+
+var __zs2401Download = "http://dream.zsh2401.top:4396/";
+var __dreamId = "343";
+
+var __baiduPanDownload = "https://pan.baidu.com/s/1bFZBAI";
+var __baiduPanId = "347";
+
+var __githubDl = "https://github.com/zsh2401/AutumnBox/releases";
+var __githubId = "348";
+
+var __UPDATE_LOG_URL = "/_api_/update/index.html";
+function gotoMono() {
+    window.open(__monologuechiDownload);
+    addDownloadCount(__monoId);
+}
+function gotoWeb1n() {
+    window.open(__web1nDownload);
+    addDownloadCount(__web1nId);
+}
+function gotoZsh2401() {
+    window.open(__zs2401Download);
+    addDownloadCount(__dreamId);
+}
+function gotoBaiduPan() {
+    window.open(__baiduPanDownload);
+    addDownloadCount(__baiduPanId);
+}
+function gotoGithub() {
+    window.open(__githubDl);
+    addDownloadCount(__githubId);
+}
+var __vm = null;
+function initVue() {
+    __vm = new Vue({
+        el: "#downloadCountInfo",
+        data: {
+            "version": null,
+            "date": [],
+            "latestVersionInfo": null,
+            "total2401":0,
+            "isWindows":true,
+            "dldata":{
+                "343":0,
+                "345":0,
+                "346":0,
+                "347":0,
+                "348":0
+            },
+        }
+    });
+    __vm.$data.isWindows = IsPC();
+}
+function IsPC(){  
+    return (navigator.platform == "Win32") || (navigator.platform == "Windows"); 
+ }
+
+function fetchData() {
+    var ids = [__dreamId, __monoId, __web1nId, __baiduPanId, __githubId];
+    queryDownloadCount(ids, function (count) {
+        __vm.$data.dldata = count;
+        __vm.$data.total2401 = (parseInt(count[__dreamId]) + parseInt(count[__baiduPanId]) + parseInt(count[__githubId]));
+    });
+    fetch(__UPDATE_LOG_URL)
+        .then(res => res.json())
+        .then(json => {
+            __vm.$data.version = json.version;
+            __vm.$data.date = json.date;
+            __vm.$data.latestVersionInfo = json.message.replace(/\n/g, '<br>');
+        }).catch(error => {
+            console.log(error);
+        });
+}
+$(document).ready(function () {
+    initVue();
+    fetchData();
+});
+</script></head><body><nav role="navigation" class="navbar navbar-default navbar-fixed-top noradius"><div class="container-fluid"><div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#navbar-c" class="navbar-toggle"><span class="sr-only">切换导航</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand visible-xs-block">秋之盒</a></div><div id="navbar-c" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">秋之盒<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/">主页</a></li><li><a href="/download">立刻下载</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">拓展模块<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/extension/">浏览拓展模块</a></li><li><a href="/help/ext.html">如何安装拓展模块?</a></li><li><a href="/go/open/">开发拓展模块</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">开源/捐赠<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/donate/">捐赠与支持</a></li><li><a href="/opensource/">开源与鸣谢?</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">帮助<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/help/">说明书</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">关于<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/about/">联系</a></li><li><a href="/story/">故事</a></li><li><a href="/about/bd.html">商务合作</a></li><li><a href="https://zsh2401.top">开发者博客</a></li></ul></li></ul></div></div></nav><div class="container"> <div class="alert alert-warning text-center">本网站目前正在维护,您可能会遇到一些问题</div><div class="alert alert-success text-center">感谢您下载秋之盒,这里是<a href="/help/">秋之盒使用说明书</a></div><div class="text-center"><a href="../donate/" target="_blank">扫码捐赠或领取最大99元支付宝赏金红包</a></div><div id="downloadCountInfo"><h1 class="text-center">选择您的下载渠道</h1><div class="text-center"><h3>2019.4.13 更新日志</h3><p>我会对软件进行定期更新与优化,旨在提升软件性能,建议用户尽快跟进</p></div><br/><br/><div class="row text-center ways"><div class="col-md-4 col-sm-6"><img src="./images/mono.jpg" class="img-responsive"/><h1>MonoLogueChi</h1><button onclick="gotoMono()" class="btn btn-default">下载 <span class="badge">{{dldata[__monoId]}}</span></button><p>MonoLogueChi提供<br>
 通常在10分钟内跟进最新版<br>
 2018年11月上线<br></p><a href="https://www.xxwhite.com/" target="_blank">叉叉白 博客</a></div><div class="col-md-4 col-sm-6"><img src="./images/web1n.jpg" class="img-responsive"/><h1>web1n</h1><button onclick="gotoWeb1n()" class="btn btn-default">下载 <span class="badge">{{dldata[__web1nId]}}</span></button><p>小黑屋开发者web1n提供<br>
 通常在1天内跟进最新版<br>

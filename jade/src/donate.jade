@@ -1,10 +1,10 @@
 extends body
-block includeCSS
-    link(rel='stylesheet',type='text/css',href='css/index.css')
 block title
     title 捐赠 - #{web.title}
 
 block content
+    style
+        include ../css/donate.css
     div#website-notice
     div.text-center
         h1 捐赠

@@ -1,4 +1,6 @@
 extends body
+block includeCSS
+    link(rel='stylesheet',type='text/css',href='https://cdn.jsdelivr.net/npm/swiper@3.4.2/dist/css/swiper.min.css')
 block includeJS
     script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js")
 block title
@@ -42,9 +44,9 @@ block content
             .col-md-3.col-sm-4.col-xs-6
                 span #{addin.key}
                 span :
-                span #{addin.value}
+                span !{addin.value}
     
-    div(vid='#{ext.id}')#vcomment
+    div(vid='/exts/#{ext.id}')#vcomment
 
     script.
         window.onload = ()=>{
@@ -57,31 +59,3 @@ block content
                 },
             });
         }
-  
-
-    //-         <div v-if="extpics != null" class="swiper-container" style="margin-top:10px">
-    //-             <div class="swiper-wrapper">
-    //-                 <div v-for="pic in extpics" class="swiper-slide"><img class="img-responsive" v-bind:src="pic"></div>
-    //-             </div>
-    //-         </div>
-    //-         <div>
-    //-             <h3>简介</h3>
-    //-             <p v-if="ext.desc != null" v-html="ext.desc"></p>
-    //-             <p v-else>开发者很懒,没写简介</p>
-    //-         </div>
-    //-         <div v-if="ext.addition != null">
-    //-             <h3>其它</h3>
-    //-             <div class="row" style="color:gray">
-    //-                 <div v-for="addin in ext.addition" class="col-md-3 col-sm-4 col-xs-6">
-    //-                     <span>{{addin.key}}</span> : <span v-html="addin.value"></span>
-    //-                 </div>
-    //-             </div>
-    //-         </div>
-            
-    //-     </div>
-
-    //-     <div v-if="extpics != null" class="swiper-container">
-    //-         <div class="swiper-wrapper">
-    //-             <div v-for="pic in extpics" class="swiper-slide"><img class="img-responsive" v-bind:src="pic"></div>
-    //-         </div>
-    //-     </div>

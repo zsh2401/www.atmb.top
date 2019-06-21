@@ -30,4 +30,12 @@ function renderAll(){
     renderExtPage();
     renderGuide();
 }
-exports.render = renderAll;
+
+if (require.main === module) {
+    console.log('called directly');
+    console.log("rendering");
+    renderAll();
+    console.log("rendered");
+} else {
+    exports.render = renderAll;
+}
