@@ -63,6 +63,12 @@ function readDonateData(){
     }
     donateData.donors = donateData.donors.sort(donateDataSort);
     donateData.donors = donateData.donors.sort((a,b)=> {
+        if(a.priority == undefined){
+            a.priority = 0;
+        }
+        if(b.priority == undefined){
+            b.priority = 0;
+        }
         return b.priority - a.priority});
     donateData.donateTotalAmount = donateData.donateTotalAmount.toFixed(2);
     return donateData;
