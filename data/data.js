@@ -17,6 +17,7 @@ function read(){
     data.story = tryReadJSON('story.json');
     data.exts = readExts();
     data.web.notice = tryReadJSON('webnotice.json');
+    data.dlways = tryReadJSON('dlways.json');
     data.guides = getGuideFiles();
     return data;
 }
