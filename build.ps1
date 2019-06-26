@@ -9,8 +9,8 @@ Write-Output '[RENDERED JADES]'
 
 #将js和css文件复制到输出目录
 Write-Output '[COPYING JS & CSS]'
-Copy-Item -Recurse web/js/* docs/js/
-Copy-Item -Recurse web/css/* docs/css/
+Copy-Item -Recurse js/* docs/js/
+Copy-Item -Recurse css/* docs/css/
 Write-Output '[COPIED JS & CSS]'
 
 #将ts文件夹下的TypeScript文件编译并放到docs/js下
