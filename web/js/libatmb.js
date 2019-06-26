@@ -2,6 +2,9 @@
 @zsh2401
 全站共用的函数库
 */
+function ready(callback){
+    $(document).ready(callback);
+}
 function getUrlParam(name){
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
     var r = window.location.search.substr(1).match(reg);  //匹配目标参数
