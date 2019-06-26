@@ -6,7 +6,7 @@ AutumnBox开源:https://github.com/zsh2401/AutumnBox/
 ### 本项目涉及技术与框架:
     * node.js(项目的基础)
     * jade(html模板引擎)
-    * TypeScript(脚本,尽可能多用)
+    * TypeScript(脚本)
     * JavaScript(脚本)
     * jquery(DOM操作与动画,尽可能少用)
     * bootstrap(响应式布局)
@@ -14,19 +14,22 @@ AutumnBox开源:https://github.com/zsh2401/AutumnBox/
     
 ### 项目结构
     data/ 编译时使用的各种数据
+    css/ 全站的css文件,构建时会被复制到docs/css中
+    js/ 全站的js文件,构建时会被复制到docs/js中
     docs/ 输出目录,github pages直接进行展示
-    jade/ 所有的jade模板及其渲染(编译)脚本,另有少量js/css
+    jade/ 所有的jade模板及其渲染(编译)脚本,另有少量被直接包含在jade页面中的js/css
     ts/ 网站所有的js/ts代码都在这里,编译输出目录在docs/js
 
 # 贡献代码
-### 如何编译项目?
+### 如何构建项目?
     0.安装node.js
-    1.在本目录下安装jade模板引擎 (npm install jade)
-    2.在本目录下安装marked md解析库 (npm install marked)
-    3.执行./build.ps1,即可进行完整编译
+    1.安装jade模板引擎 (npm install -g jade)
+    2.安装marked md解析库 (npm install -g marked)
+    3.执行./build.ps1,即可进行完整构建
 
 ### 如何编写代码?
-    添加媒体,请在docs/下对应目录进行操作     
+    添加媒体,请在docs/下对应目录进行操作   
+    修改css请前往css/或jade/css
     修改页面视图请前往jade/src   
     修改数据请前往data/   
-    修改脚本请前往ts/
+    修改脚本请前往ts/或js/
