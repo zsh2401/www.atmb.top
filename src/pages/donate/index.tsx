@@ -30,9 +30,7 @@ class PageDonate extends React.Component{
 
 
                     <div className="col-sm-4">
-                        <div className="d-flex justify-content-center">
-                            <img style={{width:"200px"}} className="img-fluid" src={require("./pot4winter.png")}/>
-                        </div>
+                        <img style={{width:"200px"}} src={require("./pot4winter.png")}/>
                         <p className="text-center">开发者的小猫娘画的冬之盆</p>
                     </div>
                 </div>
