@@ -30,15 +30,15 @@ class PageDonate extends React.Component{
 
 
                     <div className="col-sm-4">
-                        <img style={{width:"200px"}} src={require("./pot4winter.png")}/>
+                        <img className="mx-auto d-block w-50" src={require("./pot4winter.png")}/>
                         <p className="text-center">开发者的小猫娘画的冬之盆</p>
                     </div>
                 </div>
                 <h3 className="text-center">捐赠方式<small><br/>你的捐赠将被永久记录</small> </h3>
                 <div className="row">
-                    <img src={require("./alishop.png")} className="img-fluid col-md-4 donate-img"/>
-                    <img src={require("./redpacket.jpg")} className="img-fluid col-md-4 donate-img"/>
-                    <img src={require("./wechatpay.jpg")} className="img-fluid col-md-4 donate-img"/>
+                    <div className="col-sm-4"><img src={require("./alishop.png")} className="img-fluid donate-img"/></div>
+                    <div className="col-sm-4"><img src={require("./redpacket.jpg")} className="img-fluid donate-img"/></div>
+                    <div className="col-sm-4"><img src={require("./wechatpay.jpg")} className="img-fluid donate-img"/></div>
                 </div>
                 <br/>
                 <h3 className="text-center">捐赠名单</h3>
