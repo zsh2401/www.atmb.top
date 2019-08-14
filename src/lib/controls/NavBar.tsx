@@ -38,7 +38,7 @@ export class NavBar extends React.Component
                         </a>
                         <div className="dropdown-menu">
                             <a className="dropdown-item" href="/donate">捐赠与支持</a>
-                            <a className="dropdown-item" href="/os">开源与鸣谢</a>
+                            <a className="dropdown-item" href="/opensource">开源与鸣谢</a>
                         </div>
                     </li>
                     <li className="nav-item dropdown">
