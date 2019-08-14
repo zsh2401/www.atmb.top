@@ -3,7 +3,7 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin'
 const config:webpack.Configuration= {
-	mode: 'production',
+	mode: 'development',
 	entry: {
 		site: './src/lib/site',
 		pageIndex: './src/pages/index',
@@ -75,10 +75,11 @@ const config:webpack.Configuration= {
 	plugins: [
 		new webpack.ProgressPlugin(), 
 		new CopyPlugin([
-			{from:"./src/_api_",to:"_api_"},
 			{from:"./src/_data_",to:"_data_"},
-			{from:"./src/_old_api_",to:"api"},
-			{from:"./src/assets/copy-to-root/",to:"."}
+			{from:"./src/assets/copy-to-root/",to:"."},
+			{from:"./src/assets/copy-to-root-obsolute/",to:"."},
+			{from:"./src/constants/homev2.xaml",to:"./_api_/home_v2/home.xaml"},
+			{from:"./src/constants/update.json",to:"./_api_/update/index.html"},
 		]),
 		new HtmlWebpackPlugin({
 			filename:"index.html",

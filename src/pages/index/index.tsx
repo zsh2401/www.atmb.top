@@ -3,21 +3,11 @@ import ReactDOM from 'react-dom'
 import {StdLayout} from '../../lib/controls/StdLayout'
 import "./index.css"
 import { ValineComment } from '../../lib/controls/ValineComment';
-import * as updaterInfoGetter from '../../lib/data-provider/UpdateInfoGetter'
+import * as updaterInfoGetter from '../../lib/data-provider/UpdateInfoProvider'
 import { string } from 'prop-types';
 class Index extends React.Component{
-    state = {
-        versionName:"wtf",
-        updateContent:"ww"
-    }
     render(){
-        let that = this;
-        updaterInfoGetter.getUpdateInfo((verInfo)=>{
-            that.setState({
-                versionName:verInfo.version,
-                updateContent:verInfo.message
-            });
-        });
+        let updateInfo =  updaterInfoGetter.getUpdateInfo();
         return <StdLayout>
             <div className="header">
                 <div className="container jumbotron" style={{background:"transparent"}}>
@@ -118,8 +108,8 @@ class Index extends React.Component{
                     <div className="col-md-6 col-sm-6">
                         <h3>
                             <embed className="embed-icon" src={require("../../assets/svg/leaf.svg")}></embed>
-                            {this.state.versionName}-更新日志
-                            <p>{this.state.updateContent}</p>
+                            {updateInfo.version}-更新日志
+                            <p>{updateInfo.message}</p>
                         </h3>
                         
                     </div>

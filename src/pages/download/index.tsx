@@ -1,30 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { StdLayout } from '../../lib/controls/StdLayout';
-import * as updateGetter from '../../lib/data-provider/UpdateInfoGetter'
+import * as updateProvider from '../../lib/data-provider/UpdateInfoProvider'
 import "./index.css"
-interface PageDLState{
-    versionInfo:updateGetter.VersionInfo;
-}
-class PageDL extends React.Component<any,PageDLState>{
-    state:PageDLState = {
-        versionInfo:{
-            version:"NULL",
-            message:"NULL",
-            header:"NULL",
-            updateUrl:"NULL",
-            directlyUrl:"NULL",
-            date:[1970,1,1]
-        }
-    }
+class PageDL extends React.Component<any>{
     constructor(props:any){
         super(props);
-        let that = this;
-        updateGetter.getUpdateInfo((versionInfo)=>{
-            that.setState({versionInfo:versionInfo})
-        });
     }
     render(){
+        let update = updateProvider.getUpdateInfo();
         return <StdLayout>
             <div className="container">
                 <br/><br/>
@@ -35,8 +19,8 @@ class PageDL extends React.Component<any,PageDLState>{
                     </div>
                     <a href="/donate" >扫码捐赠或领取最大99元支付宝赏金红包</a>
                     <br/>
-                    <h3>{this.state.versionInfo.version}更新日志</h3>
-                    <p>{this.state.versionInfo.message}</p>
+                    <h3>{update.version}更新日志</h3>
+                    <p>{update.message}</p>
                 </div>
                 <br/>
                 <h1 className="text-center">选择下载途径</h1>

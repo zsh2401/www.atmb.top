@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { StdLayout } from '../../lib/controls';
 import "./index.css"
-import * as dm from '../../lib/data-provider/Donors'
+import * as dm from '../../lib/data-provider/DonorsInfoProvider'
 class PageDonate extends React.Component{
     render(){
         let views = [];
