@@ -1,0 +1,18 @@
+.header{
+    background-image: linear-gradient( 135deg, #FD6E6A 10%, #FFC600 100%);
+}
+.no-radius{
+    border-radius: 0px;
+}
+.hlink:hover{
+    color: black;
+    text-decoration: none;
+}
+.hlink{
+    color: black;
+    padding-bottom: 5px;
+    /* text-decoration: underline; */
+}
+.embed-icon{
+    width: 30px;
+}

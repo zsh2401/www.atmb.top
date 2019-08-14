@@ -1,0 +1,186 @@
+import webpack from 'webpack';
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin'
+const config:webpack.Configuration= {
+	mode: 'production',
+	entry: {
+		site: './src/lib/site',
+		pageIndex: './src/pages/index',
+		pageAbout: './src/pages/about',
+		page404:"./src/pages/404",
+		pageDonate:"./src/pages/donate",
+		pageOS:"./src/pages/opensource",
+		pageExtDetail:"./src/pages/ext-detail",
+		pageExtStore:"./src/pages/ext-store",
+		pageGO:"./src/pages/go",
+		pageGuideReader:"./src/pages/guide-reader",
+		pageCom:"./src/pages/com",
+		pageStory:"./src/pages/story",
+		pageDownload:"./src/pages/download",
+	},
+	//@ts-ignore
+	devServer:{
+		contentBase: __dirname + '/dist',
+		port:9001
+	},
+	output: {
+		filename: 'js/[name].js',
+		path: path.resolve(__dirname, 'dist'),
+		publicPath:"/"
+	},
+	externals:{
+		"react":"React",
+		"react-dom":"ReactDOM",
+		'valine':'Valine',
+        'leancloud-storage':'AV',
+	},
+	
+	module: {
+		rules: [
+			{ test: /\.ts(x?)$/, use: 'ts-loader' },
+			{ test: /\.css$/, use: [
+                {
+                    loader: "style-loader"
+                }, {
+                    loader: "css-loader"
+                }
+                ] 
+			},
+			// { test: /\.json$/, use: "json-loader"},
+			{ test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|bmp|svg|ttf|woff|woff2)(\?.*)?$/, 
+                use: {
+                        loader:'url-loader?limit=100000&name=images/[name]_[hash:8].[ext]'
+                }
+            }
+		]
+	},
+
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				vendors: {
+					priority: -10,
+					test: /[\\/]node_modules[\\/]/
+				}
+			},
+
+			chunks: 'async',
+			minChunks: 1,
+			minSize: 30000,
+			name: true
+		}
+	},
+
+	plugins: [
+		new webpack.ProgressPlugin(), 
+		new CopyPlugin([
+			{from:"./src/_api_",to:"_api_"},
+			{from:"./src/_data_",to:"_data_"},
+			{from:"./src/_old_api_",to:"api"},
+			{from:"./src/assets/copy-to-root/",to:"."}
+		]),
+		new HtmlWebpackPlugin({
+			filename:"index.html",
+			template:"./src/StdPage.tsx",
+			title:"秋之盒",
+			chunks:["site","pageIndex"],
+			hash:true,
+			xhtml:true,
+		}),
+		new HtmlWebpackPlugin({
+			filename:"/about/index.html",
+			template:"./src/StdPage.tsx",
+			title:"联系",
+			chunks:["site","pageAbout"],
+			hash:true,
+			xhtml:true,
+		}),
+		new HtmlWebpackPlugin({
+			filename:"404.html",
+			template:"./src/StdPage.tsx",
+			title:"404 NOT FOUND!",
+			chunks:["site","page404"],
+			hash:true,
+			xhtml:true,
+		}),
+		new HtmlWebpackPlugin({
+			filename:"/donate/index.html",
+			template:"./src/StdPage.tsx",
+			title:"捐赠秋之盒",
+			chunks:["site","pageDonate"],
+			hash:true,
+			xhtml:true,
+		}),
+		new HtmlWebpackPlugin({
+			filename:"/help/index.html",
+			template:"./src/StdPage.tsx",
+			title:"说明书",
+			chunks:["site","pageGuideReader"],
+			hash:true,
+			xhtml:true,
+		}),
+		new HtmlWebpackPlugin({
+			filename:"/opensource/index.html",
+			template:"./src/StdPage.tsx",
+			title:"开放源代码",
+			chunks:["site","pageOS"],
+			hash:true,
+			xhtml:true,
+		}),
+		new HtmlWebpackPlugin({
+			filename:"/go/index.html",
+			template:"./src/StdPage.tsx",
+			title:"跳转",
+			chunks:["site","pageGO"],
+			hash:true,
+			xhtml:true,
+		}),
+		new HtmlWebpackPlugin({
+			filename:"/extension/index.html",
+			template:"./src/pages/ext-store/template.tsx",
+			title:"拓展模块市场",
+			chunks:["site","pageExtStore"],
+			hash:true,
+			xhtml:true,
+		}),
+		new HtmlWebpackPlugin({
+			filename:"/extension/view.html",
+			template:"./src/StdPage.tsx",
+			title:"拓展模块浏览",
+			chunks:["site","pageExtDetail"],
+			hash:true,
+			xhtml:true,
+		}),
+		new HtmlWebpackPlugin({
+			filename:"/com/index.html",
+			template:"./src/StdPage.tsx",
+			title:"商务合作",
+			chunks:["site","pageCom"],
+			hash:true,
+			xhtml:true,
+		}),
+		new HtmlWebpackPlugin({
+			filename:"/story/index.html",
+			template:"./src/StdPage.tsx",
+			title:"故事",
+			chunks:["site","pageStory"],
+			hash:true,
+			xhtml:true,
+		}),
+		new HtmlWebpackPlugin({
+			filename:"/download/index.html",
+			template:"./src/StdPage.tsx",
+			title:"下载",
+			chunks:["site","pageDownload"],
+			hash:true,
+			xhtml:true,
+		}),
+	],
+
+	resolve: {
+		extensions: ['.tsx', '.ts', '.js']
+	}
+};
+
+module.exports = config;
