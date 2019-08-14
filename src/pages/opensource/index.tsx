@@ -7,7 +7,7 @@ class PageOS extends React.Component{
             <div className="container">
                 <br/>
                 <div className="d-flex justify-content-center">
-                    <img className="w-25" src={require("./github.png")}/>    
+                    <img className="img-fuild mx-auto d-block" src={require("./github.png")}/>    
                 </div>
                 <div className="text-center">
                     <h1>开源</h1>

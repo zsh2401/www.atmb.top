@@ -22,7 +22,8 @@ const config:webpack.Configuration= {
 	//@ts-ignore
 	devServer:{
 		contentBase: __dirname + '/dist',
-		port:9001
+		port:9001,
+		host: '0.0.0.0'
 	},
 	output: {
 		filename: 'js/[name].js',

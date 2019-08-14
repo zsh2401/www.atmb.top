@@ -15,7 +15,7 @@ class Index extends React.Component{
                     <h5 className="text-white">开源,易用,免费的安卓手机助手</h5>
                     <div className="btn-group">
                         <button type="button" className="btn btn-success no-radius" onClick={()=>{window.location.href="/download"}}>立刻下载</button>
-                        <button type="button" className="btn btn-light no-radius" onClick={()=>{window.location.href="/os"}}>浏览源代码</button>
+                        <button type="button" className="btn btn-light no-radius" onClick={()=>{window.location.href="/opensource"}}>浏览源代码</button>
                     </div>
                     <p className="text-white">交流群:246177486</p>
                 </div>
