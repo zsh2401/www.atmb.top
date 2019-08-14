@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { StdLayout } from '../../lib/controls';
 import {getUrlParam} from '../../lib/url-handler'
-import {GuideProviderAjax} from '../../lib/data-provider/GuideProviderAjax'
+import {getHtmlByFileName,getIndexHtml} from '../../lib/data-provider/GuideProviderAjax'
 let targetFile = getUrlParam("md") || "index.md";
-new GuideProviderAjax().getHtmlByFileName(targetFile,(md)=>{
+getHtmlByFileName(targetFile,(md)=>{
     console.log(md);
 });
 class GuideReader extends React.Component{

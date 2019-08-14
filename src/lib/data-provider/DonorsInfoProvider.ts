@@ -1,4 +1,4 @@
-let rawJsonData:Array<IDonor> = require("../../_data_/donors.json");
+let rawJsonData:Array<IDonor> = require("../../constants/donors.json");
 export function getDonors():Array<IDonor>{
     return doMotherFuckerSort(rawJsonData);
 }

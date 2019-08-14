@@ -75,7 +75,6 @@ const config:webpack.Configuration= {
 	plugins: [
 		new webpack.ProgressPlugin(), 
 		new CopyPlugin([
-			{from:"./src/_data_",to:"_data_"},
 			{from:"./src/assets/copy-to-root/",to:"."},
 			{from:"./src/assets/copy-to-root-obsolute/",to:"."},
 			{from:"./src/constants/homev2.xaml",to:"./_api_/home_v2/home.xaml"},
