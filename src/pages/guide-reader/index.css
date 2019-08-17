@@ -1,0 +1,19 @@
+.content{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.backtotop{
+    position: fixed; 
+    bottom: 20px;
+    right: 0px;
+    z-index: 9999;
+    /* background-color: #ff7f50; */
+    border-radius: 5px;
+    /* color: white; */
+    padding: 8px;
+}
+
+.important{
+    color:orangered;
+}

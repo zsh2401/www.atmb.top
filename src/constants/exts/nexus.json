@@ -1,0 +1,17 @@
+{
+    "id":"20190113",
+    "icon":"nexus.png",
+    "name":"原生工具箱",
+    "auth":"神经元",
+    "size":"69KB",
+    "desc":"类原生手机解锁、刷写分区、清除谷歌锁等",
+    "bdesc":"类原生手机解锁、刷写分区、清除谷歌锁等",
+    "downloadUrl":"https://github.com/singleNeuron/AutumnBox_exp_Nexus/releases",
+
+    "addition":{
+        "危险级别":"高",
+        "近似大小":"69KB",
+        "最近更新":"06/20/2019",
+        "支持的秋之盒":"2019.5.30"
+    }
+}

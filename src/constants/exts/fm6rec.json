@@ -1,0 +1,18 @@
+{
+    "id":"2018042601",
+    "icon":"mi.png",
+    "name":"一键刷入小米6 TWRP REC",
+    "auth":"zsh2401",
+    "downloadUrl":"http://dream.zsh2401.top:4396/extsx/Zsh2401.Xiaomi6RecFlasher.dll",
+    "version":"0.0.5",
+    "pics":["just.png"],
+    "bdesc":"这个拓展可以一键刷入小米6 REC(OFFACE开发,可解锁DATA)",
+    "desc":"这个拓展可以一键刷入小米6 TWRP REC(OFFACE开发,可解锁DATA,仅支持安卓8.0以上的小米6手机)<br>",
+   
+    "addition":{
+        "最近更新":"01/03/2019",
+        "近似大小":"34MB",
+        "支持的秋之盒":"2019.1.1",
+        "危险级别":"高"
+    }
+}

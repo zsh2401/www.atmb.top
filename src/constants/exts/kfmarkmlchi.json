@@ -1,0 +1,19 @@
+{
+  "id": "2019011900",
+  "icon": "kfmark.png",
+  "name": "一键激活快否",
+  "bdesc": "一键激活快否",
+  "desc": "一键激活快否，需要连接网络下载激活文件，如需离线激活，请出门右转，源码和使用介绍详见<a href='https://github.com/MonoLogueChi/AutumnBox.KFMARK'>GitHub</a>",
+  "auth": "MonoLogueChi",
+  "obtained": null,
+  "downloadUrl": "https://atmb.sm9.top/AutumnBox/%E6%8B%93%E5%B1%95%E6%A8%A1%E5%9D%97/MonoLogueChi/KFMARK/",
+
+
+  "addition": {
+       "近似大小": "16KB"
+    ,
+    "支持的秋之盒":"2019.3.5"
+    ,
+    "开放源代码:": "<a href='https://github.com/MonoLogueChi/AutumnBox.KFMARK'>浏览</a>"
+  }
+}

@@ -1,5 +1,6 @@
 import StdPage from '../../StdPage';
-export default function(data){
-    data.ext_data = "b";
+import RenderingReader from './RenderingReader'
+export default function(data:any){
+    data.ext_data = RenderingReader(data.htmlWebpackPlugin.options.exts_path);
     return StdPage(data);
 }

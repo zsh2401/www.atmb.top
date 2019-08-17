@@ -1,0 +1,16 @@
+{
+    "id":"2018121802",
+    "icon":"googleplay.png",
+    "name":"跳过GAPPS",
+    "auth":"zsh2401",
+    "desc":"什么?卡在GAPPS了?帮你解决!",
+    "bdesc":"什么?卡在GAPPS了?帮你解决!",
+    "downloadUrl":"http://dream.zsh2401.top:4396/extsx/Zsh2401.GappsSkipper.dll",
+    
+    "addition":{
+        "最近更新":"01/03/2019",
+        "近似大小":"15KB",
+        "支持的秋之盒":"2019.1.1",
+        "危险级别":"低"
+    }
+}
