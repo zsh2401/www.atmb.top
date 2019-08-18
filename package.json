@@ -44,6 +44,7 @@
     "webpack": "webpack",
     "build": "webpack",
     "dev": "webpack-dev-server --open",
+    "devx":"webpack && webpack-dev-server --open",
     "fml": "cross-env LIMIT=4096 increase-memory-limit"
   },
   "repository": {

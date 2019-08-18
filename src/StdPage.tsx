@@ -34,7 +34,7 @@ export class StdPage extends React.Component<StdPageProps>{
         <script src="https://cdn.bootcss.com/marked/0.7.0/marked.min.js"></script>
 
         {/* Swiper */}
-        {/* <script src="https://cdn.jsdelivr.net/npm/swiper@4.5.0/dist/js/swiper.min.js"></script> */}
+        <script src="https://cdn.jsdelivr.net/npm/swiper@4.5.0/dist/js/swiper.min.js"></script>
 
         <script dangerouslySetInnerHTML={{__html:"const __EXT_DATA__ = " + JSON.stringify(this.props.ext_data)}}></script>
         </head>

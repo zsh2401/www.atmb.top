@@ -34,7 +34,8 @@ const config:webpack.Configuration= {
 		"react-dom":"ReactDOM",
 		'valine':'Valine',
 		'leancloud-storage':'AV',
-		"marked":"marked"
+		"marked":"marked",
+		"swiper":"Swiper"
 	},
 	
 	module: {

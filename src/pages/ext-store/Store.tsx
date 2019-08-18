@@ -35,7 +35,7 @@ interface IExtViewProps{
 }
 class ExtView extends React.Component<IExtViewProps>{
     render(){
-        return <div className="col-sm-4 col-1">
+        return <div className="col-sm-4 col-12">
             <div className="row ext-card" onClick={()=>{window.open("?id=" + this.props.extInfo.id)}}>
                 <div className="col-3 d-flex h-100">
                     <img className="ext-icon justify-content-center align-self-center" src={"/images/ext_icons/" + this.props.extInfo.icon}></img>
