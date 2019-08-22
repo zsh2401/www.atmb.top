@@ -13,5 +13,5 @@
     "adb_fail":"/help/?md=adbfail.md",
     "c_dev":"/help/connect_device.html",
     "os_lisence":"https://github.com/zsh2401/AutumnBox/blob/master/LICENSE",
-    "h_ist_ext":"/help/ext.html"
+    "h_ist_ext":"/help/?md=ext.md"
 }
