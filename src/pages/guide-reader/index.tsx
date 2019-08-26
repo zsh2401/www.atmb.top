@@ -23,7 +23,7 @@ class GuideReader extends React.Component{
                     </div>
             </div>
             <div className="container">
-                <div id="md-content"></div>
+                <div id="md-content" className="content"></div>
                 <ValineComment path={getCommentPath()}></ValineComment>
             </div>
             

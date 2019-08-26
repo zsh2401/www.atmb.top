@@ -13,7 +13,9 @@
     /* color: white; */
     padding: 8px;
 }
-
 .important{
     color:orangered;
+}
+img{
+    width:100%;
 }

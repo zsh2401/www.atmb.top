@@ -3,7 +3,6 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin'
 const config:webpack.Configuration= {
-	mode: 'development',
 	entry: {
 		site: './src/lib/site',
 		pageIndex: './src/pages/index',
@@ -17,6 +16,8 @@ const config:webpack.Configuration= {
 		pageCom:"./src/pages/com",
 		pageStory:"./src/pages/story",
 		pageDownload:"./src/pages/download",
+		pageBeta:"./src/pages/beta",
+		pageDownloadV2:"./src/pages/downloadv2",
 	},
 	//@ts-ignore
 	devServer:{
@@ -174,6 +175,22 @@ const config:webpack.Configuration= {
 			template:"./src/StdPage.tsx",
 			title:"下载",
 			chunks:["site","pageDownload"],
+			hash:true,
+			xhtml:true,
+		}),
+		new HtmlWebpackPlugin({
+			filename:"/beta/index.html",
+			template:"./src/StdPage.tsx",
+			title:"BETA测试",
+			chunks:["site","pageBeta"],
+			hash:true,
+			xhtml:true,
+		}),
+		new HtmlWebpackPlugin({
+			filename:"/downloadv2/index.html",
+			template:"./src/StdPage.tsx",
+			title:"下载",
+			chunks:["site","pageDownloadV2"],
 			hash:true,
 			xhtml:true,
 		}),

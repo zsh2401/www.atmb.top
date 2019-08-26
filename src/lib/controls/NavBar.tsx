@@ -20,6 +20,7 @@ export class NavBar extends React.Component
                         <div className="dropdown-menu">
                             <a className="dropdown-item" href="/">主页</a>
                             <a className="dropdown-item" href="/download">下载</a>
+                            <a className="dropdown-item" href="/beta">BETA</a>
                         </div>
                     </li>
                     <li className="nav-item dropdown">

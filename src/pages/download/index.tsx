@@ -17,6 +17,10 @@ class PageDL extends React.Component<any>{
                         感谢下载秋之盒,接下来,您可以查阅
                         <a href="/help">秋之盒说明书</a>
                     </div>
+                    <div className="alert alert-warning">
+                        想尝鲜?请参与
+                        <a href="/beta">秋之盒BETA测试</a>
+                    </div>
                     <a href="/donate" >扫码捐赠或领取最大99元支付宝赏金红包</a>
                     <br/>
                     <h3>{update.version}更新日志</h3>

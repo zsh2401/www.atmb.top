@@ -46,7 +46,7 @@ export class StdPage extends React.Component<StdPageProps>{
 }
 export default function(props){
     return ReactDOM.renderToString(<StdPage 
-        title={props.htmlWebpackPlugin.options.title} 
+        title={props.htmlWebpackPlugin.options.title + "-秋之盒"} 
         desc={props.htmlWebpackPlugin.options.desc || props.desc || props.htmlWebpackPlugin.options.title} 
         ext_data={props.htmlWebpackPlugin.options.ext_data || props.ext_data  || {data_status:-1}}>
             <div id="app">
