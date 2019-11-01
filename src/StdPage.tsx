@@ -12,6 +12,7 @@ export class StdPage extends React.Component<StdPageProps>{
         <meta charSet="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <meta name="description" content="秋之盒是一款开源,易用,免费的安卓工具箱,在本站点您将可以下载,讨论与浏览帮助文档"/>
         <title>{this.props.title}</title>
         <meta name="description" content={this.props.desc}/>
         
