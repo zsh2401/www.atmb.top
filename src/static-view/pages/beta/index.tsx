@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import PageTemplate from '../../component/PageTemplate';
 //@ts-ignore
-import style from "!!../../../common/text-loader!./beta.css"
+import style from "../../../common/text-loader!./beta.css"
 const info = {
     versionName:"2019.9-BETA-1",
     downloadUrl:"https://dream.zsh2401.top:4396/beta/",

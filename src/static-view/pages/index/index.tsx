@@ -4,7 +4,7 @@ import PageTemplate from '../../component/PageTemplate'
 import updateInfo from '../../../data/update.json'
 
 //@ts-ignore
-import style from '!!../../../common/text-loader!./index.css'
+import style from '../../../common/text-loader!./index.css'
 import ValineComment from '../../component/ValineComment';
 
 export default function(){

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/server'
 import updateInfo from '../../../data/update.json'
 import PageTemplate from '../../component/PageTemplate';
 //@ts-ignore
-import style from '!!../../../common/text-loader!./index.css'
+import style from '../../../common/text-loader!./index.css'
 export default ReactDOM.renderToString(<Page/>);
 function Page(){
     return  <PageTemplate title="下载">

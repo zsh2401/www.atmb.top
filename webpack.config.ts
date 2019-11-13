@@ -3,23 +3,22 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin'
 import {CleanWebpackPlugin} from 'clean-webpack-plugin'
+import fs from 'fs';
+let __EXTS_PATHS:string[] = (()=>{
+	let _extDirPath = path.resolve(__dirname,"./src/data/exts");
+	let extFiles = fs.readdirSync(_extDirPath)
+		.filter(target=>!(fs.lstatSync(path.resolve(_extDirPath, target)).isDirectory()))
+		.filter(target=>path.extname(path.resolve(_extDirPath, target)) === ".json")
+		.map(file=>"/_data_/exts/" + file);
+	console.log(extFiles);
+	return extFiles;
+})();
 const config:webpack.Configuration= {
 	entry: {
 		global:"./src/global",
 		pageIndex: './src/entries/page-index',
 		pageGo: './src/entries/page-go',
-		// pageAbout: './src/pages/about',
-		// page404:"./src/pages/404",
-		// pageDonate:"./src/pages/donate",
-		// pageOS:"./src/pages/opensource",
-		// pageExtStore:"./src/pages/ext-store",
-		// pageGO:"./src/pages/go",
-		// pageGuideReader:"./src/pages/guide-reader",
-		// pageCom:"./src/pages/com",
-		// pageStory:"./src/pages/story",
-		// pageDownload:"./src/pages/download",
-		// pageBeta:"./src/pages/beta",
-		// pageDownloadV2:"./src/pages/downloadv2",
+		pageExtStore: './src/entries/page-extension-store',
 	},
 
 	//@ts-ignore
@@ -34,8 +33,8 @@ const config:webpack.Configuration= {
 		publicPath:"/"
 	},
 	externals:{
-		"react":"React",
-		"react-dom":"ReactDOM",
+		// "react":"React",
+		// "react-dom":"ReactDOM",
 		'valine':'Valine',
 		'leancloud-storage':'AV',
 		"marked":"marked",
@@ -80,7 +79,14 @@ const config:webpack.Configuration= {
 
 	plugins: [
 		new webpack.ProgressPlugin(), 
-		new CopyPlugin([{from:"./src/public",to:"."},]),
+		new webpack.DefinePlugin({
+			"__EXTS_PATHS":JSON.stringify(__EXTS_PATHS)
+		}),
+		new CopyPlugin([
+			{from:"./src/public",to:"."},
+			{from:"./src/data/exts",to:"./_data_/exts"},
+			{from:"./src/data/update.json",to:"./_api_/update/index.html"},
+		]),
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
 			filename:"index.html",
@@ -137,11 +143,6 @@ const config:webpack.Configuration= {
 			filename:"extension/index.html",
 			template:"./src/static-view/pages/extension-store",
 			chunks:["global","pageExtStore"],
-		}),
-		new HtmlWebpackPlugin({
-			filename:"extension/view/index.html",
-			template:"./src/static-view/pages/extension-view",
-			chunks:["global","pageExtView"],
 		}),
 		new HtmlWebpackPlugin({
 			filename:"com/index.html",
