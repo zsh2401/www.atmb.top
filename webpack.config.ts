@@ -2,31 +2,34 @@ import webpack from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin'
+import {CleanWebpackPlugin} from 'clean-webpack-plugin'
 const config:webpack.Configuration= {
 	entry: {
-		site: './src/lib/site',
-		pageIndex: './src/pages/index',
-		pageAbout: './src/pages/about',
-		page404:"./src/pages/404",
-		pageDonate:"./src/pages/donate",
-		pageOS:"./src/pages/opensource",
-		pageExtStore:"./src/pages/ext-store",
-		pageGO:"./src/pages/go",
-		pageGuideReader:"./src/pages/guide-reader",
-		pageCom:"./src/pages/com",
-		pageStory:"./src/pages/story",
-		pageDownload:"./src/pages/download",
-		pageBeta:"./src/pages/beta",
-		pageDownloadV2:"./src/pages/downloadv2",
+		global:"./src/global",
+		pageIndex: './src/entries/page-index',
+		pageGo: './src/entries/page-go',
+		// pageAbout: './src/pages/about',
+		// page404:"./src/pages/404",
+		// pageDonate:"./src/pages/donate",
+		// pageOS:"./src/pages/opensource",
+		// pageExtStore:"./src/pages/ext-store",
+		// pageGO:"./src/pages/go",
+		// pageGuideReader:"./src/pages/guide-reader",
+		// pageCom:"./src/pages/com",
+		// pageStory:"./src/pages/story",
+		// pageDownload:"./src/pages/download",
+		// pageBeta:"./src/pages/beta",
+		// pageDownloadV2:"./src/pages/downloadv2",
 	},
+
 	//@ts-ignore
 	devServer:{
-		contentBase: __dirname + '/dist',
+		open:true,
 		port:9001,
 		host: '0.0.0.0'
 	},
 	output: {
-		filename: 'js/[name].js',
+		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist'),
 		publicPath:"/"
 	},
@@ -77,127 +80,78 @@ const config:webpack.Configuration= {
 
 	plugins: [
 		new webpack.ProgressPlugin(), 
-		new CopyPlugin([
-			{from:"./src/assets/copy-to-root/",to:"."},
-			{from:"./src/assets/copy-to-root-obsolute/",to:"."},
-			{from:"./src/constants/exts/icons/",to:"./images/ext_icons"},
-			{from:"./src/constants/exts/pics/",to:"./images/ext_pics"},
-			{from:"./src/constants/homev2.xaml",to:"./_api_/home_v2/home.xaml"},
-			{from:"./src/constants/help",to:"./_data_/help"},
-			{from:"./src/constants/help/assets",to:"./help/assets"},
-			{from:"./src/constants/update.json",to:"./_api_/update/index.html"},
-		]),
+		new CopyPlugin([{from:"./src/public",to:"."},]),
+		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
 			filename:"index.html",
-			template:"./src/StdPage.tsx",
-			title:"秋之盒",
-			desc:"开源易用,免费的安卓手机助手",
-			chunks:["site","pageIndex"],
-			hash:true,
-			xhtml:true,
+			template:"./src/static-view/pages/index",
+			chunks:["global"]
 		}),
 		new HtmlWebpackPlugin({
-			filename:"/about/index.html",
-			template:"./src/StdPage.tsx",
-			title:"联系",
-			desc:"联系秋之盒开发者",
-			chunks:["site","pageAbout"],
-			hash:true,
-			xhtml:true,
+			filename:"download/index.html",
+			template:"./src/static-view/pages/download",
+			chunks:["global"]
+		}),
+		new HtmlWebpackPlugin({
+			filename:"about/index.html",
+			template:"./src/static-view/pages/about",
+			chunks:["global"]
+		}),
+		new HtmlWebpackPlugin({
+			filename:"story/index.html",
+			template:"./src/static-view/pages/story",
+			chunks:["global"]
+		}),
+		new HtmlWebpackPlugin({
+			filename:"beta/index.html",
+			template:"./src/static-view/pages/beta",
+			chunks:["global"]
 		}),
 		new HtmlWebpackPlugin({
 			filename:"404.html",
-			template:"./src/StdPage.tsx",
-			title:"404 NOT FOUND!",
-			chunks:["site","page404"],
-			hash:true,
-			xhtml:true,
+			template:"./src/static-view/pages/404",
+			chunks:["global"],
 		}),
 		new HtmlWebpackPlugin({
-			filename:"/donate/index.html",
-			template:"./src/StdPage.tsx",
-			title:"捐赠秋之盒",
-			chunks:["site","pageDonate"],
-			hash:true,
-			xhtml:true,
+			filename:"donate/index.html",
+			template:"./src/static-view/pages/donate",
+			chunks:["global"],
 		}),
 		new HtmlWebpackPlugin({
-			filename:"/help/index.html",
-			template:"./src/StdPage.tsx",
-			title:"说明书",
-			chunks:["site","pageGuideReader"],
-			hash:true,
-			xhtml:true,
+			filename:"guide/index.html",
+			template:"./src/static-view/pages/guide-reader",
+			chunks:["global","pageGuideReader"],
+		}),
+
+		new HtmlWebpackPlugin({
+			filename:"opensource/index.html",
+			template:"./src/static-view/pages/opensource",
+			chunks:["global"],
 		}),
 		new HtmlWebpackPlugin({
-			filename:"/opensource/index.html",
-			template:"./src/StdPage.tsx",
-			title:"开放源代码",
-			chunks:["site","pageOS"],
-			hash:true,
-			xhtml:true,
+			filename:"go/index.html",
+			template:"./src/static-view/pages/go",
+			chunks:["global","pageGo"],
 		}),
 		new HtmlWebpackPlugin({
-			filename:"/go/index.html",
-			template:"./src/StdPage.tsx",
-			title:"跳转",
-			chunks:["site","pageGO"],
-			hash:true,
-			xhtml:true,
+			filename:"extension/index.html",
+			template:"./src/static-view/pages/extension-store",
+			chunks:["global","pageExtStore"],
 		}),
 		new HtmlWebpackPlugin({
-			filename:"/extension/index.html",
-			template:"./src/pages/ext-store/template.tsx",
-			title:"拓展模块市场",
-			chunks:["site","pageExtStore"],
-			exts_path:path.resolve(__dirname,"./src/constants/exts"),
-			hash:true,
-			xhtml:true,
+			filename:"extension/view/index.html",
+			template:"./src/static-view/pages/extension-view",
+			chunks:["global","pageExtView"],
 		}),
 		new HtmlWebpackPlugin({
-			filename:"/com/index.html",
-			template:"./src/StdPage.tsx",
-			title:"商务合作",
-			chunks:["site","pageCom"],
-			hash:true,
-			xhtml:true,
-		}),
-		new HtmlWebpackPlugin({
-			filename:"/story/index.html",
-			template:"./src/StdPage.tsx",
-			title:"故事",
-			chunks:["site","pageStory"],
-			hash:true,
-			xhtml:true,
-		}),
-		new HtmlWebpackPlugin({
-			filename:"/download/index.html",
-			template:"./src/StdPage.tsx",
-			title:"下载",
-			chunks:["site","pageDownload"],
-			hash:true,
-			xhtml:true,
-		}),
-		new HtmlWebpackPlugin({
-			filename:"/beta/index.html",
-			template:"./src/StdPage.tsx",
-			title:"BETA测试",
-			chunks:["site","pageBeta"],
-			hash:true,
-			xhtml:true,
-		}),
-		new HtmlWebpackPlugin({
-			filename:"/downloadv2/index.html",
-			template:"./src/StdPage.tsx",
-			title:"下载",
-			chunks:["site","pageDownloadV2"],
-			hash:true,
-			xhtml:true,
-		}),
+			filename:"com/index.html",
+			template:"./src/static-view/pages/commerical/",
+			chunks:["global"],
+		})
 	],
 
 	resolve: {
-		extensions: ['.tsx', '.ts', '.js']
+		extensions: ['.tsx', '.ts', '.js','.css']
 	}
 };
 
