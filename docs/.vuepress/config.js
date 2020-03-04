@@ -10,12 +10,13 @@ module.exports = {
         themePicker: false,
         logo: '/images/icon.png',
         nav: [
-            { text: '主页', link: '/' },
-            { text: '指南', link: '/guide/' },
-            { text: '拓展模块', link: '/extensions/' },
+            { text: '主页', link: '/' ,icon:"reco-home"},
+            { text: '指南', link: '/guide/' ,icon:"reco-document"},
+            { text: '拓展模块', link: '/extensions/',icon:"reco-category" },
 
             {
                 text: '关于',
+                icon:"reco-other",
                 items: [
                     { text: '关于', link: '/about/' },
                     { text: '无偿捐赠', link: '/donate/' },
@@ -23,9 +24,10 @@ module.exports = {
             },
             {
                 text: '开发',
+                icon: 'reco-api',
                 items: [
                     { text: '开发文档', link: '/dev-docs/' },
-                    { text: '开放源代码', link: '/open-source/' },
+                    { text: '开放源代码', link: '/open-source/',icon:"reco-github" },
                 ]
             }
         ],
@@ -37,7 +39,7 @@ module.exports = {
         },
         lastUpdated: '最后更新',
         startYear: '2017',
-        author: 'zsh2491',
+        author: 'zsh2401<zsh2401@163.com>',
         valineConfig: {
             placeholder: "wow",
             appId: 'VLA81Yn1kDUEgE9A99Qwnb1u-gzGzoHsz',// your appId

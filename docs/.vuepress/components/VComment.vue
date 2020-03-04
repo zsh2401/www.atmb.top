@@ -5,10 +5,11 @@
 </template>
 
 <script>
-const Valine = require('valine')
-const AV = require('leancloud-storage')
+
 export default {
     mounted:()=>{
+        const Valine = require('valine')
+        const AV = require('leancloud-storage')
         const valineOptions = {
         el: '#vcomment',
         placeholder: '理性发言',
