@@ -12,6 +12,4 @@ features:
   details: 这意味着秋之盒不可能包含任何恶意代码，并且，你可以通过阅读秋之盒的代码进行学习
 - title: 功能强大
   details: 激活各种安卓优化软件！什么？不够？秋之盒支持【拓展模块】
-footer: MIT Licensed | Copyright © 2020-present zsh2401
 ---
-<VComment/>
