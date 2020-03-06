@@ -5,9 +5,9 @@
         <img class="atmb-icon" src="/images/icon.png" />
         <h1 style="font-size: 60px">AutumnBox 2019.4</h1>
         <h4>开源、免费、易用的图形化ADB工具箱</h4>
-        <a class="link" href="download/">立刻下载</a> /
-        <a class="link" href="dev/os/">浏览源代码</a> /
-        <a class="link" href="guide/">指南</a>
+        <router-link to="download/">立刻下载</router-link> /
+        <router-link to="dev/os/">浏览源代码</router-link> /
+        <router-link to="guide/">指南</router-link>
         <p>
           运行需求
           <br />Windows 7及以上 / .Net Framework 4.6.1
