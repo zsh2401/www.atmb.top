@@ -1,19 +1,22 @@
 <template>
   <div class="c-home">
-    <br />
-    <br />
-    <br />
-    <div class="c-home-row ca">
+    <div class="header">
       <div style="text-align:center">
-        <h1 style="font-size: 60px">AutumnBox 2019.4-reborn</h1>
+        <img class="atmb-icon" src="/images/icon.png" />
+        <h1 style="font-size: 60px">AutumnBox 2019.4</h1>
         <h4>开源、免费、易用的图形化ADB工具箱</h4>
-        <h4>
-          <a class="btn-download" href="download/">立刻下载</a> /
-          <a href="dev/os/">浏览源代码</a>
-        </h4>
-        <p>运行需求<br/> Windows 7及以上 / .Net Framework 4.6.1</p>
+        <a class="link" href="download/">立刻下载</a> /
+        <a class="link" href="dev/os/">浏览源代码</a> /
+        <a class="link" href="guide/">指南</a>
+        <p>
+          运行需求
+          <br />Windows 7及以上 / .Net Framework 4.6.1
+        </p>
       </div>
     </div>
+    <br />
+
+    <Content/>
     <!-- <div class="c-home-row ca">
       <div>
         <h3>秋之盒值得被您信任</h3>
@@ -43,7 +46,7 @@
           </li>
         </ul>
       </div>
-    </div> -->
+    </div>-->
   </div>
 </template>
 
@@ -57,46 +60,21 @@ export default {
 };
 </script>
 
+
 <style scoped>
+.line{
+  width: 100%;
+  background-color: lightgray;
+  height: 1px;
+}
+.atmb-icon {
+  height: 20vh;
+}
 .header {
-  background-image: url("/images/bg.png");
-  height: 50vh;
-  background-attachment: fixed;
-  background-size: cover;
+  min-height: 40vh;
+  padding-top: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.header-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.title {
-  font-size: 70px;
-  color: white;
-}
-</style>
-
-<style scoped>
-.c-home {
-  display: flex;
-  padding-top: 50px;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.c-home-row {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.ca {
-  /* background: var(--background-color); */
-}
-
-.cb {
-  /* background: var(--mask-color); */
 }
 </style>

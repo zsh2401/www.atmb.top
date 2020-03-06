@@ -12,9 +12,11 @@
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "deploy": "node deploy.js"
   },
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "typescript": "^3.8.3",
     "vuepress-theme-reco": "^1.2.2"
   }

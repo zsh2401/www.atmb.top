@@ -5,20 +5,25 @@ module.exports = {
     cache: false,
     configureWebpack: (config, isServer) => {
         if (!isServer) {
-            // config.module.rules.push({ test: /\.ts(x?)$/, use: 'ts-loader' });
+            ["link", { rel: "stylesheet" }]            // config.module.rules.push({ test: /\.ts(x?)$/, use: 'ts-loader' });
             // config.module.rules.push({test:/\.js$/,use:'babel-loader',exclude:/node_modules/}); 
         }
     },
+    head: [
+        // ["link", { rel: "stylesheet", href: "https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css" }],
+        // ['script', { src: "https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js" }]
+        // ['script', { src: "https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.min.js" }]
+    ],
     plugins: [
         [
-            // require('./plugins/cnzz/'),
-            'vuepress-plugin-typescript',
-            {
-                tsLoaderOptions: {
-                    "target": "es5",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
-                    "module": "commonjs",
-                },
-            },
+            // // require('./plugins/cnzz/'),
+            // 'vuepress-plugin-typescript',
+            // {
+            //     tsLoaderOptions: {
+            //         "target": "es5",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+            //         "module": "commonjs",
+            //     },
+            // },
             '@vuepress/google-analytics',
             {
                 'ga': 'UA-113227184-2' // UA-00000000-0
@@ -32,6 +37,7 @@ module.exports = {
         logo: '/images/icon.png',
         nav: [
             { text: '主页', link: '/', icon: "reco-home" },
+            { text: '下载', link: '/download/'},
             { text: '指南', link: '/guide/', icon: "reco-document" },
             { text: '拓展模块', link: '/extensions/', icon: "reco-category" },
 
@@ -124,7 +130,7 @@ module.exports = {
                     title: '入门',   // 必要的
                     sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
-                        '/dev/docs',
+                        '/dev/docs/',
 
                     ]
                 },
@@ -132,7 +138,7 @@ module.exports = {
                     title: '进阶',   // 必要的
                     sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
-                        '/dev/docs/advanced',
+                        '/dev/docs/advanced/',
                     ]
                 }
             ],
@@ -144,9 +150,9 @@ module.exports = {
         },
         lastUpdated: '最后更新',
         startYear: '2017',
-        author: 'zsh2401<zsh2401@163.com>',
+        author: 'AutumnBox',
         valineConfig: {
-            placeholder: "遵守法律法规,理性发言。建议填写邮箱地址以接收回复。",
+            placeholder: "建议填写邮箱地址以接收回复。遵守法律法规,理性发言。",
             appId: 'VLA81Yn1kDUEgE9A99Qwnb1u-gzGzoHsz',// your appId
             appKey: 'CpivAcjiG4W9BWNpS2z47X98', // your appKey
         }
