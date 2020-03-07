@@ -93,7 +93,7 @@ module.exports = {
                     sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         '/guide/advanced/',
-
+                        '/guide/wifi_delete_x/',
                     ]
                 },
                 {
@@ -103,7 +103,7 @@ module.exports = {
                     sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         '/guide/adb/',
-
+                        '/guide/adb_install/',
                     ]
                 }
             ],
