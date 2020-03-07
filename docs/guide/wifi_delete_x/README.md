@@ -1,5 +1,6 @@
 ---
 title: '[转] 原生安卓WiFi信号去叹号去叉教程5.0-Android P'
+author: singleNeuron(转载自EVIL42)
 ---
 
 **本文转载自 [evil42.com](https://www.evil42.com/index.php/archives/17/) ，已获得原作者授权。**  

@@ -1,5 +1,6 @@
 ---
 title: 安装ADB
+author: Hot Cocoa
 ---
 
 本教程将教会您如何将adb添加进PATH变量，安装完成后，即可在任意路径使用adb命令而无需添加adb路径（如图）
