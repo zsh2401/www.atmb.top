@@ -5,6 +5,8 @@ author: singleNeuron(转载自EVIL42)
 
 **本文转载自 [evil42.com](https://www.evil42.com/index.php/archives/17/) ，已获得原作者授权。**  
 
+---
+
 在开始处理之前有一些东西了解一下还是有好处的，不然纯粹去打命令却还不知道它是干嘛的。
 
 ### 说明
