@@ -94,6 +94,7 @@ module.exports = {
                     children: [
                         '/guide/advanced/',
                         '/guide/wifi_delete_x/',
+                        '/guide/jump_google/',
                     ]
                 },
                 {
@@ -104,6 +105,8 @@ module.exports = {
                     children: [
                         '/guide/adb/',
                         '/guide/adb_install/',
+                        '/guide/adb_enable/',
+                        '/guide/adb_use/',
                     ]
                 }
             ],
