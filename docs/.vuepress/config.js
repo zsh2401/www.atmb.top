@@ -63,47 +63,50 @@ module.exports = {
                 {
                     title: '入门',   // 必要的
                     // path: '/guide/',      // 可选的, 应该是一个绝对路径
-                    collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 2,    // 可选的, 默认值是 1
+                    collapsable: false, // 可选的, 默认值是 true,
+                    sidebarDepth: 4,    // 可选的, 默认值是 1
                     children: [
                         '/guide/',
-                        "/guide/run/",
-                        "/guide/adb_fail/",
+                        "/guide/basic/run/",
+                        "/guide/basic/adb_fail/",
                         {
                             title: '连接设备',   // 必要的
                             // path: '/guide/',      // 可选的, 应该是一个绝对路径
                             collapsable: false, // 可选的, 默认值是 true,
                             sidebarDepth: 2,    // 可选的, 默认值是 1
                             children: [
-                                '/guide/cdev/',
-                                '/guide/cdev/chuawei.html'
+                                '/guide/basic/cdev/',
+                                '/guide/basic/cdev/chuawei.html'
 
                             ]
                         },
-                        "/guide/dpm/",
-                        "/guide/ext/",
-                        "/guide/script/",
+                        "/guide/basic/dpm/",
+                        "/guide/basic/ext/",
+                        "/guide/basic/script/",
 
                     ]
                 },
                 {
                     title: '进阶',   // 必要的
                     // path: '/guide/',      // 可选的, 应该是一个绝对路径
-                    collapsable: true, // 可选的, 默认值是 true,
+                    collapsable: false, // 可选的, 默认值是 true,
                     sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         '/guide/advanced/',
-
+                        '/guide/advanced/wifi_delete_x/',
+                        '/guide/advanced/jump_google/',
                     ]
                 },
                 {
                     title: 'ADB',   // 必要的
                     // path: '/guide/',      // 可选的, 应该是一个绝对路径
-                    collapsable: true, // 可选的, 默认值是 true,
+                    collapsable: false, // 可选的, 默认值是 true,
                     sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         '/guide/adb/',
-
+                        '/guide/adb/install/',
+                        '/guide/adb/enable/',
+                        '/guide/adb/use/',
                     ]
                 }
             ],
