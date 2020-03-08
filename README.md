@@ -5,22 +5,19 @@
 * node.js >= 12
 ## 下载
 ```sh
-#下载代码仓库到本地
-git clone git@github.com:zsh2401/www.atmb.top.git atmb-top-website
-
+git clone git@github.com:zsh2401/www.atmb.top.git && cd www.atmb.top
 ```
 ### 安装依赖
-```
-#进入目录
-cd atmb-top-website && yarn
+```sh
+yarn #or npm install
 ```
 ### 运行调试
-```
-yarn dev
+```sh
+yarn dev #or npm run dev
 ```
 ### 构建静态文件
-```
-yarn build
+```sh
+yarn build #or npm run build
 ```
 ## 贡献代码
 在您对vuepress有一定程度的熟悉时，可以对本仓库提交代码。
