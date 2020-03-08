@@ -2,8 +2,7 @@
 title: 激活DPM软件
 categories: 说明书
 ---
-## 激活DPM软件
-# <div class="text-center">激活DPM软件</div> 
+# 激活DPM软件
 
 ~~这可能是你下载秋之盒的唯一原因~~
 
