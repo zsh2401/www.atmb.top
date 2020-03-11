@@ -24,10 +24,11 @@ module.exports = {
             //         "module": "commonjs",
             //     },
             // },
+            require('./plugins/custom-not-found'),
             '@vuepress/google-analytics',
             {
                 'ga': 'UA-113227184-2' // UA-00000000-0
-            }
+            },
         ]
     ],
     themeConfig: {
