@@ -19,13 +19,13 @@ module.exports = {
         logo: '/images/icon.png',
         nav: [
             { text: '主页', link: '/', icon: "reco-home" },
-            { text: '下载', link: '/download/'},
+            { text: '下载', link: '/download/',icon:"reco-other"},
             { text: '指南', link: '/guide/', icon: "reco-document" },
             { text: '拓展模块', link: '/extensions/', icon: "reco-category" },
 
             {
                 text: '关于',
-                icon: "reco-other",
+                icon: "reco-eye",
                 items: [
                     { text: '关于', link: '/about/' },
                     { text: '无偿捐赠', link: '/donate/' },
@@ -128,8 +128,15 @@ module.exports = {
                 }
             ],
             "/download/": [
-                "",
-                "beta/"
+                {
+                    title: '下载秋之盒',   // 必要的
+                    collapsable: false,
+                    sidebarDepth: -1,    // 可选的, 默认值是 1
+                    children: [
+                        '/download/',
+                        "/download/beta/"
+                    ]
+                },
             ]
 
         },
