@@ -1,6 +1,7 @@
 const tvue = require('./My404.vue');
 module.exports = ({ router }) => {
     if (typeof window !== 'undefined') {
+        console.log(router.on);
         router.beforeEach((to, from, next) => {
             if (shouldHandle(to)) {
                 to.matched[0].components = tvue;

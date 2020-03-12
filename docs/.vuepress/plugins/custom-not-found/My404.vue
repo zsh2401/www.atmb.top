@@ -15,12 +15,15 @@ export default {
     return { lastSec: 10 };
   },
   mounted() {
+    // console.log(this.$router);
     var interval = setInterval(() => {
       if (this.lastSec > 0) {
         this.lastSec--;
       } else {
         clearInterval(interval);
-        this.$router.push("/");
+        if (this.$router.currentRoute.path !== "/") {
+          this.$router.push("/");
+        }
       }
     }, 1000);
   }
