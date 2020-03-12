@@ -1,22 +1,14 @@
-const tvue = require('./Test.vue');
+const tvue = require('./My404.vue');
 module.exports = ({ router }) => {
     if (typeof window !== 'undefined') {
-        router.addRoutes([{
-            name: 'not-found',
-            path: "/not-found",
-            component: () => import('./Test.vue'),
-        }]);
-
-        router.beforeResolve((to, from, next) => {
-            console.log(to.matched);
+        router.beforeEach((to, from, next) => {
             if (shouldHandle(to)) {
-                console.log("default 404");
-                next("/not-found");
+                to.matched[0].components = tvue;
+                next();
             } else {
                 next();
             }
         });
-        console.log(router);
     }
 }
 function shouldHandle(to) {

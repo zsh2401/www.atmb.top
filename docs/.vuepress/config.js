@@ -1,40 +1,21 @@
 module.exports = {
-    title: '秋之盒 AUTUMNBOX',
+    title: '秋之盒',
     description: '开源免费易用的ADB工具',
     theme: 'reco',
     cache: false,
-    configureWebpack: (config, isServer) => {
-        if (!isServer) {
-            ["link", { rel: "stylesheet" }]            // config.module.rules.push({ test: /\.ts(x?)$/, use: 'ts-loader' });
-            // config.module.rules.push({test:/\.js$/,use:'babel-loader',exclude:/node_modules/}); 
-        }
-    },
-    head: [
-        // ["link", { rel: "stylesheet", href: "https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css" }],
-        // ['script', { src: "https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js" }]
-        // ['script', { src: "https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.min.js" }]
-    ],
     plugins: [
+        require('./plugins/custom-not-found'),
         [
-            // // require('./plugins/cnzz/'),
-            // 'vuepress-plugin-typescript',
-            // {
-            //     tsLoaderOptions: {
-            //         "target": "es5",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
-            //         "module": "commonjs",
-            //     },
-            // },
-            require('./plugins/custom-not-found'),
             '@vuepress/google-analytics',
             {
-                'ga': 'UA-113227184-2' // UA-00000000-0
+                'ga': 'UA-113227184-2' 
             },
         ]
     ],
     themeConfig: {
         noFoundPageByTencent: false,
         type: 'CustomHome',
-        evergreen: true,
+        evergreen: false,
         logo: '/images/icon.png',
         nav: [
             { text: '主页', link: '/', icon: "reco-home" },
