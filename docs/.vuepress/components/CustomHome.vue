@@ -7,6 +7,7 @@
         <h4>开源、免费、易用的图形化ADB工具箱</h4>
         <router-link to="download/">立刻下载</router-link> /
         <router-link to="dev/os/">浏览源代码</router-link> /
+        <router-link to="donate/">捐赠</router-link> /
         <router-link to="guide/">指南</router-link>
         <p>
           运行需求

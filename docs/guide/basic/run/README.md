@@ -11,7 +11,7 @@ title: 运行秋之盒
 
 ## 确保操作系统
 
-秋之盒基于[.net framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)进行编写,而`.net 4.6.1`最低支持Windows 7,因此,秋之盒对操作系统的最低要求是Windows 7系统   
+秋之盒基于[.net framework 4.6.1](https://support.microsoft.com/zh-cn/help/3102436/the-net-framework-4-6-1-offline-installer-for-windows)进行编写,而`.net 4.6.1`最低支持Windows 7,因此,秋之盒对操作系统的最低要求是Windows 7系统   
 
 * 推荐在Windows 10上运行（更安全,更美观,更稳定）
 
@@ -22,7 +22,7 @@ title: 运行秋之盒
 
 ![](https://tse3.mm.bing.net/th?id=OIP.ya74Bo-A4cFEQ-MbBYiPeAHaDr&pid=Api)
 
-是的,你缺少.NET 4.6.1环境,请立刻 [下载与安装](/go/download/dotnet/)
+是的,你缺少.NET 4.6.1环境,请立刻 [下载与安装](https://support.microsoft.com/zh-cn/help/3102436/the-net-framework-4-6-1-offline-installer-for-windows)
 
 
 ## 下载并解压使用

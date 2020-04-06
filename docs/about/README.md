@@ -1,6 +1,6 @@
 ---
 title: 关于秋之盒
-isShowComments: false
+isShowComments: true
 ---
 ### 联系开发者
 电子邮件: zsh2401@163.com   
