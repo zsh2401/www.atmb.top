@@ -15,5 +15,9 @@ title: 稳定版
 ## [2401网盘系统](https://pan.zsh2401.top/index.php?share/folder&user=1&sid=EzNkCr8i)
 秋之盒开发者提供，更新快但速度较慢  
 
-## [源代码](https://github.com/zsh2401/AutumnBox/archive/master.zip)
-秋之盒以LGPL3.0协议开源，向所有人提供源代码   
+
+------
+## 其它下载
+[秋之盒源代码](https://github.com/zsh2401/AutumnBox/archive/master.zip)
+[安卓SDK平台工具包](https://pan.zsh2401.top/index.php?share/folder&user=1&sid=YUF8iDsf)
+
