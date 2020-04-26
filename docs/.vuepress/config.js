@@ -3,23 +3,45 @@ module.exports = {
     description: '开源免费易用的ADB工具',
     theme: 'reco',
     cache: false,
+
+    head: [
+        ['script', { "async": true, "data-ad-client": "ca-pub-9452158391330419", src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" }]
+    ],
     plugins: [
         require('./plugins/custom-not-found'),
         [
             '@vuepress/google-analytics',
             {
-                'ga': 'UA-113227184-2' 
+                'ga': 'UA-113227184-2'
             },
         ]
     ],
     themeConfig: {
+        // 博客配置
+        blogConfig: {
+            // category: {
+            //     location: -1,     // 在导航栏菜单中所占的位置，默认2
+            //     text: '文章分区' // 默认文案 “分类”
+            // },
+            // tag: {
+            //     location: 3,     // 在导航栏菜单中所占的位置，默认3
+            //     text: 'Tag'      // 默认文案 “标签”
+            // }
+        },
         noFoundPageByTencent: false,
         type: 'CustomHome',
         evergreen: false,
         logo: '/images/icon.png',
         nav: [
-            { text: '主页', link: '/', icon: "reco-home" },
-            { text: '下载', link: '/download/',icon:"reco-other"},
+            {
+                text: '主页', 
+                icon:"reco-home",
+                items: [
+                    { text: '主页', link: '/' },
+                    { text: '开发动态', link: 'https://zsh2401.top/categories/AutumnBox/' },
+                ]
+            },
+            { text: '下载', link: '/download/', icon: "reco-other" },
             { text: '指南', link: '/guide/', icon: "reco-document" },
             { text: '拓展模块', link: '/extensions/', icon: "reco-category" },
 
