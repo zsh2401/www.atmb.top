@@ -13,6 +13,8 @@ author: Hot Cocoa
 
 下载地址：[SDK 平台工具版本说明  |  Android 开发者  |  Android Developers](https://developer.android.google.cn/studio/releases/platform-tools)
 
+[国内备用下载](https://pan.zsh2401.top/index.php?share/folder&user=1&sid=YUF8iDsf)
+
 解压这个压缩包，解压后会有一个文件夹，点开后再点开里面的文件夹，然后就会看到这些：
 
 ![](~./3.png)

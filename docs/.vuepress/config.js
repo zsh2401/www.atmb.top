@@ -166,7 +166,7 @@ module.exports = {
         startYear: '2017',
         author: 'AutumnBox',
         valineConfig: {
-            placeholder: "建议填写邮箱地址以接收回复。遵守法律法规,理性发言。",
+            placeholder: "遵守法律法规,理性发言。",
             appId: 'VLA81Yn1kDUEgE9A99Qwnb1u-gzGzoHsz',// your appId
             appKey: 'CpivAcjiG4W9BWNpS2z47X98', // your appKey
         }
