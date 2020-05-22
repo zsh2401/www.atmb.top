@@ -7,4 +7,4 @@ isShowComments: false
 ### 您可以通过以下几种方式下载
 
 * [微软MSDN](https://www.microsoft.com/zh-CN/download/details.aspx?id=42642)
-* [2401网盘系统](https://www.microsoft.com/zh-cn/download/details.aspx?id=30653)
+* [2401网盘系统](https://pan.zsh2401.top/index.php?share/file&user=1&sid=tNhCDc9e)
