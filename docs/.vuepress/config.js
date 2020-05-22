@@ -34,8 +34,8 @@ module.exports = {
         logo: '/images/icon.png',
         nav: [
             {
-                text: '主页', 
-                icon:"reco-home",
+                text: '主页',
+                icon: "reco-home",
                 items: [
                     { text: '主页', link: '/' },
                     { text: '开发动态', link: 'https://zsh2401.top/categories/AutumnBox/' },
@@ -156,7 +156,8 @@ module.exports = {
                     sidebarDepth: -1,    // 可选的, 默认值是 1
                     children: [
                         '/download/',
-                        "/download/beta/"
+                        "/download/beta/",
+                        "/download/env/"
                     ]
                 },
             ]

@@ -4,7 +4,7 @@ author: zsh2401<zsh2401@163.com>
 categories: 说明书
 ---
 :::warning
-秋之盒是电脑软件，请悉知
+秋之盒是Windows PC软件，请悉知
 :::
 ::: danger
 本文档仍在初期维护阶段，有大量纰漏与错误
