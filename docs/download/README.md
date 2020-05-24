@@ -7,7 +7,7 @@ title: 稳定版
 * 新版本即将回归
 :::
 ::: tip
-下载完毕后,您可以查看[说明书](/guide)
+下载完毕后,您可以查看[说明书](/guide)以及[提交建议与反馈问题](https://github.com/zsh2401/AutumnBox/issues)
 :::
 ## [MonoLogueChi的秋之盒下载站](https://atmb.sm9.top/AutumnBox/%E4%B8%BB%E7%A8%8B%E5%BA%8F/)
 通常在10分钟内跟进最新版，下载速度较快
