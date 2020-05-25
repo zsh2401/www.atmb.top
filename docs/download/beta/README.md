@@ -2,6 +2,9 @@
 title: 秋之盒β测试计划
 isShowComments: false
 ---
+# Beta版本已经废弃
+如果仍想要参与测试,请[移步Canary版本](/download/canary)
+
 ::: danger
 BETA版可能存在严重的风险，请谨慎使用，秋之盒不对任何损失负责。
 :::
