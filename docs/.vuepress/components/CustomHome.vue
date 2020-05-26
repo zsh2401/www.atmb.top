@@ -10,7 +10,7 @@
         <br />
         <br />
         <a href="https://github.com/zsh2401/AutumnBox/issues">提交建议与反馈</a> /
-        <router-link to="dev/os/">浏览源代码</router-link>
+        <a target="_blank" href="https://github.com/zsh2401/AutumnBox">浏览源代码</a>
         <p>
           运行需求
           <br />Windows 7及以上 /
