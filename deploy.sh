@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 cd ./docs/.vuepress/dist
 git init
 git add .
