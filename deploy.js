@@ -6,4 +6,3 @@ const path = require('path');
         repo: "git@e.coding.net:studio2401/www.atmb.top/deploy.git"
     });
 })();
-

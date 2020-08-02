@@ -99,6 +99,7 @@ module.exports = {
                         '/guide/advanced/',
                         '/guide/advanced/wifi_delete_x/',
                         '/guide/advanced/jump_google/',
+                        '/guide/advanced/something_about_android/',
                     ]
                 },
                 {
