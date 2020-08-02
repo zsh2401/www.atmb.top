@@ -1,6 +1,6 @@
 ---
 title: Canary(金丝雀)计划
-isShowComments: false
+isShowComments: true
 ---
 ::: warning 什么是Canary(金丝雀)版本
 Canary是最激进，最危险的版本，通常面对高级用户以供体验最新特性与反馈问题。   
