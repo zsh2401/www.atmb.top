@@ -12,8 +12,8 @@ title: 稳定版
 ## [MonoLogueChi的秋之盒下载站](https://atmb.sm9.top/AutumnBox/%E4%B8%BB%E7%A8%8B%E5%BA%8F/)
 通常在10分钟内跟进最新版，下载速度较快
  
-## [2401网盘系统](https://pan.zsh2401.top/index.php?share/folder&user=1&sid=EzNkCr8i)
-秋之盒开发者提供，更新快但速度较慢  
+<!-- ## [2401网盘系统](https://pan.zsh2401.top/index.php?share/folder&user=1&sid=EzNkCr8i)
+秋之盒开发者提供，更新快但速度较慢   -->
 
 
 ------

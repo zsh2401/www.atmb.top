@@ -2,7 +2,8 @@
 const ghpages = require('gh-pages')
 const path = require('path');
 if(!process.env.TOKEN){
-    throw "Token not defined in !!!!!";
+
+    throw "Token not defined in ENV!!!!!";
 }
 (() => {
     ghpages.publish(path.resolve(__dirname, './docs/.vuepress/dist'), {
