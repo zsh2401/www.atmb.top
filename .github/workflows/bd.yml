@@ -28,7 +28,7 @@ jobs:
     - run: npm run build --if-present
 
     - name: Deploy to Coding Pages
-      run: ./deploy.js
+      run: ./deploy.sh
       env:
         TOKEN: ${{ secrets.TOKEN }}
       
