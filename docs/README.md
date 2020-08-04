@@ -17,7 +17,7 @@ isShowComments: true
 
 ### 开放源代码
 ![](https://opencollective.com/AutumnBox/contributors.svg?button=false)   
-[Github](https://github.com/zsh2401/AutumnBox) / [提交问题](https://github.com/zsh2401/AutumnBox/issues)
+[开源相关](/dev/os) / [提交问题](https://github.com/zsh2401/AutumnBox/issues)
 
 ### 运行需求
 Windows 7 + [.NET Framework 4.6.2](/download/env/)
