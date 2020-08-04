@@ -29,7 +29,7 @@ module.exports = {
             // }
         },
         noFoundPageByTencent: false,
-        type: 'CustomHome',
+        // type: 'CustomHome',
         evergreen: false,
         logo: '/images/icon.png',
         nav: [
