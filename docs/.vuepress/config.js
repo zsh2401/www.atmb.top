@@ -138,8 +138,9 @@ module.exports = {
                     title: '入门',   // 必要的
                     sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
-                        '/dev/docs/',
-
+                        '/dev/docs/start/',
+                        '/dev/docs/project-structure/',
+                        '/dev/docs/getting-started/',
                     ]
                 },
                 {
