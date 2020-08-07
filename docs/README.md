@@ -2,14 +2,14 @@
 title: 主页
 isShowComments: true 
 ---
-### [立刻下载](/download) / [指南](/guide)  
+### [立刻下载](/download) / [指南](/guide)  / [安卓漫谈](/guide/advanced/something_about_android)
 
 ::: danger 秋之盒需要您的捐助
 作为一款自由软件，仍为学生的开发者对其进行的更新与维护几乎得不到物质回报。   
 你的捐赠是秋之盒走下去的动力,并将被永久记录。
 [浏览捐赠方式](donate/)
-
 :::
+
 ::: tip
 * 因开发者学业原因，暂停更新，请各位静心等待下个版本。
 * 加入QQ交流群: 246177486 / 958469845

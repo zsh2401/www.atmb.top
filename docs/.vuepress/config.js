@@ -195,6 +195,7 @@ module.exports = {
                     sidebarDepth: -1,    // 可选的, 默认值是 1
                     children: [
                         '/download/',
+                        "/download/ea/",
                         "/download/canary/",
                         "/download/env/"
                     ]
