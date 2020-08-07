@@ -57,7 +57,7 @@ module.exports = {
                 text: '开发',
                 icon: 'reco-api',
                 items: [
-                    { text: '开发文档', link: '/dev/docs/' },
+                    { text: '开发文档', link: '/dev/docs/beginner/' },
                     { text: '开放源代码', link: '/dev/os/', icon: "reco-github" },
                 ]
             }
@@ -133,14 +133,51 @@ module.exports = {
                     ]
                 }
             ],
-            "/dev/docs/": [
+            "/dev/docs": [
                 {
                     title: '入门',   // 必要的
                     sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
-                        '/dev/docs/start/',
-                        '/dev/docs/project-structure/',
-                        '/dev/docs/getting-started/',
+                        '/dev/docs/beginner/',
+                        '/dev/docs/beginner/project-structure/',
+                        '/dev/docs/beginner/install-dev-env/',
+                        '/dev/docs/beginner/getting-started/',
+                        '/dev/docs/beginner/extinfo/',
+                        '/dev/docs/beginner/awesome-api/',
+                    ]
+                },
+                {
+                    title: '与ADB进行交互',   // 必要的
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
+                    children: [
+                        '/dev/docs/use-basic/',
+                        '/dev/docs/use-basic/execute-command/',
+                        '/dev/docs/use-basic/manage-device/',
+                        '/dev/docs/use-basic/utilities/',
+                    ]
+                },
+                {
+                    title: 'Leafx之道',   // 必要的
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
+                    children: [
+                        '/dev/docs/use-leafx/',
+                        '/dev/docs/use-leafx/IoC/',
+                    ]
+                },
+                {
+                    title: '调试',   // 必要的
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
+                    children: [
+                        '/dev/docs/debugging/',
+                    ]
+                },
+                {
+                    title: '与开放框架进行交互',   // 必要的
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
+                    children: [
+                        '/dev/docs/use-openfx/',
+                        '/dev/docs/use-openfx/leafui/',
+                        '/dev/docs/use-openfx/connected-device/',
                     ]
                 },
                 {
