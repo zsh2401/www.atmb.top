@@ -22,4 +22,4 @@ yarn dev #or npm run dev
 yarn build #or npm run build
 ```
 ## 贡献代码
-在您对vuepress有一定程度的熟悉时，可以对本仓库提交文档与代码。
+在您对`vuepress`有一定程度的熟悉时，可以对本仓库提交文档与代码。
