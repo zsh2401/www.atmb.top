@@ -1,11 +1,13 @@
 ---
 title: ABOSP (Autumn Box Open Source Project)
 ---
+## 仓库
 ![](~./github.png)   
 
 如果可以，请点一个星标，这是对秋之盒代码的最大认可。   
-[秋之盒源代码](https://github.com/zsh2401/AutumnBox)   
-[本站点源代码](https://github.com/zsh2401)
+* [秋之盒源代码](https://github.com/zsh2401/AutumnBox)   
+* [本站点源代码](https://github.com/zsh2401)   
+* [地球三体组织](https://github.com/EarthTrisolarisOrganization)
 
 ### 秋之盒现以LGPL3.0 (宽松的GNU公共协议)开源
 请在必要时遵守开源协议   

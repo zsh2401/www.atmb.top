@@ -36,10 +36,7 @@ module.exports = {
             {
                 text: '主页',
                 icon: "reco-home",
-                items: [
-                    { text: '主页', link: '/' },
-                    { text: '开发动态', link: 'https://zsh2401.top/categories/AutumnBox/' },
-                ]
+                link: '/'
             },
             { text: '下载', link: '/download/', icon: "reco-other" },
             { text: '指南', link: '/guide/', icon: "reco-document" },
@@ -57,8 +54,11 @@ module.exports = {
                 text: '开发',
                 icon: 'reco-api',
                 items: [
-                    { text: '开发文档', link: '/dev/docs/beginner/' },
                     { text: '开放源代码', link: '/dev/os/', icon: "reco-github" },
+                    { text: '开发文档', link: '/dev/docs/beginner/' },
+                    { text: '开发动态', link: 'https://zsh2401.top/categories/AutumnBox/' },
+                    { text: 'MAGA计划表', link: 'https://github.com/zsh2401/AutumnBox/projects/2' },
+                    { text: 'Bug计划表', link: 'https://github.com/zsh2401/AutumnBox/projects/3' },
                 ]
             }
         ],
