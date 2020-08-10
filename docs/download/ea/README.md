@@ -17,11 +17,13 @@ title: 2020.8 早期测试版本
 早期测试版本可能是危险的,任何使用者都应做好彻底刷机以及丢失数据的准备。
 :::
 ## 立刻下载
-* [百度云 提取码: 9qbs](https://pan.baidu.com/s/17TtF4I43mYL09LPsvHIruw)
-* [蓝奏云 提取码: 3z2n](https://wwa.lanzous.com/b08xidfzi)
+* [蓝奏云 提取码:3z2n](https://wwa.lanzous.com/b08xidfzi)
+* [百度云 提取码: 9qbs](https://pan.baidu.com/s/17TtF4I43mYL09LPsvHIruw)    
+<br>
+
 ## 问题反馈
 开[Issues](https://github.com/zsh2401/AutumnBox/issues)或直接本页面评论区留言。
-
+<br>
 
 
 ## 预览图
