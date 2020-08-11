@@ -142,8 +142,10 @@ module.exports = {
                         '/dev/docs/beginner/install-dev-env/',
                         '/dev/docs/beginner/getting-started/',
                         '/dev/docs/beginner/extinfo/',
-                        '/dev/docs/beginner/with-device/',
                         '/dev/docs/beginner/awesome-api/',
+                        '/dev/docs/beginner/with-device/',
+                        '/dev/docs/beginner/leaf-extension/',
+                        '/dev/docs/beginner/leaf-ui/',
                         '/dev/docs/beginner/example-extensions/'
                     ]
                 },
