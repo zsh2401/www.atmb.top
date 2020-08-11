@@ -117,11 +117,11 @@ module.exports = {
             ],
             "/extensions/": [
                 {
-                    title: '拓展模块',   // 必要的
+                    title: '开始',   // 必要的
                     sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         '/extensions/',
-
+                        '/extensions/recommend/',
                     ]
                 },
                 {
@@ -129,7 +129,6 @@ module.exports = {
                     sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         '/extensions/store/',
-
                     ]
                 }
             ],
@@ -143,7 +142,9 @@ module.exports = {
                         '/dev/docs/beginner/install-dev-env/',
                         '/dev/docs/beginner/getting-started/',
                         '/dev/docs/beginner/extinfo/',
+                        '/dev/docs/beginner/with-device/',
                         '/dev/docs/beginner/awesome-api/',
+                        '/dev/docs/beginner/example-extensions/'
                     ]
                 },
                 {

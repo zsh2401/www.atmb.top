@@ -23,8 +23,7 @@ title: 2020.8 早期测试版本
 
 ## 问题反馈
 开[Issues](https://github.com/zsh2401/AutumnBox/issues)或直接本页面评论区留言。
-<br>
-
+<br><br>
 
 ## 预览图
 ![](./1.png)

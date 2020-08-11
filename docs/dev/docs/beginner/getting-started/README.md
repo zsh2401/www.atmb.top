@@ -8,7 +8,7 @@ title: 快速开始
 ## 1.2 选择合适的目标
 选择`.Net Core类库`
 ![](./dncorelib.png)
-值得注意的是，如果您的拓展模块中需要编写`WPF`控件，请在这一步时选择`WPF Custom Control Library`或`WPF User Control Library`   
+值得注意的是，如果您的拓展模块中需要编写`WPF`控件，请在这一步时选择`WPF Custom Control Library`或`WPF User Control Library`
 ![](./includingwpf.png)
 
 ## 1.3 填写项目信息
