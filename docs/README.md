@@ -1,8 +1,26 @@
 ---
-title: 主页
+title: 秋之盒-2019.4
 isShowComments: true 
 ---
-### [立刻下载](/download) / [指南](/guide)  / [安卓漫谈](/guide/advanced/something_about_android)
+<div align="center">
+
+# 秋之盒-2019.4
+<h3>
+
+[立刻下载](/download)    
+
+</h3>
+
+[指南](/guide)  /  [安卓漫谈](/guide/advanced/something_about_android)
+
+
+交流群: 246177486 / 958469845
+
+</div>
+
+::: tip 新版本来了
+秋之盒`2020.8`已经进入早期测试阶段--->[参与EA测试](/download/ea/)
+:::
 
 ::: danger 秋之盒需要您的捐助
 作为一款自由软件，仍为学生的开发者对其进行的更新与维护几乎得不到物质回报。   
@@ -10,19 +28,13 @@ isShowComments: true
 [浏览捐赠方式](donate/)
 :::
 
-::: tip
-* 因开发者学业原因，暂停更新，请各位静心等待下个版本。
-* 加入QQ交流群: 246177486 / 958469845
-:::
 
 ### 开放源代码
 ![](https://opencollective.com/AutumnBox/contributors.svg?button=false)   
-[开源相关](/dev/os) / [提交问题](https://github.com/zsh2401/AutumnBox/issues)
+[开源相关](/dev/os/) / [提交问题](https://github.com/zsh2401/AutumnBox/issues)
 
 ### 运行需求
 Windows 7 + [.NET Framework 4.6.2](/download/env/)
-
-
 
 
 ### 秋之盒是安全的
@@ -32,14 +44,10 @@ Windows 7 + [.NET Framework 4.6.2](/download/env/)
 
 * 遵守Windows应用开发规范，不调用危险API。
 * 开放源代码，恶意代码无处遁形
+
 ### 秋之盒能做什么?
 * [激活各种DPM应用](/guide/basic/dpm/)
 * [激活各种特权脚本应用](/guide/basic/script/)
 * 提供一个快捷的ADB环境
 * 拓展模块,潜力无限
-### 更新日志
-::: tip
-v2019.4
-进行了一些BUG修复
-:::
 

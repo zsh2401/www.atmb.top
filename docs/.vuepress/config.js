@@ -193,14 +193,23 @@ module.exports = {
             ],
             "/download/": [
                 {
-                    title: '下载秋之盒',   // 必要的
+                    title: '最新版本',   // 必要的
                     collapsable: false,
                     sidebarDepth: -1,    // 可选的, 默认值是 1
                     children: [
                         '/download/',
-                        "/download/ea/",
                         "/download/canary/",
-                        "/download/env/"
+                        // "/download/v201904/",
+                        "/download/ea/",
+                      
+                    ]
+                },
+                {
+                    title: '历史版本',   // 必要的
+                    collapsable: true,
+                    sidebarDepth: -1,    // 可选的, 默认值是 1
+                    children: [
+                        "/download/v201904/",
                     ]
                 },
             ]
