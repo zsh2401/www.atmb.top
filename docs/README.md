@@ -32,7 +32,7 @@ isShowComments: true
 
 ### 购置可靠的云计算服务
 通过该渠道购置云计算服务，您将得到一定的优惠，秋之盒开发者也将得到些许推广提成。
-![](~./ad.jpg)
+![](~./try-tencent-server.jpg)
 
 :::
 
