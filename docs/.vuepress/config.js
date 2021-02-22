@@ -200,7 +200,7 @@ module.exports = {
                         '/download/',
                         "/download/canary/",
                         // "/download/v201904/",
-                        "/download/ea/",
+                        // "/download/ea/",
                       
                     ]
                 },
