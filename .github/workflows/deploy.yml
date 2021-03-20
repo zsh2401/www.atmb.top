@@ -29,8 +29,8 @@ jobs:
     - name: Build
       run: yarn build
 
-    - name: Deploy to Coding Pages
-      run: ./deploy.sh
+    - name: Deploy
+      run: yarn deploy
       env:
-        REPO: ${{ secrets.REPO }}
+        TOKEN: ${{ secrets.TOKEN }}
       

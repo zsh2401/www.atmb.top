@@ -22,7 +22,7 @@ isShowComments: true
 秋之盒`2020.8`已经进入早期测试阶段--->[参与EA测试](/download/ea/)
 :::
 
-![](~./try-tencent-server.jpg)
+<!-- ![](~./try-tencent-server.jpg) -->
 
 ### 开放源代码
 ![](https://opencollective.com/AutumnBox/contributors.svg?button=false)   
