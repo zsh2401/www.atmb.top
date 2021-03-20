@@ -25,9 +25,8 @@ jobs:
     - name: Build
       run: yarn build
 
-    - name: Deploy
+    - name: Deploy to static pages server
       run: yarn deploy
       env:
-        USERNAME: ${{ secrets.USERNAME }}
-        PASSWORD: ${{ secrets.PASSWORD }}
+        FULL_REPO: ${{ secrets.CODING_REPO }}
       
