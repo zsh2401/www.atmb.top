@@ -13,7 +13,7 @@ if (!process.env.FULL_REPO) {
 }
 
 ghpages.publish(path.resolve(__dirname, "./docs/.vuepress/dist"), {
-    repo: FULL_REPO
+    repo: process.env.FULL_REPO
 }, (err) => {
     if (err) {
         throw err;
