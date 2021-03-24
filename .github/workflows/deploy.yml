@@ -31,9 +31,3 @@ jobs:
         build_dir: docs/.vuepress/dist
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    # - name: Deploy to static pages server
-    #   run: yarn deploy
-    #   env:
-    #     FULL_REPO: ${{ secrets.CODING_REPO }}
-      

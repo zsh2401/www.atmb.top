@@ -13,11 +13,9 @@
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "deploy": "node deploy.js"
+    "build": "vuepress build docs"
   },
   "dependencies": {
-    "gh-pages": "^3.1.0",
     "vuepress-theme-reco": "1.6.6"
   }
 }
