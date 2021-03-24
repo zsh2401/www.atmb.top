@@ -25,8 +25,15 @@ jobs:
     - name: Build
       run: yarn build
 
-    - name: Deploy to static pages server
-      run: yarn deploy
+    - name: Deploy to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v2.2.0
+      with:
+        build_dir: docs/.vuepress/dist
       env:
-        FULL_REPO: ${{ secrets.CODING_REPO }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # - name: Deploy to static pages server
+    #   run: yarn deploy
+    #   env:
+    #     FULL_REPO: ${{ secrets.CODING_REPO }}
       
