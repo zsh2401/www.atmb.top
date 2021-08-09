@@ -11,6 +11,7 @@ isShowComments: false
 [EarthTrisolarisOrganization](https://github.com/EarthTrisolarisOrganization)
 > 让陨石重启如萤火虫闪烁的飞行
 # 交流   
-交流群①: 246177486    
-交流群②: 958469845   
-开发者交流群: 153424015     
+交流群①: 246177486（已满）   
+交流群②: 958469845（已满）   
+交流群③：703508345    
+开发者交流群: 153424015      

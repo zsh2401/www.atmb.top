@@ -4,9 +4,10 @@
       <tr>
         <th>称呼</th>
         <th>日期</th>
-        <th>金额</th>
+        <th>金额（¥）</th>
         <th>备注</th>
       </tr>
+      
       <tr v-for="donor in donors">
         <th>{{donor.name || "佚名"}}</th>
         <th>{{donor.date}}</th>
