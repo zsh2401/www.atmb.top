@@ -48,3 +48,8 @@ Windows 7 + [.NET Framework 4.6.2](/download/env/)
 * 提供一个快捷的ADB环境
 * 拓展模块,潜力无限
 
+<div style="text-align:center">
+<a  href="https://beian.miit.gov.cn/" target="_blank">滇ICP备19011321号-2</a>
+</div>
+
+
