@@ -48,7 +48,19 @@ Windows 7 + [.NET Framework 4.6.2](/download/env/)
 * 提供一个快捷的ADB环境
 * 拓展模块,潜力无限
 
+
 <div style="text-align:center">
+<!-- <img src="./gongan.png"></img><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53018102000119">滇公安网备 5301812000184 号</a><br> -->
+
+<div style="width: 300px;margin: 0 auto;padding: 5px 0">
+                            <img src="./gongan.png"></img>
+                            <a target="_blank"
+                                href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53018102000184号"
+                                style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                                <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">滇公网安备
+                                    53018102000184号</p>
+                            </a>
+                        </div>
 <a  href="https://beian.miit.gov.cn/" target="_blank">滇ICP备19011321号-2</a>
 </div>
 

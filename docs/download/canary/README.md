@@ -2,7 +2,7 @@
 title: 最新测试版本(金丝雀)
 isShowComments: true
 ---
-![](~../../try-tencent-server.jpg)
+<!-- ![](~../../try-tencent-server.jpg) -->
 
 :::danger 金丝雀版本是极度危险的
 秋之盒目前提供金丝雀版本作为测试版本供广大机友尝鲜，而金丝雀版本可能带来未知的风险，使用者后果自负。
