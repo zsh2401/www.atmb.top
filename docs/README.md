@@ -55,7 +55,7 @@ Windows 7 + [.NET Framework 4.6.2](/download/env/)
 <div style="width: 300px;margin: 0 auto;padding: 5px 0">
                             <img src="./gongan.png"></img>
                             <a target="_blank"
-                                href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53018102000184号"
+                                href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53018102000184"
                                 style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
                                 <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">滇公网安备
                                     53018102000184号</p>
