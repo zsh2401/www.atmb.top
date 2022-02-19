@@ -4,3 +4,5 @@ db.json
 node_modules/
 .deploy*/
 docs/.vuepress/dist
+dist
+.user.ini
