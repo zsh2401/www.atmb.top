@@ -1,7 +1,7 @@
 ---
 title: 2019.4 稳定版
 ---
-![](~../../try-tencent-server.jpg)
+<!-- ![](~../../try-tencent-server.jpg) -->
 
 ::: danger 注意
 * 秋之盒并非安卓应用
