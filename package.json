@@ -16,6 +16,6 @@
     "build": "vuepress build docs -d ./dist"
   },
   "dependencies": {
-    "vuepress-theme-reco": "1.6.10"
+    "vuepress-theme-reco": "1.6.11"
   }
 }

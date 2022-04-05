@@ -1404,11 +1404,6 @@
     valine "^1.4.14"
     vssue "^1.4.6"
 
-"@vuepress-reco/vuepress-plugin-loading-page@^1.6.0":
-  version "1.6.0"
-  resolved "https://registry.npm.taobao.org/@vuepress-reco/vuepress-plugin-loading-page/download/@vuepress-reco/vuepress-plugin-loading-page-1.6.0.tgz#34b72ed342dc9b15021d077ff8faeafe52146159"
-  integrity sha1-NLcu00LcmxUCHQd/+Prq/lIUYVk=
-
 "@vuepress-reco/vuepress-plugin-pagation@^1.6.0":
   version "1.6.0"
   resolved "https://registry.npm.taobao.org/@vuepress-reco/vuepress-plugin-pagation/download/@vuepress-reco/vuepress-plugin-pagation-1.6.0.tgz#c632aae1638ff9c67fe58c39ab617132be9eeecb"
@@ -8835,16 +8830,15 @@ vuepress-plugin-smooth-scroll@^0.0.9:
   dependencies:
     smoothscroll-polyfill "^0.4.4"
 
-vuepress-theme-reco@1.6.10:
-  version "1.6.10"
-  resolved "https://registry.yarnpkg.com/vuepress-theme-reco/-/vuepress-theme-reco-1.6.10.tgz#d55c04146c10b4ae2041d7a507a199b1a5904c10"
-  integrity sha512-6KqIOi96KTsZGqL6eTg/qAJZWUK1QEUOwC66caqSPD/z0FO5ry80KcWrYxgQwYZ0YjIHCWGR+XmHY134p466tA==
+vuepress-theme-reco@1.6.11:
+  version "1.6.11"
+  resolved "https://registry.npmmirror.com/vuepress-theme-reco/-/vuepress-theme-reco-1.6.11.tgz#9880d6318e8242637852e8cd2df4ed8a74623763"
+  integrity sha512-7q3zNRjfkuEDh9f5J3vZDvhP3W1L4xKdTn8pailDz3N64yilyF1Uf2bE+b+aDmzxYMmQUrMx6ByAFl61qgS9Gg==
   dependencies:
     "@vue/composition-api" "1.0.0-beta.21"
     "@vuepress-reco/core" "^1.6.9"
     "@vuepress-reco/vuepress-plugin-back-to-top" "^1.6.0"
     "@vuepress-reco/vuepress-plugin-comments" "^1.6.0"
-    "@vuepress-reco/vuepress-plugin-loading-page" "^1.6.0"
     "@vuepress-reco/vuepress-plugin-pagation" "^1.6.0"
     "@vuepress/plugin-blog" "1.9.2"
     "@vuepress/plugin-medium-zoom" "1.5.0"
@@ -8879,8 +8873,10 @@ watchpack@^1.7.4:
   resolved "https://registry.nlark.com/watchpack/download/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha1-EmfmxV4Lm1vkTCAjrtVDeiwmxFM=
   dependencies:
+    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
+    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
