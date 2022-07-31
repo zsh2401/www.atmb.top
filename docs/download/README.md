@@ -6,7 +6,8 @@ title: 最新稳定版本
 
 ## 最新稳定版 2019.4
 [下载（蓝奏云）](https://wwx.lanzoui.com/iy9yKlzvrih)   
-[下载（AutumnBox下载站）](https://atmb.sm9.top/AutumnBox/%E4%B8%BB%E7%A8%8B%E5%BA%8F/)
+[下载（AutumnBox下载站）](https://atmb.sm9.top/AutumnBox/%E4%B8%BB%E7%A8%8B%E5%BA%8F/)  
+[下载（Microsoft Store）](https://apps.microsoft.com/store/detail/%E7%A7%8B%E4%B9%8B%E7%9B%92/9NK86VHWN6HW)
 <br><br>
 
 ::: danger 开发者已经走投无路   
