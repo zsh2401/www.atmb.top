@@ -7,15 +7,15 @@
   "homepage": "https://www.atmb.top",
   "license": "MIT",
   "devDependencies": {
-    "@vuepress/plugin-google-analytics": "^1.9.7",
+    "@vuepress/plugin-google-analytics": "^1.9.9",
     "cross-env": "^7.0.3",
-    "vuepress": "^1.9.7"
+    "vuepress": "^1.9.9"
   },
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs -d ./dist"
   },
   "dependencies": {
-    "vuepress-theme-reco": "1.6.11"
+    "vuepress-theme-reco": "1.6.17"
   }
 }
