@@ -19,7 +19,7 @@ isShowComments: true
 246177486
 
 **Vibe Coding的新起点**   
-[氛围盒子](https://vibe.zsh2401.top)
+[枫之盒](https://vibe.zsh2401.top)
 
 </div>
 
