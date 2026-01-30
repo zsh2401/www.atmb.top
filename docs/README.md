@@ -18,8 +18,8 @@ isShowComments: true
 <br>
 246177486
 
-~~与秋之盒只有名字相关的~~，**简单易用，不翻墙免费体验ChatGPT的较好选择：**   
-[叶之盒 Leaf Box](https://ai.zsh2401.top)
+**Vibe Coding的新起点**   
+[氛围盒子](https://vibe.zsh2401.top)
 
 </div>
 
