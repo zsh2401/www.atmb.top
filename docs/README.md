@@ -16,10 +16,7 @@ isShowComments: true
 
 交流群: 
 <br>
-246177486
-
-**Vibe Coding的新起点**   
-[枫之盒](https://vibe.zsh2401.top)
+24617748
 
 </div>
 
