@@ -11,6 +11,9 @@ isShowComments: true
 
 </h3>
 
+
+
+
 [指南](/guide)  /  [安卓漫谈](/guide/advanced/something_about_android)  /  [源代码](https://github.com/zsh2401/AutumnBox)
 
 
@@ -18,7 +21,16 @@ isShowComments: true
 <br>
 24617748
 
+
+
+另外，秋之盒 2026 实验版，无需下载⬇️
+
+[立刻尝试](https://app.atmb.top)
+
 </div>
+
+
+
 
 <!-- ![](~./try-tencent-server.jpg) -->
 
