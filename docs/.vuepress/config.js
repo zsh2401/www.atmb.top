@@ -40,7 +40,7 @@ module.exports = {
             },
             { text: '下载', link: '/download/', icon: "reco-other" },
             { text: '指南', link: '/guide/', icon: "reco-document" },
-            { text: '拓展模块', link: '/extensions/', icon: "reco-category" },
+            { text: '插件', link: 'https://plugins.atmb.top', icon: "reco-category" },
 
             {
                 text: '关于',
@@ -54,11 +54,9 @@ module.exports = {
                 text: '开发',
                 icon: 'reco-api',
                 items: [
+                    { text: '插件开发文档', link: '/dev/sdk2/' },
                     { text: '开放源代码', link: '/dev/os/', icon: "reco-github" },
-                    { text: '开发文档', link: '/dev/docs/beginner/' },
-                    { text: '开发动态', link: 'https://zsh2401.top/categories/AutumnBox/' },
-                    { text: 'MAGA计划表', link: 'https://github.com/zsh2401/AutumnBox/projects/2' },
-                    { text: 'Bug计划表', link: 'https://github.com/zsh2401/AutumnBox/projects/3' },
+                    { text: '开发博客', link: '/blogs/' },
                 ]
             }
         ],
@@ -132,6 +130,50 @@ module.exports = {
                     ]
                 }
             ],
+            "/dev/sdk2": [
+                {
+                    title: '概览',
+                    collapsable: false,
+                    sidebarDepth: 2,
+                    children: [
+                        '/dev/sdk2/',
+                    ]
+                },
+                {
+                    title: '开发指南',
+                    collapsable: false,
+                    sidebarDepth: 2,
+                    children: [
+                        '/dev/sdk2/quickstart/',
+                        '/dev/sdk2/plugin-structure/',
+                        '/dev/sdk2/fundamentals/',
+                        '/dev/sdk2/apps/',
+                        '/dev/sdk2/cards/',
+                        '/dev/sdk2/services/',
+                        '/dev/sdk2/i18n/',
+                        '/dev/sdk2/build-publish/',
+                    ]
+                },
+                {
+                    title: '核心服务教程',
+                    collapsable: false,
+                    sidebarDepth: 2,
+                    children: [
+                        '/dev/sdk2/guide-devices/',
+                        '/dev/sdk2/guide-shell/',
+                        '/dev/sdk2/guide-filesystem/',
+                    ]
+                },
+                {
+                    title: '参考',
+                    collapsable: false,
+                    sidebarDepth: 2,
+                    children: [
+                        '/dev/sdk2/api-reference/',
+                        '/dev/sdk2/tutorial-apk-installer/',
+                    ]
+                }
+            ],
             "/dev/docs": [
                 {
                     title: '入门',   // 必要的
@@ -193,21 +235,17 @@ module.exports = {
             ],
             "/download/": [
                 {
-                    title: '最新版本',   // 必要的
+                    title: '最新版本',
                     collapsable: false,
-                    sidebarDepth: -1,    // 可选的, 默认值是 1
+                    sidebarDepth: -1,
                     children: [
                         '/download/',
-                        "/download/canary/",
-                        // "/download/v201904/",
-                        // "/download/ea/",
-                      
                     ]
                 },
                 {
-                    title: '历史版本',   // 必要的
+                    title: '历史版本',
                     collapsable: true,
-                    sidebarDepth: -1,    // 可选的, 默认值是 1
+                    sidebarDepth: -1,
                     children: [
                         "/download/v201904/",
                     ]
